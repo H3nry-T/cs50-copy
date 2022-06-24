@@ -10,15 +10,16 @@ int main(void)
     }
     while (h < 1 || h > 8);
 
-    for(int row = 0; row < h; row++)
+    for (int row = 0; row < h; row++)
     {
+        // spacing is height - 1 but also remember the row iteration.
         for (int shift = 0; shift < h - row - 1; shift++)
         {
             printf(" ");
         }
-        for(int column = 0; row >= column; column++)
+        for (int column = 0; row >= column; column++)
         {
-        printf("#");
+            printf("#");
         }
         printf("\n");
     }
