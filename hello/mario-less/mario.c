@@ -6,7 +6,8 @@ int main(void)
     int n;
     do
     {
-        n = get_int("Height: %i ", n);
+        n = get_int("Height: ");
+        printf("%i", n);
     }
     while (n > 0 && n < 9);
 }
