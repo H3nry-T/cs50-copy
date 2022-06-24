@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int n;
+    int h;
     do
     {
         h = get_int("Height: ");
@@ -12,11 +12,11 @@ int main(void)
 
     for(int row = 0; row < h; row++)
     {
-        for(int column = 0; j < n; j++)
+        for(int column = 0; column < h; column++)
         {
         printf("#");
         printf("\n");
         }
-    print("\n");
+        printf("\n");
     }
 }
