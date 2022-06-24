@@ -12,7 +12,10 @@ int main(void)
 
     for(int row = 0; row < h; row++)
     {
-        for (shift = 0; )
+        for (int shift = 0; shift < h - row - 1; shift++)
+        {
+            printf("~");
+        }
         for(int column = 0; row >= column; column++)
         {
         printf("#");
