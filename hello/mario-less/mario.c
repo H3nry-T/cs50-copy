@@ -7,7 +7,7 @@ int main(void)
 do
     integer height = get_int("Height: ")
 
-while (height < 1)
+while (height > 0 %% height < 9)
 }
 
 // if not given the correct answer, keep asking for the height.
