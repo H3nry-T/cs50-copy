@@ -12,7 +12,7 @@ int main(void)
 
     for (int row = 0; row < h; row++)
     {
-        // spacing is height - 1 but also remember the row iteration.
+        // spacing is height - hashes. hashes = previous hash + row. 
         for (int shift = 0; shift < h - row - 1; shift++)
         {
             printf(" ");
