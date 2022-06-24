@@ -3,24 +3,10 @@
 
 int main(void)
 {
-    // ask for the height of the pyramid
-do
-int n = get_int("Height: ")
-
-        printf("height is now: %i \n", number )
-
-while (height > 0 %% height < 9)
-
-for (i=0; i<9 ; i+= -1)
-{
-printf("# \n")
-
+    int n;
+    do
+    {
+        n = get_int("Height: %i ", n);
+    }
+    while (n>0 && n<9);
 }
-
-}
-
-// if not given the correct answer, keep asking for the height.
-
-
-//if the height is 2 start with the 1 hashtag at the top,
-//loop down the pyramid until the base matches the height number
