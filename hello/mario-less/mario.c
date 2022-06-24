@@ -14,7 +14,7 @@ int main(void)
     {
         for (int shift = 0; shift < h - row - 1; shift++)
         {
-            printf("~");
+            printf(" ");
         }
         for(int column = 0; row >= column; column++)
         {
