@@ -1,0 +1,2 @@
+First ask for the height of the pyramid between 1 and 8 blocks high
+if the number is not within the range, then keep asking for the user's input
