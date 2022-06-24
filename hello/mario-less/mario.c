@@ -11,5 +11,9 @@ int main(void)
     }
     while (n < 1 || n > 8);
 
+    for(i = 0, )
+    {
+
+    }
 
 }
