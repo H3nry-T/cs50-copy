@@ -10,7 +10,7 @@ int main(void)
     }
     while (n < 1 || n > 8);
 
-    for(int i = 0; i < n-(n-1); i++)
+    for(int i = 0; i < n-(n-1) + 1; i++)
     {
         printf("#");
         for(int j = 0; j < n; j++)
