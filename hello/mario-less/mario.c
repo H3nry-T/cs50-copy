@@ -13,8 +13,10 @@ int main(void)
     for(int row = 0; row < h; row++)
     {
         for(int column = 0; j < n; j++)
+        {
         printf("#");
         printf("\n");
+        }
+    print("\n");
     }
-    printf("\n");
 }
