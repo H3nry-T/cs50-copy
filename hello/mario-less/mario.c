@@ -10,4 +10,6 @@ int main(void)
         printf("%i \n", n);
     }
     while (n < 1 || n > 8);
+
+
 }
