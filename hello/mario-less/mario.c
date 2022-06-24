@@ -11,9 +11,9 @@ int main(void)
     }
     while (n < 1 || n > 8);
 
-    for(i = 0, )
+    for(int i = 0; i < n; i += 1)
     {
-
+        printf("#")
     }
 
 }
