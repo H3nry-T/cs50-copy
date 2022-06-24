@@ -6,11 +6,11 @@ int main(void)
     int n;
     do
     {
-        n = get_int("Height: ");
+        h = get_int("Height: ");
     }
-    while (n < 1 || n > 8);
+    while (h < 1 || h > 8);
 
-    for(int row = n + 1; i > n; i--)
+    for(int row = 0; i > h; i--)
     {
         for(int column = 0; j < n; j++)
         printf("#");
