@@ -12,11 +12,11 @@ int main(void)
 
     for(int row = 0; row < h; row++)
     {
-        for(int column = 0; column < h; column++)
+        for(int column = 0; column <= h; column++)
         {
         printf("#");
         printf("\n");
         }
-    printf("\n");
+        printf("\n");
     }
 }
