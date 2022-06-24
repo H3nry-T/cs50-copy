@@ -10,7 +10,7 @@ int main(void)
     }
     while (h < 1 || h > 8);
 
-    for(int row = 0; i > h; i--)
+    for(int row = 0; row < h; row++)
     {
         for(int column = 0; j < n; j++)
         printf("#");
