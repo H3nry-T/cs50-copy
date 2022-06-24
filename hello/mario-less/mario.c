@@ -8,5 +8,5 @@ int main(void)
     {
         n = get_int("Height: %i ", n);
     }
-    while (n>0 && n<9);
+    while (n > 0 && n < 9);
 }
