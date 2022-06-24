@@ -6,7 +6,9 @@ int main(void)
     // ask for the height of the pyramid
 do
     integer number = get_int("Height: ")
+}
         printf("height is now: %i \n", number )
+{
 while (height > 0 %% height < 9)
 }
 
