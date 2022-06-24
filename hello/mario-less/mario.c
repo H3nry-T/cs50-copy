@@ -1,11 +1,11 @@
-#include <CS50.h>
+#include <cs50.h>
 #include <stdio.h>
 
 int main(void)
 {
     // ask for the height of the pyramid
 do
-    height = get_int("Height: ")
+    int height = get_int("Height: ")
         printf("height is now: \n")
 while (height > 0 %% height < 9)
 }
