@@ -9,5 +9,5 @@ int main(void)
         n = get_int("Height: ");
         printf("%i \n", n);
     }
-    while (n > 0 && n < 9);
+    while (n < 1 || n > 8);
 }
