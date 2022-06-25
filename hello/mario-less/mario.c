@@ -14,7 +14,16 @@ int main(void)
     for(int i = 0; i < h; i++)
     {
         for(int j = 0; j < h; j++)
-        printf("#");
+        {
+          if (i + j < h - 1)
+          {
+            printf("~");
+          }
+          else 
+          {
+            printf("#");
+          }
+        }
     }
     printf("\n");
 }
