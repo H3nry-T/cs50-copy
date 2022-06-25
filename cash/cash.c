@@ -67,3 +67,14 @@ int calculate_dimes(int cents);
     }
     return dimes;
 }
+
+int calculate_nickels(int cents);
+{
+    int nickels = 0;
+    while (cents >= 5)
+    {
+        cents = cents - 5;
+        nickels++;
+    }
+    return nickels
+}
