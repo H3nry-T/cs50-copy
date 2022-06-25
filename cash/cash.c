@@ -48,5 +48,16 @@ int get cents(void)
 
 int calculate_quarters(int cents);
 {
-    for
+    int quarters;
+    while (cents >= 25);
+    {
+        cents = cents - 25;
+        quarters++;
+    }
+    return quarters;
+}
+
+int calculate_nickels(int cents);
+{
+    while (cents >= )
 }
