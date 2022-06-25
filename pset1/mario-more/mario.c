@@ -16,7 +16,7 @@ int main(void)
         {
             if (i + j < h - 1 || j == h || j == h +1)
             {
-                printf(".");
+                printf(" ");
             }
             else
             {
