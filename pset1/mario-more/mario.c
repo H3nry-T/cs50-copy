@@ -14,7 +14,7 @@ int main(void)
     {
         for (j = 0; j < h; j++)
         {
-            if (i + j <= h)
+            if (i + j < h - 1)
             {
                 printf(".");
             }
