@@ -4,5 +4,10 @@
 
 int main(void)
 {
-    int change = get_int("Change owed: ");
+    int change;
+    do
+    {
+    change = get_int("Change owed: ");
+    }
+    while (change < 0 );
 }
