@@ -22,11 +22,6 @@ int main(void)
             {
                 printf("#");
             }
-        }
-        printf("  ");
-        printf("\n");
-    }
-
     int k, m;
     for (k = 0; k < h; k++)
     {
@@ -35,5 +30,10 @@ int main(void)
             printf("#");
         }
     }
+        }
+        printf("  ");
+        printf("\n");
+    }
+
         printf("\n");
 }
