@@ -14,7 +14,7 @@ int main(void)
     {
         for (j = 0; j > h + i + 2; j++)
         {
-            if (i + j < h - 1 || j = h || j = h +1)
+            if (i + j < h - 1 || j == h || j == h +1)
             {
                 printf(".");
             }
@@ -23,9 +23,7 @@ int main(void)
                 printf("#");
             }
         }
-        printf("..");
         printf("\n");
     }
-        printf("\n");
 }
 
