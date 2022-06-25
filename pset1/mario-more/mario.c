@@ -8,14 +8,14 @@ int main(void)
     {
         h = get_int("Height: ");
     }
-    while (h < 0 || h > 8);
+    while (h < 1 || h > 8);
 
     for (i = 0; i < h; i++)
     {
-        for (j = 0; j < h + i + 3; j++)
+        for (j = 0; j < h + i + 3; j++) // iterate across up to h + 2 + x inclusive.
         {
             // conditions required to place a dot is either of these 3 conditions .
-            if (i + j < h - 1 || j == h || j == h +1)
+            if (i + j < h - 1 || j == h || j == h + 1)
             {
                 printf(" ");
             }
