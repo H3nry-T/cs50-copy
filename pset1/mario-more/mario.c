@@ -26,5 +26,7 @@ int main(void)
     printf("  ");
     printf("\n");
     }
-    
+
+    int k, m;
+    for (k = 0; k < h; k++)
 }
