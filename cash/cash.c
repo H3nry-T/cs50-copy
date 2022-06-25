@@ -35,7 +35,7 @@ int main(void)
     printf("%i ", coins);
 }
 
-int get cents(void)
+int get_cents(void)
 {
     int cents;
     do
