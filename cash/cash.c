@@ -4,10 +4,11 @@
 
 int main(void)
 {
-    int change;
+    //get the user to input the change owed
+    float change;
     do
     {
-    change = get_int("Change owed: ");
+    change = get_float("Change owed: ");
     }
     while (change < 0 );
 }
