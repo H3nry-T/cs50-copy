@@ -38,25 +38,25 @@ int main(void)
 int get_cents(void)
 {
     // TODO
-    int cent;
+    int cents;
     do
     {
-        cent = get_int("Change owed:");
+        cents = get_int("Change owed:");
     }
-    while(cent < 0);
-    return cent;
+    while(cents < 0);
+    return cents;
 }
 
 int calculate_quarters(int cents)
 {
     // TODO
-    int quarters = 0
-    while (cent <= 25);
+    int quarters = 0;
+    while (cents <= 25)
     {
         quarters++;
-        cent = cent - 25;
+        cents = cents - 25;
     }
-    return quarter;
+    return quarters;
 }
 
 int calculate_dimes(int cents)
