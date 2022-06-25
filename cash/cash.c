@@ -78,3 +78,14 @@ int calculate_nickels(int cents);
     }
     return nickels
 }
+
+int calculate_pennies(int cents);
+{
+    int pennies = 0;
+    while (cents >= 1)
+    {
+        cents = cents - 1;
+        pennies++;
+    }
+    return pennies;
+}
