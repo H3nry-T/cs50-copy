@@ -10,11 +10,11 @@ int calculate_pennies(int cents);
 int main(void)
 {
     //ask how many cents the customer is owed
-    int cents = get_cents("Change owed");
+    int cents = get_cents();
 
     //calculate the number of quarters to give the customer
     int quarters = calculate_quarters(cents);
-    cents = cents - no.quarters * 25;
+    cents = cents - quarters * 25;
 
     //calculate the number of dimes to give the customer
     int dimes = calculate_dimes(cents);
