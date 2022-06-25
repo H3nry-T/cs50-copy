@@ -4,5 +4,6 @@
 int main(void)
 {
     //get input of the height
-    
+    int h; = get_int("Height: ");
+    printf("%i", h);
 }
