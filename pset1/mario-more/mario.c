@@ -22,18 +22,18 @@ int main(void)
             {
                 printf("#");
             }
+        }
+        printf("  ");
+        printf("\n");
+    }
+
     int k, m;
-    for (k = 0; k < h; k++)
+    for (k = 0; k < h; k++);
     {
         for (m = 0; m + j + 2 <= k + j; m++)
         {
             printf("#");
         }
     }
-        }
-        printf("  ");
-        printf("\n");
-    }
-
         printf("\n");
 }
