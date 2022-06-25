@@ -30,7 +30,10 @@ int main(void)
     int k, m;
     for (k = 0; k < h; k++)
     {
-        for (m = 0; m + j + 2 <= k+)
+        for (m = 0; m + j + 2 <= k + j; m++)
+        {
+            printf("#");
+        }
     }
         printf("\n");
 }
