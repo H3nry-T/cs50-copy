@@ -10,7 +10,7 @@ int main(void)
     h = get_int("Height: ");
     }
     while(h < 1 || h > 8);
-// print the pyramid row and height. 
+// print the pyramid row and columns
     for(int i = 0; i < h; i++)
     {
         for(int j = 0; j < h; j++)
