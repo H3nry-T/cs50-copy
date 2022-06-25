@@ -10,5 +10,5 @@ int main(void)
     }
     while (h < 0 || h > 8);
 
-    for (i = 0; i + )
+    for (i = 0; )
 }
