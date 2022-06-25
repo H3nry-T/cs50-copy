@@ -46,7 +46,7 @@ int get_cents(void)
     return cents;
 }
 
-int calculate_quarters(int cents);
+int calculate_quarters(int cents)
 {
     int quarters = 0;
     while (cents >= 25);
