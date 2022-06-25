@@ -1,5 +1,5 @@
 prompt the user for the height of the pyramid
 print out a right facing pyramid, print spaces as well to form the pyramid.
-print out 2 hashes block
-print out the rest of the pyramid.
-the condition, is that the gap is 2 hashes wide regardless.
+print out all the spaces
+whatever is left over (else) print a hash
+remember that the only places where you can print a space depends on the hight and the row iteration.
