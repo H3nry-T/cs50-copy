@@ -10,7 +10,7 @@ int main(void)
     h = get_int("Height: ");
     }
     while(h < 1 || h > 8);
-
+// print the pyramid row and height. 
     for(int i = 0; i < h; i++)
     {
         for(int j = 0; j < h; j++)
@@ -19,7 +19,7 @@ int main(void)
           {
             printf("~");
           }
-          else 
+          else
           {
             printf("#");
           }
