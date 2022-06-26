@@ -81,7 +81,7 @@ int main(void)
 
     if (length == 15 && (amex == 34 || amex == 37))
     {
-        printf("AMERICAN EXPRESS\n");
+        printf("AMEX\n");
         return 0;
     }
 
