@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 
+//prototype for checking credit card number 
 bool checksum (int number);
 
 int main(void)
