@@ -60,7 +60,7 @@ int main(void)
         printf("VISA \n");
     }
 //check MASTERCARD 16 digits 51,52,53,54,55
-
+    if 
 //check AMERICAN EXPRESS 15 digits 34,37
 }
 bool checksum(int sum3)
@@ -89,7 +89,7 @@ int numlen(long card)
 // take starting digit (should be 4)
 int startvisa(long visa)
 {
-    while (visa >= 0)
+    while (visa >= 10)
     {
         visa /= 10;
     }
