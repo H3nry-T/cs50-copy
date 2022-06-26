@@ -57,7 +57,7 @@ int main(void)
 //check VISA digits 16 or 13 starting digit 4
     if ((len == 16 || len == 13) && startvisa(n) == 4)
     {
-        printf("VISA \n");
+        printf("VISA\n");
     }
 //check MASTERCARD 16 digits starting 51,52,53,54,55
     else if ((len == 16) && (startmaster(n) == 51 || startmaster(n) == 52 || startmaster(n) == 53 || startmaster(n) == 54 || startmaster(n) == 55))
