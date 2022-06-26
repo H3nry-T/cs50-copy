@@ -63,6 +63,7 @@ int main(void)
         card /= 10;
         length++;
     }
+    //visa check
     while (visa >= 10)
     {
         visa /= 10;
@@ -74,17 +75,17 @@ int main(void)
         return 0;
     }
 
+//amex check
     while (amex >= 10000000000000)
     {
         amex /= 10000000000000;
     }
-
     if (length == 15 && (amex == 34 || amex == 37))
     {
         printf("AMEX\n");
         return 0;
     }
-
+// master check
     while (master >= 100000000000000)
     {
         master /= 100000000000000;
