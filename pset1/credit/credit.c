@@ -49,7 +49,7 @@ int main(void)
         printf("INVALID\n");
     }
 
-    int length = 0;
+    int length = 1;
     while (n >= 10 && length <= n)
     {
         n /= 10;
