@@ -15,11 +15,3 @@ int main(void)
     }
     while (n < 0) //card number cannot be negative
 }
-
-bool valid_check(int number);
-{
-    int = n;
-
-    n = get_int("Number: ");
-
-}
