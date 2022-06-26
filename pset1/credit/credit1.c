@@ -21,7 +21,7 @@ int main(void)
     card5=((card%10000000000)/1000000000*2);
     card6=((card%1000000000000)/100000000000*2);
     card7=((card%100000000000000)/10000000000000*2);
-    card8=((card%10000000000000000)/1000000000000000*2);|
+    card8=((card%10000000000000000)/1000000000000000*2);
 
     card1=(card1%100/10)+(card1%10);
     card2=(card2%100/10)+(card2%10);
@@ -49,9 +49,9 @@ int main(void)
     int sum3 = sum1 + sum2;
 
     int length = 0;
-    while (n > 0)
+    while (card > 0)
     {
-        n /= 10;
+        card /= 10;
         length++;
     }
 
@@ -61,9 +61,9 @@ int main(void)
         return 0;
     }
 
-    long visa = n;
-    long amex = n;
-    long master = n;
+    long visa = card;
+    long amex = card;
+    long master = card;
 
     while (visa >= 10)
     {
