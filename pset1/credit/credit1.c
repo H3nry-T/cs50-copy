@@ -4,15 +4,15 @@
 
 int main(void)
 {
-    long n;
+    long card;
     do
     {
-        n = get_long("Number: ");
+        card = get_long("Number: ");
     }
-    while (n < 0);
+    while (card < 0);
     // find alternating digits from the second last one, then times 2
     // no1 is the SECOND LAST digit of the card
-    int card1, card2, card3, card4, card5, card6, card7, card8; 
+    int card1, card2, card3, card4, card5, card6, card7, card8;
 
     card1=((card%100)/10)*2;
     card2=((card%10000)/1000*2);
@@ -22,11 +22,6 @@ int main(void)
     card6=((card%1000000000000)/100000000000*2);
     card7=((card%100000000000000)/10000000000000*2);
     card8=((card%10000000000000000)/1000000000000000*2);|
-
-
-
-
-
 
     no1 = (no1 % 100 / 10) + (no1 % 10);
     no2 = (no2 % 100 / 10) + (no2 % 10);
