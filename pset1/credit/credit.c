@@ -49,22 +49,15 @@ int main(void)
     int sum3 = sum1 + sum2;
 
     int length = 0;
-    while (card > 0)
-    {
-        card /= 10;
-        length++;
-    }
-
-    if (sum3 % 10 != 0)
-    {
-        printf("INVALID\n");
-        return 0;
-    }
-
     long visa = card;
     long amex = card;
     long master = card;
 
+    if((sum3%10)!=0)
+    {
+        printf("%s\n","INVALID");
+        return 0;
+    }
     while (visa >= 10)
     {
         visa /= 10;
