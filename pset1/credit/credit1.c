@@ -48,7 +48,7 @@ int main(void)
     int len = numlen(n);
     if (checksum(sum3) && (len > 13))
     {
-        printf("VALID\n");
+
     }
         else
     {
@@ -69,7 +69,6 @@ int main(void)
     {
         printf("AMEX\n");
     }
-    printf("%i \n", len);
 }
 
 bool checksum(int sum3)
