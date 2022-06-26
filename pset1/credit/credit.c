@@ -44,11 +44,11 @@ int main(void)
     {
         printf("VALID\n");
     }
-    if (visalength(n) == 16 || visalength(n) == 13)
-    {
-        printf("VISA\n");
-    }
-    else (checksum(sum3))
+    // if (visalength(n) == 16 || visalength(n) == 13)
+    // {
+    //     printf("VISA\n");
+    // }
+    else (checksum(sum3));
     {
         printf("INVALID\n");
     }
