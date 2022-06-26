@@ -48,7 +48,7 @@ int main(void)
     {
         printf("VISA\n");
     }
-    else if (checksum(sum3) != 0)
+    else (checksum(sum3))
     {
         printf("INVALID\n");
     }
@@ -67,13 +67,13 @@ bool checksum(int sum3)
         return 1;
     }
 }
-int visalength (int n)
-{
-        int length = 1;
-    while (n >= 10)
-    {
-        n /= 10;
-        length++;
-    }
-    return length;
-}
+// int visalength (int n)
+// {
+//     int length = 1;
+//     while (n >= 10)
+//     {
+//         n /= 10;
+//         length++;
+//     }
+//     return length;
+// }
