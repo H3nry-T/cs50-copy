@@ -12,7 +12,7 @@ int main(void)
     {
         n = get_long("Number: ");
     }
-    while (n < 0);
+    while (n < 0 && (n == 13 || n == 15 || n == 16));
     // find alternating digits from the second last one, then times 2
     // no1 is the SECOND LAST digit of the card
     int no1, no2, no3, no4, no5, no6, no7, no8;
