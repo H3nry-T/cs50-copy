@@ -53,6 +53,12 @@ int main(void)
     int sum3 = sum1 + sum2;
 
     int length = 0
+    while (n > 0)
+    {
+        n /= 10
+        length++;
+    }
+
     if (sum3 % 10 != 0)
     {
         printf("INVALID\n");
@@ -63,5 +69,10 @@ int main(void)
     long amex = n
     long master = n
 
-    else if (n)
+    while (visa >= 10)
+    {
+        visa /= 10
+    }
+    
+    else if ((length == 16 || length = 13) && visa == 4 )
 }
