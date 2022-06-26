@@ -58,7 +58,11 @@ int main(void)
         printf("%s\n","INVALID");
         return 0;
     }
-    while ()
+    while (card > 0)
+    {
+        card /= 10;
+        length++;
+    }
     while (visa >= 10)
     {
         visa /= 10;
