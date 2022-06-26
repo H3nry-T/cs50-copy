@@ -55,7 +55,7 @@ int main(void)
     printf("%i \n", length);
 
 //check VISA
-    if ((length == 16 || length == 13) && startvisa(n) = 4 ) // and starting digit is 4
+    if ((length == 16 || length == 13) && startvisa(n) == 4 ) // and starting digit is 4
     {
         printf("VISA \n");
     }
