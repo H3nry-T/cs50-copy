@@ -39,9 +39,3 @@ int compute_score(string word)
     return 0;
 }
 
-float multfloat(float a, float b)
-{
-    float product = a * b;
-    return product;
-}
-
