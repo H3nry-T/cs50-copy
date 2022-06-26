@@ -50,7 +50,7 @@ int main(void)
     }
 }
 
-bool checksum(int sum3);
+bool checksum(int sum3)
 {
     if (sum3 % 10 == 0)
     {
