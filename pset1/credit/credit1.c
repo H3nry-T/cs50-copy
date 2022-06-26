@@ -44,18 +44,16 @@ int main(void)
     int sum3 = sum1 + sum2;
     // check if the last digit of sum 3 is zero , then this is valid boolean expression true.
 
-    if (checksum(sum3))
+//check the length of the card
+    int len = numlen(n);
+    if (checksum(sum3) && (len > 13))
     {
         printf("VALID\n");
     }
-    else
+        else
     {
-        int len = numlen(n)
-        if (len < 13)
         printf("INVALID\n");
     }
-//check the length of the card
-    int len = numlen(n);
 //check VISA digits 16 or 13 starting digit 4
     if ((len == 16 || len == 13) && startvisa(n) == 4)
     {
