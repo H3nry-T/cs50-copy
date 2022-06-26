@@ -4,7 +4,7 @@
 
 //prototype for checking credit card number
 bool checksum (int sum3);
-int intlength (int n);
+int visalength (int n);
 int main(void)
 {
     long n;
@@ -44,18 +44,15 @@ int main(void)
     {
         printf("VALID\n");
     }
+    if (visalength(n) == 16 || visalength(n) == 13)
+    {
+        prinf("VISA\n");
+    }
     else
     {
         printf("INVALID\n");
     }
 
-    int length = 1;
-    while (n >= 10 && length <= n)
-    {
-        n /= 10;
-        length++;
-    }
-    printf("%i \n", length);
 
 }
 
@@ -70,7 +67,7 @@ bool checksum(int sum3)
         return 1;
     }
 }
-int length (int n)
+int visalength (int n)
 {
         int length = 1;
     while (n >= 10 && length <= n)
