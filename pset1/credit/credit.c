@@ -50,12 +50,12 @@ int main(void)
     }
 
     int length = 0;
-    while (n >= 10 && length < n)
+    while (n >= 10 && length <= n)
     {
         n /= 10;
         length++;
     }
-    printf("%i", length);
+    printf("%i \n", length);
 }
 
 bool checksum(int sum3)
