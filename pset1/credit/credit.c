@@ -68,7 +68,6 @@ int main(void)
     {
         printf("INVALID\n");
     }
-    return 0; 
 }
 
 bool checksum(int sum3)
