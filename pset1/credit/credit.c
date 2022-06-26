@@ -50,10 +50,6 @@ int main(void)
     {
 
     }
-        else
-    {
-        printf("INVALID\n");
-    }
 //check VISA digits 16 or 13 starting digit 4
     if ((len == 16 || len == 13) && startvisa(n) == 4)
     {
@@ -68,6 +64,10 @@ int main(void)
     else if ((len == 15) && (startamex(n) == 34 || startamex(n) == 37))
     {
         printf("AMEX\n");
+    }
+    else
+    {
+        printf("INVALID\n");
     }
 }
 
