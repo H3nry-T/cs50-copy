@@ -19,8 +19,8 @@ int grade(string text)
     char text[wordlen];
     for (i = 0; senlen[n]; i++)
     {
-
-        senlen++;
+        // if the letter is between a and z then count the characters. else, treat them as spaces. 
+        if(text[wordlen] > 65 || text[wordlen] < )
     }
 }
 // longer words
