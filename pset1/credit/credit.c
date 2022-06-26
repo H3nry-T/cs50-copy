@@ -61,21 +61,30 @@ int main(void)
         if ((len == 16 || len == 13) && startvisa(n) == 4)
         {
             printf("VISA\n");
+            return 0;
         }
     //check MASTERCARD 16 digits starting 51,52,53,54,55
         else if ((len == 16) && (startmaster(n) == 51 || startmaster(n) == 52 || startmaster(n) == 53 || startmaster(n) == 54 || startmaster(n) == 55))
         {
             printf("MASTERCARD\n");
+            return 0;
         }
     //check AMERICAN EXPRESS 15 digits starting 34,37
         else if ((len == 15) && (startamex(n) == 34 || startamex(n) == 37))
         {
             printf("AMERICAN EXPRESS\n");
+            return 0;
+        }
+        else
+        {
+            printf("INVALID\n");
+            return 0;
         }
     }
     else
     {
         printf("INVALID\n");
+        return 0;
     }
 }
 
