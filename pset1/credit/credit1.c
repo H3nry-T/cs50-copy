@@ -73,6 +73,10 @@ int main(void)
     {
         visa /= 10
     }
-    
+
     else if ((length == 16 || length = 13) && visa == 4 )
+    {
+        printf("VISA\n");
+        return 0;
+    }
 }
