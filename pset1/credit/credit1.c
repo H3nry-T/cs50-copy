@@ -48,8 +48,9 @@ int main(void)
     {
         printf("VALID\n");
     }
-        else
+    else
     {
+        if (n != ())
         printf("INVALID\n");
     }
 //check the length of the card
