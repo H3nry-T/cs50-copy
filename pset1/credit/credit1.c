@@ -46,7 +46,7 @@ int main(void)
 
 //check the length of the card
     int len = numlen(n);
-    if (checksum(sum3) && (len > 13))
+    if (checksum(sum3) && (len > 12))
     {
 
     }
