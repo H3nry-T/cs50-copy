@@ -56,15 +56,15 @@ int main(void)
 
 }
 
-bool checksum(int sum3)
+bool checksum(int s)
 {
-    if (sum3 % 10 == 0)
+    if (s % 10 == 0)
     {
-        return 0;
+        return true;
     }
     else
     {
-        return 1;
+        return false;
     }
 }
 // int visalength (int n)
