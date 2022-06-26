@@ -1,5 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
+
 int grade(string text);
 
 int main(void)
@@ -12,7 +14,12 @@ int main(void)
 
 int grade(string text)
 {
+    int wordlen = 0
+    int senlen = 0
+    for (i = 0; strlen(text); i++)
+    {
 
+    }
 }
 // longer words
 // longer sentences
