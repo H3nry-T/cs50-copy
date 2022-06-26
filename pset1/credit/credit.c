@@ -8,7 +8,12 @@ bool checksum (int number);
 int main(void)
 {
     int n;
-    
+    do
+    {
+    n = get_int("Number; ");
+
+    }
+    while (n )
 }
 
 bool valid_check(int number);
