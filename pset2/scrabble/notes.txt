@@ -1,0 +1,5 @@
+Complete the compute_score function.
+ •Return the number of points for the word
+ •Ignore non-letter characters
+ •Handle both uppercase and lowercase letters
+•In main,print"Player1wins!","Player2wins!",or"Tie!"
