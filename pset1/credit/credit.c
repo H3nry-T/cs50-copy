@@ -10,7 +10,7 @@ int main(void)
     long n;
     do
     {
-        n = get_long("Number; ");
+        n = get_long("Number: ");
     }
     while (n < 0);
     // find alternating digits from the second last one, then times 2
@@ -51,7 +51,7 @@ int main(void)
 
     int length = 0;
     int visa = 0;
-    while (int visa >= 10)
+    while (visa >= 10)
     {
         visa /= 10;
         length++;
