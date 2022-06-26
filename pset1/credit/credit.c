@@ -15,5 +15,7 @@ int main(void)
     while (n < 0);
     // in finding the second last digit, using the modulus of 100, this will get you the second last digit. 6872 / 100 = 68.72
     //take 72 and pick the first digit, of the remainder. which is the second last digit. (this REPEATS IN A PATTERN)
-    
+    // no1 is the SECOND LAST digit of the card
+    int no1, no2, no3, no4, no5, no6, no7, no8;
+    no1 = (n % 100) / 10
 }
