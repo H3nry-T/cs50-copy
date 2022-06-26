@@ -48,6 +48,8 @@ int main(void)
     {
         printf("INVALID\n");
     }
+
+    int length: 
 }
 
 bool checksum(int sum3)
