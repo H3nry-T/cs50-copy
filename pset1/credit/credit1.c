@@ -32,7 +32,8 @@ int main(void)
     card7=(card7%100/10)+(card7%10);
     card8=(card8%100/10)+(card8%10);
 
-    int card9, card10,card11,card12,card13,card14,card15,card16;
+    int sum1=card1+card2+card3+card4+card5+card6+card7+card8;
+    
     no9  = (n % 10);
     no10 = (n % 1000) / 10;
     no11 = (n % 100000) / 1000;
