@@ -60,7 +60,7 @@ int main(void)
 //check MASTERCARD
 
 //check AMERICAN EXPRESS
-
+}
 bool checksum(int sum3)
 {
     if (sum3 % 10 == 0)

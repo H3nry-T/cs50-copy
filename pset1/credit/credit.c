@@ -61,7 +61,6 @@ int main(void)
     {
         printf("VISA \n");
     }
-    else if(length == 16 && ) // and starting digit is 34 or 37 
 }
 
 bool checksum(int sum3)
