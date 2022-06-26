@@ -53,5 +53,10 @@ int main(void)
     int sum3 = sum1 + sum2;
 
     int length = 0
-    if (sum3 % 10 != 0) 
+    if (sum3 % 10 != 0)
+    {
+        printf("INVALID\n");
+        return 0;
+    }
+    e
 }
