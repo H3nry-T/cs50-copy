@@ -4,7 +4,7 @@
 
 //prototype for checking credit card number
 bool checksum (int sum3);
-
+int numlen(int card);
 int main(void)
 {
     long n;
