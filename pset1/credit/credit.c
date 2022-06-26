@@ -64,7 +64,7 @@ int main(void)
             printf("AMEX\n");
         }
     }
-    else
+    else if ()
     {
         printf("INVALID\n");
     }
