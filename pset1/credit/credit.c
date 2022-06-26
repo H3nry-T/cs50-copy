@@ -50,7 +50,7 @@ int main(void)
     }
 
     int length = 0;
-    for (visa = 0; v
+    while (visa >= 10)
 }
 
 bool checksum(int sum3)
