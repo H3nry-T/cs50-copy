@@ -75,7 +75,7 @@ bool checksum(int sum3)
     }
 }
 
-int numlen(int card)
+int numlen(unsigned long long card)
 {
     int length = 1;
     while (card >= 10)
