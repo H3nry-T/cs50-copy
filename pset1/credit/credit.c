@@ -3,7 +3,7 @@
 #include <math.h>
 
 //prototype for checking credit card number
-bool checksum (int number);
+bool checksum (int sum3);
 
 int main(void)
 {
@@ -39,7 +39,7 @@ int main(void)
     int sum2 = no9 + no10 + no11 + no12 + no13 + no14 + no15 + no16;
     int sum3 = sum1 + sum2;
     // check if the last digit of sum 3 is zero , then this is valid boolean expression true.
-
+    
 }
 
 bool checksum(int sum3);
