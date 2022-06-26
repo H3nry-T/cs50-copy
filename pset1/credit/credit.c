@@ -46,7 +46,7 @@ int main(void)
     }
     if (visalength(n) == 16 || visalength(n) == 13)
     {
-        prinf("VISA\n");
+        printf("VISA\n");
     }
     else
     {
@@ -70,10 +70,10 @@ bool checksum(int sum3)
 int visalength (int n)
 {
         int length = 1;
-    while (n >= 10 && length <= n)
+    while (n >= 10)
     {
         n /= 10;
         length++;
     }
-    printf("%i \n", length);
+    return length;
 }
