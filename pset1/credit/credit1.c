@@ -52,10 +52,10 @@ int main(void)
     int sum2 = no9 + no10 + no11 + no12 + no13 + no14 + no15 + no16;
     int sum3 = sum1 + sum2;
 
-    int length = 0
+    int length = 0;
     while (n > 0)
     {
-        n /= 10
+        n /= 10;
         length++;
     }
 
@@ -65,18 +65,44 @@ int main(void)
         return 0;
     }
 
-    long visa = n
-    long amex = n
-    long master = n
+    long visa = n;
+    long amex = n;
+    long master = n;
 
     while (visa >= 10)
     {
-        visa /= 10
+        visa /= 10;
     }
 
-    else if ((length == 16 || length = 13) && visa == 4 )
+    if ((length == 16 || length == 13) && visa == 4 )
     {
         printf("VISA\n");
         return 0;
     }
-}
+
+    while (amex >= 10000000000000)
+    {
+        amex /= 10000000000000;
+    }
+
+    if (length == 15 && (amex == 34 || amex == 37))
+    {
+        printf("AMERICAN EXPRESS\n");
+        return 0;
+    }
+
+    while (master >= 100000000000000)
+    {
+        master /= 100000000000000;
+    }
+
+    if (length == 16 && (master == 51 || master == 52 || master == 53 || master == 54 || master == 55)
+    {
+        printf("MASTERCARD\n");
+        return 0;
+    }
+    else
+    {
+        printf("INVALID\n");
+        return 0;
+    }
