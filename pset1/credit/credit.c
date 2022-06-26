@@ -56,6 +56,11 @@ int main(void)
         length++;
     }
     printf("%i \n", length);
+
+    if (length == 16 || length == 13)
+    {
+        printf("VISA \n");
+    }
 }
 
 bool checksum(int sum3)
