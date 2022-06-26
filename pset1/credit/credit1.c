@@ -77,13 +77,12 @@ bool checksum(int sum3)
 
 int numlen(int card)
 {
-    int length = 0;
+    int length = 1;
     while (card >= 10)
     {
         card /= 10;
         length++;
     }
-    return length;
 }
 // take starting digit (should be 4)
 int startvisa(int card)
