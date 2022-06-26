@@ -52,7 +52,7 @@ int main(void)
     int length = 0;
     while (n >= 10 && length < n)
     {
-        visa /= 10;
+        n /= 10;
         length++;
     }
     printf("%i", length);
