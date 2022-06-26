@@ -58,5 +58,10 @@ int main(void)
         printf("INVALID\n");
         return 0;
     }
-    e
+
+    long visa = n
+    long amex = n
+    long master = n
+
+    else if (n)
 }
