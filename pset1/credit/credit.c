@@ -13,7 +13,7 @@ int main(void)
     n = get_int("Number; ");
 
     }
-    while (n )
+    while (n < 0 || )
 }
 
 bool valid_check(int number);
