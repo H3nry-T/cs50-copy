@@ -54,18 +54,21 @@ int main(void)
     int len = numlen(n);
     printf("%i \n", len);
 
-//check VISA
-    if ((len == 16 || len == 13) && startvisa(n) == 4) // and starting digit is 4
+//check VISA digits 16 or 13 starting digit 4
+    if ((len == 16 || len == 13) && startvisa(n) == 4)
     {
         printf("VISA \n");
     }
-//check MASTERCARD 16 digits 51,52,53,54,55
-    if ((len == 16) && (startmaster(n) == 51 || startmaster(n) == 52 || startmaster(n) == 53 || startmaster(n) == 54 || startmaster(n) == 55))
+//check MASTERCARD 16 digits starting 51,52,53,54,55
+    else if ((len == 16) && (startmaster(n) == 51 || startmaster(n) == 52 || startmaster(n) == 53 || startmaster(n) == 54 || startmaster(n) == 55))
     {
         print("MASTER\n");
     }
-    
-//check AMERICAN EXPRESS 15 digits 34,37
+//check AMERICAN EXPRESS 15 digits starting 34,37
+    else if ((len == 15) && (startamex(n) == 34 || startamex(n) == 37))
+    {
+        print("AMEX\n");
+    }
 }
 bool checksum(int sum3)
 {
@@ -103,6 +106,13 @@ int startvisa(long visa)
 // starting digit of master
 
 int startmaster(long master)
+{
+    master /
+}
+
+//starting digits of amex
+
+int startamex(long amex)
 {
 
 }
