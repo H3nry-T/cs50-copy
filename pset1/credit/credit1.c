@@ -60,7 +60,11 @@ int main(void)
         printf("VISA \n");
     }
 //check MASTERCARD 16 digits 51,52,53,54,55
-    if 
+    if ((len == 16) && (startmaster(n) == 51 || startmaster(n) == 52 || startmaster(n) == 53 || startmaster(n) == 54 || startmaster(n) == 55))
+    {
+        print("MASTER\n");
+    }
+    
 //check AMERICAN EXPRESS 15 digits 34,37
 }
 bool checksum(int sum3)
@@ -94,4 +98,11 @@ int startvisa(long visa)
         visa /= 10;
     }
     return visa;
+}
+
+// starting digit of master
+
+int startmaster(long master)
+{
+
 }
