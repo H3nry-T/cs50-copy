@@ -39,17 +39,25 @@ int main(void)
     int sum2 = no9 + no10 + no11 + no12 + no13 + no14 + no15 + no16;
     int sum3 = sum1 + sum2;
     // check if the last digit of sum 3 is zero , then this is valid boolean expression true.
-    
-}
 
-bool checksum(int sum3);
-{
-    if (sum3 % 10 == 0)
+    if (checksum(sum3) == 0)
     {
         printf("VALID");
     }
     else
     {
         printf("INVALID");
+    }
+}
+
+bool checksum(int sum3);
+{
+    if (sum3 % 10 == 0)
+    {
+        return 0;
+    }
+    else
+    {
+        return 1;
     }
 }
