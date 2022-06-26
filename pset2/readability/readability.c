@@ -14,11 +14,12 @@ int main(void)
 
 int grade(string text)
 {
-    int wordlen = 0
-    int senlen = 0
+    int wordlen = strnlen(text);
+    int senlen = 0;
     for (i = 0; strlen(text); i++)
     {
-
+        
+        senlen++;
     }
 }
 // longer words
