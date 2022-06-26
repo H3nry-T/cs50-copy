@@ -83,8 +83,8 @@ int numlen(int card)
     }
     return length;
 }
-
+// take starting digit (should be 4)
 int startvisa(int card)
 {
-    while ()
+    while (card >= 10)
 }
