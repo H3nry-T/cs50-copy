@@ -89,7 +89,7 @@ int numlen(unsigned long long card)
 // take starting digit (should be 4)
 int startvisa(int card)
 {
-    while (card >= 10)
+    while (card >= 0)
     {
         card /= 10;
     }
