@@ -50,7 +50,8 @@ int main(void)
     }
     else
     {
-        if (n != ())
+        int len = numlen(n)
+        if (len < 13)
         printf("INVALID\n");
     }
 //check the length of the card
