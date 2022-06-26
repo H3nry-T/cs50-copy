@@ -33,18 +33,19 @@ int main(void)
     card8=(card8%100/10)+(card8%10);
 
     int sum1=card1+card2+card3+card4+card5+card6+card7+card8;
-    
-    no9  = (n % 10);
-    no10 = (n % 1000) / 10;
-    no11 = (n % 100000) / 1000;
-    no12 = (n % 10000000) / 100000;
-    no13 = (n % 1000000000) / 10000000;
-    no14 = (n % 100000000000) / 1000000000;
-    no15 = (n % 10000000000000) / 100000000000;
-    no16 = (n % 1000000000000000) / 10000000000000;
 
-    int sum1 = no1 + no2 + no3 + no4 + no5 + no6 + no7 + no8;
-    int sum2 = no9 + no10 + no11 + no12 + no13 + no14 + no15 + no16;
+    int card9,card10,card11,card12,card13,card14,card15,card16;
+
+    card9=(card%10);
+    card10=((card%1000)/100);
+    card11=((card%100000)/10000);
+    card12=((card%10000000)/1000000);
+    card13=((card%1000000000)/100000000);
+    card14=((card%100000000000)/10000000000);
+    card15=((card%10000000000000)/1000000000000);
+    card16=((card%1000000000000000)/100000000000000);
+
+    int sum2=card9+card10+card11+card12+card13+card14+card15+card16;
     int sum3 = sum1 + sum2;
 
     int length = 0;
