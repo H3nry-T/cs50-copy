@@ -11,12 +11,13 @@ int main(void)
     do
     {
         n = get_long("Number: ");
-        if (n < 0 || (n != 13 && n != 15 && n != 16))
-        {
-            printf("INVALID\n");
-        }
+        // if (n < 0 || (n != 13 && n != 15 && n != 16))
+        // {
+        //     printf("INVALID\n");
+        // }
     }
     while (n < 0 || (n != 13 && n != 15 && n != 16));
+    printf("INVALID\n");
     // find alternating digits from the second last one, then times 2
     // no1 is the SECOND LAST digit of the card
     int no1, no2, no3, no4, no5, no6, no7, no8;
