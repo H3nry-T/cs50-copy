@@ -83,7 +83,7 @@ int numlen(int card)
         card /= 10;
         length++;
     }
-    return length;
+    return int length;
 }
 // take starting digit (should be 4)
 int startvisa(int card)
