@@ -2,12 +2,13 @@
 #include <stdio.h>
 #include <math.h>
 
-//prototype for checking credit card number 
+//prototype for checking credit card number
 bool checksum (int number);
 
 int main(void)
 {
-
+    int n;
+    
 }
 
 bool valid_check(int number);
