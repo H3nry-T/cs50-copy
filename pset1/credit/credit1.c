@@ -109,12 +109,19 @@ int startvisa(long visa)
 int startmaster(long master)
 {
     while (master >= 100000000000000)
-    master / 100000000000000
+    {
+        master / 100000000000000;
+    }
+    return master;
 }
 
 //starting digits of amex
 
 int startamex(long amex)
 {
-
+    while (amex >= 10000000000000)
+    {
+        amex / 10000000000000;
+    }
+    return amex;
 }
