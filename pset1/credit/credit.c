@@ -29,6 +29,8 @@ int main(void)
     no7 = ((n % 100000000000000) / 10000000) * 2;
     no8 = ((n % 10000000000000000) / 10000000) * 2;
 
+    no1 = no1 (100/10 + 10)
+
     int no9, no10, no11, no12, no13, no14, no15, no16;
     no9 = (n % 10);
     no10 = (n % 1000) / 10;
@@ -64,7 +66,7 @@ int main(void)
             printf("AMEX\n");
         }
     }
-    else if ()
+    else
     {
         printf("INVALID\n");
     }
