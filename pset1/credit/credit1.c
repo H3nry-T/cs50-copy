@@ -86,5 +86,5 @@ int numlen(int card)
 
 int startvisa(int card)
 {
-    while (card)
+    while ()
 }
