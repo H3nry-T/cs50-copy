@@ -46,10 +46,6 @@ int main(void)
     {
         printf("VALID\n");
     }
-    else
-    {
-        printf("INVALID\n");
-    }
 //check the length of the card
     int len = numlen(n);
     printf("%i \n", len);
@@ -60,16 +56,21 @@ int main(void)
         printf("VISA \n");
     }
 //check MASTERCARD 16 digits starting 51,52,53,54,55
-    else if ((len == 16) && (startmaster(n) == 51 || startmaster(n) == 52 || startmaster(n) == 53 || startmaster(n) == 54 || startmaster(n) == 55))
+    if ((len == 16) && (startmaster(n) == 51 || startmaster(n) == 52 || startmaster(n) == 53 || startmaster(n) == 54 || startmaster(n) == 55))
     {
         print("MASTER\n");
     }
 //check AMERICAN EXPRESS 15 digits starting 34,37
-    else if ((len == 15) && (startamex(n) == 34 || startamex(n) == 37))
+    if ((len == 15) && (startamex(n) == 34 || startamex(n) == 37))
     {
         print("AMEX\n");
     }
+    else
+    {
+        printf("INVALID\n");
+    }
 }
+
 bool checksum(int sum3)
 {
     if (sum3 % 10 == 0)
