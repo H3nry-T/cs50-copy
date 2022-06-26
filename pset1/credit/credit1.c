@@ -96,7 +96,7 @@ int main(void)
         master /= 100000000000000;
     }
 
-    if (length == 16 && (master == 51 || master == 52 || master == 53 || master == 54 || master == 55)
+    if (length == 16 && (master == 51 || master == 52 || master == 53 || master == 54 || master == 55))
     {
         printf("MASTERCARD\n");
         return 0;
@@ -106,3 +106,4 @@ int main(void)
         printf("INVALID\n");
         return 0;
     }
+}
