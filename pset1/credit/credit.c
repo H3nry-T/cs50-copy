@@ -50,7 +50,13 @@ int main(void)
     }
 
     int length = 0;
-    while (visa >= 10)
+    int visa = 0;
+    while (int visa >= 10)
+    {
+        visa /= 10;
+        length++;
+    }
+    printf("%i", length);
 }
 
 bool checksum(int sum3)
