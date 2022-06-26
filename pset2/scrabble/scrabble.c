@@ -42,11 +42,11 @@ int compute_score(string word)
     {// if the word is upper case
         if (isupper(word[i]))
         {// the character of the word turns into an integer - 65 should equal position 0 IF the letter is A
-            points += POINTS[word[i] - int A];
-        }
+            points += POINTS[word[i] - 'A'];
+        }//word[i] is a character because stringarray is basically a character. A = 65 when placed in an arithmetic calculation.
         if (islower(word[i]))
-        {
-            points += POINTS[word[i] - int a];
+        {// in single quotation marks, a = 97 because of the ASCII coding
+            points += POINTS[word[i] - 'a'];
         }
     }
     return points;
