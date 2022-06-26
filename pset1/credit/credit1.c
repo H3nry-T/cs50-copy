@@ -108,7 +108,7 @@ int startvisa(long visa)
 
 int startmaster(long master)
 {
-    master /
+    master / 100000000000000
 }
 
 //starting digits of amex
