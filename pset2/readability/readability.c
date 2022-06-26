@@ -16,7 +16,7 @@ int grade(string text)
 {
     int n = 0; // the number of gaps in the sentence
     int wordlen = strnlen(text);
-    char senlen[n];
+    char text[wordlen];
     for (i = 0; senlen[n]; i++)
     {
 
