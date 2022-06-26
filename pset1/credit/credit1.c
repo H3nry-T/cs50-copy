@@ -4,7 +4,7 @@
 
 //prototype for checking credit card number
 bool checksum (int sum3);
-int numlen(int card);
+int numlen(unsigned long long card);
 int startvisa(int card);
 
 int main(void)
@@ -77,7 +77,7 @@ bool checksum(int sum3)
 
 int numlen(int card)
 {
-    int length = 1;
+    int length = 0;
     while (card >= 10)
     {
         card /= 10;
