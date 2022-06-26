@@ -48,7 +48,7 @@ int main(void)
     {
         printf("VISA\n");
     }
-    else
+    else if (checksum(sum3) != 0)
     {
         printf("INVALID\n");
     }
