@@ -83,7 +83,9 @@ int numlen(unsigned long long card)
         card /= 10;
         length++;
     }
+    return length;
 }
+
 // take starting digit (should be 4)
 int startvisa(int card)
 {
