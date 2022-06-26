@@ -14,4 +14,7 @@ int main(void)
 
     }
     while (n < 0) //card number cannot be negative
+    // in finding the second last digit, using the modulus of 100, this will get you the second last digit. 6872 / 100 = 68.72
+    //take 72 and pick the first digit, of the remainder. which is the second last digit.
+    
 }
