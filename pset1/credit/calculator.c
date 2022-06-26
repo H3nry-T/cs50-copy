@@ -4,8 +4,9 @@
 
 int main(void)
 {
-    int n = 5000;
-    no1 = ((no1 % 100) / 10) * 2;
-    no2 = ((no1 % 100)/ 10 * 2);
+    int no1 = 5111;
+    int c = ((no1 % 100) / 10) * 2;
+    int c2 = ((no1 % 10000)/ 1000 * 2);
+    printf("%i and %i", c, c2);
 
 }
