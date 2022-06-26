@@ -48,18 +48,18 @@ int main(void)
     {
         printf("INVALID\n");
     }
-
+//check the length of the card
     int length = numlen(n);
     printf("%i \n", length);
 
 //check VISA
-    if (length == 16 || length == 13) // and starting digit is 4
+    if ((length == 16 || length == 13) && starting digit = 4 ) // and starting digit is 4
     {
         printf("VISA \n");
     }
-//check MASTERCARD
+//check MASTERCARD 16 digits 51,52,53,54,55
 
-//check AMERICAN EXPRESS
+//check AMERICAN EXPRESS 15 digits 34,37
 }
 bool checksum(int sum3)
 {
@@ -82,4 +82,9 @@ int numlen(int card)
         length++;
     }
     return length;
+}
+
+int startvisa(int card)
+{
+    while (card)
 }
