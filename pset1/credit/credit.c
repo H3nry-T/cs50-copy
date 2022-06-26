@@ -49,7 +49,8 @@ int main(void)
         printf("INVALID\n");
     }
 
-    int length: 
+    int length = 0;
+    for (visa = 0; v
 }
 
 bool checksum(int sum3)
