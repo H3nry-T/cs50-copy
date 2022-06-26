@@ -50,8 +50,7 @@ int main(void)
     }
 
     int length = 0;
-    int visa = 0;
-    while (visa >= 10)
+    while (n >= 10)
     {
         visa /= 10;
         length++;
