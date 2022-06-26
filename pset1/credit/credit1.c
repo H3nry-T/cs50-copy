@@ -2,13 +2,6 @@
 #include <stdio.h>
 #include <math.h>
 
-//prototype for checking credit card number
-bool checksum (int sum3);
-int numlen(long card);
-int startvisa(long visa);
-int startmaster(long master);
-int startamex(long amex);
-
 int main(void)
 {
     long n;
