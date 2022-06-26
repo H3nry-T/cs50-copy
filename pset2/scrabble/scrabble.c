@@ -37,10 +37,10 @@ int compute_score(string word)
 {
     // TODO: Compute and return score for string
     int points = 0
-    
+
     for (int i = 0; i < strlen(word); i++)
     {
-        wordarray[strlen(word)] = {}
+        
     }
     return 0;
 }
