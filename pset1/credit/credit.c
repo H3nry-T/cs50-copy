@@ -11,6 +11,10 @@ int main(void)
     do
     {
         n = get_long("Number: ");
+        if (n < 0 || (n != 13 && n != 15 && n != 16))
+        {
+            printf("INVALID\n");
+        }
     }
     while (n < 0 || (n != 13 && n != 15 && n != 16));
     // find alternating digits from the second last one, then times 2
