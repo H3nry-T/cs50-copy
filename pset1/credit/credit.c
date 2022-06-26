@@ -24,4 +24,25 @@ int main(void)
     no6 = ((n % 1000000000000) / 10000000) * 2
     no7 = ((n % 100000000000000) / 10000000) * 2
     no8 = ((n % 10000000000000000) / 10000000) * 2
+
+    int no9, no10, no11, no12, no13, no14, no15, no16;
+    no9 = (n % 10)
+    no10 = (n % 1000) / 10
+    no11 = (n % 100000) / 1000
+    no12 = (n % 10000000) / 100000
+    no13 = (n % 1000000000) / 100000
+    no14 = (n % 100000000000) / 100000
+    no15 = (n % 10000000000000) / 100000
+    no16 = (n % 1000000000000000) / 100000
+
+    int sum1 = no1 + no2 + no3 + no4 + no5 + no6 + no7 + no8
+    int sum2 = no9 + no10 + no11 + no12 + no13 + no14 + no15 + no16
+    int sum3 = sum1 + sum2
+    // check if the last digit of sum 3 is zero , then this is valid boolean expression true.
+
+}
+
+bool checksum(int number);
+{
+    
 }
