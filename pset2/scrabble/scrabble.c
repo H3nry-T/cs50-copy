@@ -42,7 +42,7 @@ int compute_score(string word)
     {
         if (isupper(word[i]))
         {
-            points += 
+            points += POINTS[i]
         }
     }
     return 0;
