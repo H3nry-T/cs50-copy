@@ -39,12 +39,16 @@ int compute_score(string word)
     int points = 0
 
     for (int i = 0; i < strlen(word); i++)
-    {
+    {// if the word is upper case
         if (isupper(word[i]))
-        {
+        {// the character of the word turns into an integer - 65 should equal position 0 IF the letter is A
             points += POINTS[int word[i] - int A];
         }
+        if (islower(word[i]))
+        {
+            points += POINTS[int word[i] - int a]
+        }
     }
-    return 0;
+    return points;
 }
 
