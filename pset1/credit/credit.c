@@ -13,7 +13,7 @@ int main(void)
     n = get_long("Number; ");
 
     }
-    while (n < 0 || )
+    while (n < 0) //card number cannot be negative
 }
 
 bool valid_check(int number);
