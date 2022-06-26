@@ -39,15 +39,20 @@ int compute_score(string word)
     int points = 0;
 
     for (int i = 0; i < strlen(word); i++)
-    {// if the word is upper case
+    {
+        // if the word is upper case
         if (isupper(word[i]))
-        {// the character of the word turns into an integer - 65 should equal position 0 IF the letter is A, rotates through the ascii codes until letter z
+        {
+            // the character of the word turns into an integer - 65 should equal position 0 IF the letter is A, rotates through the ascii codes until letter z
             points += POINTS[word[i] - 'A'];
-        }//word[i] is a character because stringarray is basically a character. A = 65 when placed in an arithmetic calculation.
+        }
+        //word[i] is a character because stringarray is basically a character. A = 65 when placed in an arithmetic calculation.
         else if (islower(word[i]))
-        {// in single quotation marks, a = 97 because of the ASCII coding
+        {
+            // in single quotation marks, a = 97 because of the ASCII coding
             points += POINTS[word[i] - 'a'];
-        }// if outside the alphabet ascii codes then do not give any points
+        }
+        // if outside the alphabet ascii codes then do not give any points
         else if (word[i] < 65 || word[i] > 122)
         {
             points += 0;
