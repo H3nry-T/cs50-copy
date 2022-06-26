@@ -4,10 +4,6 @@
 
 //prototype for checking credit card number
 bool checksum (int sum3);
-int numlen(long card);
-int startvisa(long visa);
-int startmaster(long master);
-int startamex(long amex);
 
 int main(void)
 {
@@ -44,30 +40,26 @@ int main(void)
     int sum3 = sum1 + sum2;
     // check if the last digit of sum 3 is zero , then this is valid boolean expression true.
 
-//check the length of the card
-    int len = numlen(n);
-    if (checksum(sum3) && (len > 12))
+    if (checksum(sum3))
     {
-
+        printf("VALID\n");
     }
-        else
+    else
     {
         printf("INVALID\n");
     }
-//check VISA digits 16 or 13 starting digit 4
-    if ((len == 16 || len == 13) && startvisa(n) == 4)
+
+    int length = 1;
+    while (n >= 10)
+    {
+        n /= 10;
+        length++;
+    }
+    printf("%i \n", length);
+
+    if (length == 16 || length == 13) // and starting digit is 4
     {
         printf("VISA \n");
-    }
-//check MASTERCARD 16 digits starting 51,52,53,54,55
-    else if ((len == 16) && (startmaster(n) == 51 || startmaster(n) == 52 || startmaster(n) == 53 || startmaster(n) == 54 || startmaster(n) == 55))
-    {
-        printf("MASTER\n");
-    }
-//check AMERICAN EXPRESS 15 digits starting 34,37
-    else if ((len == 15) && (startamex(n) == 34 || startamex(n) == 37))
-    {
-        printf("AMEX\n");
     }
 }
 
@@ -81,47 +73,4 @@ bool checksum(int sum3)
     {
         return 1;
     }
-}
-
-int numlen(long card)
-{
-    int length = 1;
-    while (card >= 10)
-    {
-        card /= 10;
-        length++;
-    }
-    return length;
-}
-
-// take starting digit (should be 4)
-int startvisa(long visa)
-{
-    while (visa >= 10)
-    {
-        visa /= 10;
-    }
-    return visa;
-}
-
-// starting digit of master
-
-int startmaster(long master)
-{
-    while (master >= 100000000000000)
-    {
-        master /= 100000000000000;
-    }
-    return master;
-}
-
-//starting digits of amex
-
-int startamex(long amex)
-{
-    while (amex >= 10000000000000)
-    {
-        amex /= 10000000000000;
-    }
-    return amex;
 }
