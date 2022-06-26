@@ -87,8 +87,8 @@ bool checksum(int sum3)
 
 int numlen(long card)
 {
-    int length = 1;
-    while (card >= 10)
+    int length = 0;
+    while (card >= 0)
     {
         card /= 10;
         length++;
