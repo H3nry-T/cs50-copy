@@ -38,3 +38,8 @@ int compute_score(string word)
     // TODO: Compute and return score for string
     return 0;
 }
+
+float multfloat(float a, float b)
+{
+    a * b
+}
