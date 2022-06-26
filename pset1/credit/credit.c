@@ -70,7 +70,7 @@ int main(void)
     //check AMERICAN EXPRESS 15 digits starting 34,37
         else if ((len == 15) && (startamex(n) == 34 || startamex(n) == 37))
         {
-            printf("AMEX\n");
+            printf("AMERICAN EXPRESS\n");
         }
     }
     else
