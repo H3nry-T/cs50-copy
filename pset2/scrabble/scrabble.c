@@ -41,5 +41,7 @@ int compute_score(string word)
 
 float multfloat(float a, float b)
 {
-    a * b
+    float product = a * b;
+    return product;
 }
+
