@@ -23,16 +23,16 @@ int main(void)
     card7=((card%100000000000000)/10000000000000*2);
     card8=((card%10000000000000000)/1000000000000000*2);|
 
-    no1 = (no1 % 100 / 10) + (no1 % 10);
-    no2 = (no2 % 100 / 10) + (no2 % 10);
-    no3 = (no3 % 100 / 10) + (no3 % 10);
-    no4 = (no4 % 100 / 10) + (no4 % 10);
-    no5 = (no5 % 100 / 10) + (no5 % 10);
-    no6 = (no6 % 100 / 10) + (no6 % 10);
-    no7 = (no7 % 100 / 10) + (no7 % 10);
-    no8 = (no8 % 100 / 10) + (no8 % 10);
+    card1=(card1%100/10)+(card1%10);
+    card2=(card2%100/10)+(card2%10);
+    card3=(card3%100/10)+(card3%10);
+    card4=(card4%100/10)+(card4%10);
+    card5=(card5%100/10)+(card5%10);
+    card6=(card6%100/10)+(card6%10);
+    card7=(card7%100/10)+(card7%10);
+    card8=(card8%100/10)+(card8%10);
 
-    int no9, no10, no11, no12, no13, no14, no15, no16;
+    int card9, card10,card11,card12,card13,card14,card15,card16
     no9  = (n % 10);
     no10 = (n % 1000) / 10;
     no11 = (n % 100000) / 1000;
