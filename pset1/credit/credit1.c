@@ -108,6 +108,7 @@ int startvisa(long visa)
 
 int startmaster(long master)
 {
+    while (master >= 100000000000000)
     master / 100000000000000
 }
 
