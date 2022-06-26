@@ -51,7 +51,7 @@ int main(void)
 //check the length of the card
     int len = numlen(n);
 //check VISA digits 16 or 13 starting digit 4
-    else if ((len == 16 || len == 13) && startvisa(n) == 4)
+    if ((len == 16 || len == 13) && startvisa(n) == 4)
     {
         printf("VISA \n");
     }
