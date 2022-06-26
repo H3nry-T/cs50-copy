@@ -49,7 +49,7 @@ int main(void)
         printf("INVALID\n");
     }
 
-    length = numlen(n);
+    int length = numlen(n);
     printf("%i \n", length);
 
 //check VISA
