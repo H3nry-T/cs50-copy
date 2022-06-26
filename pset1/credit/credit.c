@@ -7,10 +7,10 @@ bool checksum (int number);
 
 int main(void)
 {
-    int n;
+    long n;
     do
     {
-    n = get_int("Number; ");
+    n = get_long("Number; ");
 
     }
     while (n < 0 || )
