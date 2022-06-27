@@ -21,7 +21,7 @@ int main(void)
     int word = words(text);
     printf("this text has %i words\n", word);
 
-    float L = (letter / word) * 100;
+    float L = (65 / 14) * 100;
     printf("L is %f\n", L);
     float S = (sentence / word) * 100;
     printf("S is %f\n", S);
