@@ -12,16 +12,16 @@ int main(void)
 {
     string text = get_string("Text: ");
 
-    int letter = letters(text);
-    printf("this text has %i letters\n", letter);
+    float letter = letters(text);
+    printf("this text has %f letters\n", letter);
 
-    int sentence = sentences(text);
-    printf("this text has %i sentences\n", sentence);
+    float sentence = sentences(text);
+    printf("this text has %f sentences\n", sentence);
 
-    int word = words(text);
-    printf("this text has %i words\n", word);
+    float word = words(text);
+    printf("this text has %f words\n", word);
 
-    float L = (65 / 14) * 100;
+    float L = (letter / word) * 100;
     printf("L is %f\n", L);
     float S = (sentence / word) * 100;
     printf("S is %f\n", S);
