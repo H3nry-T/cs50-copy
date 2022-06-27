@@ -55,9 +55,10 @@ int sentences(string text)
 int words(string text)
 {
     int words = 1;
+    char nonwords[] = " .,;\n\t";
     for (int i = 0; i < strlen(text); i++)
     {
-        if (text[i] == ' .,;\n\t') // ' '
+        if (text[i] == nonwords[]) // ' '
         {
             words++;
         }
