@@ -18,9 +18,9 @@ int main(void)
     // calculate words
     int word = words(text);
     // calculate L is the average number of letters per 100 words in the text
-    float L = letter / word * 100;
+    float L = letter / (float) word * 100;
     // calculate S is the average number of sentences per 100 words in the text
-    float S = sentence / word * 100;
+    float S = sentence / (float) word * 100;
 
     int index = 0.0588 * L - 0.296 * S - 15.8;
 
