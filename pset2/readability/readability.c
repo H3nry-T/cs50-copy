@@ -63,7 +63,5 @@ int words(string text)
 }
 
 // index = 0.0588 * L - 0.296 * S - 15.8
-//where ,
-//and .
 //Congratulations! Today is your day. You're off to Great Places! You're off and away!
 //65 letters, 4 sentences, and 14 words.
