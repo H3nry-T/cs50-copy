@@ -14,7 +14,15 @@ int main(void)
 
 }
 
-int (string text)
+int letters(string text)
+{
+    
+}
+int sentences(string text)
+{
+
+}
+int words(string text)
 {
 
 }
