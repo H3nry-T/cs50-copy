@@ -24,7 +24,14 @@ int sentences(string text)
 }
 int words(string text)
 {
-
+    int words = 0;
+    for (i = 0; i < 10; i++)
+    {
+        if (text[i] == NULL)
+        {
+            words++;
+        }
+    }
 }
 // longer words
 // longer sentences
