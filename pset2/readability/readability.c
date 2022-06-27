@@ -25,13 +25,13 @@ int letters(string text)
     {
         if (text[i] == 32)
         {
-            words++;
+            letters++;
         }
     }
 }
 int sentences(string text)
 {
-    
+
 }
 int words(string text)
 {
