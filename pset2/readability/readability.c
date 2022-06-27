@@ -20,7 +20,7 @@ int main(void)
 
 int letters(string text)
 {
-
+    
 }
 int sentences(string text)
 {
