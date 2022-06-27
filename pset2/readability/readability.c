@@ -11,13 +11,17 @@ int main(void)
     string text = get_string("Text:");
     // calculate letters
     int letter = letters(text);
-    // calculate L is the average number of letters per 100 words in the text
-    
     // calculate sentences
+    int sentences = sentences(text);
     // calculate words
+    int words = words(text);
+    // calculate L is the average number of letters per 100 words in the text
+    float L = letter / words * 100;
+    // calculate S is the average number of sentences per 100 words in the text
+    float S = sentences / words * 100;
 
     int index = 0.0588 * L - 0.296 * S - 15.8
-    printf("Grade %i\n",grade);
+    printf("Grade %i\n",index);
 
 }
 
@@ -60,6 +64,6 @@ int words(string text)
 
 // index = 0.0588 * L - 0.296 * S - 15.8
 //where ,
-//and S is the average number of sentences per 100 words in the text.
+//and .
 //Congratulations! Today is your day. You're off to Great Places! You're off and away!
 //65 letters, 4 sentences, and 14 words.
