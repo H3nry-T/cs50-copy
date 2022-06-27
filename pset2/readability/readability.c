@@ -23,7 +23,7 @@ int letters(string text)
     int letters = 0;
     for (i = 0; i < strlen(text); i++)
     {
-        if (text[i] == 32)
+        if (text[i] < 65 || text[i] > 90)
         {
             letters++;
         }
