@@ -23,10 +23,10 @@ int main(void)
     float S = sentence / (float) word * 100;
 
     int index = 0.0588 * L - 0.296 * S - 15.8;
-    
+
     if (index < 1)
     {
-        printf("Before Grade 1\n")
+        printf("Before Grade 1\n");
     }
     else if (index > 16)
     {
