@@ -28,10 +28,11 @@ int letters(string text)
             letters++;
         }
     }
+    return letters;
 }
 int sentences(string text)
 {
-
+    
 }
 int words(string text)
 {
@@ -43,6 +44,7 @@ int words(string text)
             words++;
         }
     }
+    return words;
 }
 // longer words
 // longer sentences
