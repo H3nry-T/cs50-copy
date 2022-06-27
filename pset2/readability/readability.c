@@ -45,7 +45,7 @@ int sentences(string text)
     int sentences = 0;
     for (int i = 0; i < strlen(text); i++)
     {
-        if (text[i] == 46 || text[i] == 33 || text[i] == 63) // '.' '!' '?'
+        if (text[i] == '.' || text[i] == '!' || text[i] == '?') // '.' '!' '?'
         {
             sentences++;
         }
