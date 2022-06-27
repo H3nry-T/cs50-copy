@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
+#include <ctype.h>
+
 int letters(string text);
 int sentences(string text);
 int words(string text);
@@ -31,7 +33,7 @@ int letters(string text)
     int letters = 0;
     for (int i = 0; i < strlen(text); i++)
     {
-        if ('A' < text[i] < 'z') // 'A' 'z'
+        if (isalpha(text[i])) // 'A' 'z'
         {
             letters++;
         }
