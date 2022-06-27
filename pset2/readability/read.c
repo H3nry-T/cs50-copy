@@ -21,7 +21,7 @@ int main(void)
     int word = words(text);
     printf("this text has %i words\n", word);
 
-    index = 
+    int index = 0.0588 * L - 0.296 * S - 15.8
 }
 
 int letters(string text)
