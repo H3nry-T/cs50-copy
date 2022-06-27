@@ -9,6 +9,10 @@ int words(string text);
 int main(void)
 {
     string text = get_string("Text:");
+    // calculate letters
+    // calculate sentences
+    // calculate words
+
     int index = 0.0588 * L - 0.296 * S - 15.8
     printf("Grade %i\n",grade);
 
@@ -25,9 +29,9 @@ int sentences(string text)
 int words(string text)
 {
     int words = 0;
-    for (i = 0; i < 10; i++)
+    for (i = 0; i < strlen(text); i++)
     {
-        if (text[i] == NULL)
+        if (text[i] == 32)
         {
             words++;
         }
