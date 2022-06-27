@@ -54,12 +54,17 @@ int sentences(string text)
 }
 int words(string text)
 {
+    int words = 0;
     int i = 0;
     while (text[i] != '\0')
     {
+        if (text[i] == ' ' || text[i] == '\n' || text[i] == '\t')
+        {
+            words++;
+        }
         i++;
-        
     }
+    return words;
 }
 
 // index = 0.0588 * L - 0.296 * S - 15.8
