@@ -54,7 +54,7 @@ int sentences(string text)
 }
 int words(string text)
 {
-    int words = 0;
+    int words = 1;
     int i = 0;
     while (text[i] != '\0') //chraracter is not NULL
     {
