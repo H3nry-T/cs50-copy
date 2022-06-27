@@ -13,7 +13,7 @@ int main(void)
     string text = get_string("TEXT:\n");
 
     int letter = letters(text);
-    printf("this text has %i", letter);
+    printf("this text has %i letters\n", letter);
 }
 
 int letters(string text)
