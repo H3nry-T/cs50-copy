@@ -62,7 +62,11 @@ int words(string text)
         {
             if (strchr(nonwords, text[i]) != NULL)
             {
-
+                return 0;
+            }
+            else
+            {
+                words++;
             }
         }
     }
