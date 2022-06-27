@@ -22,9 +22,9 @@ int main(void)
     // calculate S is the average number of sentences per 100 words in the text
     float S = sentence / word * 100;
 
-    float index = 0.0588 * L - 0.296 * S - 15.8;
-    int grade = round(index);
-    printf("Grade %i\n",grade);
+    int index = 0.0588 * L - 0.296 * S - 15.8;
+
+    printf("Grade %i\n",index);
 
 }
 

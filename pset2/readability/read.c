@@ -10,7 +10,7 @@ int words(string text);
 
 int main(void)
 {
-    string text = get_string("TEXT:\n");
+    string text = get_string("Text: ");
 
     int letter = letters(text);
     printf("this text has %i letters\n", letter);
@@ -20,6 +20,8 @@ int main(void)
 
     int word = words(text);
     printf("this text has %i words\n", word);
+
+    index = 
 }
 
 int letters(string text)
