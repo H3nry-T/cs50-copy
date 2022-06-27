@@ -20,7 +20,14 @@ int main(void)
 
 int letters(string text)
 {
-    
+    int words = 0;
+    for (i = 0; i < strlen(text); i++)
+    {
+        if (text[i] == 32)
+        {
+            words++;
+        }
+    }
 }
 int sentences(string text)
 {
