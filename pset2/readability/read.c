@@ -14,6 +14,9 @@ int main(void)
 
     int letter = letters(text);
     printf("this text has %i letters\n", letter);
+
+    int sentence = sentences(text);
+    printf("this text has %i sentences\n", sentence);
 }
 
 int letters(string text)
