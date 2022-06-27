@@ -66,7 +66,17 @@ int words(string text)
                 i++;
             }
         }
+
         words++;
+
+        while ( i < strlen(text))
+        {
+            if (strchr(nonwords, text[i]) == NULL)
+            {
+                break;
+                i++;
+            }
+        }
     }
     return words;
 }
