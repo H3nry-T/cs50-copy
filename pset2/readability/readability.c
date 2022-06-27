@@ -58,9 +58,13 @@ int words(string text)
     char nonwords[] = " .,;\n\t";
     for (int i = 0; i < strlen(text); i++)
     {
-        if (strchr(nonwords, text[i]) != NULL)
+        while (i < strlen(text))
         {
-            break;
+            if (strchr(nonwords, text[i]) != NULL)
+            {
+                break;
+                i++;
+            }
         }
         words++;
     }
