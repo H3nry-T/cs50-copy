@@ -54,7 +54,7 @@ int sentences(string text)
 }
 int words(string text)
 {
-    int words = 1;
+    int words = 0;
     char nonwords[] = " .,;\n\t";
     for (int i = 0; i < strlen(text); i++)
     {
@@ -66,7 +66,6 @@ int words(string text)
         {
             words++;
         }
-    }
     }
     return words;
 }
