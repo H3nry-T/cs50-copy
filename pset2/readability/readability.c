@@ -35,7 +35,7 @@ int sentences(string text)
     int sentences = 0;
     for (i = 0; i < strlen(text); i++)
     {
-        if (text[i] == 46 )
+        if (text[i] == 46 || text[i] == 33)
         {
             sentences++;
         }
