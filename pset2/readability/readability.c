@@ -2,12 +2,14 @@
 #include <stdio.h>
 #include <string.h>
 
-int grade(string text);
+int letters(string text);
+int sentences(string text);
+int words(string text);
 
 int main(void)
 {
     string text = get_string("Text:");
-    int grade = grade(text);
+    int index = 0.0588 * L - 0.296 * S - 15.8
     printf("Grade %i\n",grade);
 
 }
