@@ -56,7 +56,7 @@ int words(string text)
 {
     int words = 0;
     int i = 0;
-    while (text[i] != '\0')
+    while (text[i] != '\0') //chraracter is not NULL
     {
         if (text[i] == ' ' || text[i] == '\n' || text[i] == '\t')
         {
