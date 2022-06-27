@@ -17,6 +17,9 @@ int main(void)
 
     int sentence = sentences(text);
     printf("this text has %i sentences\n", sentence);
+
+    int word = words(text);
+    printf("this text has %i words\n", word);
 }
 
 int letters(string text)
@@ -45,7 +48,7 @@ int sentences(string text)
 }
 int words(string text)
 {
-    int words = 0;
+    int words = 1;
     int i = 0;
     while (text[i] != '\0') //chraracter is not NULL
     {
