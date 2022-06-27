@@ -54,31 +54,12 @@ int sentences(string text)
 }
 int words(string text)
 {
-    int words = 0;
-    char nonwords[] = " .,;\n\t";
-    for (int i = 0; i < strlen(text); i++)
+    int i = 0;
+    while (text[i] != '\0')
     {
-        while (i < strlen(text))
-        {
-            if (strchr(nonwords, text[i]) != NULL)
-            {
-                break;
-                i++;
-            }
-        }
-
-        words++;
-
-        while ( i < strlen(text))
-        {
-            if (strchr(nonwords, text[i]) == NULL)
-            {
-                break;
-                i++;
-            }
-        }
+        i++;
+        
     }
-    return words;
 }
 
 // index = 0.0588 * L - 0.296 * S - 15.8
