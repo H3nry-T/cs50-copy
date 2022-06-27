@@ -32,7 +32,15 @@ int letters(string text)
 }
 int sentences(string text)
 {
-    
+    int sentences = 0;
+    for (i = 0; i < strlen(text); i++)
+    {
+        if (text[i] == )
+        {
+            sentences++;
+        }
+    }
+    return sentences;
 }
 int words(string text)
 {
