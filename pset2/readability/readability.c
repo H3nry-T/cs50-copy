@@ -12,16 +12,9 @@ int main(void)
 
 }
 
-int grade(string text)
+int (string text)
 {
-    int n = 0; // the number of gaps in the sentence
-    int wordlen = strnlen(text);
-    char text[wordlen];
-    for (i = 0; senlen[n]; i++)
-    {
-        // if the letter is between a and z then count the characters. else, treat them as spaces.
-        if(text[wordlen] > 65 || text[wordlen] < )
-    }
+
 }
 // longer words
 // longer sentences
