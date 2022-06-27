@@ -12,15 +12,15 @@ int main(void)
     // calculate letters
     int letter = letters(text);
     // calculate sentences
-    int sentences = sentences(text);
+    int sentence = sentences(text);
     // calculate words
-    int words = words(text);
+    int word = words(text);
     // calculate L is the average number of letters per 100 words in the text
-    float L = letter / words * 100;
+    float L = letter / word * 100;
     // calculate S is the average number of sentences per 100 words in the text
-    float S = sentences / words * 100;
+    float S = sentence / word * 100;
 
-    int index = 0.0588 * L - 0.296 * S - 15.8
+    int index = 0.0588 * L - 0.296 * S - 15.8;
     printf("Grade %i\n",index);
 
 }
@@ -28,7 +28,7 @@ int main(void)
 int letters(string text)
 {
     int letters = 0;
-    for (i = 0; i < strlen(text); i++)
+    for (int i = 0; i < strlen(text); i++)
     {
         if (text[i] < 65 || text[i] > 90) // 'A' 'z'
         {
@@ -40,7 +40,7 @@ int letters(string text)
 int sentences(string text)
 {
     int sentences = 0;
-    for (i = 0; i < strlen(text); i++)
+    for (int i = 0; i < strlen(text); i++)
     {
         if (text[i] == 46 || text[i] == 33 || text[i] == 63) // '.' '!' '?'
         {
@@ -52,7 +52,7 @@ int sentences(string text)
 int words(string text)
 {
     int words = 1;
-    for (i = 0; i < strlen(text); i++)
+    for (int i = 0; i < strlen(text); i++)
     {
         if (text[i] == 32) // ' '
         {
