@@ -31,7 +31,7 @@ int letters(string text)
     int letters = 0;
     for (int i = 0; i < strlen(text); i++)
     {
-        if (text[i] > 64 || text[i] < 91) // 'A' 'z'
+        if (64 < text[i] < 91) // 'A' 'z'
         {
             letters++;
         }
