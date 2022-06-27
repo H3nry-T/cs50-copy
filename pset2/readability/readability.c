@@ -29,4 +29,4 @@ int grade(string text)
 //where L is the average number of letters per 100 words in the text,
 //and S is the average number of sentences per 100 words in the text.
 //Congratulations! Today is your day. You're off to Great Places! You're off and away!
-//
+//65 letters, 4 sentences, and 14 words.
