@@ -20,10 +20,12 @@ int main(void)
 
     int word = words(text);
     printf("this text has %i words\n", word);
-    
+
     float L = (letter / word) * 100;
+    printf("L is %f\n", L);
     float S = (sentence / word) * 100;
-    int index = 0.0588 * L - 0.296 * S - 15.8;
+    printf("S is %f\n", S);
+    int index = (0.0588 * L) - (0.296 * S) - 15.8;
     printf("Grade %i\n", index);
 }
 
