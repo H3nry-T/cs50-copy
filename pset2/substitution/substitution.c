@@ -6,12 +6,14 @@
 
 bool checkdupe(string key);
 bool salphacheck(string key);
-
+bool sub(string ptext);
 int main(int argc, string argv[])
 {
     //single command line argument
     //case insensitive
     //if no argument or too many argument return 1;
+    //if key NOT 26 char, NOT alpha, NOT exactly 1 letter
+    //ERROR
     if (argc != 2)
     {
         printf("Usage: ./substitution key\n");
@@ -33,13 +35,13 @@ int main(int argc, string argv[])
         printf("there atleast 1 duplicated letter in your key\n");
         return 1;
     }
+    //plaintext request
     else
     {
         string ptext = get_string("plaintext:");
     }
-    //if key NOT 26 char, NOT alpha, NOT exactly 1 letter
-    //ERROR
-    //plaintext request
+
+    char cipher = sub()
     //substitute each letter to the key
     //non alphabet should not be changed
     //preserve the case of each letter
