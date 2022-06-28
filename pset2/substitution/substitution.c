@@ -30,6 +30,9 @@ bool checkdupe(string argv[])
     int len = strlen(argv[]);
     for (i = 0; i < len; i++)
     {
-        
+        if (argv[1][i])
+        {
+            
+        }
     }
 }
