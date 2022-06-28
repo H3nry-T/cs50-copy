@@ -104,7 +104,15 @@ char sub(string ptext, string key)
         }
         else if(islower(ptext[i]))
         {
-            char keyindex = ptext[i] + 'a';
+            int alphaindex = ptext[i] - 'a';
+            for (j = 0; j < 26; j++)
+            {
+                if(alphaindex == j)
+                {
+                    ptext[i] = key[j]
+                    return ptext[i];
+                }
+            }
         }
 
     }
