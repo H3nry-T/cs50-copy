@@ -23,7 +23,7 @@ int main(int argc, string argv[])
     int keyasnumber = atoi(argv[1]);
     // prompt the user for a plain text
     string text = get_string("plaintext: ")
-    for (i = 0; i < strlength(text); i++)
+    for (i = 0; i < strlen(text); i++)
     {
         if (isalpha(text[i]))
         {
@@ -64,7 +64,7 @@ char rotate(char c, int key)
     }
     else if(islower(c))
     {
-        
+
     }
     return newchar;
 }
