@@ -9,7 +9,7 @@ int main(int argc, string argv[])
     //single command line argument
     //case insensitive
     //if no argument or too many argument return 1;
-    if (int argc < 2 || int argc > 2 || argv[1] != 26 || isalpha(argv[1]) == false || )
+    if (int argc != 2 || strlen(argv[1]) != 26 || isalpha(argv[1]) == false || )
     {
         printf("ERROR\n");
         return 1;
