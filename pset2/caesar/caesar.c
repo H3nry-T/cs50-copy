@@ -9,7 +9,7 @@ char rotate(char c, int key);
 
 int main(int argc, string argv[])
 {
-    argv[1] = 1
+    
     // if the user does not give a argument OR gives too many arguments OR is NOT digit
     if (argc == 1 || argc > 2 || only_digits(argv[1]) == false)
     {
