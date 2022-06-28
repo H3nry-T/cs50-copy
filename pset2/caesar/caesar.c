@@ -24,8 +24,8 @@ int main(int argc, string argv[])
     int keyasnumber = atoi(argv[1]);
 
     // prompt the user for a plain text
-    string text = get_string("plaintext: ")
-    for (i = 0; i < strlen(text); i++)
+    string text = get_string("plaintext: ");
+    for (int i = 0; i < strlen(text); i++)
     {
     // rotate the characters but do not change any punctuation
         if (isalpha(text[i]))
@@ -60,12 +60,13 @@ char rotate(char c, int key)
 {
     if(isupper(c))
     {
-        char alphaindex = c - 'A' //alphaindex for A should be 0
+        char alphaindex = c - 'A'; //alphaindex for A should be 0
         char cipher = (alphaindex + key) % 26;
     }
     else if(islower(c))
     {
-        
+        char alphaindex = c - 'a'; // alphaindex for a should be 0
+        char cipher = (alphaindex + key) % 26;
     }
     return cipher;
 }
