@@ -12,6 +12,7 @@ int main(int argc, string argv[])
     //if key NOT 26 char, NOT alpha, NOT exactly 1 letter
     //ERROR
     //plaintext request
+    // substitute each letter to the key
     //cipher text output
-    
+
 }
