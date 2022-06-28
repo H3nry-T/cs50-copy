@@ -23,6 +23,7 @@ int main(int argc, string argv[])
     int keyasnumber = atoi(argv[1]);
     // prompt the user for a plain text
     string text = get_string("plaintext: ")
+    if ()
     // rotate the characters but do not change any punctuation
     // output the cipher text
 }
