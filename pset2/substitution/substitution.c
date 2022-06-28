@@ -93,7 +93,8 @@ char sub(string ptext, string key)
         if(isupper(ptext[i]))
         {
             keyindex = key[i] + 'A';
-            if()
+            if(ptext[i] == keyindex)
+            
 
         }
         else if(islower(ptext[i]))
