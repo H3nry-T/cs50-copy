@@ -33,7 +33,7 @@ int main(int argc, string argv[])
     }
 
     // output the cipher text
-    printf("ciphertext: %s\n", text);
+    printf("ciphertext: %s\n", ciphertext);
 }
 
 bool only_digits(string key) // if key = 20x this should return false
