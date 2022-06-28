@@ -90,7 +90,7 @@ char sub(string ptext, string key)
         if(isupper(ptext[i]))
         {
             int alphaindex = ptext[i] - 'A';
-            for (j = 0; j < 26; j++)
+            for (int j = 0; j < 26; j++)
             {
                 if(alphaindex == j)
                 {
@@ -102,7 +102,7 @@ char sub(string ptext, string key)
         else if(islower(ptext[i]))
         {
             int alphaindex = ptext[i] - 'a';
-            for (j = 0; j < 26; j++)
+            for (int j = 0; j < 26; j++)
             {
                 if(alphaindex == j)
                 {
