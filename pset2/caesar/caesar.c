@@ -22,9 +22,10 @@ int main(int argc, string argv[])
 
     // prompt the user for a plain text
     string text = get_string("plaintext: ");
+
+    // rotate the characters but do not change any punctuation
     for (int i = 0; i < strlen(text); i++)
     {
-    // rotate the characters but do not change any punctuation
         if (isalpha(text[i]))
         {
             rotate(text[i], keyasnumber);
