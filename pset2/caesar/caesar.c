@@ -5,6 +5,9 @@ int main(int argc, string argv[])
 {
 
 }
-
+// take in a command line argument for a key
+// if the user does not give a number
+// if the user does not give a argument
+// if the user does not 
 // k (secret key) has to be a positive number
 // preserve upper and lower case letters when printing ciphertext
