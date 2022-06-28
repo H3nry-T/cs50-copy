@@ -49,8 +49,8 @@ int main(int argc, string argv[])
             ptext[i] = sub(ptext, argv[1]);
         }
         printf("%c", ptext[i]);
-        printf("\n");
     }
+    printf("\n");
     return 0;
     //new line, then return 0;
 }
