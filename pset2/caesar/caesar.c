@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-bool only_digits(key);
+bool only_digits(char key);
 
 int main(int argc, string argv[])
 {
@@ -24,7 +24,7 @@ int main(int argc, string argv[])
     // output the cipher text
 }
 
-bool only_digits(key)
+bool only_digits(char key)
 {
     if (isint(key))
     {
@@ -32,7 +32,7 @@ bool only_digits(key)
     }
     else
     {
-        return 1; 
+        return 1;
     }
 }
 
