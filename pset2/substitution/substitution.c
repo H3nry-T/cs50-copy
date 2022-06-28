@@ -50,7 +50,7 @@ int main(int argc, string argv[])
         }
         printf("%c", ptext[i]);
     }
-    // printf("\n");
+    printf("\n");
     return 0;
     //new line, then return 0;
 }
