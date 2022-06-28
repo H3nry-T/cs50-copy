@@ -92,8 +92,8 @@ char sub(string ptext, string key)
     {
         if(isupper(ptext[i]))
         {
-            char alphaindex = ptext[i] - 'A';
-            if(ptext[i] == keyindex)
+            int alphaindex = ptext[i] - 'A';
+            if(ptext[i])
             {
                 ptext[i] = keyindex
                 char cipher = ptext[i]
