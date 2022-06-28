@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <ctype.h>
-
+#include <string.h>
 bool only_digits(string key);
 
 int main(int argc, string argv[])
@@ -27,15 +27,11 @@ int main(int argc, string argv[])
 bool only_digits(string key)
 {
     //turn string into characters
-    for (i = 0; i < strlen(key); i++)
+    for (int i = 0; i < strlen(key); i++)
     {
         if (isdigit(key[i]) == 0) // if non decimal digit return false
         {
-            return true;
-        }
-        else
-        {
-            return false;
+            break;
         }
     }
 }
