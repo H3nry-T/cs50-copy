@@ -27,12 +27,14 @@ int main(int argc, string argv[])
 bool only_digits(string key)
 {
     //turn string into characters
-    for (int i = 0; i < strlen(key); i++)
+    int i = 0;
+    while(i < strlen(key))
     {
-        if (isdigit(key[i]) == 0) // if non decimal digit return false
-        {
-            break;
-        }
+        i++;
+    }
+    if (isdigit(key[i]) == 0) // if non decimal digit return false
+    {
+        break;
     }
 }
 
