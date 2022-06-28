@@ -1,13 +1,13 @@
 #include <cs50.h>
 #include <stdio.h>
 
-bool only_digits(key);
+bool only_digits(argv[1]);
 
 int main(int argc, string argv[])
 {
-    
+
     // if the user does not give a argument or gives too many arguments
-    if (argc == 1 || argc > 2 || only)
+    if (argc == 1 || argc > 2 || only_digits(argv[1]))
     {
         printf("Usage: ./caesar key\n");
         return 1;
