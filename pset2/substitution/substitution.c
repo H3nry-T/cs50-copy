@@ -32,7 +32,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        
+        string ptext = get_string("plaintext:");
     }
     //if key NOT 26 char, NOT alpha, NOT exactly 1 letter
     //ERROR
