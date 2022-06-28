@@ -29,11 +29,8 @@ int main(int argc, string argv[])
         {
             rotate(text[i], keyasnumber);
         }
-        else
-        {
-
-        }
     }
+    string ciphertext = text
     // rotate the characters but do not change any punctuation
     // output the cipher text
 }
