@@ -7,7 +7,7 @@ char rotate(char c, int key);
 
 int main(int argc, string argv[])
 {
-    if (only_digits(argv[1]))
+    if (argc == 1 || only_digits(argv[1]))
     {
         printf("key is digits only key: %s\n", argv[1]);
     }
