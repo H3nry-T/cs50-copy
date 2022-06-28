@@ -12,3 +12,4 @@ int main(int argc, string argv[])
 //print the Usage: ./caesar key
 // k (secret key) has to be a positive number
 // preserve upper and lower case letters when printing ciphertext
+// if k > 26 keep rotating through the ascii codes. so 27 more than A is B NOT [
