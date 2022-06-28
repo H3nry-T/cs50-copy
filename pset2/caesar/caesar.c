@@ -5,10 +5,10 @@
 #include <stdlib.h>
 
 bool only_digits(string key);
+char rotate(char c, int key);
 
 int main(int argc, string argv[])
 {
-
     // if the user does not give a argument OR gives too many arguments OR is NOT digit
     if (argc == 1 || argc > 2 || only_digits(argv[1]) == false)
     {
