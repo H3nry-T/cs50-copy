@@ -75,7 +75,7 @@ bool salphacheck(string key)
 {
     for (int i = 0; i < strlen(key); i++)
     {
-        if (isalpha(key[1]) == 0)
+        if (isalpha(key[i]) == 0)
         {
             return false;
         }
