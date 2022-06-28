@@ -19,7 +19,7 @@ int main(int argc, string argv[])
     {
         return 0;
     }
-    
+
     // convert the key given into an integer
     int keyasnumber = atoi(argv[1]);
 
@@ -60,13 +60,14 @@ char rotate(char c, int key)
 {
     if(isupper(c))
     {
-        char cipher = (c + key) % (91/65)
+        char alphaindex = c - 'A' //alphaindex for A should be 0
+        char cipher = (c + key) % 26;
     }
     else if(islower(c))
     {
 
     }
-    return newchar;
+    return cipher;
 }
 
 
