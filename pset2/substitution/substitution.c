@@ -36,10 +36,7 @@ int main(int argc, string argv[])
         return 1;
     }
     //plaintext request
-    else
-    {
-        string ptext = get_string("plaintext:");
-    }
+    string ptext = get_string("plaintext:");
 
     //substitute each letter to the key
     //non alphabet should not be changed
