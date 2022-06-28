@@ -26,7 +26,7 @@ int main(int argc, string argv[])
     // output the cipher text
 }
 
-bool only_digits(string key) // key = 20x
+bool only_digits(string key) // if key = 20x this should return false
 {
     //turn string into characters
     int i = 0;
