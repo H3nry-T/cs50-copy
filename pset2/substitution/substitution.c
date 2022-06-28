@@ -44,8 +44,11 @@ int main(int argc, string argv[])
     //substitute each letter to the key
     //non alphabet should not be changed
     //preserve the case of each letter
-    char cipher = sub(ptext, argv[1]);
     //cipher text output
+    for (int i = 0; i < strlen(ptext); i++)
+    {
+        char cipher = sub(ptext, argv[1]);
+    }
     //new line, then return 0;
 }
 
