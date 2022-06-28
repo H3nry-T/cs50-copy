@@ -14,6 +14,8 @@ int main(int argc, string argv[])
     {
         printf("key has a non digit in it key: %s\n", argv[1]);
     }
+
+    string text = get_string("plaintext: ");
 }
 
 bool only_digits(string key) // if key = 20x this should return false
