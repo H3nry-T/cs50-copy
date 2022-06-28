@@ -10,7 +10,7 @@ int main(int argc, string argv[])
     //single command line argument
     //case insensitive
     //if no argument or too many argument return 1;
-    if (int argc != 2 || strlen(argv[1]) != 26 || isalpha(argv[1]) == false || checkdupe(argv[]) == true)
+    if (int argc != 2 || strlen(argv[1]) != 26 || isalpha(argv[1]) == false || checkdupe(argv[1]) == true)
     {
         printf("ERROR\n");
         return 1;
@@ -38,5 +38,5 @@ bool checkdupe(string argv[])
             }
         }
     }
-    return false; 
+    return false;
 }
