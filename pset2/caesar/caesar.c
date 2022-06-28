@@ -25,13 +25,13 @@ int main(int argc, string argv[])
     string text = get_string("plaintext: ")
     for (i = 0; i < strlen(text); i++)
     {
+    // rotate the characters but do not change any punctuation
         if (isalpha(text[i]))
         {
             rotate(text[i], keyasnumber);
         }
     }
-    string ciphertext = text
-    // rotate the characters but do not change any punctuation
+    printf("ciphertext: %s\n", text);
     // output the cipher text
 }
 
