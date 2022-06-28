@@ -29,11 +29,12 @@ int main(int argc, string argv[])
     // rotate the characters but do not change any punctuation
     for (int i = 0; i < strlen(text); i++)
     {
-        if (isalpha(text[i]))
+        char ciphertext[i] = text[i]
+        if (isalpha(ciphertext[i]))
         {
-            rotate(text[i], keyasnumber);
+            char ciphertext = rotate(ciphertext[i], keyasnumber);
         }
-        printf("%c", text);
+        printf("%c", ciphertext);
     }
 
 }
