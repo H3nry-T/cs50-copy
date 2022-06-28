@@ -85,7 +85,7 @@ bool salphacheck(string key)
 
 char sub(string ptext, string key) //take plaintext and key and output subbed character
 {
-    for (int i = 0; i < strlen(ptext); i++)
+    for (int i = 0; i < strlen(ptext); i++) //loop through ptext
     {
         if(isupper(ptext[i])) //sub all uppercase characters with the key
         {
