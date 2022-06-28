@@ -15,7 +15,8 @@ int main(int argc, string argv[])
     {
         printf("key has a non digit in it key: %s\n", argv[1]);
     }
-    char cipher = rotate('A', 1);
+
+    char cipher = rotate('A', 2);
     printf("%c\n", cipher);
 
 }
