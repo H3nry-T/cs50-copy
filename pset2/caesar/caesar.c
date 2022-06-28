@@ -29,14 +29,13 @@ bool only_digits(string key)
     //turn string into characters
     for (i = 0; i < strlen(key); i++)
     {
-        char digit[i] = key[i]
-        if (isdigit(digit[i]) != 0) // if decimal digit return true
+        if (isdigit(key[i]) != 0) // if decimal digit return true
         {
-            return 0;
+            return true;
         }
         else
         {
-            return 1;
+            return false;
         }
     }
 }
