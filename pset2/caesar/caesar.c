@@ -58,14 +58,13 @@ bool only_digits(string key) // if key = 20x this should return false
 
 char rotate(char c, int key)
 {
-    char cipher = c
     if(isupper(c))
     {
-        newchar += key
+        char cipher = (c + key) % (91/65)
     }
     else if(islower(c))
     {
-        newchar += key
+        
     }
     return newchar;
 }
