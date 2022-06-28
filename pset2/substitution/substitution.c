@@ -5,12 +5,14 @@
 #include <ctype.h>
 
 bool checkdupe(string argv[]);
+bool salphacheck(string argv[]);
+
 int main(int argc, string argv[])
 {
     //single command line argument
     //case insensitive
     //if no argument or too many argument return 1;
-    if (argc != 2 || strlen(argv[1]) != 26 || isalpha(argv[1]) == 0|| checkdupe(argv[1]) == true)
+    if (argc != 2 || strlen(argv[1]) != 26 || salphacheck(argv[1]) == 0|| checkdupe(argv[1]) == true)
     {
         printf("ERROR\n");
         return 1;
@@ -39,4 +41,16 @@ bool checkdupe(string argv[])
         }
     }
     return false;
+}
+
+bool salphacheck(string argv[])
+{
+    for (i = 0; i < strlen(argv[]); i++)
+    {
+        if (isalpha(argv[][i]) == 0)
+        {
+            return false;
+        }
+    }
+    return true;
 }
