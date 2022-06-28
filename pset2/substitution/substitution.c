@@ -111,10 +111,7 @@ char sub(string ptext, string key) //take plaintext and key and output subbed ch
                 }
             }
         }
-        else
-        {
-            char nonalpha = ptext[i]; //if not return a char that is unmodified
-        }
     }
-    return nonalpha;
+    return 0; //exit function if not upper,lower case alphabet
 }
+
