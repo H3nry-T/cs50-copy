@@ -102,7 +102,7 @@ char sub(string ptext, string key)
         }
         else if(islower(ptext[i]))
         {
-            char keyindex = key[i] + 'a';
+            char keyindex = ptext[i] + 'a';
         }
 
     }
