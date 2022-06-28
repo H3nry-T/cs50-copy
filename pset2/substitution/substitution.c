@@ -49,9 +49,9 @@ int main(int argc, string argv[])
     {
         if (isalpha(ptext[i]))
         {
-            char cipher = sub(ptext, argv[1]);
+            sub(ptext, argv[1]);
         }
-        printf("%c", cipher);
+        printf("%c", ptext[i]);
         printf("\n");
     }
     return 0;
