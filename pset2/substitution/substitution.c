@@ -97,7 +97,7 @@ char sub(string ptext, string key)
             {
                 if(alphaindex == j)
                 {
-                    ptext[i] = key[j]
+                    ptext[i] = key[j];
                     return ptext[i];
                 }
             }
@@ -109,7 +109,7 @@ char sub(string ptext, string key)
             {
                 if(alphaindex == j)
                 {
-                    ptext[i] = key[j]
+                    ptext[i] = key[j];
                     return ptext[i];
                 }
             }
