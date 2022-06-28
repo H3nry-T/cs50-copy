@@ -28,12 +28,16 @@ int main(int argc, string argv[])
 bool checkdupe(string argv[])
 {
     int len = strlen(argv[]);
-    for (i = 0; i < len; i++)
+    for (int i = 0; i < len; i++)
     {
-        for (j = 0; j < len;)
-        if (argv[1][i] == argv[1][j])
+        for (int j = 0; j < len; j++)
         {
-
+            if (argv[1][i] == argv[1][j])
+            {
+                return true;
+            }
         }
     }
+    return false;
+
 }
