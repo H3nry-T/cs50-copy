@@ -68,7 +68,7 @@ char rotate(char c, int key)
         char alphaindex = c - 'a'; // alphaindex for a should be 0
         char cipher = (alphaindex + key) % 26;
     }
-    return cipher;
+    return char cipher;
 }
 
 
