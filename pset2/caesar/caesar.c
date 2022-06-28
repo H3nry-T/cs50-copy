@@ -23,6 +23,9 @@ int main(int argc, string argv[])
     // prompt the user for a plain text
     string text = get_string("plaintext: ");
 
+    // output the cipher text
+    printf("ciphertext: \n");
+
     // rotate the characters but do not change any punctuation
     for (int i = 0; i < strlen(text); i++)
     {
@@ -30,9 +33,8 @@ int main(int argc, string argv[])
         {
             rotate(text[i], keyasnumber);
         }
+        printf("%c", text);
     }
-    // output the cipher text
-    printf("ciphertext: %s\n", text);
 
 }
 
