@@ -9,10 +9,11 @@ bool salphacheck(string key);
 
 int main(int argc, string argv[])
 {
-    if (argv[1] != 2 || salphacheck(argv[1]) == 0 || checkdupe(argv[1]) == true)
+    if (argc != 2 || salphacheck(argv[1]) == 0 || checkdupe(argv[1]) == true)
     {
         printf("Usage: ./substitution key\n");
-        printf("key needs to be 26 long alphabet")
+        printf("key needs to be 26 long alphabet\n");
+        printf("key needs to have 0 duplicates\n");
     }
 }
 
