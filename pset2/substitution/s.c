@@ -6,5 +6,15 @@
 
 int main(int argc, string argv[])
 {
-    
+    if (isalpha(argv[1]))
+    {
+        if
+        {
+            
+        }
+        else
+        {
+
+        }
+    }
 }
