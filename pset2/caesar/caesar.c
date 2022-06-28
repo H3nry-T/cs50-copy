@@ -27,6 +27,13 @@ int main(int argc, string argv[])
 bool only_digits(key)
 {
     if (isint(key))
+    {
+        return 0;
+    }
+    else
+    {
+        return 1; 
+    }
 }
 
 
