@@ -29,7 +29,7 @@ bool only_digits(string key)
     //turn string into characters
     for (i = 0; i < strlen(key); i++)
     {
-        digit[] = key[i]
+        digit[] += key[i]
     }
     if (isdigit(digit[i]) != 0)
     {
