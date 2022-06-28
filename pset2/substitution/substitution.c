@@ -90,7 +90,7 @@ char sub(string ptext, string key) //take plaintext and key and output subbed ch
         if(isupper(ptext[i])) //sub all uppercase characters with the key
         {
             int alphaindex = ptext[i] - 'A';//take uppercase character - 65
-            for (int j = 0; j < 26; j++)
+            for (int j = 0; j < 27; j++)
             {
                 if(alphaindex == j)//compare the keyindex (j) to the uppercase letter
                 {
