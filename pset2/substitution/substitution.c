@@ -37,7 +37,7 @@ int main(int argc, string argv[])
     }
     //plaintext request
     string ptext = get_string("plaintext:");
-
+    printf("ciphertext: ");
     //substitute each letter to the key
     //non alphabet should not be changed
     //preserve the case of each letter
