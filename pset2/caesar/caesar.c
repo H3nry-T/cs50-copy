@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <stdlib.h>
+
 bool only_digits(string key);
 
 int main(int argc, string argv[])
@@ -17,8 +19,8 @@ int main(int argc, string argv[])
     {
         return 0;
     }
-
     // convert the key given into an integer
+    int keyasnumber = atoi(argv[1])
     // prompt the user for a plain text
     // rotate the characters but do not change any punctuation
     // output the cipher text
