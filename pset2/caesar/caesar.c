@@ -20,7 +20,7 @@ int main(int argc, string argv[])
         return 0;
     }
     // convert the key given into an integer
-    int keyasnumber = atoi(argv[1])
+    int keyasnumber = atoi(argv[1]);
     // prompt the user for a plain text
     // rotate the characters but do not change any punctuation
     // output the cipher text
@@ -35,6 +35,11 @@ bool only_digits(string key) // key = 20x
         if (isdigit(key[i]) != 0) // if char is digit
         {
             i++;
+        }
+        else
+        {
+            return false;
+            break;
         }
     }
     return true;
