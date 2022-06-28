@@ -8,11 +8,11 @@ int main(int argc, string argv[])
 {
     if (only_digits(argv[1]))
     {
-        printf("key is digits only\n");
+        printf("key is digits only key: %s\n", argv[1]);
     }
     else
     {
-        printf("key has a non digit in it\n");
+        printf("key has a non digit in it key: %s\n", argv[1]);
     }
 }
 
