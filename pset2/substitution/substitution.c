@@ -76,3 +76,19 @@ bool salphacheck(string key)
     }
     return true;
 }
+
+bool sub(string ptext)
+{
+    for (int i = 0; i < strlen(ptext); i++)
+    {
+        if(isupper(ptext[i]))
+        {
+            
+        }
+        else if(islower(ptext[i]))
+        {
+
+        }
+
+    }
+}
