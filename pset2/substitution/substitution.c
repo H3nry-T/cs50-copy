@@ -17,5 +17,4 @@ int main(int argc, string argv[])
     //preserve the case of each letter
     //cipher text output
     //new line, then return 0;
-
 }
