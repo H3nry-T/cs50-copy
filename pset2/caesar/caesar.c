@@ -7,7 +7,7 @@ bool only_digits(string key);
 int main(int argc, string argv[])
 {
 
-    // if the user does not give a argument or gives too many arguments
+    // if the user does not give a argument OR gives too many arguments OR is NOT digit
     if (argc == 1 || argc > 2 || only_digits(argv[1]) == 1)
     {
         printf("Usage: ./caesar key\n");
@@ -26,7 +26,7 @@ int main(int argc, string argv[])
 
 bool only_digits(string key)
 {
-    if (isint(key))
+    if (is)
     {
         return 0;
     }
