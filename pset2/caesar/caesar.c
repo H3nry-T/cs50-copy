@@ -35,8 +35,8 @@ int main(int argc, string argv[])
             ciphertext = rotate(ciphertext, keyasnumber);
         }
         printf("%c", ciphertext);
-        printf("\n");
     }
+        printf("\n");
 
 }
 
