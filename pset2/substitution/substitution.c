@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <ctype.h>
 
-bool repeatchar
+bool checkdupe(string argv[]);
 int main(int argc, string argv[])
 {
     //single command line argument
@@ -23,4 +23,13 @@ int main(int argc, string argv[])
     //preserve the case of each letter
     //cipher text output
     //new line, then return 0;
+}
+
+bool checkdupe(string argv[])
+{
+    int len = strlen(argv[]);
+    for (i = 0; i < len; i++)
+    {
+        
+    }
 }
