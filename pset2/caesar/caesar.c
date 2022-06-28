@@ -31,7 +31,7 @@ bool only_digits(string key)
     {
         digit[] += key[i]
     }
-    if (isdigit(digit[i]) != 0)
+    if (isdigit(digit[i]) != 0) // if decimal digit return true
     {
         return 0;
     }
