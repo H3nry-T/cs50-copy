@@ -92,11 +92,12 @@ char sub(string ptext, string key)
     {
         if(isupper(ptext[i]))
         {
+            alphaindex = ptext[i] - 'A';
             
         }
         else if(islower(ptext[i]))
         {
-
+            alphaindex = ptext[i] - 'a';
         }
 
     }
