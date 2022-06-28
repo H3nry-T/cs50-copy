@@ -4,18 +4,35 @@
 #include <stdio.h>
 #include <ctype.h>
 
-bool checkdupe(string argv[]);
-bool salphacheck(string argv[]);
+bool checkdupe(string key);
+bool salphacheck(string key);
 
 int main(int argc, string argv[])
 {
     //single command line argument
     //case insensitive
     //if no argument or too many argument return 1;
-    if (argc != 2 || strlen(argv[1]) != 26)
+    if (argc != 2)
     {
-        printf("ERROR\n");
+        printf("Usage: ./substitution key\n");
+        printf("you need to provide a key\n");
         return 1;
+    }
+    if (strlen(argv[1]) != 26)
+    {
+        printf("26 long alphabet needs to be provided\n");
+    }
+    if(salphacheck(argv[1]) == 0)
+    {
+        printf("key needs to be all alphabet\n");
+    }
+    if (checkdupe(argv[1]) == true)
+    {
+        printf("key needs to have 0 duplicates\n");
+    }
+    else
+    {
+        return 0; 
     }
     //if key NOT 26 char, NOT alpha, NOT exactly 1 letter
     //ERROR
@@ -27,14 +44,14 @@ int main(int argc, string argv[])
     //new line, then return 0;
 }
 
-bool checkdupe(string argv[])
+bool checkdupe(string key)
 {
-    int len = strlen(argv[]);
+    int len = strlen(key);
     for (int i = 0; i < len; i++)
     {
         for (int j = 0; j < len; j++)
         {
-            if (argv[1][i] == argv[1][j])
+            if (key[i] == key[j])
             {
                 return true;
             }
@@ -43,11 +60,11 @@ bool checkdupe(string argv[])
     return false;
 }
 
-bool salphacheck(string argv[])
+bool salphacheck(string key)
 {
-    for (i = 0; i < strlen(argv[]); i++)
+    for (int i = 0; i < strlen(key); i++)
     {
-        if (isalpha(argv[][i]) == 0)
+        if (isalpha(key[1]) == 0)
         {
             return false;
         }
