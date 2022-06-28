@@ -3,7 +3,11 @@
 
 int main(int argc, string argv[])
 {
+    // convert the key given into an integer
     int key = argv[1];
+    // prompt the user for a plain text
+    // rotate the characters but do not change any punctuation 
+    // output the cipher text
 }
 // take in a command line argument for a key
 // if the user does not give a number
