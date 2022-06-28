@@ -32,13 +32,13 @@ bool only_digits(string key) // key = 20x
     int i = 0;
     while(i < strlen(key))
     {
-        if (isdigit(key[i]) == 0) // if non decimal digit return false
+        if (isdigit(key[i]) != 0) // if char is digit
         {
-            break;
+            i++;
         }
-        return false;
-        
+        break;
     }
+    return true;
 }
 
 
