@@ -28,7 +28,7 @@ int main(int argc, string argv[])
     {
         if (isalpha(text[i]))
         {
-            rotate(text[i], keyasnumber);
+            cipher
         }
     }
 
