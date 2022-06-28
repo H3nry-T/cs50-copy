@@ -23,7 +23,17 @@ int main(int argc, string argv[])
     int keyasnumber = atoi(argv[1]);
     // prompt the user for a plain text
     string text = get_string("plaintext: ")
-    if ()
+    for (i = 0; i < strlength(text); i++)
+    {
+        if (isalpha(text[i]))
+        {
+            rotate(text[i], keyasnumber);
+        }
+        else
+        {
+
+        }
+    }
     // rotate the characters but do not change any punctuation
     // output the cipher text
 }
@@ -48,7 +58,16 @@ bool only_digits(string key) // if key = 20x this should return false
 
 char rotate(char c, int key)
 {
-    
+    char newchar = c
+    if(isupper(c))
+    {
+        newchar += key
+    }
+    else if(islower(c))
+    {
+        newchar += key
+    }
+    return newchar; 
 }
 
 
