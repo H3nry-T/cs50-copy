@@ -6,7 +6,7 @@
 
 bool checkdupe(string key);
 bool salphacheck(string key);
-bool sub(string ptext, string key);
+char sub(string ptext, string key);
 int main(int argc, string argv[])
 {
     //single command line argument
@@ -54,6 +54,7 @@ int main(int argc, string argv[])
         printf("%c", cipher);
         printf("\n");
     }
+    return 0;
     //new line, then return 0;
 }
 
@@ -85,13 +86,13 @@ bool salphacheck(string key)
     return true;
 }
 
-bool sub(string ptext, string key)
+char sub(string ptext, string key)
 {
     for (int i = 0; i < strlen(ptext); i++)
     {
         if(isupper(ptext[i]))
         {
-
+            
         }
         else if(islower(ptext[i]))
         {
