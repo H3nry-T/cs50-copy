@@ -28,11 +28,11 @@ int main(int argc, string argv[])
     }
     if (checkdupe(argv[1]) == true)
     {
-        printf("key needs to have 0 duplicates\n");
+        printf("there atleast 1 duplicated letter in your key\n");
     }
     else
     {
-        return 0;
+        
     }
     //if key NOT 26 char, NOT alpha, NOT exactly 1 letter
     //ERROR
