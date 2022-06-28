@@ -36,7 +36,6 @@ bool only_digits(string key) // key = 20x
         {
             i++;
         }
-        break;
     }
     return true;
 }
