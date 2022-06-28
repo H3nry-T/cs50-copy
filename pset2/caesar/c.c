@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
+
 bool only_digits(string key);
 char rotate(char c, int key);
 
@@ -16,7 +18,8 @@ int main(int argc, string argv[])
         printf("key has a non digit in it key: %s\n", argv[1]);
     }
 
-    char cipher = rotate('A', 2);
+    int key = atoi(argv[1]);
+    char cipher = rotate('A', key);
     printf("%c\n", cipher);
 
 }
