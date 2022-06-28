@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <ctype.h>
 
+bool repeatchar
 int main(int argc, string argv[])
 {
     //single command line argument
