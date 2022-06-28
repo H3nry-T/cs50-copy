@@ -46,6 +46,11 @@ bool only_digits(string key) // if key = 20x this should return false
     return true;
 }
 
+char rotate(char c, int key)
+{
+    
+}
+
 
 // k (secret key) has to be a positive number
 // preserve upper and lower case letters when printing ciphertext
