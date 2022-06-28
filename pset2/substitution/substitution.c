@@ -94,19 +94,19 @@ char sub(string ptext, string key) //take plaintext and key and output subbed ch
             {
                 if(alphaindex == j)//compare the keyindex (j) to the uppercase letter
                 {
-                    ptext[i] = key[j];//replace e.g letter A with key[0] 
+                    ptext[i] = key[j];//replace e.g letter A with key[0]
                     return ptext[i];
                 }
             }
         }
-        else if (islower(ptext[i]))
+        else if (islower(ptext[i]))// if lower case
         {
-            int alphaindex = ptext[i] - 'a';
+            int alphaindex = ptext[i] - 'a';//lowercase letter - 91
             for (int j = 0; j < 26; j++)
             {
-                if(alphaindex == j)
+                if(alphaindex == j)//compare keyindex (j) to the lowercase letter
                 {
-                    ptext[i] = key[j];
+                    ptext[i] = key[j];//replace e.g letter a with key[0]
                     return ptext[i];
                 }
             }
