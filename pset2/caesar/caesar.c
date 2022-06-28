@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
+bool only_digits()
 int main(int argc, string argv[])
 {
     // take in a command line argument for a key
