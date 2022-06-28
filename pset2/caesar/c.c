@@ -3,6 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 bool only_digits(string key);
+char rotate(char c, int key);
 
 int main(int argc, string argv[])
 {
@@ -14,8 +15,9 @@ int main(int argc, string argv[])
     {
         printf("key has a non digit in it key: %s\n", argv[1]);
     }
+    char cipher = rotate('A', 1);
+    printf("%c\n", cipher);
 
-    string text = get_string("plaintext: ");
 }
 
 bool only_digits(string key) // if key = 20x this should return false
@@ -38,3 +40,18 @@ bool only_digits(string key) // if key = 20x this should return false
     return true;
 }
 
+char rotate(char c, int key)
+{
+    char cipher = 0;
+    if(isupper(c))
+    {
+        char alphaindex = c - 'A'; //alphaindex for A should be 0
+        cipher = ((alphaindex + key) % 26) + 'A';
+    }
+    else if(islower(c))
+    {
+        char alphaindex = c - 'a'; // alphaindex for a should be 0
+        cipher = ((alphaindex + key) % 26) + 'a';
+    }
+    return cipher;
+}
