@@ -98,8 +98,7 @@ char sub(string ptext, string key)
                 if(alphaindex == j)
                 {
                     ptext[i] = key[j]
-                    char cipher = ptext[i]
-                    return cipher;
+                    return ptext[i];
                 }
             }
         }
