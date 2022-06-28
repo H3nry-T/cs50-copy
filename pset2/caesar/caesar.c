@@ -38,8 +38,7 @@ bool only_digits(string key) // if key = 20x this should return false
         }
         else
         {
-            return false;
-            break;
+            return false; // exit loop
         }
     }
     return true;
