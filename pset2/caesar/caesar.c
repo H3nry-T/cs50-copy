@@ -28,12 +28,12 @@ int main(int argc, string argv[])
     {
         if (isalpha(text[i]))
         {
-            rotate(text[i], keyasnumber)
+            rotate(text[i], keyasnumber);
+            // output the cipher text
+            printf("%s\n", text);
         }
     }
 
-    // output the cipher text
-    printf("ciphertext: %s\n", ciphertext);
 }
 
 bool only_digits(string key) // if key = 20x this should return false
