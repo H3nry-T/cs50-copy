@@ -6,17 +6,16 @@ int main(int argc, string argv[])
     // take in a command line argument for a key
     // if the user does not give a number
     // if the user does not give a argument
-    if (argc == 1)
+    if (argc == 1 || argc > 2)
     {
         printf("Usage: ./caesar key\n");
         return 1;
+    }
+    else
+    {
+        return 0;
     }
     // if the user gives multiple arguments
-    else if(argc > 2)
-    {
-        printf("Usage: ./caesar key\n");
-        return 1;
-    }
     //print the Usage: ./caesar key
     // convert the key given into an integer
     // prompt the user for a plain text
