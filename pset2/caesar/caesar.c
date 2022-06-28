@@ -3,7 +3,7 @@
 
 int main(int argc, string argv[])
 {
-    printf("argv[] is %c\n", argv[]);
+    printf("argv[0] is %s\n", argv[0]);
 }
 // take in a command line argument for a key
 // if the user does not give a number
