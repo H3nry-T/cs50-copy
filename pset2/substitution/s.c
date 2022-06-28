@@ -22,7 +22,7 @@ bool checkdupe(string argv[])
     {
         for (int j = 0; j < len; j++)
         {
-            if (argv[1][i] == argv[1][j])
+            if (argv[i] == argv[j])
             {
                 return true;
             }
@@ -35,7 +35,7 @@ bool salphacheck(string argv[])
 {
     for (i = 0; i < strlen(argv[]); i++)
     {
-        if (isalpha(argv[][i]) == 0)
+        if (isalpha(argv[i]) == 0)
         {
             return false;
         }
