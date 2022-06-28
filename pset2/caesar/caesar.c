@@ -1,6 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
-#include <stdbool.h>
+#include <ctype.h>
 
 bool only_digits(string key);
 
