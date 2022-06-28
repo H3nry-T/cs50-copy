@@ -19,8 +19,10 @@ int main(int argc, string argv[])
     {
         return 0;
     }
+    
     // convert the key given into an integer
     int keyasnumber = atoi(argv[1]);
+
     // prompt the user for a plain text
     string text = get_string("plaintext: ")
     for (i = 0; i < strlen(text); i++)
@@ -31,8 +33,9 @@ int main(int argc, string argv[])
             rotate(text[i], keyasnumber);
         }
     }
-    printf("ciphertext: %s\n", text);
+
     // output the cipher text
+    printf("ciphertext: %s\n", text);
 }
 
 bool only_digits(string key) // if key = 20x this should return false
