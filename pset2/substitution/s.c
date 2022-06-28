@@ -11,7 +11,7 @@ int main(int argc, string argv[])
 {
     if (salphacheck(argv[1]) == 0|| checkdupe(argv[1]) == true)
     {
-        prinf("error\n");
+        printf("error\n");
     }
 }
 
@@ -33,7 +33,7 @@ bool checkdupe(string key)
 
 bool salphacheck(string key)
 {
-    for (i = 0; i < strlen(key); i++)
+    for (int i = 0; i < strlen(key); i++)
     {
         if (isalpha(key[1]) == 0)
         {
