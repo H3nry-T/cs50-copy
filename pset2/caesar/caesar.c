@@ -36,6 +36,7 @@ bool only_digits(string key) // key = 20x
     }
     if (isdigit(key[i]) == 0) // if non decimal digit return false
     {
+        return false;
         break;
     }
 }
