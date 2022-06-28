@@ -113,8 +113,8 @@ char sub(string ptext, string key)
         }
         else
         {
-            return ptext[i];
+            char nonalpha = ptext[i];
         }
     }
-    return ptext;
+    return nonalpha;
 }
