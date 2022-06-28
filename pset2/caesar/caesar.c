@@ -24,15 +24,15 @@ int main(int argc, string argv[])
     string text = get_string("plaintext: ");
 
     // output the cipher text
-    printf("ciphertext: \n");
+    printf("ciphertext: ");
 
     // rotate the characters but do not change any punctuation
     for (int i = 0; i < strlen(text); i++)
     {
-        char ciphertext[i] = text[i]
-        if (isalpha(ciphertext[i]))
+        char ciphertext = text[i];
+        if (isalpha(ciphertext))
         {
-            char ciphertext = rotate(ciphertext[i], keyasnumber);
+            ciphertext = rotate(ciphertext, keyasnumber);
         }
         printf("%c", ciphertext);
     }
