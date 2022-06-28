@@ -32,7 +32,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        return 0; 
+        return 0;
     }
     //if key NOT 26 char, NOT alpha, NOT exactly 1 letter
     //ERROR
@@ -49,7 +49,7 @@ bool checkdupe(string key)
     int len = strlen(key);
     for (int i = 0; i < len; i++)
     {
-        for (int j = 0; j < len; j++)
+        for (int j = i + 1; j < len; j++)
         {
             if (key[i] == key[j])
             {
