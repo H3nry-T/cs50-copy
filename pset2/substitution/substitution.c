@@ -21,14 +21,17 @@ int main(int argc, string argv[])
     if (strlen(argv[1]) != 26)
     {
         printf("26 long alphabet needs to be provided\n");
+        return 1;
     }
     if(salphacheck(argv[1]) == 0)
     {
         printf("key needs to be all alphabet\n");
+        return 1;
     }
     if (checkdupe(argv[1]) == true)
     {
         printf("there atleast 1 duplicated letter in your key\n");
+        return 1;
     }
     else
     {
