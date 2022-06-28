@@ -61,11 +61,11 @@ char rotate(char c, int key)
     if(isupper(c))
     {
         char alphaindex = c - 'A' //alphaindex for A should be 0
-        char cipher = (c + key) % 26;
+        char cipher = (alphaindex + key) % 26;
     }
     else if(islower(c))
     {
-
+        
     }
     return cipher;
 }
