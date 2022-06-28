@@ -1,7 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <stdbool.h>
 
-bool only_digits(argv[1]);
+bool only_digits(key);
 
 int main(int argc, string argv[])
 {
@@ -25,7 +26,7 @@ int main(int argc, string argv[])
 
 bool only_digits(key)
 {
-    
+    char digit[] = {0,1,2,3,4,5,6,7,8,9}
 }
 
 
