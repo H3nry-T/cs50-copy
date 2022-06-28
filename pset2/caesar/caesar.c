@@ -8,7 +8,7 @@ int main(int argc, string argv[])
 {
 
     // if the user does not give a argument OR gives too many arguments OR is NOT digit
-    if (argc == 1 || argc > 2 || only_digits(argv[1]) != 0)
+    if (argc == 1 || argc > 2 || only_digits(argv[1]) == false)
     {
         printf("Usage: ./caesar key\n");
         return 1;
