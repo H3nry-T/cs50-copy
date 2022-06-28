@@ -43,16 +43,16 @@ bool only_digits(string key) // if key = 20x this should return false
 
 char rotate(char c, int key)
 {
-    char cipher;
     if(isupper(c))
     {
         char alphaindex = c - 'A'; //alphaindex for A should be 0
         cipher = ((alphaindex + key) % 26) + 'A';
+        return cipher;
     }
     else if(islower(c))
     {
         char alphaindex = c - 'a'; // alphaindex for a should be 0
         cipher = ((alphaindex + key) % 26) + 'a';
+        return cipher;
     }
-    return cipher;
 }
