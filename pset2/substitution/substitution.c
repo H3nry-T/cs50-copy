@@ -111,6 +111,10 @@ char sub(string ptext, string key)
                 }
             }
         }
+        else
+        {
+            return ptext[i];
+        }
     }
-    return ptext[i];
+    return ptext;
 }
