@@ -56,24 +56,23 @@ bool salphacheck(string key)
 }
 
 //debug
-char sub(char ptext, string key) //take plaintext and key and output subbed character
+char sub(char ptext, string key) //take plaintext char and key and output subbed character
 {
     string uletter = ptext;
     string lletter = ptext;
-    for (int i = 0; i < strlen(ptext); i++) //loop through ptext
+
+    if(isupper(ptext) != 0) //sub all uppercase characters with the key
     {
-        if(isupper(ptext[i])) //sub all uppercase characters with the key
-        {
-            int ualphaindex = uletter[i] - 'A';//take uppercase character - 65
-            uletter[i] = key[ualphaindex];
-            return uletter[i];
-        }
-        else if (islower(ptext[i]))// if lower case
-        {
-            int lalphaindex = lletter[i] - 'a';//take lowercase character - '91'
-            uletter[i] = key[lalphaindex];
-            return lletter[i];
-        }
+        int ualphaindex = uletter - 'A';//take uppercase character - 65
+        uletter = key[ualphaindex];
+        return uletter;
     }
+    else if (islower(ptext[i]) != 0)// if lower case
+    {
+        int lalphaindex = lletter[i] - 'a';//take lowercase character - '91'
+        uletter[i] = key[lalphaindex];
+        return lletter[i];
+    }
+
     return 0; //exit function if not upper,lower case alphabet
 }
