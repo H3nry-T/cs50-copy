@@ -61,7 +61,7 @@ char sub(string ptext, string key) //take plaintext and key and output subbed ch
             int lalphaindex = lletter[i] - 'a';//lowercase letter - 91
             for (int j = 0; j < 26; j++)
             {
-                if(alphaindex == j)//compare keyindex (j) to the lowercase letter
+                if(lalphaindex == j)//compare keyindex (j) to the lowercase letter
                 {
                     ptext[i] = key[j];//replace e.g letter a with key[0]
                     return ptext[i];
