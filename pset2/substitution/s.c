@@ -50,9 +50,12 @@ char sub(string ptext, string key) //take plaintext and key and output subbed ch
     {
         if(isupper(ptext[i])) //sub all uppercase characters with the key
         {
-            int alphaindex = ptext[i] - 'A';//take uppercase character - 65
-            ptext[i] = key[alphaindex];
-            return ptext[i];
+            for (int i = 0; i < strlen(ptext); i++)
+            {
+                int alphaindex = ptext[i] - 'A';//take uppercase character - 65
+                ptext[i] = key[alphaindex];
+                return ptext[i];
+            }
         }
         else if (islower(ptext[i]))// if lower case
         {
