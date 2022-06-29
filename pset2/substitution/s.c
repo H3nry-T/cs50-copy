@@ -10,11 +10,28 @@ char sub(char ptext, string key);
 
 int main(int argc, string argv[])
 {
-    if (salphacheck(argv[1]) == 0 || argc != 2 || strlen(argv[1]) != 26 || checkdupe(argv[1]) != 0)
+    if (argc != 2)
     {
-        printf("ERROR\n");
+        printf("Usage: ./s key\n");
+        printf("you need to provide a key\n");
         return 1;
     }
+    if (strlen(argv[1]) != 26)
+    {
+        printf("26 long alphabet needs to be provided\n");
+        return 1;
+    }
+    if(salphacheck(argv[1]) == 0)
+    {
+        printf("key needs to be all alphabet\n");
+        return 1;
+    }
+    if (checkdupe(argv[1]) == true)
+    {
+        printf("there atleast 1 duplicated letter in your key\n");
+        return 1;
+    }
+
     string ptext = get_string("plaintext:");
     printf("ciphertext: ");
     for (int i = 0; i < strlen(ptext); i++)
