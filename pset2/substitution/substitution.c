@@ -6,7 +6,8 @@
 
 bool checkdupe(string key);
 bool salphacheck(string key);
-char sub(string ptext, string key);
+char sub(char ptext, string key);
+
 int main(int argc, string argv[])
 {
     //single command line argument
@@ -83,35 +84,22 @@ bool salphacheck(string key)
     return true;
 }
 
-char sub(string ptext, string key) //take plaintext and key and output subbed character
+char sub(char ptext, string key) //take plaintext char and key and output subbed character
 {
-    for (int i = 0; i < strlen(ptext); i++) //loop through ptext
+    char uletter = ptext;
+    char lletter = ptext;
+
+    if(isupper(ptext) != 0) //sub all uppercase characters with the key
     {
-        if(isupper(ptext[i])) //sub all uppercase characters with the key
-        {
-            int alphaindex = ptext[i] - 'A';//take uppercase character - 65
-            for (int j = 0; j < 27; j++)
-            {
-                if(alphaindex == j)//compare the keyindex (j) to the uppercase letter
-                {
-                    ptext[i] = key[j];//replace e.g letter A with key[0]
-                    return ptext[i];
-                }
-            }
-        }
-        else if (islower(ptext[i]))// if lower case
-        {
-            int alphaindex = ptext[i] - 'a';//lowercase letter - 91
-            for (int j = 0; j < 27; j++)
-            {
-                if(alphaindex == j)//compare keyindex (j) to the lowercase letter
-                {
-                    ptext[i] = key[j];//replace e.g letter a with key[0]
-                    return ptext[i];
-                }
-            }
-        }
+        int ualphaindex = uletter - 'A';//take uppercase character - 65
+        uletter = toupper(key[ualphaindex]);
+        return uletter;
+    }
+    else if (islower(ptext) != 0)// if lower case
+    {
+        int lalphaindex = lletter - 'a';//take lowercase character - '91'
+        lletter = tolower(key[lalphaindex]);
+        return lletter;
     }
     return 0; //exit function if not upper,lower case alphabet
 }
-
