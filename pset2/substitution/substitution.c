@@ -45,11 +45,12 @@ int main(int argc, string argv[])
     //cipher text output
     for (int i = 0; i < strlen(ptext); i++)
     {
+        char cipher = ptext[i];
         if (isalpha(ptext[i]))
         {
-            ptext[i] = sub(ptext, argv[1]);
+            cipher = sub(ptext[i], argv[1]);
         }
-        printf("%c", ptext[i]);
+        printf("%c", cipher);
     }
     printf("\n");
     return 0;
