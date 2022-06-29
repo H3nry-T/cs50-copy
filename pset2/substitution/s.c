@@ -13,6 +13,18 @@ int main(int argc, string argv[])
     {
         printf("key needs to be alphabet\n");
     }
+    string ptext = get_string("plaintext:");
+    printf("ciphertext: ");
+    for (int i = 0; i < strlen(ptext); i++)
+    {
+        if (isalpha(ptext[i]))
+        {
+            ptext[i] = sub(ptext, argv[1]);
+        }
+        printf("%c", ptext[i]);
+    }
+    printf("\n");
+    return 0;
 }
 
 bool checkdupe(string key)
