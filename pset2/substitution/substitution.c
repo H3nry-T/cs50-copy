@@ -102,7 +102,7 @@ char sub(string ptext, string key) //take plaintext and key and output subbed ch
         else if (islower(ptext[i]))// if lower case
         {
             int alphaindex = ptext[i] - 'a';//lowercase letter - 91
-            for (int j = 0; j < 26; j++)
+            for (int j = 0; j < 27; j++)
             {
                 if(alphaindex == j)//compare keyindex (j) to the lowercase letter
                 {
