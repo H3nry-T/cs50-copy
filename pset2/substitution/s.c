@@ -58,15 +58,9 @@ char sub(string ptext, string key) //take plaintext and key and output subbed ch
         }
         else if (islower(ptext[i]))// if lower case
         {
-            int lalphaindex = lletter[i] - 'a';//lowercase letter - 91
-            for (int j = 0; j < 26; j++)
-            {
-                if(lalphaindex == j)//compare keyindex (j) to the lowercase letter
-                {
-                    ptext[i] = key[j];//replace e.g letter a with key[0]
-                    return ptext[i];
-                }
-            }
+            int lalphaindex = lletter[i] - 'a';//take lowercase character - '91'
+            uletter[i] = key[lalphaindex];
+            return lletter[i];
         }
     }
     return 0; //exit function if not upper,lower case alphabet
