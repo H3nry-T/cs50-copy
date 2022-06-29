@@ -6,6 +6,7 @@
 
 bool checkdupe(string key);
 bool salphacheck(string key);
+char sub(ptext,argv[1]);
 
 int main(int argc, string argv[])
 {
@@ -19,9 +20,9 @@ int main(int argc, string argv[])
     {
         if (isalpha(ptext[i]))
         {
-            ptext[i] = sub(ptext, argv[1]);
+            char cipher = sub(ptext[i], argv[1]);
         }
-        printf("%c", ptext[i]);
+        printf("%c", cipher);
     }
     printf("\n");
     return 0;
@@ -64,15 +65,14 @@ char sub(char ptext, string key) //take plaintext char and key and output subbed
     if(isupper(ptext) != 0) //sub all uppercase characters with the key
     {
         int ualphaindex = uletter - 'A';//take uppercase character - 65
-        uletter = key[ualphaindex];
+        uletter = toupper(key[ualphaindex]);
         return uletter;
     }
     else if (islower(ptext[i]) != 0)// if lower case
     {
         int lalphaindex = lletter - 'a';//take lowercase character - '91'
-        lletter = key[lalphaindex];
+        lletter = tolower(key[lalphaindex]);
         return lletter;
     }
-
     return 0; //exit function if not upper,lower case alphabet
 }
