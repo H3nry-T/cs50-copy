@@ -12,13 +12,13 @@ int main(int argc, string argv[])
 {
     if (salphacheck(argv[1]) == 0 || argc != 2 || strlen(argv[1]) != 26)
     {
-        printf("key needs to be alphabet\n");
+        printf("ERROR\n");
     }
     string ptext = get_string("plaintext:");
     printf("ciphertext: ");
     for (int i = 0; i < strlen(ptext); i++)
     {
-        char cipher = ptext[i]
+        char cipher = ptext[i];
         if (isalpha(ptext[i]))
         {
             cipher = sub(ptext[i], argv[1]);
@@ -69,7 +69,7 @@ char sub(char ptext, string key) //take plaintext char and key and output subbed
         uletter = toupper(key[ualphaindex]);
         return uletter;
     }
-    else if (islower(ptext[i]) != 0)// if lower case
+    else if (islower(ptext) != 0)// if lower case
     {
         int lalphaindex = lletter - 'a';//take lowercase character - '91'
         lletter = tolower(key[lalphaindex]);
