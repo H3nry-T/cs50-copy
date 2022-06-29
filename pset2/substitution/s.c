@@ -18,7 +18,7 @@ int main(int argc, string argv[])
     printf("ciphertext: ");
     for (int i = 0; i < strlen(ptext); i++)
     {
-        char cipher = 
+        char cipher = ptext[i]
         if (isalpha(ptext[i]))
         {
             cipher = sub(ptext[i], argv[1]);
