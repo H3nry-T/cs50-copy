@@ -9,7 +9,7 @@ bool salphacheck(string key);
 
 int main(int argc, string argv[])
 {
-    if (salphacheck(argv[1]) == 0)
+    if (salphacheck(argv[1]) == 0 || argc != 2 || strlen(argv[1]) != 26)
     {
         printf("key needs to be alphabet\n");
     }
@@ -46,8 +46,8 @@ bool salphacheck(string key)
 //debug
 char sub(string ptext, string key) //take plaintext and key and output subbed character
 {
-    string uletter = ptext
-    string lletter = ptext
+    string uletter = ptext;
+    string lletter = ptext;
     for (int i = 0; i < strlen(ptext); i++) //loop through ptext
     {
         if(isupper(ptext[i])) //sub all uppercase characters with the key
@@ -65,7 +65,3 @@ char sub(string ptext, string key) //take plaintext and key and output subbed ch
     }
     return 0; //exit function if not upper,lower case alphabet
 }
-
-//replace with
-
-ptext[i] = key[alphaindex]
