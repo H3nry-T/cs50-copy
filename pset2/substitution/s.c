@@ -56,7 +56,7 @@ bool salphacheck(string key)
 }
 
 //debug
-char sub(string ptext, string key) //take plaintext and key and output subbed character
+char sub(char ptext, string key) //take plaintext and key and output subbed character
 {
     string uletter = ptext;
     string lletter = ptext;
