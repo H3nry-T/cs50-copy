@@ -13,7 +13,7 @@ int main(int argc, string argv[])
     if (salphacheck(argv[1]) == 0 || argc != 2 || strlen(argv[1]) != 26 || checkdupe(argv[1]) != 0)
     {
         printf("ERROR\n");
-        
+        return 1;
     }
     string ptext = get_string("plaintext:");
     printf("ciphertext: ");
