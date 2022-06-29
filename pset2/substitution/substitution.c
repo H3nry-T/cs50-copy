@@ -26,7 +26,7 @@ int main(int argc, string argv[])
         printf("26 long alphabet needs to be provided\n");
         return 1;
     }
-    if(salphacheck(argv[1]) == 0)
+    if (salphacheck(argv[1]) == 0)
     {
         printf("key needs to be all alphabet\n");
         return 1;
@@ -90,7 +90,7 @@ char sub(char ptext, string key) //take plaintext char and key and output subbed
     char uletter = ptext;
     char lletter = ptext;
 
-    if(isupper(ptext) != 0) //sub all uppercase characters with the key
+    if (isupper(ptext) != 0) //sub all uppercase characters with the key
     {
         int ualphaindex = uletter - 'A';//take uppercase character - 65
         uletter = toupper(key[ualphaindex]);
