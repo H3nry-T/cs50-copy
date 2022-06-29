@@ -6,7 +6,7 @@
 
 bool checkdupe(string key);
 bool salphacheck(string key);
-char sub(ptext,argv[1]);
+char sub(char ptext, string key);
 
 int main(int argc, string argv[])
 {
@@ -18,9 +18,10 @@ int main(int argc, string argv[])
     printf("ciphertext: ");
     for (int i = 0; i < strlen(ptext); i++)
     {
+        char cipher = 
         if (isalpha(ptext[i]))
         {
-            char cipher = sub(ptext[i], argv[1]);
+            cipher = sub(ptext[i], argv[1]);
         }
         printf("%c", cipher);
     }
