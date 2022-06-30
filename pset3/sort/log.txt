@@ -10,3 +10,14 @@ sorted5000.txt
 sorted10000.txt
 sorted50000.txt
 
+random5000.txt
+random10000.txt
+random50000.txt
+
+reversed5000.txt
+reversed10000.txt
+reversed50000.txt
+
+sorted5000.txt
+sorted10000.txt
+sorted50000.txt
