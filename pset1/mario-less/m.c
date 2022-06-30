@@ -13,6 +13,7 @@ void pyramid(int height)
 {
     for (int i = 0; i < height; i++)
     {
-        printf()
+        for (int j = 0; j < i + 1)
+        printf("\n");
     }
 }
