@@ -10,6 +10,7 @@ time ./sort1 reversed50000.txt 5.608s
 time ./sort1 sorted5000.txt 0.043
 time ./sort1 sorted10000.txt
 time ./sort1 sorted50000.txt 0.535s
+
 // merge sort
 time ./sort2 random5000.txt 0.022s
 time ./sort2 random10000.txt
@@ -22,6 +23,7 @@ time ./sort2 reversed50000.txt 0.596s
 time ./sort2 sorted5000.txt 0.022s
 time ./sort2 sorted10000.txt
 time ./sort2 sorted50000.txt 0.534s
+
 // selection sort
 time ./sort3 random5000.txt 0.069s
 time ./sort3 random10000.txt
