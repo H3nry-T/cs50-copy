@@ -2,10 +2,10 @@ sort1 uses: bubble sort
 
 How do you know?: sorted 0.535s when sorted and sorted in 7.543 when unsorted
 
-sort2 uses: TODO
+sort2 uses: merge sort
 
-How do you know?: TODO
+How do you know?: fastest sort time of 
 
-sort3 uses: TODO
+sort3 uses: selection sort
 
 How do you know?: TODO
