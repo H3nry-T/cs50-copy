@@ -29,8 +29,8 @@ time ./sort3 random50000.txt 3.273s
 
 time ./sort3 reversed5000.txt
 time ./sort3 reversed10000.txt
-time ./sort3 reversed50000.txt
+time ./sort3 reversed50000.txt 3.252s
 
 time ./sort3 sorted5000.txt
 time ./sort3 sorted10000.txt
-time ./sort3 sorted50000.txt
+time ./sort3 sorted50000.txt 3.255
