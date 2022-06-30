@@ -21,5 +21,5 @@ void pyramid(int n)
     {
         printf("#");
     }
-
+    printf("\n");
 }
