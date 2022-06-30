@@ -23,3 +23,4 @@ void pyramid(int n)
     }
     printf("\n");
 }
+
