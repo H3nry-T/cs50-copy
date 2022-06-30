@@ -1,31 +1,31 @@
 
 time ./sort1 random5000.txt
 time ./sort1 random10000.txt
-time ./sort1 random50000.txt
+time ./sort1 random50000.txt 7.543s
 
 time ./sort1 reversed5000.txt
 time ./sort1 reversed10000.txt
-time ./sort1 reversed50000.txt
+time ./sort1 reversed50000.txt 5.608s
 
 time ./sort1 sorted5000.txt
 time ./sort1 sorted10000.txt
-time ./sort1 sorted50000.txt
+time ./sort1 sorted50000.txt 0.535s
 //
 time ./sort2 random5000.txt
 time ./sort2 random10000.txt
-time ./sort2 random50000.txt
+time ./sort2 random50000.txt 0.508s
 
 time ./sort2 reversed5000.txt
 time ./sort2 reversed10000.txt
-time ./sort2 reversed50000.txt
+time ./sort2 reversed50000.txt 0.596s
 
 time ./sort2 sorted5000.txt
 time ./sort2 sorted10000.txt
-time ./sort2 sorted50000.txt
+time ./sort2 sorted50000.txt 0.520s
 //
 time ./sort3 random5000.txt
 time ./sort3 random10000.txt
-time ./sort3 random50000.txt
+time ./sort3 random50000.txt 3.273s
 
 time ./sort3 reversed5000.txt
 time ./sort3 reversed10000.txt
