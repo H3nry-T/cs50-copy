@@ -1,6 +1,6 @@
-sort1 uses: TODO
+sort1 uses: bubble sort
 
-How do you know?: TODO
+How do you know?: O(n^2) for the best case scenario and o(n) for the worst case scenario
 
 sort2 uses: TODO
 
