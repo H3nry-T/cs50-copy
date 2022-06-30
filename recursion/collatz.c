@@ -24,7 +24,7 @@ int collatz(int n)
     {
         return 0;
     }
-    else if (n % 2 == 0)
+    else if ((n % 2) == 0)
     {
         collatz(n/2);
         count++;
