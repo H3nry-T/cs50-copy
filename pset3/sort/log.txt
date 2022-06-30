@@ -1,14 +1,3 @@
-random5000.txt
-random10000.txt
-random50000.txt
-
-reversed5000.txt
-reversed10000.txt
-reversed50000.txt
-
-sorted5000.txt
-sorted10000.txt
-sorted50000.txt
 
 time ./sort1 random5000.txt
 time ./sort1 random10000.txt
@@ -21,7 +10,7 @@ time ./sort1 reversed50000.txt
 time ./sort1 sorted5000.txt
 time ./sort1 sorted10000.txt
 time ./sort1 sorted50000.txt
-
+//
 time ./sort2 random5000.txt
 time ./sort2 random10000.txt
 time ./sort2 random50000.txt
@@ -33,7 +22,7 @@ time ./sort2 reversed50000.txt
 time ./sort2 sorted5000.txt
 time ./sort2 sorted10000.txt
 time ./sort2 sorted50000.txt
-
+//
 time ./sort3 random5000.txt
 time ./sort3 random10000.txt
 time ./sort3 random50000.txt
