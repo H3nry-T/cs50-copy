@@ -1,6 +1,6 @@
 sort1 uses: bubble sort
 
-How do you know?: O(n^2) for the best case scenario and o(n) for the worst case scenario
+How do you know?: sorted 0.535s when sorted and sorted in 7.543 when unsorted
 
 sort2 uses: TODO
 
