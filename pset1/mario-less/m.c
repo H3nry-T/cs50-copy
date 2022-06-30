@@ -11,13 +11,8 @@ int main(void)
 
 void pyramid(int height)
 {
-    if (height == 0)
-    {
-        return 1;
-    }
     for (int i = 0; i < height; i++)
     {
-        printf("#");
+        printf()
     }
-    pyramid(height - 1);
 }
