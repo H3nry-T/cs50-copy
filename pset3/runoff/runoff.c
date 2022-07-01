@@ -182,10 +182,17 @@ int find_min(void)
     int i = 0;
     while (i < candidate_count)
     {
-        if()
+        if ()
+        {
+            
+        }
+        else if(candidates[i].eliminated == false || )
+        {
+
+        }
         i++;
     }
-    return 0;
+    return 1;
 }
 
 // Return true if the election is tied between all candidates, false otherwise
