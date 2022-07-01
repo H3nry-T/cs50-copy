@@ -80,7 +80,7 @@ bool vote(string name)
 void print_winner(void)
 {
     string winner[candidate_count] = 0:
-    int scorewin = candidates[0].votes;
+
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = i + 1; j < candidate_count; j++)
