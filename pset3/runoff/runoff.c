@@ -146,9 +146,9 @@ void tabulate(void)
         int j = 0;
         while (j < candidate_count)
         {
-            if (candidates[preference[i][j]].eliminated = false)
+            if (candidates[preferences[i][j]].eliminated == false)
             {
-                candidates[preference[i][j]].votes += 1;
+                candidates[preferences[i][j]].votes += 1;
                 break;
             }
             else
@@ -165,7 +165,7 @@ bool print_winner(void)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes > 0.5 * unsigned double voter_count)
+        if (candidates[i].votes > ceil(0.5 * unsigned double voter_count))
         {
             printf("%s\n", candidates[i].name);
             return true;
