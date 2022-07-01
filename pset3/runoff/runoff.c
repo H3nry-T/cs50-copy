@@ -205,15 +205,21 @@ bool is_tie(int min)
         }//if candidates not min value, but all the same score return true;
         else if(candidates[i].votes != min && candidates[i].eliminated == false)
         {
-            tiedvote = 0;
-            if (candidates[i].votes)
+            int tiedvote = 0; //if repeated vote count += 1
+            for (int j = i + 1; j < canddiate_count; j++)
+            {
+                if (candidates[i].votes == candidates[j].votes)
+                {
+                    tied vote++;
+                }
+            }
         }
     }
     if (tiecount >= 2)//more than 2 people have the same score.
     {
         return true;
     }
-    else if ()
+    else if (tiedvote > 0)
     {
 
     }
