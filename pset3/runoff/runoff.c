@@ -135,7 +135,7 @@ bool vote(int voter, int rank, string name)
             {
                 for (j = 0; j < candidate_count; j++)
                 {
-                    
+                    preferences[i][j] = i
                 }
                 candidates[i].votes += 1;
                 return true;
