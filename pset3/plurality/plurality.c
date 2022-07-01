@@ -88,7 +88,7 @@ void print_winner(void)
         {
             if (candidates[i].votes == candidates[j].votes)
             {
-                printf("%s %s\n", candidates[i].name, candidates[j].name);
+                winner[i] = candidates[i].name
             }
         }
         if (candidates[i].votes > candidates[0].votes)
