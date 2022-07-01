@@ -195,26 +195,22 @@ int find_min(void)
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
-    int tiecount = 0;//need 2 or more same vot to be tiecount
-    int tiedvote = 0; //if any repeated non min votes that are the same.
+    int tiecount = 0;//need 2 or more same vote to be tiecount
+    int inrunoff = 0; //if any candidate in runoff (but may or may not be tied)
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes == min && candidates[i].eliminated == false)
         {
             tiecount++;
-        }//if candidates not min value, but all the same score return true;
-        else if(candidates[i].votes != min && candidates[i].eliminated == false)
+            inrunoff++;
+        }
+        else if (candidates[i].votes != min && candidates[i].eliminated == false)
         {
-            for (int j = i + 1; j < candidate_count; j++)
-            {
-                if (candidates[i].votes == candidates[j].votes)
-                {
-                    tiedvote++;
-                }
-            }
+            inrunoff++;
         }
     }
-    if (tiecount < tiedvote)//more than 2 people have the same score.
+
+    if (tiecount == inrunoff)//still some people in runoff?
     {
         return true;
     }
