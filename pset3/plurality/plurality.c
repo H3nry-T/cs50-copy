@@ -68,7 +68,7 @@ bool vote(string name)
 {
     for (int i = 1; i <= candidate_count; i++)
     {
-        if (strcomp(name, candidates[i].name))
+        if (strcomp(name, candidates[i].name) == 0)
         {
             return true;
         }
