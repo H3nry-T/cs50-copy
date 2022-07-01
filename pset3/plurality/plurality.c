@@ -88,6 +88,7 @@ void print_winner(void)
         if (candidates[i].votes > candidates[0].votes)
         {
             winscore = candidates[i].name;
+            
         }
     }
     if (winscore = candidates[i].name)
