@@ -88,6 +88,10 @@ void print_winner(void)
         {
             winner[0] = candidates[i].name;
         }
+        else
+        {
+            winn
+        }
     }
     printf("%s\n", winner[0]);
     return;
