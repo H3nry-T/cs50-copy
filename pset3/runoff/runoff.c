@@ -181,7 +181,7 @@ int find_min(void)
     int min = candidates[0].votes;
     for (int i = 0; i < candidate_count; i++)
     {
-        helalfsdjlkadsjklf
+        
     }
     return 0;
 }
