@@ -166,7 +166,7 @@ bool print_winner(void)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes > ceil(0.5 * unsigned double voter_count))
+        if (candidates[i].votes > ceil(0.5 * voter_count))
         {
             printf("%s\n", candidates[i].name);
             return true;
