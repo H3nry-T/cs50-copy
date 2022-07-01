@@ -1,11 +1,11 @@
 sort1 uses: bubble sort
 
-How do you know?: sorted 0.535s when sorted and sorted in 7.543 when unsorted
+How do you know?: sorted 0.535s when sorted and sorted in 7.543 when unsorted, so O(n^2) (best case) O(n) (worst case)
 
 sort2 uses: merge sort
 
-How do you know?: fastest sort time of 
+How do you know?: fastest sort time of the 3 algorithms consistent with the worst and best case scenario
 
 sort3 uses: selection sort
 
-How do you know?: TODO
+How do you know?: same best and worst case scenario. faster than bubble sort, but slower than merge sort.
