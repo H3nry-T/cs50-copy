@@ -87,7 +87,7 @@ void print_winner(void)
         {
             if (candidates[i].votes == candidates[j].votes)
             {
-
+                print("%s %s\n", candidates[i].name, candidates[j].name);
             }
         }
         if (candidates[i].votes > candidates[0].votes)
