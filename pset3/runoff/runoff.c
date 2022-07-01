@@ -147,12 +147,9 @@ void tabulate(void)
         {
             if (candidates[preference[i][j]].eliminated = true)
             {
-                return
+                //keep finding a number (candidate) that is not eliminated
             }
-            else
-            {
-                
-            }
+            
         }
     }
     return;
