@@ -81,7 +81,7 @@ bool vote(string name)
 void print_winner(void)
 {
     string winner[candidate_count];
-
+    if 
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes > candidates[0].votes)
