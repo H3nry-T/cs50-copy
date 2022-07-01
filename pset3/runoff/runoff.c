@@ -183,6 +183,7 @@ int find_min(void)
     while (i < candidate_count)
     {
         if()
+        i++;
     }
     return 0;
 }
