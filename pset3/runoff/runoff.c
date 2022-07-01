@@ -214,11 +214,7 @@ bool is_tie(int min)
             }
         }
     }
-    if (tiecount >= 2)//more than 2 people have the same score.
-    {
-        return true;
-    }
-    else if (tiedvote > 0)
+    if (tiecount < tiedvote)//more than 2 people have the same score.
     {
         return true;
     }
