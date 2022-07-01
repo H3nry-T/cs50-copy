@@ -216,6 +216,6 @@ bool is_tie(int min)
 // Eliminate the candidate (or candidates) in last place
 void eliminate(int min)
 {
-    //if candidate has 0 vote change eliminate - "true"
+    for (int i = 0; )
     return;
 }
