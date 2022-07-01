@@ -163,9 +163,9 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    if (candidates[i].votes > 0.5)
+    if (candidates[i].votes > 0.5 * unsigned double voter_count)
     {
-        
+        return true; 
     }
     return false;
 }
