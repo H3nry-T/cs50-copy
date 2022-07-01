@@ -206,7 +206,7 @@ bool is_tie(int min)
         else if(candidates[i].votes != min && candidates[i].eliminated == false)
         {
             int tiedvote = 0; //if repeated vote count += 1
-            for (int j = i + 1; j < canddiate_count; j++)
+            for (int j = i + 1; j < candidate_count; j++)
             {
                 if (candidates[i].votes == candidates[j].votes)
                 {
@@ -221,7 +221,7 @@ bool is_tie(int min)
     }
     else if (tiedvote > 0)
     {
-
+        return true;
     }
     else
     {
