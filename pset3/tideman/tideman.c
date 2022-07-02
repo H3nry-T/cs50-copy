@@ -100,12 +100,12 @@ int main(int argc, string argv[])
 // Update ranks given a new vote
 bool vote(int rank, string name, int ranks[])
 {
-    int candindex = 0;
+    int candindex = -1;
     for (int i = 0; i < candidate_count; i++)
     {
         if (strcmp(name, candidates[i]) == 0)
         {
-            candindex = i;
+            candindex++;
             break;
         }
         ranks[rank] = candindex;
