@@ -149,9 +149,9 @@ void sort_pairs(void)
     {
         int stgh_v = preferences[pairs[i].winner][pairs[i].loser];
         int begin_index = i; //selection sort starting position
-        for (int j = i - 1; j < pair_count - 1; j++)
+        for (int j = i - 1; j >= 0; j--)
         {
-
+            
         }
     }
     return;
