@@ -100,7 +100,6 @@ int main(int argc, string argv[])
 // Update ranks given a new vote
 bool vote(int rank, string name, int ranks[])
 {
-    int updateranks = 0;
     for (int c = 0; c < candidate_count; c++)
     {
         if (strcmp(name, candidates[c]) == 0)
