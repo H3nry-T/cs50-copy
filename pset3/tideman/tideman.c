@@ -101,6 +101,9 @@ int main(int argc, string argv[])
 bool vote(int rank, string name, int ranks[])
 {
     if (strcmp(name, candidates[rank]))
+    {
+        ranks[rank] = 
+    }
     return false;
 }
 
