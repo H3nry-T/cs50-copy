@@ -112,10 +112,7 @@ bool vote(int rank, string name, int ranks[])
             return false;
         }
     }
-    if (updateranks > 0)
-    {
-        return true;
-    }
+    return true;
 }
 
 // Update preferences given one voter's ranks
