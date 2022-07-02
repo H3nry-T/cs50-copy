@@ -108,9 +108,12 @@ bool vote(int rank, string name, int ranks[])
             candindex++;
             break;
         }
+        else
+        {
+            return false;
+        }
         ranks[rank] = candindex;
     }
-    return false;
 }
 
 // Update preferences given one voter's ranks
