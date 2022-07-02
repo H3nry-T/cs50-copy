@@ -133,13 +133,12 @@ void add_pairs(void)
         {
             if (preferences[i][j] - preferences[j][i] > 0)
             {
-
-            }
-            else if (preferences[i][j] - preferences[j][i] == 0)
-            {
-                break;
+                
             }
             else if (preferences[i][j] - preferences[j][i] < 0)
+            {
+
+            }
         }
     }
     return;
