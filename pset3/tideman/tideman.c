@@ -147,7 +147,7 @@ void sort_pairs(void)
 {
     for (int i = pair_count - 1; i >= 0; i--) //implement loop backwards, beginning shall be highest
     {
-        int stgh_v = preferences[][]
+        int stgh_v = preferences[pairs[i].winner][pairs[i].loser];
         for (int j = i + 1; j < pair_count - 1; j++)
         {
             if (pairs[i][j] )
