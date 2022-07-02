@@ -151,7 +151,7 @@ void sort_pairs(void)
         int begin_index = i; //selection sort starting position
         for (int j = i - 1; j >= 0; j--)
         {
-            
+            if (stgh_v )
         }
     }
     return;
