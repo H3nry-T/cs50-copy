@@ -109,6 +109,10 @@ bool vote(int rank, string name, int ranks[])
             break;
         }
     }
+    if (candindex = -1)
+    {
+        return false;
+    }
     ranks[rank] = candindex;
     return true;
 
