@@ -32,3 +32,24 @@ bool vote(int rank, string name, int ranks[])
         return false;
     }
 }
+
+void add_pairs(void)
+{
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = 0; j < candidate_count; j++)
+        {
+            if (preferences[i][j] - preferences[j][i] > 0)
+            {
+                pair_count++;
+                pairs[i].winner = preferences[i][j]
+            }
+            else if (preferences[i][j] - preferences[j][i] < 0)
+            {
+                pair_count++;
+                pairs[i].loser =
+            }
+        }
+    }
+    return;
+}
