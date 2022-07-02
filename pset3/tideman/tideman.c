@@ -131,7 +131,11 @@ void add_pairs(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            if (candidate)
+            if (preferences[i][j] == 0)
+            {
+                break;
+            }
+            else if ()
         }
     }
     return;
