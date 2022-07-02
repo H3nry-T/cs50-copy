@@ -133,12 +133,12 @@ void add_pairs(void)
         {
             if (preferences[i][j] - preferences[j][i] > 0)
             {
-                pairs[MAX * (MAX - 1) / 2] = preferences[i][j]
                 pair_count++;
+                pairs[i].winner = 
             }
             else if (preferences[i][j] - preferences[j][i] < 0)
             {
-                
+
             }
         }
     }
