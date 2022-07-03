@@ -166,9 +166,9 @@ void sort_pairs(void)
         int higheststrength_index = i;
         for (int j = i + 1; j < pair_count - 1; j++)
         {
-            if (maxv > maxv)
+            if (victorystgh(j) > maxv)
             {
-                int maxv = victorystgh(j);
+                maxv = victorystgh(j);
                 higheststrength_index = j;
             }
         }
@@ -176,7 +176,7 @@ void sort_pairs(void)
         {
             pair swapwith = pairs[higheststrength_index];//we want highstrength index pair to swap with the starting pair.
             pairs[higheststrength_index]= pairs[i];
-            pairs[i] = pairs[higheststrength_index]
+            pairs[i] = pairs[higheststrength_index];
         }
     }
     return;
