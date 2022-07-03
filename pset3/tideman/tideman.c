@@ -152,17 +152,22 @@ void add_pairs(void) //look into the preferences array.
     return;
 }
 
+int victorystgh(int i)//i is any index position
+{
+    return preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].winner][pairs[i].loser];
+}
+
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
     int maxv, higheststrength_index, newhighest_maxv;
-    for (int i = 0; i < pair_count; i++)
+    for (int i = 0; i < pair_count - 1; i++)
     {
-        maxv = preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].winner][pairs[i].loser];
+        maxv = victorystgh(i);
         higheststrength_index = i;
-        for (int j = i + 1; j < pair_count; j++)
+        for (int j = i + 1; j < pair_count - 1; j++)
         {
-            newhighest_maxv = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].winner][pairs[j].loser];
+            newhighest_maxv = victorystgh(j);
             if (newhighest_maxv > maxv)
             {
                 higheststrength_index = j;
