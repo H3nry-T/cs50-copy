@@ -153,7 +153,7 @@ void sort_pairs(void)
         int min_index = 0;
         for (int j = i - 1; j >= 0; j--)
         {
-            if (preferences[pairs[j].winner][pairs[j].loser] < stgh_v)//test each subsequent strength with
+            if (preferences[pairs[j].winner][pairs[j].loser] < minv)//test each subsequent strength with
             {
                 minv = preferences[pairs[j].winner][pairs[j].loser];
                 min_index = j;
