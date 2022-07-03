@@ -169,8 +169,9 @@ void sort_pairs(void)
         }
         if (higheststrength_index != i)
         {
-            
-            maxv = preferences[pairs[min_index].winner][pairs[min_index].loser] - preferences[pairs[min_index].winner][pairs[min_index].loser];
+            pair swapwith = pairs[i];//pairs[i] is the location we want to swap with.
+            pairs[i] = pairs[higheststrength_index];
+            pairs[higheststrength_index] = swapwith;
         }
     }
     return;
