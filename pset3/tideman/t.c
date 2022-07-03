@@ -166,6 +166,7 @@ void sort_pairs(void)
                 int min_index = j;
             }
         }
+        if ()
         maxv = preferences[pairs[min_index].winner][pairs[min_index].loser] - preferences[pairs[min_index].winner][pairs[min_index].loser];
     }
     return;
