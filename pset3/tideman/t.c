@@ -163,10 +163,11 @@ void sort_pairs(void)
             int new_maxv = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].winner][pairs[j].loser];
             if (new_maxv > maxv)
             {
-                int min_index = j;
+                int higheststrength_index = j;
+                maxv = new_maxv;
             }
         }
-        if (maxv != new_maxv)
+        if (j != new_maxv)
         maxv = preferences[pairs[min_index].winner][pairs[min_index].loser] - preferences[pairs[min_index].winner][pairs[min_index].loser];
     }
     return;
