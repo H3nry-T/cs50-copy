@@ -158,8 +158,8 @@ void sort_pairs(void)
                 int min_index = j;
             }
         }
-        pair swap = pairs[min_index];
-        pairs[min_index] = pairs[i]
+        pairs[min_index] = pairs[i];
+        pairs[i] = pairs[min_index];
     }
     return;
 }
