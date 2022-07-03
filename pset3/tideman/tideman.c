@@ -150,17 +150,18 @@ void sort_pairs(void)
         int stgh_v = preferences[pairs[i].winner][pairs[i].loser];
         int minv = stgh_v;
         int begin_index = i; //selection sort starting position
+        int min_index = 0;
         for (int j = i - 1; j >= 0; j--)
         {
             if (preferences[pairs[j].winner][pairs[j].loser] < stgh_v)//test each subsequent strength with
             {
                 minv = preferences[pairs[j].winner][pairs[j].loser];
-                int min_index = j;
+                min_index = j;
             }
         }
         pair temp = pairs[min_index];
         pairs[min_index] = pairs[i];
-        pairs[i] = pairs[min_index];
+        pairs[i] = temp;
     }
     return;
 }
