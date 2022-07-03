@@ -117,23 +117,48 @@ void record_preferences(int ranks[])
     {
         for (int j = i + 1; j < candidate_count; i++)
         {
-            
+            preferences[ranks[i]][ranks[j]] += 1; //ranks[i] is preferred over ranks[j]
         }
     }
     return;
 }
 
 // Record pairs of candidates where one is preferred over the other
-void add_pairs(void)
+void add_pairs(void) //look into the preferences array.
 {
-    // TODO
+    for (int i = 0; i < candidate_count; i++) //check each row candidate
+    {
+        for (int j = 0; j < candidate_count; j++) //check if the row beat the column (larger vote count)
+        {
+            if (preferences[i][j] > preferences[j][i]) //i wins against j vs j wins against i
+            {
+                pair addpair = {i, j};//winner is i and loser is j
+                pairs[pair_count] = addpair;//make pairs array, of alice bob, bob chalie, etc.
+                pair_count++;//if an extra pair is found with a winner => add the pair_count (increases array size)
+            }
+            //no else if() statement
+            //A vs B and B vs A (A is i B is j)
+            //B vs A and A vs B? this makes else if() redundant.
+            //(B is i A is j)
+            //because this loop covers this scenario already
+            // else if (preferences[j][i] > preferences[i][j])
+            // {
+            //     pair addpair = {j, i};
+            //     pairs[pair_count] = addpair;
+            //     pair_count++;
+            // }
+        }
+    }
     return;
 }
 
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
-    // TODO
+    for (int i = 0; i < pair_count - 1; i++)
+    {
+        
+    }
     return;
 }
 

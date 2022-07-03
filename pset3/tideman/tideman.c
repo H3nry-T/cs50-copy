@@ -194,7 +194,7 @@ void lock_pairs(void)
         if (!has_cycle(winner,loser))
         {
             locked[winner][loser] = true;
-        
+        }
     return;
 }
 
