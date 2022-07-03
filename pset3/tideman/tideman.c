@@ -160,11 +160,10 @@ int victorystgh(int i)//i is any index position
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
-    int maxv, higheststrength_index, newhighest_maxv;
     for (int i = 0; i < pair_count - 1; i++)
     {
-        maxv = victorystgh(i);
-        higheststrength_index = i;
+        int maxv = victorystgh(i);
+        int higheststrength_index = i;
         for (int j = i + 1; j < pair_count - 1; j++)
         {
             newhighest_maxv = victorystgh(j);
