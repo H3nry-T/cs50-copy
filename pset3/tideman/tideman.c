@@ -175,9 +175,9 @@ void sort_pairs(void)
         }
         if (higheststrength_index != i)
         {
-            pair swapwith = pairs[i];//we want highstrength index pair to swap with the starting pair.
-            pairs[i] = pairs[higheststrength_index];
-            pairs[higheststrength_index] = swapwith;
+            pair swapwith = pairs[higheststrength_index];//we want highstrength index pair to swap with the starting pair.
+            pairs[higheststrength_index]= pairs[i];
+            pairs[i] = pairs[higheststrength_index]
         }
     }
     return;
