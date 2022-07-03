@@ -166,7 +166,7 @@ void sort_pairs(void)
         int higheststrength_index = i;
         for (int j = i + 1; j < pair_count - 1; j++)
         {
-            if (newhighest_maxv > maxv)
+            if (maxv > maxv)
             {
                 int maxv = victorystgh(j);
                 higheststrength_index = j;
