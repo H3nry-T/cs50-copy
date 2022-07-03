@@ -167,8 +167,11 @@ void sort_pairs(void)
                 maxv = new_maxv;
             }
         }
-        if (j != i)
-        maxv = preferences[pairs[min_index].winner][pairs[min_index].loser] - preferences[pairs[min_index].winner][pairs[min_index].loser];
+        if (higheststrength_index != i)
+        {
+            
+            maxv = preferences[pairs[min_index].winner][pairs[min_index].loser] - preferences[pairs[min_index].winner][pairs[min_index].loser];
+        }
     }
     return;
 }
