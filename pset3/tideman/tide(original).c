@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+
 // Max number of candidates
 #define MAX 9
 
@@ -115,78 +116,104 @@ void record_preferences(int ranks[])
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = i + 1; j < candidate_count; i++)
+        for (int j = i + 1; j < candidate_count; j++)
         {
-            preferences[ranks[i]][ranks[j]] += 1; //ranks[i] is preferred over ranks[j]
+            preferences[ranks[i]][ranks[j]] += 1;
         }
     }
     return;
 }
 
 // Record pairs of candidates where one is preferred over the other
-void add_pairs(void) //look into the preferences array.
+void add_pairs(void)
 {
-    for (int i = 0; i < candidate_count; i++) //check each row candidate
+    for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = 0; j < candidate_count; j++) //check if the row beat the column (larger vote count)
+        for (int j = 0; j < candidate_count; j++)
         {
-            if (preferences[i][j] > preferences[j][i]) //i wins against j vs j wins against i
+            if (preferences[i][j] > preferences[j][i])
             {
-                pair addpair = {i, j};//winner is i and loser is j
-                pairs[pair_count] = addpair;//make pairs array, of alice bob, bob chalie, etc.
-                pair_count++;//if an extra pair is found with a winner => add the pair_count (increases array size)
+                pair addpair = {i, j};
+                pairs[pair_count] = addpair;
+                pair_count++;
             }
-            //no else if() statement
-            //A vs B and B vs A (A is i B is j)
-            //B vs A and A vs B? this makes else if() redundant.
-            //(B is i A is j)
-            //because this loop covers this scenario already
-            // else if (preferences[j][i] > preferences[i][j])
-            // {
-            //     pair addpair = {j, i};
-            //     pairs[pair_count] = addpair;
-            //     pair_count++;
-            // }
         }
     }
     return;
 }
 
 // Sort pairs in decreasing order by strength of victory
+
+int pair_sov(i)
+{
+    return preferences[pairs[i].winner][pairs[i].loser];
+}
 void sort_pairs(void)
 {
-    for (int i = 0; i < pair_count - 1; i++)
+    for (int i = pair_count - 1; i >= 0; i--) //implement loop backwards, beginning shall be highest
     {
-        int maxv = preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].winner][pairs[i].loser];
-        for (int j = i + 1; j < pair_count - 1; j++)
+        int min_sov = pair_sov(i); //selection sort starting position
+        int min_index = i;
+        for (int j = i - 1; j >= 0; j--)
         {
-            int new_maxv = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].winner][pairs[j].loser];
-            if (new_maxv > maxv)
+            if (pair_sov(j) < min_sov)//test each subsequent strength with
             {
-                int higheststrength_index = j;
-                maxv = new_maxv;
+                min_sov = pair_sov(j);
+                min_index = j;
             }
         }
-        if (higheststrength_index != i)
-        {
-            pair swapwith = pairs[i];//we want highstrength index pair to swap with the starting pair.
-            pairs[i] = pairs[higheststrength_index];
-            pairs[higheststrength_index] = swapwith;
-        }
+        pair temp = pairs[min_index];
+        pairs[min_index] = pairs[i];
+        pairs[i] = temp;
     }
     return;
 }
 
+bool has_cycle(int winner, int loser)
+{
+    if (locked[loser][winner] == true)
+    {
+        return true;
+    }
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if(locked[loser][i] == true && has_cycle(winner,i))
+        {
+            return true;
+        }
+    }
+    return false;
+}
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    // TODO
+    for (int i = 0; i < pair_count; i++)
+    {
+        int winner = pairs[i].winner;
+        int loser = pairs[i].loser;
+        if (!has_cycle(winner,loser))
+        {
+            locked[winner][loser] = true;
+        }
     return;
 }
 
 // Print the winner of the election
 void print_winner(void)
 {
-    // TODO
+    for (int row = 0; row < candidate_count; row++)
+    {
+        for (int col = 0; col < candidate_count; col++)
+        {
+            if(locked[col][row] == true)
+            {
+                break;
+            }
+            else if (col == candidate_count - 1)
+            {
+                printf("%s", candidates[col]);
+            }
+        }
+    }
     return;
 }
