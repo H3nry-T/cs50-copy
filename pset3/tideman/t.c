@@ -157,6 +157,7 @@ void sort_pairs(void)
 {
     for (int i = 0; i < pair_count - 1; i++)
     {
+        int max_v = preferences[pairs[i]][pairs[j]]
         for (int j = i + 1; j < pair_count - 1; j++)
     }
     return;
