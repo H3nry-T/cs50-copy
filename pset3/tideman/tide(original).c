@@ -195,6 +195,7 @@ void lock_pairs(void)
         {
             locked[winner][loser] = true;
         }
+    }
     return;
 }
 

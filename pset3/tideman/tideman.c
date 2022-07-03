@@ -182,10 +182,33 @@ void sort_pairs(void)
     return;
 }
 
+bool has_cycle(int winner, int loser)
+{
+    if (locked[loser][winner] == true)
+    {
+        return true;
+    }
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if(locked[loser][i] == true && has_cycle(winner,i))
+        {
+            return true;
+        }
+    }
+    return false;
+}
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    
+    for (int i = 0; i < pair_count; i++)
+    {
+        int winner = pairs[i].winner;
+        int loser = pairs[i].loser;
+        if (!has_cycle(winner,loser))
+        {
+            locked[winner][loser] = true;
+        }
+    }
     return;
 }
 
