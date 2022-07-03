@@ -204,7 +204,7 @@ void print_winner(void)
 {
     for (int row = 0; row < candidate_count; row++)
     {
-        for (int col = 0; col < candidate_countj; col++)
+        for (int col = 0; col < candidate_count; col++)
         {
             if(locked[row][col] == true)
             {
