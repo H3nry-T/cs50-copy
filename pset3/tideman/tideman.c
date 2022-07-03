@@ -152,7 +152,11 @@ void sort_pairs(void)
         int begin_index = i; //selection sort starting position
         for (int j = i - 1; j >= 0; j--)
         {
-            if (preferences[pairs[j].winner][pairs[j].loser])
+            if (preferences[pairs[j].winner][pairs[j].loser] < stgh_v)
+            {
+                minv = preferences[pairs[j].winner][pairs[j].loser]
+                int min_index = j;
+            }
         }
     }
     return;
