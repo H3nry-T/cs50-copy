@@ -154,7 +154,7 @@ void add_pairs(void) //look into the preferences array.
 
 int victorystgh(int i)//i is any index position
 {
-    return preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].winner][pairs[i].loser];
+    return preferences[pairs[i].winner][pairs[i].loser];
 }
 
 // Sort pairs in decreasing order by strength of victory
