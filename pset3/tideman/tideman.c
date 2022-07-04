@@ -221,7 +221,7 @@ void print_winner(void)
         int count = 0;// counting the number of falses in 1 column
         for (int i = 0; i < candidate_count; i++)
         {
-            if(locked[j][i] == false)// if candidate column is false in the locked array, we know that this candidate has no arrows pointing at him/her.
+            if(locked[i][j] == false)// if candidate column is false in the locked array, we know that this candidate has no arrows pointing at him/her.
             {
                 count++;// add to the number of falses.
                 if (count == candidate_count)
