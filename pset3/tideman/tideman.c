@@ -189,7 +189,7 @@ void lock_pairs(void)
     {
         if (no cycle is created)
         {
-            locked
+
         }
     }
     return;
