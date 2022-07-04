@@ -203,7 +203,7 @@ bool cycleismade(int finalloser, int startwinner) //checks is a cycle is made tr
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    for (int i = 0; i < pair_count - 1; i++)//look through the pairs, if the loser, links back up to the winner, then we cannot create an edge/arrow
+    for (int i = 0; i < pair_count; i++)//look through the pairs, if the loser, links back up to the winner, then we cannot create an edge/arrow
     {
         if (!cycleismade(pairs[i].loser, pairs[i].winner))
         {
@@ -217,9 +217,9 @@ void lock_pairs(void)
 void print_winner(void)
 {
     int count = 0;// counting the number of falses in 1 column
-    for (int j = 0; j < candidate_count; j++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        for (int i = 0; i < candidate_count; i++)
+        for (int j = 0; j < candidate_count; j++)
         {
             if(locked[j][i] == false)// if candidate column is false in the locked array, we know that this candidate has no arrows pointing at him/her.
             {
