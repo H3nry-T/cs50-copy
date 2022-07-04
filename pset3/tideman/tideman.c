@@ -182,14 +182,32 @@ void sort_pairs(void)
     return;
 }
 
+bool cycleismade(int finalloser, int startwinner) //checks is a cycle is made true or false?
+{
+    if (finalloser == startwinner) //does the loser candidate point back to the winner? if true, we have a loop .
+    {
+        return true; //because we have looped around back to the winner.
+    }
+    for (int i = 0; i < candidate_count; i++)//does the loser point to any other candidates?
+    {
+        if (locked[finalloser][i]) //does the loser point to any other candidate? if true check if it creates a cycle AGAIN
+        {
+            if (cycleismade(i, startwinner))//since the loser points to another candidate, do they loop back round to the starting winner?
+            {
+                return true;
+            }
+        }
+    }
+    return false;
+}
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    for (int i = 0; i < pair_count - 1; i++)
+    for (int i = 0; i < pair_count - 1; i++)//look through the pairs, if the loser, links back up to the winner, then we cannot create an edge/arrow
     {
-        if (no cycle is created)
+        if (!cycleismade(pairs[i].loser, pairs[i].winner))
         {
-
+            locked[pairs[i].winner][pairs[i].loser] = true;
         }
     }
     return;
@@ -198,6 +216,20 @@ void lock_pairs(void)
 // Print the winner of the election
 void print_winner(void)
 {
-    // TODO
+    int count = 0;// counting the number of falses in 1 column
+    for (int j = 0; j < candidate_count; j++)
+    {
+        for (int i = 0; i < candidate_count; i++)
+        {
+            if(locked[j][i] == false)// if candidate column is false in the locked array, we know that this candidate has no arrows pointing at him/her.
+            {
+                count++;// add to the number of falses.
+                if (count == candidate_count)
+                {
+                    printf("%s\n", candidate[j])
+                }
+            }
+        }
+    }
     return;
 }
