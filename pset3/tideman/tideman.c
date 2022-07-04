@@ -226,7 +226,7 @@ void print_winner(void)
                 count++;// add to the number of falses.
                 if (count == candidate_count)
                 {
-                    printf("%s\n", candidate[j])
+                    printf("%s\n", candidates[j]);
                 }
             }
         }
