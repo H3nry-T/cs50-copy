@@ -35,8 +35,8 @@ int main(int argc, char *argv[])
 
     // TODO: Copy header from input file to output file
     uint8_t header[HEADER_SIZE];
-    fread(header, sizeof(uint8_t), 44, input);
-    fwrite(header, sizeof(uint8_t), 44, output);
+    fread(header, HEADER_SIZE, 1, input);
+    fwrite(header, HEADER_SIZE, 1, output);
 
     // TODO: Read samples from input file and write updated data to output file
     int16_t buffer; // times by length of sample e.g 200 2byte samples.
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
         {
             keep_reading = false;
             printf("reached end of file\n");
-            return 2;
+            return 0;
         }
         fwrite(&buffer, sizeof(int16_t), 1, input);
     }
