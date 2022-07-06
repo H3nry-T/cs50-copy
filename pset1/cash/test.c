@@ -1,8 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <cs50.h>
-#include <getopt.h>
 typedef char* string;
 
 
@@ -10,9 +6,8 @@ typedef char* string;
 int main(void)
 {
     char *argv[] = {"Hello", "Bob", "!"};
-    char *s 
     char **argv;
     printf("%p\n", argv);
-    printf("%p\n", argv[]);
+    printf("%p\n", argv[0]);
     return 0;
 }
