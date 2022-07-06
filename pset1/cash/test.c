@@ -10,6 +10,7 @@ typedef char* string;
 int main(void)
 {
     char *argv[] = {"Hello", "Bob", "!"};
+    char *s 
     char **argv;
     printf("%p\n", argv);
     printf("%p\n", argv[]);
