@@ -10,6 +10,7 @@ int main(void)
 {
     int x;
     printf("pls give integer: ");
-    scanf("%i\n", &x);
+    scanf("%i", &x);
     printf("the number is %i\n", x);
+    return 0; 
 }
