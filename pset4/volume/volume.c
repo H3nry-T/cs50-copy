@@ -44,11 +44,10 @@ int main(int argc, char *argv[])
     do
     {
         fread(&buffer, sizeof(int16_t), 1, input);
-        buffer *= factor;
-        if (feof(input) == true)
+        buffer *= factor; //increase everysingle sample by 2* 
+        if (feof(input) == true)//end of file stop reading.
         {
             keep_reading = false;
-            printf("reached end of file\n");
             return 0;
         }
         fwrite(&buffer, sizeof(int16_t), 1, output);
