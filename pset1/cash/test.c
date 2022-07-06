@@ -9,9 +9,9 @@ typedef char* string;
 
 int main(void)
 {
-    char *s = "Hello World!";
-    int *t[] = {0,1,2,3,4,5};
-    printf("%p\n", s);
-    printf("%p\n", t[]);
+    char *argv[] = {"Hello", "Bob", "!"};
+    char **argv;
+    printf("%p\n", argv);
+    printf("%p\n", argv[]);
     return 0;
 }
