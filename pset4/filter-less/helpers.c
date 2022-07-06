@@ -7,10 +7,10 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            BYTE image[i][j].rgbtBlue;
-            BYTE image[i][j].rgbtGreen;
-            BYTE image[i][j].rgbtRed;
-            
+            int B = image[i][j].rgbtBlue * 255;
+            int G = image[i][j].rgbtGreen * 255;
+            int R = image[i][j].rgbtRed * 255;
+
         }
     }
     return;
