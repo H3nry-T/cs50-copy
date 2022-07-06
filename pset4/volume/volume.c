@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
             printf("reached end of file\n");
             return 0;
         }
-        fwrite(&buffer, sizeof(int16_t), 1, input);
+        fwrite(&buffer, sizeof(int16_t), 1, output);
     }
     while (keep_reading == true);
 
