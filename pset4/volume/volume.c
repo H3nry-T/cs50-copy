@@ -39,11 +39,11 @@ int main(int argc, char *argv[])
     fwrite(header, HEADER_SIZE, 1, output);
 
     // TODO: Read samples from input file and write updated data to output file
-    int16_t buffer; // times by length of sample e.g 200 2byte samples.
+    int16_t buffer[2];
     bool keep_reading = true;
     do
     {
-        fread(&buffer, sizeof(int16_t), 1, input);
+        fread(buffer, sizeof(int16_t), 1, input);
         buffer *= factor;
         if (feof(input) == true)
         {
