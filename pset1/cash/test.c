@@ -10,7 +10,7 @@ typedef char* string;
 int main(void)
 {
     char *s = "Hello World!";
-    char *t[] = {0,1,2,3,4,5};
+    int *t[] = {0,1,2,3,4,5};
     printf("%p\n", s);
     printf("%p\n", t[]);
     return 0;
