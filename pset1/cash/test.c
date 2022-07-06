@@ -12,5 +12,4 @@ int main(void)
     printf("pls give integer: ");
     scanf("%i\n", &x);
     printf("the number is %i\n", x);
-    return 0;
 }
