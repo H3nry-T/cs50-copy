@@ -1,16 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include <cs50.h>
+#include <getopt.h>
 typedef char* string;
 
 
 
 int main(void)
 {
-    int x;
-    printf("pls give integer: ");
-    scanf("%i", &x);
-    printf("the number is %i\n", x);
-    return 0; 
+    char *s = "Hello World!";
+    char *t[] = {0,1,2,3,4,5};
+    printf("%p\n", s);
+    printf("%p\n", t[]);
+    return 0;
 }
