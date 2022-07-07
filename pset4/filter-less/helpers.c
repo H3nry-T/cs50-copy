@@ -83,6 +83,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     }
 
     // setup a counter for red, green, blue, for 3 x 3 grid (9 lots of RGB)
+    // float count used for calculating the average, and then round() the final result.
 
     for (int i = 0; i < height; i++)
     {
@@ -90,7 +91,16 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             int redtotal, greentotal, bluetotal;
             redtotal = greentotal = bluetotal = 0;
-            number
+            float count = 0;
+
+            // get the nearby pixels, i - 1, i, i + 1
+            for (int i = -1, i < 2; i++)
+            {
+                for (int j = -1; j < 2; j++)
+                {
+                    
+                }
+            }
         }
     }
     return;
