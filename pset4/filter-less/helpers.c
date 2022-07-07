@@ -78,26 +78,23 @@ centre(RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE copy[height][width];
+    RGBTRIPLE copy[height][width]; //make empty copy of the image bitmap.
+
+    for (int i = 0; i < height; i++) //loop through the image and copy it.
+    {
+        for (int j = 0; j < width; j++)
+        {
+            copy[i][j] = image[i][j];
+        }
+    }
+    
+    // setup a counter for red, green, blue, for 3 x 3 grid.
 
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            RGBTRIPLE initial_colour = {0, 0, 0};
-            copy[i][j] = initial_colour;
-            if (centre() == true)
-            {
-                
-            }
-            if (edge() == true)
-            {
 
-            }
-            if (corner() == true)
-            {
-
-            }
         }
     }
     return;
