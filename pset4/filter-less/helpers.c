@@ -90,7 +90,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             int redtotal, greentotal, bluetotal;
             redtotal = greentotal = bluetotal = 0;
-            
+            number
         }
     }
     return;
