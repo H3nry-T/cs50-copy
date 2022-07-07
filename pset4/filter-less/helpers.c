@@ -89,7 +89,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            int redtotal, greentotal, bluetotal;
+            BYTE redtotal, greentotal, bluetotal;
             redtotal = greentotal = bluetotal = 0;
             float count = 0;
 
@@ -107,7 +107,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     {
                         count++;
                     }
-                    BYTE blurpixel = round (redtotal + greentotal + bluetotal / count)
+                    BYTE blurpixelred = round (redtotal / count)
+
                     copy[i][j].rgbtRed =
                 }
             }
