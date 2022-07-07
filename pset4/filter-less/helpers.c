@@ -56,7 +56,7 @@ void swap (int image[i][j], int width)
     int end = width - 1;
     while (start < end)
     {
-        
+        int buffer = image[i][start];
         if (end == start)
         {
             return;
@@ -70,12 +70,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     for (int i = 0; i < height; i++)
     {
-
-        for (int j = 0; j < width; j++)
-        {
-            swap(image[i][j], width);
-        }
-
+        swap(image[i][j], width);
     }
     return;
 }
