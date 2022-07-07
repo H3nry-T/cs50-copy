@@ -1,5 +1,5 @@
 #include "helpers.h"
-
+#include <math.h>
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
@@ -7,13 +7,13 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            float B = image[i][j].rgbtBlue * 255;
-            float G = image[i][j].rgbtGreen * 255;
-            float R = image[i][j].rgbtRed * 255;
-            BYTE avrgcolour =round(((B + G + R) / 3.0 ) / 255);
-            image[i][j].rgbtBlue = avrgcolour;
-            image[i][j].rgbtGreen = avrgcolour;
+            float R = image[i][j].rgbtRed;
+            float G = image[i][j].rgbtGreen;
+            float B = image[i][j].rgbtBlue;
+            BYTE avrgcolour = round(((B + G + R) / 3.0 ));
             image[i][j].rgbtRed = avrgcolour;
+            image[i][j].rgbtGreen = avrgcolour;
+            image[i][j].rgbtBlue = avrgcolour;
         }
     }
     return;
@@ -22,12 +22,48 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 // Convert image to sepia
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            float sepia_r = 0.393 * image[i][j].rgbtRed + 0.769 * image[i][j].rgbtGreen + 0.189 * image[i][j].rgbtBlue;
+            float sepia_g = 0.349 * image[i][j].rgbtRed + 0.686 * image[i][j].rgbtGreen + 0.168 * image[i][j].rgbtBlue;
+            float sepia_b = 0.272 * image[i][j].rgbtRed + 0.534 * image[i][j].rgbtGreen + 0.131 * image[i][j].rgbtBlue;
+            // store the pixel index of the colour that is over 8 bits, or 1 byte, or value 255.
+            if (sepia_r > 255)
+            {
+                sepia_r = 255;
+            }
+            if (sepia_g > 255)
+            {
+                sepia_g = 255;
+            }
+            if (sepia_b > 255)
+            {
+                sepia_b = 255;
+            }
+            image[i][j].rgbtRed = round(sepia_r);
+            image[i][j].rgbtGreen = round(sepia_g);
+            image[i][j].rgbtBlue = round(sepia_b);
+        }
+    }
     return;
+}
+
+swap (int *x, int *y)
+{
+    int tempbuffer = *x;
+    *x = *y;
+    *y = tempbuffer;
 }
 
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
+    for (int i = 0; i < height; i++)
+    {
+        swap(); 
+    }
     return;
 }
 
