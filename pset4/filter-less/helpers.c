@@ -70,7 +70,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 }
 centre(RGBTRIPLE image[height][width])
 {
-
+    if 
 }
 
 
