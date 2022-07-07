@@ -94,11 +94,13 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             float count = 0;
 
             // get the nearby pixels, i - 1, i, i + 1
-            for (int i = -1, i < 2; i++)
+            for (int r = -1, r < 2; r++)
             {
-                for (int j = -1; j < 2; j++)
+                for (int c = -1; c < 2; c++)
                 {
-                    
+                    int gridscanindex_y = i + r;
+                    int gridscanindex_x = j + c;
+                    image[gridscanindex_y][gridscanindex_x]
                 }
             }
         }
