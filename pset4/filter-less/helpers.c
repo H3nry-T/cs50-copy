@@ -93,7 +93,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             redtotal = greentotal = bluetotal = 0;
             float count = 0;
 
-            // get the nearby pixels, i - 1, i, i + 1, 3 x 3 grid around the middle pixel. 
+            // get the nearby pixels, i - 1, i, i + 1, 3 x 3 grid around the middle pixel.
             for (int r = -1; r < 2; r++)
             {
                 for (int c = -1; c < 2; c++)
@@ -109,7 +109,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     }
                 }
             }
-
             BYTE blurpixelred = round (redtotal / count);
             BYTE blurpixelgreen = round (greentotal / count);
             BYTE blurpixelblue = round (bluetotal / count);
