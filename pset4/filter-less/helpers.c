@@ -54,7 +54,15 @@ void swap (int image[i][j], int width)
 {
     int start = 0;
     int end = width - 1;
-    while (j > i)
+    while (start < end)
+    {
+        
+        if (end == start)
+        {
+            return;
+        }
+    }
+    return;
 }
 
 // Reflect image horizontally
