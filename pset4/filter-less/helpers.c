@@ -108,7 +108,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         count++;
                     }
                     BYTE blurpixel = round (redtotal + greentotal + bluetotal / count)
-                    copy[i][j]
+                    copy[i][j].rgbtRed = 
                 }
             }
         }
