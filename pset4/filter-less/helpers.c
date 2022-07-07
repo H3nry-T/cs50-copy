@@ -110,9 +110,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     count++;
                 }
             }
-            BYTE blurpixelred = round (redtotal / count);
-            BYTE blurpixelgreen = round (greentotal / count);
-            BYTE blurpixelblue = round (bluetotal / count);
+            BYTE blurpixelred = round(redtotal / count);
+            BYTE blurpixelgreen = round(greentotal / count);
+            BYTE blurpixelblue = round(bluetotal / count);
             copy[i][j].rgbtRed = blurpixelred;
             copy[i][j].rgbtGreen = blurpixelgreen;
             copy[i][j].rgbtBlue = blurpixelblue;
