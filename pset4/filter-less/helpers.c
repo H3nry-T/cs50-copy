@@ -94,7 +94,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             float count = 0;
 
             // get the nearby pixels, i - 1, i, i + 1
-            for (int r = -1, r < 2; r++)
+            for (int r = -1; r < 2; r++)
             {
                 for (int c = -1; c < 2; c++)
                 {
@@ -107,11 +107,24 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         bluetotal += image[gridscanindex_y][gridscanindex_x].rgbtBlue;
                         count++;
                     }
-                    BYTE blurpixelred = round (redtotal / count)
-
-                    copy[i][j].rgbtRed =
+                    BYTE blurpixelred = round (redtotal / count);
+                    BYTE blurpixelgreen = round (greentotal / count);
+                    BYTE blurpixelblue = round (bluetotal / count);
+                    copy[i][j].rgbtRed = blurpixelred;
+                    copy[i][j].rgbtGreen = blurpixelgreen;
+                    copy[i][j].rgbtBlue = blurpixelblue;
                 }
             }
+        }
+    }
+// copy everything from the blurred copy into the image file.
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j].rgbtRed = copy[i][j].rgbtRed;
+            image[i][j].rgbtGreen = copy[i][j].rgbtGreen;
+            image[i][j].rgbtBlue =copy[i][j].rgbtBlue;
         }
     }
     return;
