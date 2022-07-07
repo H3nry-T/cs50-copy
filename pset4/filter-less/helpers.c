@@ -52,11 +52,13 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 
 void swap (int image[i][j], int width)
 {
-    int start = 0;
-    int end = width - 1;
+    int start = 0; //start of column
+    int end = width - 1;//end of column
     while (start < end)
     {
         int buffer = image[i][start];
+        image[i][start] = image[i][end];
+        image[i][end] = buffer;
         if (end == start)
         {
             return;
