@@ -77,7 +77,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             RGBTRIPLE copy[i][j] = image[i][j];
-            copy[i][j].rgbtRed = mean(image[i - 1][j - 1].rgbtRed, copy[i - 1][j].rgbtRed, copy[i - 1][j + 1].rgbtRed, copy[i][j].rgbtRed, copy[i][j].rgbtRed, copy[i][j].rgbtRed, copy[i][j].rgbtRed, copy[i][j].rgbtRed
+            copy[i][j].rgbtRed = mean(image[i - 1][j - 1].rgbtRed, image[i - 1][j].rgbtRed, image[i - 1][j + 1].rgbtRed, image[i][j - 1].rgbtRed, image[i][j].rgbtRed, image[i][j + 1].rgbtRed, image[i + 1][j - 1].rgbtRed, image[i + 1][j].rgbtRed, image[i + 1][j + 1].rgbtRed)
             copy[i][j].rgbtBlue =
             copy[i][j].rgbtGreen =
         }
