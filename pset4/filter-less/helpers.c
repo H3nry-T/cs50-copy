@@ -50,7 +50,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-swap (int *x, int *y)
+void swap (int *x, int *y)
 {
     int tempbuffer = *x;
     *x = *y;
@@ -62,7 +62,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     for (int i = 0; i < height; i++)
     {
-        swap(); 
+        swap();
     }
     return;
 }
