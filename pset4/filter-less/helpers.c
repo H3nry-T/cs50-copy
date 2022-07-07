@@ -52,7 +52,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 
 void swap (int image[i][j], int width)
 {
-    
+    int start = 0;
+    int end = width - 1;
+    while (j > i)
 }
 
 // Reflect image horizontally
