@@ -50,19 +50,6 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-void swap (int image[int i][int j], int width)
-{
-    int start = 0; //start of column
-    int end = width - 1;//end of column
-    while (start < end)
-    {
-        int buffer = image[i][start];
-        image[i][start] = image[i][end];
-        image[i][end] = buffer;
-    }
-    return;
-}
-
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
@@ -72,7 +59,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         int end = width - 1;//end of column
         while (start < end)
         {
-            int buffer = image[i][start];
+            RGBTRIPLE buffer = image[i][start];
             image[i][start] = image[i][end];
             image[i][end] = buffer;
         }
