@@ -103,7 +103,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     redtotal = image[gridscanindex_y][gridscanindex_x].rgbtRed
                     greentotal = image[gridscanindex_y][gridscanindex_x].rgbtGreen
                     bluetotal = image[gridscanindex_y][gridscanindex_x].rgbtBlue
-                    if (image[gridscanindex_y][gridscan_x])
+                    if (image[gridscanindex_y][gridscan_x] > -1)
                 }
             }
         }
