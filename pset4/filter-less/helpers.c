@@ -69,7 +69,6 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-float mean()
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
@@ -78,9 +77,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             RGBTRIPLE copy[i][j] = image[i][j];
-            copy[i][j].rgbtRed = mean(image[i - 1][j - 1].rgbtRed, image[i - 1][j].rgbtRed, image[i - 1][j + 1].rgbtRed, image[i][j - 1].rgbtRed, image[i][j].rgbtRed, image[i][j + 1].rgbtRed, image[i + 1][j - 1].rgbtRed, image[i + 1][j].rgbtRed, image[i + 1][j + 1].rgbtRed);
-            copy[i][j].rgbtBlue = mean(image[i - 1][j - 1].rgbtGreen, image[i - 1][j].rgbtGreen, image[i - 1][j + 1].rgbtGreen, image[i][j - 1].rgbtGreen, image[i][j].rgbtGreen, image[i][j + 1].rgbtGreen, image[i + 1][j - 1].rgbtGreen, image[i + 1][j].rgbtGreen, image[i + 1][j + 1].rgbtGreen);
-            copy[i][j].rgbtGreen = mean(image[i - 1][j - 1].rgbtBlue, image[i - 1][j].rgbtBlue, image[i - 1][j + 1].rgbtBlue, image[i][j - 1].rgbtBlue, image[i][j].rgbtBlue, image[i][j + 1].rgbtBlue, image[i + 1][j - 1].rgbtBlue, image[i + 1][j].rgbtBlue, image[i + 1][j + 1].rgbtBlue);
+            copy[i][j].rgbtRed = (image[i - 1][j - 1].rgbtRed, image[i - 1][j].rgbtRed, image[i - 1][j + 1].rgbtRed, image[i][j - 1].rgbtRed, image[i][j].rgbtRed, image[i][j + 1].rgbtRed, image[i + 1][j - 1].rgbtRed, image[i + 1][j].rgbtRed, image[i + 1][j + 1].rgbtRed) / 9;
+            copy[i][j].rgbtBlue = (image[i - 1][j - 1].rgbtGreen, image[i - 1][j].rgbtGreen, image[i - 1][j + 1].rgbtGreen, image[i][j - 1].rgbtGreen, image[i][j].rgbtGreen, image[i][j + 1].rgbtGreen, image[i + 1][j - 1].rgbtGreen, image[i + 1][j].rgbtGreen, image[i + 1][j + 1].rgbtGreen) / 9;
+            copy[i][j].rgbtGreen = (image[i - 1][j - 1].rgbtBlue, image[i - 1][j].rgbtBlue, image[i - 1][j + 1].rgbtBlue, image[i][j - 1].rgbtBlue, image[i][j].rgbtBlue, image[i][j + 1].rgbtBlue, image[i + 1][j - 1].rgbtBlue, image[i + 1][j].rgbtBlue, image[i + 1][j + 1].rgbtBlue) / 9;
             image[i][j].rgbtRed = round(copy[i][j].rgbtRed);
             image[i][j].rgbtGreen = round(copy[i][j].rgbtBlue);
             image[i][j].rgbtBlue = round(copy[i][j].rgbtGreen);
