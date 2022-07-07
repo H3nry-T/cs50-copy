@@ -69,6 +69,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
+float mean()
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
