@@ -50,7 +50,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-void swap (int image[i][j], int width)
+void swap (int image[int i][int j], int width)
 {
     int start = 0; //start of column
     int end = width - 1;//end of column
