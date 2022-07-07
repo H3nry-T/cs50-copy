@@ -68,6 +68,12 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     }
     return;
 }
+centre(RGBTRIPLE image[height][width])
+{
+
+}
+
+
 
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
@@ -96,7 +102,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
             if (corner() == true)
             {
-                
+
             }
         }
     }
