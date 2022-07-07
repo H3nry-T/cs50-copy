@@ -100,11 +100,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     int gridscanindex_y = i + r;
                     int gridscanindex_x = j + c;
-                    redtotal += image[gridscanindex_y][gridscanindex_x].rgbtRed;
-                    greentotal += image[gridscanindex_y][gridscanindex_x].rgbtGreen;
-                    bluetotal += image[gridscanindex_y][gridscanindex_x].rgbtBlue;
                     if (gridscanindex_y < i || gridscanindex_x < j || gridscanindex_x > width - 1 || gridscanindex_y > height - 1)
                     {
+                        redtotal += image[gridscanindex_y][gridscanindex_x].rgbtRed;
+                        greentotal += image[gridscanindex_y][gridscanindex_x].rgbtGreen;
+                        bluetotal += image[gridscanindex_y][gridscanindex_x].rgbtBlue;
                         count++;
                     }
                     BYTE blurpixelred = round (redtotal / count)
