@@ -59,10 +59,6 @@ void swap (int image[i][j], int width)
         int buffer = image[i][start];
         image[i][start] = image[i][end];
         image[i][end] = buffer;
-        if (end == start)
-        {
-            return;
-        }
     }
     return;
 }
