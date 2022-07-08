@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     while (fread(buffer, 1, 512, f) == 512) //keep reading changes if it reaches the end.
     {
         // f is the card.raw file
-        int blockreadcount = fread(buffer, 512, 1, f);
+        fread(buffer, 512, 1, f);
         int jpegcount = 0;
 
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
