@@ -43,13 +43,14 @@ int main(int argc, char *argv[])
             //else we find new jpeg?
             else
             {
-                //close the file we've been writing to
+                //close the file we've been writing to, and make new img
                 fclose(img);
                 sprintf(filename, "%03i.jpg", jpegcount);
                 img = fopen(filename, "w");
                 jpegcount++;
             }
         }
+        //write into img files disregarding whether or not 
         if (img != NULL)
         {
             fwrite(buffer, 1, 512, img);
