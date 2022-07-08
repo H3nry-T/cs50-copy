@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
     if (argc != 2)
     {
         printf("only accepts one command-line argument\n");
-        printf("Correct usage: <name of forensic image> \n");
+        printf("Correct usage: ./recover <name of image>\n");
         return 1;
     }
 
