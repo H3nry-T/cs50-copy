@@ -23,18 +23,18 @@ int main(int argc, char *argv[])
         fread(buffer, 512, 1, f);
         int jpegcount = 0;
 
-        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)// if jpeg.
         {
             if (jpegcount == 0) //first jpeg
             {
                 char *filename = malloc(8); //create a new filename
                 sprintf(filename, "%03i.jpg", jpegcount);
-                FILE *img = fopen(filename, "w"); //open a new file with the new filename wrote permissions.
-                fwrite(buffer, 1, 512, img); //write to the filepointer called img.
+                FILE *img = fopen(filename, "w"); //recover image
+                fwrite(buffer, 1, 512, img); //write to new image
                 free(filename);
                 jpegcount++;
             }
-             else //we already have jpegs (EDIT)
+             else //we already have jpegs
             {
                 continue;
             }
