@@ -16,8 +16,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    int keep_reading = 0;
-    while (keep_reading = 0;) //keep reading changes if it reaches the end.
+    while () //keep reading changes if it reaches the end.
     {
         int *buffer = malloc(512);
         // f is the card.raw file
@@ -45,10 +44,6 @@ int main(int argc, char *argv[])
                 fwrite(buffer, 512, 1, img); //write to the filepointer called img.
                 free(filename);
             }
-        }
-        if (blockreadcount != 1)
-        {
-            keep_reading++;
         }
     }
 }
