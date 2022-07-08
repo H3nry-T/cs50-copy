@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     while (keep_reading = 0) //keep reading changes if it reaches the end.
     {
         int *buffer = malloc(512);
-        fread(buffer, 512, 1, f); // f is the card.raw file when typed into the terminal
+        int blockreadcount = fread(buffer, 512, 1, f); // f is the card.raw file when typed into the terminal
         int jpegcount = 0;
 
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
@@ -45,9 +45,6 @@ int main(int argc, char *argv[])
                 free(filename);
             }
         }
-        else
-        {
-
-        }
+        if (blockreadcount = )
     }
 }
