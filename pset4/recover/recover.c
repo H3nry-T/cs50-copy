@@ -27,11 +27,11 @@ int main(int argc, char *argv[])
         {
             if (jpegcount = 0) //check for existing jpegs.
             {
-                jpegcount++;
                 char *filename = malloc(8); //create a new filename
                 sprintf(filename, "%03i.jpg", jpegcount);
                 FILE *img = fopen(filename, "w"); //open a new file with the new filename wrote permissions.
                 fwrite(buffer, 512, 1, img); //write to the filepointer called img.
+                jpegcount++;
                 free(filename);
             }
              else //we already have jpegs
