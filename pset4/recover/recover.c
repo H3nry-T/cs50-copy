@@ -18,8 +18,10 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    //repeat until end of card
     int *buffer = malloc(512);
+
+
+    //repeat until end of card
     while (fread(buffer, 1, 512, f) == 512)
     {
         // read card.raw 512 bytes into buffer
