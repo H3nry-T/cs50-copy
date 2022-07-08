@@ -15,6 +15,6 @@ int main(int argc, char *argv[])
         printf("the file does not exist\n");
         return 1;
     }
-    
-    fread()
+    uint8_t *buffer = malloc(4 * sizeof(unint8_t));
+    fread(buffer, unint8_t, 512, f)
 }
