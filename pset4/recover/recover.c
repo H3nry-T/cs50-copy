@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
                 {
                     fwrite(buffer, 1, 512, img); //write to new image
                 }
-                while (buffer[0] != 0xff && buffer[1] != 0xd8 && buffer[2] != 0xff && (buffer[3] & 0xf0) == 0xe0)
+                while (buffer[0] != 0xff || buffer[1] != 0xd8 || buffer[2] != 0xff || (buffer[3] & 0xf0) != 0xe0)
                 free(filename);
                 jpegcount++;
             }
