@@ -29,20 +29,16 @@ int main(int argc, char *argv[])
             //if first jpeg? yes
             if (jpegcount == 0)
             {
-                char *filename = malloc(8); //create a new filename
+                //recover the file and name "###.jpg" and write.
+                char *filename = malloc(8);
                 sprintf(filename, "%03i.jpg", jpegcount);
-                FILE *img = fopen(filename, "w"); //recover image
-                do
-                {
-                    fwrite(buffer, 1, 512, img); //write to new image
-                }
-                while (buffer[0] != 0xff || buffer[1] != 0xd8 || buffer[2] != 0xff || (buffer[3] & 0xf0) != 0xe0)
-                free(filename);
+                FILE *img = fopen(filename, "w");
+                fwrite(buffer, 1, 512, img);
                 jpegcount++;
             }
             else //if first jpeg? no
             {
-                fclose(img); 
+                fclose(img);
             }
         }
 
