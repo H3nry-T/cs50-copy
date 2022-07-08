@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     uint8_t *buffer = malloc(512);
     int jpegcount = 0;
     FILE *img = NULL;
-    char *filename = malloc(8 * );
+    char *filename = malloc(8 * sizeof(char));
 
     //repeat until end of card
     while (fread(buffer, 1, 512, f) == 512)
