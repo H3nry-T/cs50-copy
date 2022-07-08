@@ -22,7 +22,8 @@ int main(int argc, char *argv[])
 
     BYTE *buffer = malloc(512);
     int jpegcount = 0;
-    FILE *img = NULL; 
+    FILE *img = NULL;
+    char *filename = malloc(8);
 
     //repeat until end of card
     while (fread(buffer, 1, 512, f) == 512)
@@ -37,7 +38,6 @@ int main(int argc, char *argv[])
             if (jpegcount == 0)
             {
                 //recover the file and name "###.jpg" and write first 512 bytes.
-                char *filename = malloc(8);
                 sprintf(filename, "%03i.jpg", jpegcount);
                 FILE *img = fopen(filename, "w");
                 fwrite(buffer, 1, 512, img);
