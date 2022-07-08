@@ -47,16 +47,13 @@ int main(int argc, char *argv[])
             }
         }
 
+        //else NOT start of new jpeg?
         else
         {
             //already found a jpeg? yes
-            if ()
+            if (jpegcount != 0)
             {
-
-            }
-            else
-            {
-
+                fwrite(buffer, 1, 512, img);
             }
         }
 
