@@ -16,9 +16,9 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    while (fread()) //keep reading changes if it reaches the end.
+    int *buffer = malloc(512);
+    while (fread(buffer, 1, 512, f) == 512) //keep reading changes if it reaches the end.
     {
-        int *buffer = malloc(512);
         // f is the card.raw file
         int blockreadcount = fread(buffer, 512, 1, f);
         int jpegcount = 0;
