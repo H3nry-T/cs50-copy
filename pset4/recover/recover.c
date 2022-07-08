@@ -39,6 +39,7 @@ int main(int argc, char *argv[])
                 sprintf(filename, "%03i.jpg", jpegcount);
                 img = fopen(filename, "w");
                 jpegcount++;
+                fwrite(buffer, 1, 512, img);
             }
             //else we find new jpeg?
             else
@@ -52,7 +53,7 @@ int main(int argc, char *argv[])
         else
         {
             //already found a jpeg? yes
-            if (img != NULL)
+            if (jpegcount != 0)
             {
                 fwrite(buffer, 1, 512, img);
             }
