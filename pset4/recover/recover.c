@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
                 jpegcount++;
             }
         }
-        //write into img files disregarding whether or not 
+        //write into img files disregarding whether it is a jpeg block.
         if (img != NULL)
         {
             fwrite(buffer, 1, 512, img);
