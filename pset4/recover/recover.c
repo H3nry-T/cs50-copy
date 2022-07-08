@@ -9,13 +9,13 @@ int main(int argc, char *argv[])
         printf("Correct usage: <name of forensic image> \n");
         return 1;
     }
-    FILE *f = fopen(filename, "r"); //get the file pointer which is the memory address of the opened image.
+    FILE *f = fopen(argv[1], "r"); //get the file pointer which is the memory address of the opened image.
     if (f == NULL)
     {
         printf("the file does not exist\n");
         return 1;
     }
     int *buffer = malloc(512);
-    fread(buffer, unint8_t, 512, f)
-    
+    fread(buffer, 512, 1, f)
+
 }
