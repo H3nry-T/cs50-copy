@@ -30,7 +30,11 @@ int main(int argc, char *argv[])
                 char *filename = malloc(8); //create a new filename
                 sprintf(filename, "%03i.jpg", jpegcount);
                 FILE *img = fopen(filename, "w"); //recover image
-                fwrite(buffer, 1, 512, img); //write to new image
+                do
+                {
+                    fwrite(buffer, 1, 512, img); //write to new image
+                }
+                while ()
                 free(filename);
                 jpegcount++;
             }
