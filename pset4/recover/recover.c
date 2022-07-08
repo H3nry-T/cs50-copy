@@ -39,20 +39,26 @@ int main(int argc, char *argv[])
                 fwrite(buffer, 1, 512, img);
                 jpegcount++;
             }
-            else //if first jpeg? no
+            else
             {
                 fclose(img);
             }
         }
 
-        //start of new jpeg? no keep reading
-
-
-        //already found a jpeg? no
         else
         {
-            
+            //already found a jpeg? yes
+            if ()
+            {
+
+            }
+            else
+            {
+                
+            }
         }
+
+
 
         //already found a jpeg? yes
 
