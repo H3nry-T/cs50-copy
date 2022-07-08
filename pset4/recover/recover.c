@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
         return 2;
     }
 
-    BYTE buffer[512];
+    BYTE *buffer = malloc(512);
     int jpegcount = 0;
     FILE *img = NULL;
     char *filename = malloc(8);
@@ -51,5 +51,6 @@ int main(int argc, char *argv[])
     fclose(inputfile);
     fclose(img);
     free(filename);
+    free(buffer);
     return 0;
 }
