@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
             }
             else //if first jpeg? no
             {
-                continue;
+                fclose(img); 
             }
         }
 
