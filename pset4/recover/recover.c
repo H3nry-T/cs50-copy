@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    int *buffer = malloc(512);
+    uint8_t *buffer = malloc(512);
     int jpegcount = 0;
     FILE *img = NULL;
     char *filename = malloc(8);
