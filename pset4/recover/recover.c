@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
         else
         {
             //already found a jpeg? yes
-            if (jpegcount > 0)
+            if (img != NULL)
             {
                 fwrite(buffer, 1, 512, img);
             }
