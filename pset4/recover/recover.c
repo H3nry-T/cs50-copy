@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
             //if first jpeg? yes
             if (jpegcount == 0)
             {
-                //recover the file and name "###.jpg" and write.
+                //recover the file and name "###.jpg" and write first 512 bytes.
                 char *filename = malloc(8);
                 sprintf(filename, "%03i.jpg", jpegcount);
                 FILE *img = fopen(filename, "w");
@@ -42,6 +42,7 @@ int main(int argc, char *argv[])
             //else we find new jpeg?
             else
             {
+                //close the file we've been writing to
                 fclose(img);
             }
         }
