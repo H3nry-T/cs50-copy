@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    BYTE buffer = malloc(512);
+    BYTE buffer[512];
     int jpegcount = 0;
     FILE *img = NULL;
     char *filename = malloc(8);
