@@ -14,8 +14,8 @@ int main(int argc, char *argv[])
     }
 
     //open memory card.raw
-    FILE *f = fopen(argv[1], "r");
-    if (f == NULL)
+    FILE *inputfile = fopen(argv[1], "r");
+    if (inputfile == NULL)
     {
         printf("the file does not exist\n");
         return 2;
@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
         }
     }
     //close remaining files
-    fclose(f);
+    fclose(inputfile);
     fclose(img);
     free(filename);
     return 0;
