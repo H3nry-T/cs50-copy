@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
         fread(buffer, 512, 1, f);
         int jpegcount = 0;
 
-        //start of new jpeg?
+        //start of new jpeg? yes
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
             char *filename = malloc(8); //create a new filename
@@ -37,15 +37,20 @@ int main(int argc, char *argv[])
             free(filename);
             jpegcount++;
 
-            
+
              else //we already have jpegs
             {
                 continue;
             }
         }
+
+        //start of new jpeg? no keep reading
+
+
         //already found a jpeg?
         //if yes, keep writing
     }
+
+    //close remaining files
     fclose(f);
-    fclose(img);
 }
