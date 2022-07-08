@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    while () //keep reading changes if it reaches the end.
+    while (fread()) //keep reading changes if it reaches the end.
     {
         int *buffer = malloc(512);
         // f is the card.raw file
