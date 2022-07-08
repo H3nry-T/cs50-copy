@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
         jpegcount++;
         char *filename[8]; //create a new filename
         sprintf(filename, "%03i.jpg", jpegcount);
-        FILE *img = fopen(filename, "w"); //open a new file
-
+        FILE *img = fopen(filename, "w"); //open a new file with the new filename wrote permissions.
+        fwrite(buffer, 512, 1, f)
     }
 }
