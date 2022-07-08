@@ -16,6 +16,6 @@ int main(int argc, char *argv[])
         return 1;
     }
     int *buffer = malloc(512);
-    fread(buffer, 512, 1, f)
-
+    fread(buffer, 512, 1, f); // f is the card.raw file when typed into the terminal
+    if (buffer[0])
 }
