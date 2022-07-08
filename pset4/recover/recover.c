@@ -15,6 +15,8 @@ int main(int argc, char *argv[])
         printf("the file does not exist\n");
         return 1;
     }
+
+    while (eof(f) != NULL)
     int *buffer = malloc(512);
     fread(buffer, 512, 1, f); // f is the card.raw file when typed into the terminal
     int jpegcount = 0;
