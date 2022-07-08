@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
         int *buffer = malloc(512);
         fread(buffer, 512, 1, f); // f is the card.raw file when typed into the terminal
         int jpegcount = 0;
-        
+
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
             if (jpegcount = 0) //check for existing jpegs.
@@ -31,6 +31,7 @@ int main(int argc, char *argv[])
                 sprintf(filename, "%03i.jpg", jpegcount);
                 FILE *img = fopen(filename, "w"); //open a new file with the new filename wrote permissions.
                 fwrite(buffer, 512, 1, img); //write to the filepointer called img.
+                free(filename); 
             }
              else //we already have jpegs
             {
@@ -40,6 +41,7 @@ int main(int argc, char *argv[])
                 sprintf(filename, "%03i.jpg", jpegcount);
                 FILE *img = fopen(filename, "w"); //open a new file with the new filename wrote permissions.
                 fwrite(buffer, 512, 1, img); //write to the filepointer called img.
+                free(filename);
             }
         }
         else
