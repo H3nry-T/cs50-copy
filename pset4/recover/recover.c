@@ -16,12 +16,12 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    keep_reading = 0;
+    int keep_reading = 0;
     while (keep_reading = 0) //keep reading changes if it reaches the end.
     {
         int *buffer = malloc(512);
         int blockreadcount = fread(buffer, 512, 1, f); // f is the card.raw file when typed into the terminal
-        int blockreadcount = fread(buffer, 1, 512, f); 
+        int blockreadcount = fread(buffer, 1, 512, f);
         int jpegcount = 0;
 
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
