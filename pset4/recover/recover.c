@@ -16,7 +16,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    while (feof(f) != 0) //
+    keep_reading = 0;
+    while (keep_reading = 0) //keep reading changes if it reaches the end.
     {
         int *buffer = malloc(512);
         fread(buffer, 512, 1, f); // f is the card.raw file when typed into the terminal
