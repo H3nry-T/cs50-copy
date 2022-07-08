@@ -9,15 +9,18 @@ int main(int argc, char *argv[])
         printf("Correct usage: <name of forensic image> \n");
         return 1;
     }
-    FILE *f = fopen(argv[1], "r"); //open card file
+
+    //open memory card.raw
+    FILE *f = fopen(argv[1], "r");
     if (f == NULL)
     {
         printf("the file does not exist\n");
         return 1;
     }
-
+    
+    //repeat until end of card
     int *buffer = malloc(512);
-    while (fread(buffer, 1, 512, f) == 512) //repeat until end of card
+    while (fread(buffer, 1, 512, f) == 512)
     {
         // read card.raw 512 bytes into buffer
         fread(buffer, 512, 1, f);
