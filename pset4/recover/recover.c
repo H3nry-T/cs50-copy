@@ -38,10 +38,6 @@ int main(int argc, char *argv[])
                 //recover the file and name "###.jpg" and write first 512 bytes.
                 sprintf(filename, "%03i.jpg", jpegcount);
                 img = fopen(filename, "w");
-                if (img != NULL)
-                {
-                    fwrite(buffer, 1, 512, img);
-                }
                 jpegcount++;
             }
             //else we find new jpeg?
@@ -67,6 +63,6 @@ int main(int argc, char *argv[])
     fclose(f);
     fclose(img);
     free(filename);
-    free(buffer); 
+    free(buffer);
     return 0;
 }
