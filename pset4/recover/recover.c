@@ -9,6 +9,6 @@ int main(int argc, char *argv[])
         printf("Correct usage: <name of forensic image> \n");
         return 1;
     }
-    FILE *f = fopen(filename, "r"); 
+    FILE *f = fopen(filename, "r"); //get the file pointer which is the memory address of the opened image.
     fread()
 }
