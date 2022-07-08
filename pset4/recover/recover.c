@@ -26,8 +26,6 @@ int main(int argc, char *argv[])
         //start of new jpeg?
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            if (jpegcount == 0) //first jpeg
-            {
             char *filename = malloc(8); //create a new filename
             sprintf(filename, "%03i.jpg", jpegcount);
             FILE *img = fopen(filename, "w"); //recover image
@@ -38,7 +36,8 @@ int main(int argc, char *argv[])
             while (buffer[0] != 0xff || buffer[1] != 0xd8 || buffer[2] != 0xff || (buffer[3] & 0xf0) != 0xe0)
             free(filename);
             jpegcount++;
-            }
+
+            
              else //we already have jpegs
             {
                 continue;
