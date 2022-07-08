@@ -31,9 +31,9 @@ int main(int argc, char *argv[])
                 char *filename = malloc(8); //create a new filename
                 sprintf(filename, "%03i.jpg", jpegcount);
                 FILE *img = fopen(filename, "w"); //open a new file with the new filename wrote permissions.
-                fwrite(buffer, 512, 1, img); //write to the filepointer called img.
-                jpegcount++;
+                fwrite(buffer, 1, 1, img); //write to the filepointer called img.
                 free(filename);
+                jpegcount++;
             }
              else //we already have jpegs (EDIT)
             {
@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
         }
         if (blockreadcount != 1)
         {
-            keep_reading++; 
+            keep_reading++;
         }
     }
 }
