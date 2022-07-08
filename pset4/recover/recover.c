@@ -26,19 +26,21 @@ int main(int argc, char *argv[])
         //start of new jpeg? yes
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            char *filename = malloc(8); //create a new filename
-            sprintf(filename, "%03i.jpg", jpegcount);
-            FILE *img = fopen(filename, "w"); //recover image
-            do
+            //if first jpeg? yes
+            if (jpegcount == 0)
             {
-                fwrite(buffer, 1, 512, img); //write to new image
+                char *filename = malloc(8); //create a new filename
+                sprintf(filename, "%03i.jpg", jpegcount);
+                FILE *img = fopen(filename, "w"); //recover image
+                do
+                {
+                    fwrite(buffer, 1, 512, img); //write to new image
+                }
+                while (buffer[0] != 0xff || buffer[1] != 0xd8 || buffer[2] != 0xff || (buffer[3] & 0xf0) != 0xe0)
+                free(filename);
+                jpegcount++;
             }
-            while (buffer[0] != 0xff || buffer[1] != 0xd8 || buffer[2] != 0xff || (buffer[3] & 0xf0) != 0xe0)
-            free(filename);
-            jpegcount++;
-
-
-             else //we already have jpegs
+            else //if first jpeg? no
             {
                 continue;
             }
@@ -50,7 +52,7 @@ int main(int argc, char *argv[])
         //already found a jpeg? no
 
         //already found a jpeg? yes
-        
+
     }
 
     //close remaining files
