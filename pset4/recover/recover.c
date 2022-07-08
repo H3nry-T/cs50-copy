@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
             }
              else //we already have jpegs (EDIT)
             {
-                close(f);
+                continue;
             }
         }
     }
