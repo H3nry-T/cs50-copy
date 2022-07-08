@@ -39,6 +39,7 @@ int main(int argc, char *argv[])
                 fwrite(buffer, 1, 512, img);
                 jpegcount++;
             }
+            //else we find new jpeg?
             else
             {
                 fclose(img);
@@ -54,7 +55,7 @@ int main(int argc, char *argv[])
             }
             else
             {
-                
+
             }
         }
 
