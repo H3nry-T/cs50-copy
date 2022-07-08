@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     }
 
     int keep_reading = 0;
-    while (keep_reading == 0) //keep reading changes if it reaches the end.
+    while (keep_reading = 0;) //keep reading changes if it reaches the end.
     {
         int *buffer = malloc(512);
         // f is the card.raw file
@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
         }
         if (blockreadcount != 1)
         {
-            keep_reading++;
+            keep_reading++; 
         }
     }
 }
