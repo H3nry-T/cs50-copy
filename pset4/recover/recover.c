@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
     }
 
     int *buffer = malloc(512);
+    int jpegcount = 0;
 
 
     //repeat until end of card
@@ -26,7 +27,6 @@ int main(int argc, char *argv[])
     {
         // read card.raw 512 bytes into buffer
         fread(buffer, 512, 1, f);
-        int jpegcount = 0;
 
         //start of new jpeg? yes
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
