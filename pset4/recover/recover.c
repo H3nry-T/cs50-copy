@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
         printf("the file does not exist\n");
         return 1;
     }
-    
+
     //repeat until end of card
     int *buffer = malloc(512);
     while (fread(buffer, 1, 512, f) == 512)
@@ -49,6 +49,10 @@ int main(int argc, char *argv[])
 
 
         //already found a jpeg? no
+        else
+        {
+            
+        }
 
         //already found a jpeg? yes
 
