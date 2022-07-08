@@ -45,6 +45,9 @@ int main(int argc, char *argv[])
             {
                 //close the file we've been writing to
                 fclose(img);
+                sprintf(filename, "%03i.jpg", jpegcount);
+                img = fopen(filename, "w");
+                jpegcount++;
             }
         }
         if (img != NULL)
