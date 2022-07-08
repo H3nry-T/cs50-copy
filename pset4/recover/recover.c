@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 
     BYTE *buffer = malloc(512);
     int jpegcount = 0;
-
+    FILE *img = NULL; 
 
     //repeat until end of card
     while (fread(buffer, 1, 512, f) == 512)
