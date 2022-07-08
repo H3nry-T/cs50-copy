@@ -15,5 +15,6 @@ int main(int argc, char *argv[])
         printf("the file does not exist\n");
         return 1;
     }
+    
     fread()
 }
