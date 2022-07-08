@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    while (feof(f) != 0)
+    while (feof(f) != 0) //
     {
         int *buffer = malloc(512);
         fread(buffer, 512, 1, f); // f is the card.raw file when typed into the terminal
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
                 sprintf(filename, "%03i.jpg", jpegcount);
                 FILE *img = fopen(filename, "w"); //open a new file with the new filename wrote permissions.
                 fwrite(buffer, 512, 1, img); //write to the filepointer called img.
-                free(filename); 
+                free(filename);
             }
              else //we already have jpegs
             {
