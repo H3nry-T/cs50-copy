@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     if (f == NULL)
     {
         printf("the file does not exist\n");
-        return 1;
+        return 2;
     }
 
     BYTE buffer[512];
