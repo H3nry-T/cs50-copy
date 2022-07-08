@@ -47,8 +47,10 @@ int main(int argc, char *argv[])
         //start of new jpeg? no keep reading
 
 
-        //already found a jpeg?
-        //if yes, keep writing
+        //already found a jpeg? no
+
+        //already found a jpeg? yes
+        
     }
 
     //close remaining files
