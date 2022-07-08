@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <std
+#include <stdint.h>
 
 typedef uint8_t BYTE;
 
@@ -65,5 +65,5 @@ int main(int argc, char *argv[])
 
     //close remaining files
     fclose(f);
-    fclose(img)
+    fclose(img);
 }
