@@ -26,4 +26,8 @@ int main(int argc, char *argv[])
         FILE *img = fopen(filename, "w"); //open a new file with the new filename wrote permissions.
         fwrite(buffer, 512, 1, img) //write to the filepointer called img.
     }
+    else
+    {
+        
+    }
 }
