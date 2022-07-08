@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     FILE *f = fopen(filename, "r"); //get the file pointer which is the memory address of the opened image.
-    if (*f == NULL)
+    if (f == NULL)
     {
         printf("the file does not exist\n");
         return 1;
