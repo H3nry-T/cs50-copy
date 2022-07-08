@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
                 jpegcount++;
             }
         }
-        else if (img != NULL) 
+        if (img != NULL)
         {
             fwrite(buffer, 1, 512, img);
         }
