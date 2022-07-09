@@ -56,8 +56,8 @@ int main(void)
     list -> nextnode -> nextnode = n;
 
     // print numbers
-    for (node *n = list; tmp != NULL; tmp -> nextnode);
+    for (node *tmp = list; tmp != NULL; tmp = tmp -> nextnode);
     {
-        printf("%i\n", tmp-> number);
+        printf("%i\n", tmp -> number);
     }
 }
