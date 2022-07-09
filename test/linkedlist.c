@@ -63,7 +63,8 @@ int main(void)
 
     while (list != NULL)
     {
-        node *tmp = list -> nextnode;
-        
+        node *tmp = list -> nextnode; //points to number 2
+
+
     }
 }
