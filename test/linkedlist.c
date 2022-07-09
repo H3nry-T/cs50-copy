@@ -63,6 +63,6 @@ int main(void)
 
     while (list != NULL)
     {
-        node *tmp; 
+        node *tmp = list -> nextnode;
     }
 }
