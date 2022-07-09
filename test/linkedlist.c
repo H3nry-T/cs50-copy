@@ -38,16 +38,18 @@ int main(void)
     }
 
     n -> number = 2;
-    n -> next = NULL;
+    n -> nextnode = NULL;
 
-    list -> next = n;
+    list -> nextnode = n;
 
-    // adda number to list
+    // add a number to list
     n = malloc(sizeof(node));
     if (n == NULL)
     {
+        free(list -> next);
         free(list);
-        free()
         return 1;
     }
+    n -> number = 3;
+    n -> nextnode
 }
