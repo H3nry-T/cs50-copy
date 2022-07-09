@@ -30,7 +30,7 @@ int main(void)
     list = n;
 
     //add a number to the list
-    node *n = malloc(sizeof(node));
+    n = malloc(sizeof(node));
     if (n == NULL)
     {
         free(list);
@@ -46,7 +46,7 @@ int main(void)
     n = malloc(sizeof(node));
     if (n == NULL)
     {
-        free(list -> next);
+        free(list -> nextnode);
         free(list);
         return 1;
     }
