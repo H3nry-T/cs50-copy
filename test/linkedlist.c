@@ -66,6 +66,6 @@ int main(void)
         node *tmp = list -> nextnode; //points to number 2
         free(list); //safely free address of number 1
         list = tmp; //list is now pointing at number 2
-
     }
+    return 0;
 }
