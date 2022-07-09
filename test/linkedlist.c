@@ -60,4 +60,9 @@ int main(void)
     {
         printf("%i\n", tmp -> number);
     }
+
+    while (list != NULL)
+    {
+        node *tmp; 
+    }
 }
