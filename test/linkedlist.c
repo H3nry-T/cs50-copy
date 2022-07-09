@@ -51,5 +51,7 @@ int main(void)
         return 1;
     }
     n -> number = 3;
-    n -> nextnode
+    n -> nextnode = NULL;
+
+    list -> nextnode -> nextnode = n;
 }
