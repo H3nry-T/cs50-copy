@@ -64,5 +64,6 @@ int main(void)
     while (list != NULL)
     {
         node *tmp = list -> nextnode;
+        
     }
 }
