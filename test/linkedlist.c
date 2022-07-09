@@ -54,4 +54,10 @@ int main(void)
     n -> nextnode = NULL;
 
     list -> nextnode -> nextnode = n;
+
+    // print numbers
+    for (node *n = list; tmp != NULL; tmp -> nextnode);
+    {
+        printf("%i\n", tmp-> number);
+    }
 }
