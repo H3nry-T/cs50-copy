@@ -41,4 +41,13 @@ int main(void)
     n -> next = NULL;
 
     list -> next = n;
+
+    // adda number to list
+    n = malloc(sizeof(node));
+    if (n == NULL)
+    {
+        free(list);
+        free()
+        return 1;
+    }
 }
