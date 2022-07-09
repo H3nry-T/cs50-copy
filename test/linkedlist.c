@@ -4,7 +4,7 @@
 typedef struct node
 {
     int number;
-    node *nextnode;
+    struct node *nextnode;
 }
 node;
 
@@ -56,7 +56,7 @@ int main(void)
     list -> nextnode -> nextnode = n;
 
     // print numbers imagine tmp = i, then it is similair to a normal for loop.
-    for (node *tmp = list; tmp != NULL; tmp = tmp -> nextnode);
+    for (node *tmp = list; tmp != NULL; tmp = tmp -> nextnode)
     {
         printf("%i\n", tmp -> number);
     }
@@ -64,7 +64,8 @@ int main(void)
     while (list != NULL)
     {
         node *tmp = list -> nextnode; //points to number 2
-        
+        free(list);
+        list = tmp;
 
     }
 }
