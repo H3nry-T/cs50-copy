@@ -64,8 +64,8 @@ int main(void)
     while (list != NULL)
     {
         node *tmp = list -> nextnode; //points to number 2
-        free(list);
-        list = tmp;
+        free(list); //safely free address of number 1
+        list = tmp; //list is now pointing at number 2
 
     }
 }
