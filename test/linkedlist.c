@@ -55,7 +55,7 @@ int main(void)
 
     list -> nextnode -> nextnode = n;
 
-    // print numbers
+    // print numbers imagine tmp = i, then it is similair to a normal for loop.
     for (node *tmp = list; tmp != NULL; tmp = tmp -> nextnode);
     {
         printf("%i\n", tmp -> number);
