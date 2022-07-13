@@ -26,7 +26,7 @@ bool check(const char *word)
     return false;
 }
 
-// Hashes word to a number
+// Hashes word to a number (position in the hastable)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
