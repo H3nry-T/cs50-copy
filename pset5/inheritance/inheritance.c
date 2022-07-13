@@ -91,6 +91,7 @@ void free_family(person *p)
     free(p);
 }
 
+
 // Print each family member and their alleles.
 void print_family(person *p, int generation)
 {
