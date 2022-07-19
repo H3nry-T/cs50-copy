@@ -36,10 +36,11 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     FILE *file = fopen(dictionary, "r");
-
-    while (fscanf(dictionary != EOF)));
+    //creating nodes
+    while (fscanf(file, "%s", word) != EOF);
     {
-        fread(dictionary);
+        node *newnode = 
+        fread();
     }
     return false;
 }
