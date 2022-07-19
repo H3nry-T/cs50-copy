@@ -39,7 +39,7 @@ bool load(const char *dictionary)
     //creating nodes
     while (fscanf(file, "%s", word) != EOF);
     {
-        node *newnode = 
+        node *newnode = malloc(sizeof(node));
         fread();
     }
     return false;
