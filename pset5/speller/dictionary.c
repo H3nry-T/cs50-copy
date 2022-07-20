@@ -103,14 +103,14 @@ unsigned int size(void)
 bool unload(void)
 {
     node *traversal;
-
+    node *temp;
     for (int i = 0, i < N, i++)
     {
         traversal = table[i]->next;
 
         while (traversal != NULL)
         {
-            traversal = traversal
+            traversal = traversal->next
         }
     }
     return false;
