@@ -1,5 +1,5 @@
 // Implements a dictionary's functionality
-
+#include <cs50.h>
 #include <ctype.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -30,10 +30,10 @@ bool check(const char *word)
 
     node *traversal;
     traversal = table[hashcode];
-    while(traversal != NULL);
+    while(traversal != NULL)
     {
         int indict = strcasecmp(word, traversal->word);
-        if (indict == 0);
+        if (indict == 0)
         {
             return true;
         }
