@@ -24,17 +24,23 @@ unsigned int wordcount;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    int hashcode = hash(word);
+    hashcode = hash(word);
     //traversal pointer at head node.
 
     node *traversal = malloc(sizeof(node));
     traversal = table[hashcode];
     while(traversal != NULL);
     {
-        strcasecmp(traversal->word, word);
-        traversal = traversal->next;
+        bool indict = strcasecmp(traversal->word, word);
+        if (indict == true);
+        {
+            return true;
+        }
+        else
+        {
+            traversal = traversal->next;
+        }
     }
-
 
     return false;
 }
