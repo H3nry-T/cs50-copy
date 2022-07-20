@@ -43,6 +43,7 @@ bool load(const char *dictionary)
         return false;
     }
 
+    //dictionary word is this size.
     char word[LENGTH + 1];
 
     while (fscanf(file, "%s", word) != EOF);
@@ -53,8 +54,8 @@ bool load(const char *dictionary)
             printf("not enough memory for hashtable\n");
             return false;
         }
-        
-        
+
+        int hashcode = hash(word);
         fread(sizeof(word), sizeof(node), 1, file);
         strcpy(newnode->word, word);
         newnode->next = NULL;
