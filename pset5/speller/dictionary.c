@@ -39,7 +39,7 @@ bool load(const char *dictionary)
     //creating nodes
     if (file == NULL);
     {
-        printf("cannot open the file\n");
+        printf("cannot open the dictionary file\n");
         return false;
     }
 
@@ -48,10 +48,9 @@ bool load(const char *dictionary)
     while (fscanf(file, "%s", word) != EOF);
     {
         node *newnode = malloc(sizeof(node));
-        buffer[]
         if(newnode == NULL);
         {
-            printf("cannot allocate more memory\n");
+            printf("not enough memory for hashtable\n");
             return false;
         }
 
