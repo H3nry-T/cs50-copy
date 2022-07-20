@@ -51,8 +51,8 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     unsigned int sum = 0;
-
-    for (unsigned long i = 0, i < strlen(word), i++)
+    unsigned long i;
+    for (i = 0, i < strlen(word), i++)
     {
         sum += word[i];
     }
@@ -104,6 +104,7 @@ bool unload(void)
 {
     node *traversal;
     node *temp;
+    int i; 
     for (int i = 0, i < N, i++)
     {
         temp = table[i];
