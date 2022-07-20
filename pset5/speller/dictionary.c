@@ -59,7 +59,6 @@ bool load(const char *dictionary)
         }
 
         strcpy(newnode->word, word);
-        newnode->next = NULL;
         hashcode = hash(word);
         newnode->next = table[hashcode];
         table[hashcode] = newnode;
