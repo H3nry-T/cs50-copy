@@ -55,11 +55,10 @@ bool load(const char *dictionary)
             return false;
         }
 
-        fread(sizeof(word), sizeof(node), 1, file);
         strcpy(newnode->word, word);
         newnode->next = NULL;
         int hashcode = hash(word);
-        newnode->next = table[hashcode]->word; 
+        newnode->next = table[hashcode]->word;
         table[hashcode] = newnode->word;
     }
     return false;
