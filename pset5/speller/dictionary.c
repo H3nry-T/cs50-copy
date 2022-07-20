@@ -59,8 +59,9 @@ bool load(const char *dictionary)
         newnode->next = NULL;
         int hashcode = hash(word);
         newnode->next = table[hashcode];
-        table[hashcode] = newnode->word;
+        table[hashcode] = newnode;
     }
+    fclose(file); 
     return false;
 }
 
