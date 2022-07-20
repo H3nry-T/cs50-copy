@@ -31,7 +31,8 @@ bool check(const char *word)
 
     while(traversal != NULL);
     {
-        traversal = traversal->next; 
+        strcasecmp(word, );
+        traversal = traversal->next;
     }
 
 
