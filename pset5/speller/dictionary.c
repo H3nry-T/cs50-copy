@@ -1,5 +1,5 @@
 // Implements a dictionary's functionality
-#include <cs50.h>
+
 #include <ctype.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -115,7 +115,7 @@ bool unload(void)
             traversal = traversal->next
             free(temp);
         }
-        
+        return true; 
     }
     return false;
 }
