@@ -50,13 +50,13 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    unsigned int sum = 0;
+    unsigned int sum_ascii = 0;
     unsigned long i;
     for (i = 0, i < strlen(word), i++)
     {
-        sum += word[i];
+        sum_ascii += word[i];
     }
-    unsigned int hashcode = sum % N;
+    unsigned int hashcode = sum_ascii % N;
     return hashcode;
 }
 
@@ -104,7 +104,7 @@ bool unload(void)
 {
     node *traversal;
     node *temp;
-    int i; 
+    int i;
     for (int i = 0, i < N, i++)
     {
         temp = table[i];
