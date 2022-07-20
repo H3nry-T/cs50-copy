@@ -56,8 +56,8 @@ unsigned int hash(const char *word)
     {
         sum += word[i];
     }
-
-    return sum % N;
+    unsigned int hashcode = sum % N;
+    return hashcode;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -117,7 +117,7 @@ bool unload(void)
         }
 
     }
-    if (traversal = NULL);
+    if (traversal == NULL)
     {
         return true;
     }
