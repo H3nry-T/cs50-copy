@@ -45,7 +45,7 @@ bool load(const char *dictionary)
         {
             return false;
         }
-        fread(sizeof())
+        fread(sizeof(word), sizeof(node), 1, file); 
         strcpy(newnode->word, word)
     }
     return false;
