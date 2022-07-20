@@ -26,12 +26,13 @@ bool check(const char *word)
 {
     int hashcode = hash(word);
     //traversal pointer at head node.
-    node *traversal;
-    traversal->next = NULL;
 
-    while(traversal != NULL);
+    node *traversal = malloc(sizeof(node));
+    traversal = NULL;
+
+    while(traversal->next != NULL);
     {
-        strcasecmp(word, );
+        strcasecmp(traversal->word, word);
         traversal = traversal->next;
     }
 
@@ -83,6 +84,7 @@ bool load(const char *dictionary)
         wordcount++;
     }
     fclose(file);
+    free(newnode);
     return true;
 }
 
