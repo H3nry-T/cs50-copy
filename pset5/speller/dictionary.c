@@ -65,7 +65,7 @@ bool load(const char *dictionary)
 {
     FILE *file = fopen(dictionary, "r");
     //creating nodes
-    if (file == NULL);
+    if (file == NULL)
     {
         printf("cannot open the dictionary file\n");
         return false;
