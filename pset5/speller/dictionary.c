@@ -3,6 +3,8 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include "dictionary.h"
+#include <string.h>
+#include <stdlib.h>
 
 // Represents a node in a hash table
 typedef struct node
@@ -61,7 +63,7 @@ bool load(const char *dictionary)
         newnode->next = table[hashcode];
         table[hashcode] = newnode;
     }
-    fclose(file); 
+    fclose(file);
     return false;
 }
 
