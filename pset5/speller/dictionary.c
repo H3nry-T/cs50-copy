@@ -53,9 +53,11 @@ bool load(const char *dictionary)
             printf("not enough memory for hashtable\n");
             return false;
         }
-
+        
+        
         fread(sizeof(word), sizeof(node), 1, file);
         strcpy(newnode->word, word);
+        newnode->next = NULL;
     }
     return false;
 }
