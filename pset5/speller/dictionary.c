@@ -25,11 +25,13 @@ unsigned int wordcount;
 bool check(const char *word)
 {
     int hashcode = hash(word);
-    node *traversal = table[hashcode];
+    //traversal pointer at head node.
+    node *traversal;
+    traversal->next = NULL;
 
-    while(traversal->next != NULL);
+    while(traversal != NULL);
     {
-        
+        traversal = traversal->next; 
     }
 
 
