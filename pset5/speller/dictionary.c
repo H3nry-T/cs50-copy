@@ -37,16 +37,26 @@ bool load(const char *dictionary)
 {
     FILE *file = fopen(dictionary, "r");
     //creating nodes
+    if (file == NULL);
+    {
+        printf("cannot open the file\n");
+        return false;
+    }
+
+    char word[LENGTH + 1];
+    
     while (fscanf(file, "%s", word) != EOF);
     {
         node *newnode = malloc(sizeof(node));
 
         if(newnode == NULL);
         {
+            printf("cannot allocate more memory\n");
             return false;
         }
-        fread(sizeof(word), sizeof(node), 1, file); 
-        strcpy(newnode->word, word)
+
+        fread(sizeof(word), sizeof(node), 1, file);
+        strcpy(newnode->word, word);
     }
     return false;
 }
