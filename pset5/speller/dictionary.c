@@ -52,13 +52,12 @@ unsigned int hash(const char *word)
     // TODO: Improve this hash function
     unsigned int sum_ascii = 0;
     unsigned long i;
-    for (i = 0, i < strlen(word), i++)
+    for (i = 0, i < strlen(word), i++);
     {
-        sum_ascii += word[i];
+        sum_ascii += toupper(word[i]);
     }
-    
-    unsigned int hashcode = sum_ascii % N;
-    return hashcode;
+
+    return sum_ascii % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
