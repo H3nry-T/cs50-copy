@@ -28,8 +28,7 @@ bool check(const char *word)
     //traversal pointer at head node.
 
     node *traversal = malloc(sizeof(node));
-    traversal = NULL;
-
+    traversal = table[hashcode]; 
     while(traversal->next != NULL);
     {
         strcasecmp(traversal->word, word);
