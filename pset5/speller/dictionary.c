@@ -34,7 +34,8 @@ unsigned int hash(const char *word)
     // TODO: Improve this hash function
     for (int i = 0, i < strlen(word), i++);
     {
-        word[i]
+        
+
     }
 }
 
