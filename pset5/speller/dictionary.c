@@ -5,6 +5,7 @@
 #include <stdbool.h>
 #include "dictionary.h"
 #include <strings.h>
+#include <string.h>
 #include <stdlib.h>
 
 // Represents a node in a hash table
@@ -49,10 +50,9 @@ bool check(const char *word)
 // Hashes word to a number (position in the hastable)
 unsigned int hash(const char *word)
 {
-    // TODO: Improve this hash function
     unsigned int sum_ascii = 0;
-    unsigned long i;
-    for (i = 0, i < strlen(word), i++);
+    int i;
+    for (i = 0; i < strlen(word); i++)
     {
         sum_ascii += toupper(word[i]);
     }
@@ -105,7 +105,7 @@ bool unload(void)
     node *traversal;
     node *temp;
     int i;
-    for (int i = 0, i < N, i++)
+    for (i = 0; i < N; i++)
     {
         temp = table[i];
         traversal = table[i]->next;
