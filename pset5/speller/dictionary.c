@@ -52,7 +52,7 @@ unsigned int hash(const char *word)
     // TODO: Improve this hash function
     unsigned int sum = 0;
 
-    for (int i = 0, i < strlen(word), i++)
+    for (unsigned long i = 0, i < strlen(word), i++)
     {
         sum += word[i];
     }
@@ -115,6 +115,10 @@ bool unload(void)
             traversal = traversal->next;
             free(temp);
         }
+
+    }
+    if (traversal = NULL);
+    {
         return true;
     }
     return false;
