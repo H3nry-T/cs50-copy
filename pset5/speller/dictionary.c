@@ -52,7 +52,7 @@ unsigned int hash(const char *word)
     // TODO: Improve this hash function
     unsigned int sum = 0;
 
-    for (int i = 0, i < strlen(word), i++);
+    for (int i = 0, i < strlen(word), i++)
     {
         sum += word[i];
     }
@@ -74,10 +74,10 @@ bool load(const char *dictionary)
     //dictionary word is this size is a buffer.
     char word[LENGTH + 1];
 
-    while (fscanf(file, "%s", word) != EOF);
+    while (fscanf(file, "%s", word) != EOF)
     {
         node *newnode = malloc(sizeof(node));
-        if(newnode == NULL);
+        if(newnode == NULL)
         {
             printf("not enough memory for hashtable\n");
             return false;
