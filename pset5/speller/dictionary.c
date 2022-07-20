@@ -102,6 +102,11 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
+    node *traversal;
 
+    for (int i = 0, i < N, i++)
+    {
+        while (traversal != NULL)
+    }
     return false;
 }
