@@ -63,10 +63,10 @@ bool load(const char *dictionary)
         hashcode = hash(word);
         newnode->next = table[hashcode];
         table[hashcode] = newnode;
-        wordcount++; 
+        wordcount++;
     }
     fclose(file);
-    return false;
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
