@@ -19,7 +19,8 @@ const unsigned int N = 26;
 
 // Hash table
 node *table[N];
-
+int hashcode;
+unsigned int wordcount;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -59,9 +60,10 @@ bool load(const char *dictionary)
 
         strcpy(newnode->word, word);
         newnode->next = NULL;
-        int hashcode = hash(word);
+        hashcode = hash(word);
         newnode->next = table[hashcode];
         table[hashcode] = newnode;
+        wordcount++; 
     }
     fclose(file);
     return false;
