@@ -55,8 +55,8 @@ bool load(const char *dictionary)
             return false;
         }
 
-        int hashcode = hash(word);
         fread(sizeof(word), sizeof(node), 1, file);
+        int hashcode = hash(word);
         strcpy(newnode->word, word);
         newnode->next = NULL;
     }
