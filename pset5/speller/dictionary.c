@@ -56,6 +56,7 @@ unsigned int hash(const char *word)
     {
         sum_ascii += word[i];
     }
+    
     unsigned int hashcode = sum_ascii % N;
     return hashcode;
 }
