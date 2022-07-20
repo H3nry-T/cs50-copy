@@ -27,7 +27,7 @@ bool check(const char *word)
     hashcode = hash(word);
     //traversal pointer at head node.
 
-    node *traversal = malloc(sizeof(node));
+    node *traversal;
     traversal = table[hashcode];
     while(traversal != NULL);
     {
