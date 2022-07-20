@@ -111,8 +111,8 @@ bool unload(void)
 
         while (traversal != NULL)
         {
-            temp = traversal
-            traversal = traversal->next
+            temp = traversal;
+            traversal = traversal->next;
             free(temp);
         }
         return true;
