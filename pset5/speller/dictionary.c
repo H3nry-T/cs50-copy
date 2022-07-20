@@ -106,7 +106,7 @@ bool unload(void)
     node *temp;
     for (int i = 0, i < N, i++)
     {
-        tremp = table[i];
+        temp = table[i];
         traversal = table[i]->next;
 
         while (traversal != NULL)
@@ -115,7 +115,7 @@ bool unload(void)
             traversal = traversal->next
             free(temp);
         }
-        return true; 
+        return true;
     }
     return false;
 }
