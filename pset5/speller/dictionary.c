@@ -106,7 +106,12 @@ bool unload(void)
 
     for (int i = 0, i < N, i++)
     {
+        traversal = table[i]->next;
+
         while (traversal != NULL)
+        {
+            traversal = traversal
+        }
     }
     return false;
 }
