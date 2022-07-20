@@ -43,7 +43,7 @@ bool load(const char *dictionary)
         return false;
     }
 
-    //dictionary word is this size.
+    //dictionary word is this size is a buffer. 
     char word[LENGTH + 1];
 
     while (fscanf(file, "%s", word) != EOF);
