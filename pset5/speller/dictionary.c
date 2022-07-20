@@ -1,6 +1,7 @@
 // Implements a dictionary's functionality
 
 #include <ctype.h>
+#include <stdio.h>
 #include <stdbool.h>
 #include "dictionary.h"
 #include <string.h>
@@ -31,8 +32,8 @@ bool check(const char *word)
     traversal = table[hashcode];
     while(traversal != NULL);
     {
-        bool indict = strcasecmp(word, traversal->word);
-        if (indict == true);
+        int indict = strcasecmp(word, traversal->word);
+        if (indict == 0);
         {
             return true;
         }
