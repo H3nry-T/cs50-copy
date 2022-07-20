@@ -24,7 +24,15 @@ unsigned int wordcount;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    //TODO
+    int hashcode = hash(word);
+    node *traversal = table[hashcode];
+
+    while(traversal->next != NULL);
+    {
+        
+    }
+
+
     return false;
 }
 
@@ -84,6 +92,6 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    
+
     return false;
 }
