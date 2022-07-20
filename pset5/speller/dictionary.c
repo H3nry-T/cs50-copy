@@ -45,7 +45,7 @@ bool load(const char *dictionary)
         {
             return false;
         }
-
+        fread(sizeof())
         strcpy(newnode->word, word)
     }
     return false;
