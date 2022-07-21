@@ -32,8 +32,7 @@ bool check(const char *word)
     traversal = table[hashcode];
     while(traversal != NULL)
     {
-        int indict = strcasecmp(word, traversal->word);
-        if (indict == 0)
+        if (strcasecmp(word, traversal->word) == 0)
         {
             return true;
         }
