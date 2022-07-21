@@ -97,14 +97,14 @@ bool unload(void)
     node *traversal;
 
     int i;
-    for (i = 0, i < N, i++)
+    for (i = 0; i < N; i++)
     {
         temp = table[i];
         traversal = table[i]->next;
-        while (traversal != NULL);
+        while (traversal != NULL)
         {
             free(temp);
-            temp = traversal
+            temp = traversal;
             traversal = traversal->next;
         }
     }
