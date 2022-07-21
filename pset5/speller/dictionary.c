@@ -62,6 +62,7 @@ bool load(const char *dictionary)
         hashcode = hash(scanword);
         newword->next = table[hashcode];
         table[hashcode] = newword;
+        
     }
     return false;
 }
