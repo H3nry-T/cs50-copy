@@ -41,7 +41,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     FILE *file  = fopen(dictionary, "r");
-    if (file == NULL);
+    if (file == NULL)
     {
         printf("unable to open the dictionary\n");
         return false;
@@ -52,7 +52,7 @@ bool load(const char *dictionary)
     while(fscanf(file, %s, scanword) != EOF)
     {
         node *newword = malloc(sizeof(node));
-        if (newword == NULL);
+        if (newword == NULL)
         {
             printf("cannot allocate any more memory for hashtable\n");
             return false;
@@ -62,9 +62,10 @@ bool load(const char *dictionary)
         hashcode = hash(scanword);
         newword->next = table[hashcode];
         table[hashcode] = newword;
-        
+        wordcount++;
     }
-    return false;
+    fclose(file);
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
