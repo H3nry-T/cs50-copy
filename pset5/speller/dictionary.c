@@ -47,12 +47,14 @@ bool load(const char *dictionary)
         printf("unable to open the dictionary\n");
         return false;
     }
-    
+
     while(fscanf(file, %s, scanword) != EOF)
     {
-        node *newword
+        node *newword = malloc(sizeof(node));
         hashcode = hash(word);
         strcpy(table[hashcode]->word, scanword);
+        newword = table[hashcode];
+        table[hashcode] = newword; 
     }
     return false;
 }
