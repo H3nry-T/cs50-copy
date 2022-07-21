@@ -103,7 +103,6 @@ unsigned int size(void)
     else
     {
         return 0;
-
     }
 }
 
@@ -113,6 +112,7 @@ bool unload(void)
     node *traversal;
     node *temp;
     int i;
+
     for (i = 0; i < N; i++)
     {
         temp = table[i];
@@ -124,8 +124,8 @@ bool unload(void)
             traversal = traversal->next;
             free(temp);
         }
-
     }
+
     if (traversal == NULL)
     {
         return true;
