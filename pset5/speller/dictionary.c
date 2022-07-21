@@ -83,7 +83,7 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    return wordcount; 
+    return wordcount;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
@@ -95,13 +95,16 @@ bool unload(void)
     int i;
     for (i = 0; i < N; i++)
     {
-        temp = table[i];
-        traversal = table[i]->next;
+        traversal = table[i];
         while (traversal != NULL)
         {
-            free(temp);
             temp = traversal;
             traversal = traversal->next;
+            free(temp);
+        }
+        if (traversal == NULL && i == N - 1)
+        {
+            return true;
         }
     }
     return false;
