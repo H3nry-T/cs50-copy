@@ -21,7 +21,6 @@ const unsigned int N = 26;
 
 // Hash table
 node *table[N];
-char scanword[LENGTH + 1];
 unsigned long hashcode;
 
 // Returns true if word is in dictionary, else false
@@ -48,13 +47,15 @@ bool load(const char *dictionary)
         return false;
     }
 
+    //buffer
+    char scanword[LENGTH + 1];
     while(fscanf(file, %s, scanword) != EOF)
     {
         node *newword = malloc(sizeof(node));
         hashcode = hash(word);
         strcpy(table[hashcode]->word, scanword);
         newword = table[hashcode];
-        table[hashcode] = newword; 
+        table[hashcode] = newword;
     }
     return false;
 }
