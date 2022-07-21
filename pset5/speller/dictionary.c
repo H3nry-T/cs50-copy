@@ -34,7 +34,10 @@ bool check(const char *word)
         {
             return true;
         }
-        traversal = traversal->next;
+        else
+        {
+            traversal = traversal->next;
+        }
     }
     return false;
 }
@@ -90,6 +93,16 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    // TODO
+    node *temp;
+    node *traversal;
+
+    int i;
+    for (i = 0, i < N, i++)
+    {
+        temp = table[i];
+        traversal = table[i]->next;
+        free(temp); 
+        traversal = traversal->next;
+    }
     return false;
 }
