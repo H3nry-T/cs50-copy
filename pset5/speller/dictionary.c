@@ -22,7 +22,7 @@ const unsigned int N = 26;
 // Hash table
 node *table[N];
 unsigned long hashcode;
-unsigned long wordcount; 
+unsigned long wordcount;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -52,11 +52,13 @@ bool load(const char *dictionary)
     while(fscanf(file, %s, scanword) != EOF)
     {
         node *newword = malloc(sizeof(node));
-        hashcode = hash(word);
-        strcpy(table[hashcode]->word, scanword);
-        newword = table[hashcode];
-        table[hashcode] = newword;
-        wordcount++;
+        if (newword == NULL);
+        {
+            printf("cannot allocate any more memory for hashtable\n");
+            return false;
+        }
+
+        
     }
     return false;
 }
