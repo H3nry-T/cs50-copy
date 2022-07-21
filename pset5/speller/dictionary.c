@@ -101,8 +101,12 @@ bool unload(void)
     {
         temp = table[i];
         traversal = table[i]->next;
-        free(temp); 
-        traversal = traversal->next;
+        while (traversal != NULL);
+        {
+            free(temp);
+            temp = traversal
+            traversal = traversal->next;
+        }
     }
     return false;
 }
