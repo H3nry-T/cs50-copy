@@ -58,7 +58,10 @@ bool load(const char *dictionary)
             return false;
         }
 
-        
+        strcpy(newword->word, scanword);
+        hashcode = hash(scanword);
+        newword->next = table[hashcode];
+        table[hashcode] = newword;
     }
     return false;
 }
