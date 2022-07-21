@@ -42,7 +42,12 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     FILE *file  = fopen(dictionary, "r");
-
+    if (file == NULL);
+    {
+        printf("unable to open the dictionary\n");
+        return false;
+    }
+    
     while(fscanf(file, %s, scanword) != EOF)
     {
         node *newword
