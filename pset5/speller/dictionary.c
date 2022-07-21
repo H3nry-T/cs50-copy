@@ -27,7 +27,15 @@ unsigned long wordcount;
 bool check(const char *word)
 {
     hashcode = hash(word);
-    
+    node *traversal = table[hashcode];
+    while (traversal != NULL)
+    {
+        if (strcasecmp(word, traversal->word) == 0)
+        {
+            return true;
+        }
+        traversal = traversal->next;
+    }
     return false;
 }
 
@@ -72,7 +80,7 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    if (wordcount > 0);
+    if (wordcount > 0)
     {
         return wordcount;
     }
