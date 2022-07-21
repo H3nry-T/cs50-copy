@@ -26,7 +26,8 @@ unsigned long wordcount;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-
+    hashcode = hash(word);
+    
     return false;
 }
 
@@ -49,7 +50,7 @@ bool load(const char *dictionary)
 
     //buffer
     char scanword[LENGTH + 1];
-    while(fscanf(file, %s, scanword) != EOF)
+    while(fscanf(file, "%s", scanword) != EOF)
     {
         node *newword = malloc(sizeof(node));
         if (newword == NULL)
@@ -71,7 +72,10 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO
+    if (wordcount > 0);
+    {
+        return wordcount;
+    }
     return 0;
 }
 
