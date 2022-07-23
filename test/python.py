@@ -1,7 +1,7 @@
 
-
+def square(x):
+    return x ** 2
 #if statmeent
-main()
 counter = 0
 while (counter < 1):
     print(f"counter: {counter}")
@@ -46,12 +46,6 @@ for item, price in pizzas.items():
     print(f"The item: {item}\nCosts: ${price} ")
     print("")
 
-print(square(5))
+print("5 squared is: ", square(5))
 #if __name__ == "__main__":
 #    main()
-
-def square(x):
-    return x ** 2
-
-if __name__ == "__main__":
-    main()
