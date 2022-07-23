@@ -2,8 +2,10 @@ from cs50 import get_int
 
 def main():
     height = getheight()
-    for i in range(n)
-        print("#")
+    for i in range(height):
+        for j in range(height):
+            print("#", end = "")
+        print("")
 
 def getheight():
     while True:
@@ -11,3 +13,5 @@ def getheight():
         if n > 0:
             break
     return n
+
+main()
