@@ -17,7 +17,7 @@ print("\n", end = "")
 nums[len(nums):] = [5]
 for n in nums:
     print(n)
-
+print("")
 presidents = [
     ("president 1", 1789),
     ("president 2", 1797)
@@ -25,6 +25,8 @@ presidents = [
 
 for i, a in presidents:
     print(f"{i} is in offce at year {a} ")
+
+print("")
 
 pizzas = {
     "cheese" : 9,
@@ -34,5 +36,5 @@ pizzas = {
 }
 
 for i in pizzas:
-    print(f"pizzas have {a} {i}")
+    print(i)
 
