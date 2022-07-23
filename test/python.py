@@ -50,7 +50,4 @@ print(square(5))
 #    main()
 
 def square(x):
-    result = 0
-    for i in range(0, x):
-        result += x
-    return result
+    return x ** 2
