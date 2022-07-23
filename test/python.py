@@ -12,6 +12,8 @@ nums += [4]
 for n in nums:
     print(n)
 
-nums[:-1] = [5]
+print("\n", end = "")
+
+nums[len(nums):] = [5]
 for n in nums:
     print(n)
