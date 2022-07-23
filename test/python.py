@@ -18,3 +18,9 @@ nums[len(nums):] = [5]
 for n in nums:
     print(n)
 
+presidents = [
+    ("president 1", 1789),
+    ("president 2", 1797)
+]
+
+for 
