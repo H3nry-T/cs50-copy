@@ -3,7 +3,10 @@
 
 
 def main():
-    #code
+    henry = Student("Henry", 111)
+    print(henry.name, henry.id)
+    henry.changeID(50)
+    print(henry.name, henry.id)
 
 
 
