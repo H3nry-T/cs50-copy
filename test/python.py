@@ -45,5 +45,11 @@ for item, price in pizzas.items():
     print(f"The item: {item}\nCosts: ${price} ")
     print("")
 
-if __name__ == "__main__":
-    main()
+#if __name__ == "__main__":
+#    main()
+
+def square(x):
+    result = 0
+    for i in range(0, x)
+        result += x
+    return result
