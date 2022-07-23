@@ -1,6 +1,7 @@
 
 
 #if statmeent
+main()
 counter = 0
 while (counter < 1):
     print(f"counter: {counter}")
@@ -51,3 +52,6 @@ print(square(5))
 
 def square(x):
     return x ** 2
+
+if __name__ == "__main__":
+    main()
