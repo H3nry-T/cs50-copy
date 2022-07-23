@@ -26,3 +26,14 @@ presidents = [
 for i, a in presidents:
     print(f"{i} is in offce at year {a} ")
 
+pizzas = {
+    "cheese" : 9,
+    "pepperoni" : 10,
+    "vegetables" : 11,
+    "buffalo chicken" : 12
+}
+
+for i, a in pizzas:
+    print(f"pizzas have {a} {i}")
+
+    
