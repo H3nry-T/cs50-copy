@@ -40,6 +40,6 @@ for i in pizzas:
 print("")
 
 for item, price in pizzas.items():
-    print(f"The item: {item}\ncosts: ${price} ")
+    print(f"The item: {item}\nCosts: ${price} ")
     print("")
 
