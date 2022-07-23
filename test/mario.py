@@ -3,10 +3,8 @@ from cs50 import get_int
 def main():
     height = getheight()
     for i in range(height):
-        j = i + 1
-        while j < i + 1:
+        for j in range(i + 1):
             print("#", end = "")
-            i += 1
         print("")
 
 def getheight():
