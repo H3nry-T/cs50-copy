@@ -33,7 +33,6 @@ pizzas = {
     "buffalo chicken" : 12
 }
 
-for i, a in pizzas:
+for i in pizzas:
     print(f"pizzas have {a} {i}")
 
-    
