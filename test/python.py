@@ -38,3 +38,5 @@ pizzas = {
 for i in pizzas:
     print(i)
 
+for item, price in pizzas.items():
+    print(price)
