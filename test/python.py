@@ -1,3 +1,5 @@
+
+
 #if statmeent
 counter = 0
 while (counter < 1):
@@ -43,3 +45,5 @@ for item, price in pizzas.items():
     print(f"The item: {item}\nCosts: ${price} ")
     print("")
 
+if __name__ == "__main__":
+    main()
