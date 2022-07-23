@@ -11,3 +11,7 @@ nums = [n for n in range(10)]
 nums += [4]
 for n in nums:
     print(n)
+
+nums[:-1] = [5]
+for n in nums:
+    print(n)
