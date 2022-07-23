@@ -23,4 +23,5 @@ presidents = [
     ("president 2", 1797)
 ]
 
-for 
+for i, a in presidents:
+    print("{0} is in offce at year {1} ".format(i, a))
