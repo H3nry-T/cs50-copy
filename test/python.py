@@ -37,6 +37,9 @@ pizzas = {
 
 for i in pizzas:
     print(i)
+print("")
 
 for item, price in pizzas.items():
-    print(price)
+    print("The item: {}\ncosts ${} ".format(item, price))
+    print("")
+
