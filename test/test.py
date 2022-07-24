@@ -3,7 +3,7 @@ import sys
 import math
 
 def nthlastdigit(number, n):
-    return number % 10**n // 10
+    return number % 10**n // 10 ** (n - 1)
 def lengthnumber(number):
     return int(math.log10(number) + 1)
 
