@@ -15,10 +15,10 @@ def main():
 #get the second last digit
     i = 2
     #while i <= 8
-    while (i <= len(number) // 2):
+    while (i <= lengthnumber(number) // 2):
         card = nthlastdigit(number, i)
         card = card * 2
-
+        for digit in card
         i += 2
 
 def nthlastdigit(number, n):
@@ -26,7 +26,7 @@ def nthlastdigit(number, n):
 
 def lengthnumber(number):
     return int(math.log10(number) + 1)
-    
+
 if __name__ == "__main__":
     main()
 
