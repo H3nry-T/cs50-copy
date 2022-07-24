@@ -63,7 +63,7 @@ def simulate_tournament(teams):
     # TODO
     while True:
         nextround = simulate_round(teams)
-        if len(simulate_round(teams)) == 1:
+        if len(nextround) == 1:
             break
         else:
             simulate_round(nextround)
