@@ -7,10 +7,10 @@ def nthlastdigit(number, n):
 
 
 while True:
-    x = input("pls give number\n")
-    if (x.isdigit() == False):
-        print("this has to be a number")
-    else:
+    try:
+        x = int(input("pls give number:\n"))
+    except:
+        print("This has to be a integer")
         continue
 
-print(nthlastdigit(689098834729234253424, 2))
+print(nthlastdigit(x, 2))
