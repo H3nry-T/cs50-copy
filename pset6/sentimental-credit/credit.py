@@ -18,7 +18,9 @@ def main():
     while (i <= lengthnumber(number) // 2):
         card = nthlastdigit(number, i)
         card = card * 2
-        for digit in card
+        for digit in range(2):
+            
+
         i += 2
 
 def nthlastdigit(number, n):
