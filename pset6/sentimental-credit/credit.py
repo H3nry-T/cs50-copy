@@ -10,5 +10,5 @@ def main():
             print("please insert a valid credit card number")
             continue
 
-
+main() 
 
