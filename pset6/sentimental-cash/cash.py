@@ -19,7 +19,7 @@ def main():
     change = change - nickels * 0.05
 
     print(change)
-    
+
     pennies = calculate_pennies(change)
     change = change - pennies * 0.01
 
@@ -40,6 +40,7 @@ def calculate_dimes(change):
     return dimes
 
 def calculate_nickels(change):
+    round(change, 2) 
     nickels = 0
     while (change >= 0.05):
         change -= 0.05
@@ -47,7 +48,7 @@ def calculate_nickels(change):
     return nickels
 
 def calculate_pennies(change):
-    round(change)
+    round(change, 2)
     pennies = 0
     while (change >= 0.01):
         change -= 0.01
