@@ -32,14 +32,14 @@ def calculate_quarters(change):
 
 def calculate_dimes(change):
     dimes = 0
-    while (change >= 0.1):
+    while (round(change, 2) >= 0.1):
         change -= 0.1
         dimes += 1
     return dimes
 
 def calculate_nickels(change):
     nickels = 0
-    while (change >= 0.05):
+    while (round(change, 2) >= 0.05):
         change -= 0.05
         nickels += 1
     return nickels
