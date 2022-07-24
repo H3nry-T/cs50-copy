@@ -9,8 +9,8 @@ while True:
         continue
 
 for i in range(height):
-    for j in range(height + 2 + i):
-        if j == height or j == height + 1 or i + j < height - 1:
+    for j in range(height + 2 + i + 1):
+        if j == height or j == height + 1 or j < 5 - (i + 1):
             print(" ", end = "")
         else:
             print("#", end = "")
