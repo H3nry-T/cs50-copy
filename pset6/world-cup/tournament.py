@@ -67,9 +67,7 @@ def simulate_tournament(teams):
             break
         else:
             simulate_round(nextround)
-
-    winning_team = str(nextround[0])
-    return winning_team
+    return nextround[0]["team"]
 
 if __name__ == "__main__":
     main()
