@@ -22,12 +22,7 @@ def main():
     change = change - pennies * 0.01
 
     print(quarters + dimes + nickels + pennies)
-
-
-
-
-
-
+    
 def calculate_quarters(change):
     quarters = 0
     while (change >= 0.25):
