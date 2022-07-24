@@ -2,7 +2,7 @@ from cs50 import get_float
 
 def main():
     while True:
-        change = get_float("please input your change\n")
+        change = get_float("please input your change:\n")
         if 0 < change:
             break
         else:
