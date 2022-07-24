@@ -19,12 +19,12 @@ def main():
 
     nickels = calculate_nickels(change)
     change = change - nickels * 0.05
-    round(change)
+    int(round(change))
 
     pennies = calculate_pennies(change)
     change = change - pennies * 0.01
     round(change)
-    
+
     print(quarters + dimes + nickels + pennies)
 
 def calculate_quarters(change):
