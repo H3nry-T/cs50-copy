@@ -9,10 +9,19 @@ def main():
             print("please input a positive number\n")
             continue
 
+    quarters = calculate_quarters(change)
+    change = change - quarters * 25
 
+    dimes = calculate_dimes(change)
+    change = change - dimes * 10
 
+    nickels = calculate_nickels(change)
+    change = change - nickels * 5
 
+    pennies = calculate_pennies(change)
+    change = change - pennies * 1
 
+    print()
 
 
 
