@@ -9,6 +9,7 @@ def nthlastdigit(number, n):
 while True:
     try:
         x = int(input("pls give number:\n"))
+        break
     except:
         print("This has to be a integer")
         continue
