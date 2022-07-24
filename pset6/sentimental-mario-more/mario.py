@@ -11,7 +11,7 @@ while True:
 for i in range(height):
     for j in range(height + 2 + i):
         if j == 4 or j == 5 or j < height - (i + 1):
-            print("#", end = "")
+            print(" ", end = "")
         else:
             print("#", end = "")
         print("")
