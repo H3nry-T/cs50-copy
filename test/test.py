@@ -1,10 +1,11 @@
 import cs50
 import sys
-
+import math
 
 def nthlastdigit(number, n):
     return number % 10**n // 10
-
+def lengthnumber(number):
+    return int(math.log10(number) + 1)
 
 while True:
     try:
@@ -14,7 +15,7 @@ while True:
         print("This has to be a integer")
         continue
 
-for i in range(0, len(number), 2):
+for i in range(0, lengthnumber(number), 2):
     print(f"every other digit is {nthlastdigit(number, i)}")
 
 
