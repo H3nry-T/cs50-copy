@@ -24,9 +24,7 @@ def main():
             row["rating"] = int(row["rating"])
             teams.append(row)
 
-    for i in range(len(teams)):
-        print(teams[i])
-        
+
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
     for i in range(N):
