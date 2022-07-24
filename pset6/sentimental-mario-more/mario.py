@@ -7,3 +7,4 @@ while True:
     else:
         print("input a number between 1 and 8 inclusive")
         continue
+
