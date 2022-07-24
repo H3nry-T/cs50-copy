@@ -15,7 +15,7 @@ while True:
         print("This has to be a integer")
         continue
 
-for i in range(0, lengthnumber(number), 2):
+for i in range(2, lengthnumber(number), 2):
     print(f"every other digit is {nthlastdigit(number, i)}")
 
 
