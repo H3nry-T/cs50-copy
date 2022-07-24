@@ -8,10 +8,14 @@ def nthlastdigit(number, n):
 
 while True:
     try:
-        x = int(input("pls give number:\n"))
+        number = int(input("pls give number:\n"))
         break
     except:
         print("This has to be a integer")
         continue
 
-print(nthlastdigit(x, 2))
+for i in range(0, len(number), 2):
+    print(f"every other digit is {nthlastdigit(number, i)}")
+
+
+# print(nthlastdigit(x, 2))
