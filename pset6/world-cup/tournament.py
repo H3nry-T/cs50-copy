@@ -18,10 +18,10 @@ def main():
     # TODO: Read teams into memory from file
     filename = sys.argv[1]
     with open(filename, "r") as f:
-        dictreader = csv.DictReader(f)
-        next(dictreader)
-        for row in dictreader:
-            
+        reader = csv.DictReader(f)
+        next(reader)
+        for row in reader:
+            int(reader[1])
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
 
