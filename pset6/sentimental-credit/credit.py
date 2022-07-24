@@ -12,12 +12,14 @@ def main():
 
 #get the second last digit
     i = 2
-    while ():
-
+    while (i < len(number) // 2):
+        card = nthlastdigit(number, i)
+        card = card * 2
+        
         i += 2
 
 def nthlastdigit(number, n):
-    number % 10**n
+    return number % 10**n
 
 if __name__ == "__main__":
     main()
