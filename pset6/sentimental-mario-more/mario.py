@@ -8,3 +8,5 @@ while True:
         print("input a number between 1 and 8 inclusive")
         continue
 
+for i in range(height):
+    for j in range(h + )
