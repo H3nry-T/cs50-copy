@@ -9,8 +9,9 @@ def main():
         else:
             print("please insert a valid credit card number")
             continue
-    
 
+    for i in range(len(number)):
+        number % 
 if __name__ == "__main__":
     main()
 
