@@ -10,17 +10,21 @@ def main():
             continue
 
     quarters = calculate_quarters(change)
-    round(change) = change - quarters * 0.25
+    change = change - quarters * 0.25
+    round(change)
 
     dimes = calculate_dimes(change)
-    round(change) = change - dimes * 0.10
+    change = change - dimes * 0.10
+    round(change)
 
     nickels = calculate_nickels(change)
-    round(change) = change - nickels * 0.05
+    change = change - nickels * 0.05
+    round(change)
 
     pennies = calculate_pennies(change)
-    round(change) = change - pennies * 0.01
-
+    change = change - pennies * 0.01
+    round(change)
+    
     print(quarters + dimes + nickels + pennies)
 
 def calculate_quarters(change):
