@@ -11,7 +11,7 @@ def main():
             continue
 
     print(nthlastdigit(number, 2))
-    
+
 #get the second last digit
     i = 2
     #while i <= 8
@@ -22,7 +22,7 @@ def main():
         i += 2
 
 def nthlastdigit(number, n):
-    return number % 10**n
+    return number % 10**n // 10
 
 if __name__ == "__main__":
     main()
