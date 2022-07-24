@@ -22,7 +22,7 @@ def main():
         i += 2
 
 def nthlastdigit(number, n):
-    return number % 10**n // 10
+    return number % 10 ** n // 10 ** (n - 1)
 
 if __name__ == "__main__":
     main()
