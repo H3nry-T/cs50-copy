@@ -23,5 +23,6 @@ for i in range(2, lengthnumber(number), 2):
     for digit in range(len(str(card))):
         print (digit)
         digit_sum += digit
+        print (digit_sum)
 
 # print(nthlastdigit(x, 2))
