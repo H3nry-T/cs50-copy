@@ -21,7 +21,7 @@ def main():
     pennies = calculate_pennies(change)
     change = change - pennies * 1
 
-    print()
+    print(quarters + dimes + nickels + pennies)
 
 
 
@@ -29,7 +29,7 @@ def main():
 
 
 def calculate_quarters(change):
-
+    change % 25
 def calculate_dimes(change):
 
 def calculate_nickels(change):
