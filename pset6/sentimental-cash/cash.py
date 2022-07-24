@@ -10,19 +10,19 @@ def main():
             continue
 
     quarters = calculate_quarters(change)
-    change = change - quarters * 0.25
+    round(change) = change - quarters * 0.25
 
     dimes = calculate_dimes(change)
-    change = change - dimes * 0.10
+    round(change) = change - dimes * 0.10
 
     nickels = calculate_nickels(change)
-    change = change - nickels * 0.05
+    round(change) = change - nickels * 0.05
 
     pennies = calculate_pennies(change)
-    change = change - pennies * 0.01
+    round(change) = change - pennies * 0.01
 
     print(quarters + dimes + nickels + pennies)
-    
+
 def calculate_quarters(change):
     quarters = 0
     while (change >= 0.25):
