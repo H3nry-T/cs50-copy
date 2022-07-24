@@ -16,10 +16,12 @@ def main():
     i = 2
     #while i <= 8
     while (i <= lengthnumber(number) // 2):
+        # times each card number by 2 for every other digit from the second last one.
         card = nthlastdigit(number, i)
         card = card * 2
+
         for digit in range(2):
-            
+            digit += nthlastdigit(card, digit)
 
         i += 2
 
