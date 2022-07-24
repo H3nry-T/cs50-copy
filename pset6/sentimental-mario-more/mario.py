@@ -9,4 +9,7 @@ while True:
         continue
 
 for i in range(height):
-    for j in range(h + )
+    for j in range(h + 2 + i):
+        if j = 4 or j = 5:
+            print("#")
+        elif :
