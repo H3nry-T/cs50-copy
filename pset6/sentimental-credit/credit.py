@@ -11,13 +11,13 @@ def main():
             continue
 
 #get the second last digit
-    i = len(number)
-    while (i > 0):
+    i = 2
+    while ():
 
-        i -= 2
+        i += 2
 
-def secondlastdigit(number):
-    
+def nthlastdigit(number, n):
+    number % 10**n
 
 if __name__ == "__main__":
     main()
