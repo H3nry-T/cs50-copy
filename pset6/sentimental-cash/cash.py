@@ -11,6 +11,7 @@ def main():
 
     quarters = calculate_quarters(change)
     change = change - quarters * 0.25
+    round(change, 2) 
     print(change)
     dimes = calculate_dimes(change)
     change = change - dimes * 0.10
