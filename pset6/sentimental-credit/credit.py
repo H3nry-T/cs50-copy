@@ -27,7 +27,7 @@ def main():
 
     productdigits = []
     for i in range(len(digitarray)):
-        for j in range(lengthnumber(digitarray[i]) + 1):
+        for j in range(lengthnumber(int(digitarray[i])) + 1):
             productdigit = nthlastdigit(digitarray[i], j)
             productdigits.append(productdigit)
 
