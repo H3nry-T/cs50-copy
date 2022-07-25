@@ -16,6 +16,23 @@ while True:
         continue
 
 
+digitarray = []
+print("every other digit is: ")
 for i in range(2, lengthnumber(number) + 1, 2):
     print(nthlastdigit(number, i), end = " ")
+    digit = nthlastdigit(number, i)
+    digit = digit * 2
+    digitarray.append(digit)
+
+print("")
+print("times every digit by two:")
+
+for i in range(len(digitarray)):
+    print(digitarray[i], end = " ")
+
+productdigits = []
+for i in range(len(digitarray)):
+    for j in range(len(str(digitarray[i][j]))):
+        productdigit = nthlastdigit(digitarray[i], j)
+        productdigits.append(productdigit)
 
