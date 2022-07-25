@@ -59,6 +59,12 @@ print("")
 finalsum = productdigits + leftoverdigits
 print(sum(finalsum))
 
+if nthlastdigit(sum(finalsum), 1) == 0:
+    continue
+else:
+    print("INVALID")
+    sys.exit()
+
 visa = number
 amex = number
 master = number
@@ -77,4 +83,4 @@ elif lengthnumber(number) == 16 and (str(master)[0:2] == "51" or str(master)[0:2
 
 #anything else
 else:
-    print("INVALID") 
+    print("INVALID")
