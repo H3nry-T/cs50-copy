@@ -43,3 +43,11 @@ print("seperate out all the product digits:")
 for i in range(len(productdigits)):
     print(productdigits[i], end = " ")
 print("")
+
+print("leftover digits:")
+leftoverdigits = []
+for i in range(1, lengthnumber(number) + 1, 2):
+    untouched_digits = nthlastdigit(number, i)
+    print(untouched_digits, end = " ")
+    leftoverdigits.append(untouched_digits)
+print("")
