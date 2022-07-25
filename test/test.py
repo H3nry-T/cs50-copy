@@ -67,6 +67,7 @@ master = number
 while visa >= 10:
     visa //= 10
 while amex 
+
 if visa == 4 and (lengthnumber(number) == 16 or lengthnumber(number) == 13):
     print("VISA")
 
