@@ -25,7 +25,7 @@ def main():
             productdigit = nthlastdigit(digitarray[i], j)
             productdigits.append(productdigit)
 
-    #all digits not multiplied by 2 
+    #all digits not multiplied by 2
     leftoverdigits = []
     for i in range(1, lengthnumber(number) + 1, 2):
         untouched_digits = nthlastdigit(number, i)
