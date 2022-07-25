@@ -4,8 +4,14 @@ import math
 
 def nthlastdigit(number, n):
     return number % 10**n // 10 ** (n - 1)
+
 def lengthnumber(number):
     return int(math.log10(number) + 1)
+
+def sumlist(list):
+    sum = 0
+    for i in range(len(list)):
+        sum += list[i]
 
 while True:
     try:
@@ -53,4 +59,4 @@ for i in range(1, lengthnumber(number) + 1, 2):
 print("")
 
 productdigits.append(leftoverdigits)
-print(sum(productdigits))
+print(sumlist(productdigits))
