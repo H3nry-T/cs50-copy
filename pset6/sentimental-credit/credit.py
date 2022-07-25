@@ -33,7 +33,8 @@ def main():
     print(productdigits)
     print("")
 
-    print(type(productdigits[1]))
+    for i in range(1, lengthnumber(number) + 1, 2):
+        untouched_digits = 
 
 def nthlastdigit(number, n):
     return number % 10 ** n // 10 ** (n - 1)
