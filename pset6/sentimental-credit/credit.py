@@ -38,11 +38,15 @@ def main():
     for i in range(1, lengthnumber(number) + 1, 2):
         untouched_digits = nthlastdigit(number, i)
         leftoverdigits.append(untouched_digits)
+
     print(leftoverdigits)
     finalsum = productdigits + leftoverdigits
     print(finalsum)
     print(sum(finalsum))
-    
+    if nthlastdigit(sum(finalsum), 1) == 0:
+        print("The card is valid")
+    else:
+        print("The card is not valid") 
 
 def nthlastdigit(number, n):
     return number % 10 ** n // 10 ** (n - 1)
