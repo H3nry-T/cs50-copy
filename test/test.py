@@ -51,3 +51,6 @@ for i in range(1, lengthnumber(number) + 1, 2):
     print(untouched_digits, end = " ")
     leftoverdigits.append(untouched_digits)
 print("")
+
+productdigits.append(leftoverdigits)
+print(sum(productdigits))
