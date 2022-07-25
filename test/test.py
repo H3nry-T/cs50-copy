@@ -57,6 +57,11 @@ for i in range(1, lengthnumber(number) + 1, 2):
 print("")
 
 finalsum = productdigits + leftoverdigits
+print("combine both product and leftover digits")
+
+for i in range(len(finalsum)):
+    print(finalsum[i], end = " ")
+print("")
 print(sum(finalsum))
 
 if nthlastdigit(sum(finalsum), 1) == 0:
