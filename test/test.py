@@ -15,14 +15,11 @@ while True:
         print("This has to be a integer")
         continue
 
+digitarray = []
 for i in range(2, lengthnumber(number), 2):
     print(f"every other digit is {nthlastdigit(number, i)}")
     card = nthlastdigit(number, i)
     card = card * 2
-    digit_sum = 0
-    for digit in range(len(str(card))):
-        print (digit)
-        digit_sum += digit
-        print (digit_sum)
+    digitarray.append(card)
 
 # print(nthlastdigit(x, 2))
