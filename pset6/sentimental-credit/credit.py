@@ -10,20 +10,14 @@ def main():
         else:
             print("please insert a valid credit card number")
             continue
-    print("")
 
     #get every other digit starting from the second last
     digitarray = []
-    print("every other digit is: ")
     for i in range(2, lengthnumber(number) + 1, 2):
-        print(nthlastdigit(number, i), end = " ")
         digit = nthlastdigit(number, i)
         digit = digit * 2
         digitarray.append(digit)
 
-    print("")
-    print("times every digit by two:")
-    print(digitarray)
 
     productdigits = []
     for i in range(len(digitarray)):
@@ -31,21 +25,13 @@ def main():
             productdigit = nthlastdigit(digitarray[i], j)
             productdigits.append(productdigit)
 
-    print("seperate out all the product digits:")
-    print(productdigits)
 
-    print("leftover digits:")
     leftoverdigits = []
     for i in range(1, lengthnumber(number) + 1, 2):
         untouched_digits = nthlastdigit(number, i)
         leftoverdigits.append(untouched_digits)
 
-    print(leftoverdigits)
     finalsum = productdigits + leftoverdigits
-    print(finalsum)
-    print(sum(finalsum))
-
-
 
     if nthlastdigit(sum(finalsum), 1) == 0:
         visa = number
