@@ -74,3 +74,7 @@ elif lengthnumber(number) == 15 and (str(amex)[0:2] == "37" or str(amex)[0:2] ==
 #mastercheck
 elif lengthnumber(number) == 16 and (str(master)[0:2] == "51" or str(master)[0:2] == "52" or str(master)[0:2] == "53" or str(master)[0:2] == "54" or str(master)[0:2] == "55"):
     print("MASTER")
+
+#anything else
+else:
+    print("INVALID") 
