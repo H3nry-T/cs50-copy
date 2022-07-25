@@ -32,6 +32,8 @@ def main():
             productdigits.append(productdigit)
 
 def nthlastdigit(number, n):
+    if (n = 0):
+        return 0
     return number % 10 ** n // 10 ** (n - 1)
 
 def lengthnumber(number):
