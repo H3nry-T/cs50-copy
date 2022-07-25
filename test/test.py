@@ -14,7 +14,7 @@ while True:
     except:
         print("This has to be a integer")
         continue
-
+print("")
 
 digitarray = []
 print("every other digit is: ")
@@ -32,7 +32,12 @@ for i in range(len(digitarray)):
 
 productdigits = []
 for i in range(len(digitarray)):
-    for j in range(len(str(digitarray[i][j]))):
-        productdigit = nthlastdigit(digitarray[i], j)
+    j = 0
+    while j < len(str(digitarray[i])):
+        productdigit = str(digitarray[i])[j]
         productdigits.append(productdigit)
+        j += 1
 
+print("")
+for i in range(len(productdigits)):
+    print(productdigits)
