@@ -40,4 +40,4 @@ for i in range(len(digitarray)):
 
 print("")
 for i in range(len(productdigits)):
-    print(productdigits)
+    print(productdigits[i], end = " ")
