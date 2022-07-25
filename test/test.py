@@ -8,10 +8,7 @@ def nthlastdigit(number, n):
 def lengthnumber(number):
     return int(math.log10(number) + 1)
 
-def sumlist(list):
-    sum = 0
-    for i in range(len(list)):
-        sum += list[i]
+
 
 while True:
     try:
@@ -60,4 +57,4 @@ print("")
 
 productdigits.append(leftoverdigits)
 print()
-print(sumlist(productdigits))
+print(sum(productdigits))
