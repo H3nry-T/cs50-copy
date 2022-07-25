@@ -18,14 +18,14 @@ def main():
         digit = digit * 2
         digitarray.append(digit)
 
-
+    #all digits, multiplied by 2
     productdigits = []
     for i in range(len(digitarray)):
         for j in range(1, len(str(digitarray[i])) + 1, 1):
             productdigit = nthlastdigit(digitarray[i], j)
             productdigits.append(productdigit)
 
-
+    #all digits not multiplied by 2 
     leftoverdigits = []
     for i in range(1, lengthnumber(number) + 1, 2):
         untouched_digits = nthlastdigit(number, i)
