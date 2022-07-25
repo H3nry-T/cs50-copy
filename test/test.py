@@ -35,7 +35,7 @@ for i in range(len(digitarray)):
     j = 0
     while j < len(str(digitarray[i])):
         productdigit = str(digitarray[i])[j]
-        productdigits.append(productdigit)
+        productdigits.append(int(productdigit))
         j += 1
 
 print("")
