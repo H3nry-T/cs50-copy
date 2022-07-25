@@ -13,7 +13,8 @@ def main():
     #get every other digit starting from the second last
     digitarray = []
     for i in range(2, len(str(number)) + 1, 2):
-        print(f"every other digit is {nthlastdigit(number, i)}")
+        print("every other digit is: ")
+        print(nthlastdigit(number, i), end = " ")
         digit = nthlastdigit(number, i)
         digit = digit * 2
         digitarray.append(digit)
