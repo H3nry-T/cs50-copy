@@ -1,5 +1,6 @@
 from cs50 import get_int
 import math
+import sys
 
 def main():
     while True:
@@ -43,10 +44,12 @@ def main():
     finalsum = productdigits + leftoverdigits
     print(finalsum)
     print(sum(finalsum))
+    
     if nthlastdigit(sum(finalsum), 1) == 0:
-        print("The card is valid")
+        continue
     else:
-        print("The card is not valid")
+        print("INVALID")
+        sys.exit()
 
     visa = number
     amex = number
@@ -62,11 +65,17 @@ def main():
 
     #mastercheck
     elif lengthnumber(number) == 16 and (str(master)[0:2] == "51" or str(master)[0:2] == "52" or str(master)[0:2] == "53" or str(master)[0:2] == "54" or str(master)[0:2] == "55"):
-        print("MASTER")
+        print("MASTERCARD")
 
     #anything else
     else:
         print("INVALID")
+
+
+
+
+
+
 
 def nthlastdigit(number, n):
     return number % 10 ** n // 10 ** (n - 1)
