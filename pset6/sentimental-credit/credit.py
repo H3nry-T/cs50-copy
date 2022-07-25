@@ -1,6 +1,5 @@
 from cs50 import get_int
-from cs50 import get_string
-
+import math
 def main():
     while True:
         number = get_int("please type in your credit card number:\n")
@@ -20,11 +19,14 @@ def main():
         digitarray.append(digit)
 
     for i in range(len(digitarray)):
-        print(digitarray[i])
+        print(digitarray[i], end = " ")
 
     productdigits = []
     for i in range(len(digitarray)):
-        
+        for j in lengthnumber(digitarray[i]):
+            productdigit = nthlastdigit(digitarray[i], j)
+            productdigits.append(productdigit)
+
 def nthlastdigit(number, n):
     return number % 10 ** n // 10 ** (n - 1)
 
