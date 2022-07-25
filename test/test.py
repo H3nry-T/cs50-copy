@@ -42,5 +42,4 @@ print("")
 print("seperate out all the product digits:")
 for i in range(len(productdigits)):
     print(productdigits[i], end = " ")
-    
 print("")

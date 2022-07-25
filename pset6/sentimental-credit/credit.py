@@ -31,8 +31,14 @@ def main():
             productdigit = nthlastdigit(digitarray[i], j)
             productdigits.append(productdigit)
 
+    print("")
+    print("seperate out all the product digits:")
+    for i in range(len(productdigits)):
+        print(productdigits[i], end = " ")
+    print("")
+
 def nthlastdigit(number, n):
-    if (n = 0):
+    if (n == 0):
         return 0
     return number % 10 ** n // 10 ** (n - 1)
 
