@@ -37,6 +37,7 @@ def main():
         print(productdigits[i], end = " ")
     print("")
 
+    print(productdigits)
 def nthlastdigit(number, n):
     return number % 10 ** n // 10 ** (n - 1)
 
