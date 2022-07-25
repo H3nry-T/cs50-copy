@@ -1,5 +1,6 @@
 from cs50 import get_int
 import math
+
 def main():
     while True:
         number = get_int("please type in your credit card number:\n")
@@ -8,7 +9,6 @@ def main():
         else:
             print("please insert a valid credit card number")
             continue
-
 
     #get every other digit starting from the second last
     digitarray = []
