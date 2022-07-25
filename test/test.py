@@ -57,6 +57,6 @@ for i in range(1, lengthnumber(number) + 1, 2):
 print("")
 
 finalsum = productdigits + leftoverdigits
-print(type(productdigits))
-print(type(leftoverdigits))
 print(sum(finalsum))
+
+#visacheck

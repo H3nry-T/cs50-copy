@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <math.h>
-// THIS CODE WORKS :) 
+// THIS CODE WORKS :)
 int main(void)
 {
     long card;
@@ -63,7 +63,7 @@ int main(void)
         card /= 10;
         length++;
     }
-    //visa check
+//visa check
     while (visa >= 10)
     {
         visa /= 10;
