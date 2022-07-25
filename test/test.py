@@ -59,4 +59,15 @@ print("")
 finalsum = productdigits + leftoverdigits
 print(sum(finalsum))
 
+visa = number
+amex = number
+master = number
+
+while number >= 10:
+    number //= 10
+
 #visacheck
+if number == 4 and (lengthnumber(number) == 16 or lengthnumber(number) == 13):
+    print("VISA")
+#amexcheck
+if number ==
