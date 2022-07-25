@@ -16,7 +16,7 @@ while True:
         continue
 
 digitarray = []
-for i in range(2, lengthnumber(number), 2):
+for i in range(2, len(str(number)), 2):
     print(f"every other digit is {nthlastdigit(number, i)}")
     card = nthlastdigit(number, i)
     card = card * 2
