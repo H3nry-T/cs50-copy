@@ -31,10 +31,12 @@ def main():
 
     print("seperate out all the product digits:")
     print(productdigits)
-    print("")
 
+    print("leftover digits:")
     for i in range(1, lengthnumber(number) + 1, 2):
-        untouched_digits = 
+        untouched_digits = nthlastdigit(number, i)
+        print(untouched_digits, end = " ")
+
 
 def nthlastdigit(number, n):
     return number % 10 ** n // 10 ** (n - 1)
