@@ -21,8 +21,10 @@ def main():
 
     for i in range(len(digitarray)):
         print(digitarray[i])
-        
 
+    productdigits = []
+    for i in range(len(digitarray)):
+        
 def nthlastdigit(number, n):
     return number % 10 ** n // 10 ** (n - 1)
 
