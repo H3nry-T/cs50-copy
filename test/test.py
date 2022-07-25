@@ -65,13 +65,13 @@ master = number
 
 #visacheck
 
-if str(visa)[0] == 4 and (lengthnumber(number) == 16 or lengthnumber(number) == 13):
+if (lengthnumber(number) == 16 or lengthnumber(number) == 13) and str(visa)[0] == '4':
     print("VISA")
 
 #amexcheck
-elif lengthnumber(number) == 15 and (str(amex)[0:2] == 37 or str(amex)[0:2] == 34):
+elif lengthnumber(number) == 15 and (str(amex)[0:2] == "37" or str(amex)[0:2] == "34"):
     print("AMEX")
 
 #mastercheck
-else:
+elif lengthnumber(number) == 16 and (str(master)[0:2] == "55"):
     print("MASTER")
