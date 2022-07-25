@@ -10,7 +10,7 @@ def main():
             print("please insert a valid credit card number")
             continue
     print("")
-    
+
     #get every other digit starting from the second last
     digitarray = []
     print("every other digit is: ")
@@ -39,7 +39,10 @@ def main():
         untouched_digits = nthlastdigit(number, i)
         leftoverdigits.append(untouched_digits)
     print(leftoverdigits)
-
+    finalsum = productdigits + leftoverdigits
+    print(finalsum)
+    print(sum(finalsum))
+    
 
 def nthlastdigit(number, n):
     return number % 10 ** n // 10 ** (n - 1)

@@ -33,6 +33,7 @@ print("times every digit by two:")
 for i in range(len(digitarray)):
     print(digitarray[i], end = " ")
 
+#product digits all seperated out
 productdigits = []
 for i in range(len(digitarray)):
     j = 0
