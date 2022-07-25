@@ -36,9 +36,10 @@ def main():
     leftoverdigits = []
     for i in range(1, lengthnumber(number) + 1, 2):
         untouched_digits = nthlastdigit(number, i)
-        print(untouched_digits, end = " ")
         leftoverdigits.append(untouched_digits)
+    print(leftoverdigits)
 
+    
 def nthlastdigit(number, n):
     return number % 10 ** n // 10 ** (n - 1)
 
