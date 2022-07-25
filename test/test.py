@@ -55,6 +55,6 @@ for i in range(1, lengthnumber(number) + 1, 2):
     leftoverdigits.append(untouched_digits)
 print("")
 
-productdigits.append(leftoverdigits)
-print()
-print(sum(productdigits))
+productdigits + leftoverdigits
+print(type(productdigits))
+print(type(leftoverdigits))
