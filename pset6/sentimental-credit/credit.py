@@ -10,9 +10,8 @@ def main():
             print("please insert a valid credit card number")
             continue
 
-    print(nthlastdigit(number, 2))
 
-#get the second last digit
+    #get the second last digit
     i = 2
     #while i <= 8
     while (i <= lengthnumber(number) // 2):

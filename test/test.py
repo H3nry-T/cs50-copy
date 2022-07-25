@@ -22,4 +22,5 @@ for i in range(2, len(str(number)), 2):
     card = card * 2
     digitarray.append(card)
 
+print(digitarray)
 # print(nthlastdigit(x, 2))
