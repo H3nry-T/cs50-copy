@@ -21,9 +21,7 @@ def main():
 
     print("")
     print("times every digit by two:")
-
-    for i in range(len(digitarray)):
-        print(digitarray[i], end = " ")
+    print(digitarray)
 
     productdigits = []
     for i in range(len(digitarray)):
@@ -31,13 +29,12 @@ def main():
             productdigit = nthlastdigit(digitarray[i], j)
             productdigits.append(productdigit)
 
-    print("")
     print("seperate out all the product digits:")
-    for i in range(len(productdigits)):
-        print(productdigits[i], end = " ")
+    print(productdigits)
     print("")
 
     print(type(productdigits[1]))
+
 def nthlastdigit(number, n):
     return number % 10 ** n // 10 ** (n - 1)
 
