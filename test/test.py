@@ -14,6 +14,6 @@ while True:
     except:
         print("This has to be a integer")
         continue
-
-print(nthlastdigit(number, 16))
+for i in range(2, len(str(number)) + 1, 2):
+    print(nthlastdigit(number, i))
 
