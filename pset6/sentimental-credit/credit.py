@@ -11,18 +11,13 @@ def main():
             continue
 
 
-    #get the second last digit
-    i = 2
-    #while i <= 8
-    while (i <= lengthnumber(number) // 2):
-        # times each card number by 2 for every other digit from the second last one.
-        card = nthlastdigit(number, i)
-        card = card * 2
-
-        for digit in range(2):
-            digit += nthlastdigit(card, digit)
-
-        i += 2
+    #get every other digit starting from the second last
+    digitarray = []
+    for i in range(2, len(str(number)), 2):
+        print(f"every other digit is {nthlastdigit(number, i)}")
+        digit = nthlastdigit(number, i)
+        digit = digit * 2
+        digitarray.append(digit)
 
 def nthlastdigit(number, n):
     return number % 10 ** n // 10 ** (n - 1)

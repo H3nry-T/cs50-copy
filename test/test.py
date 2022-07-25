@@ -15,12 +15,7 @@ while True:
         print("This has to be a integer")
         continue
 
-digitarray = []
-for i in range(2, len(str(number)), 2):
-    print(f"every other digit is {nthlastdigit(number, i)}")
-    card = nthlastdigit(number, i)
-    card = card * 2
-    digitarray.append(card)
+
 
 print(digitarray)
 # print(nthlastdigit(x, 2))
