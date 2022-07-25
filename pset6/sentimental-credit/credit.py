@@ -19,6 +19,10 @@ def main():
         digit = digit * 2
         digitarray.append(digit)
 
+    for i in range(len(digitarray)):
+        print(digitarray[i])
+        
+
 def nthlastdigit(number, n):
     return number % 10 ** n // 10 ** (n - 1)
 
