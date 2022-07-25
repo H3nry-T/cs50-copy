@@ -60,27 +60,26 @@ finalsum = productdigits + leftoverdigits
 print(sum(finalsum))
 
 if nthlastdigit(sum(finalsum), 1) == 0:
-    continue
+    visa = number
+    amex = number
+    master = number
+
+    #visacheck
+    if (lengthnumber(number) == 16 or lengthnumber(number) == 13) and str(visa)[0] == '4':
+        print("VISA")
+
+    #amexcheck
+    elif lengthnumber(number) == 15 and (str(amex)[0:2] == "37" or str(amex)[0:2] == "34"):
+        print("AMEX")
+
+    #mastercheck
+    elif lengthnumber(number) == 16 and (str(master)[0:2] == "51" or str(master)[0:2] == "52" or str(master)[0:2] == "53" or str(master)[0:2] == "54" or str(master)[0:2] == "55"):
+        print("MASTER")
+
+    #anything else
+    else:
+        print("INVALID")
+
 else:
     print("INVALID")
     sys.exit()
-
-visa = number
-amex = number
-master = number
-
-#visacheck
-if (lengthnumber(number) == 16 or lengthnumber(number) == 13) and str(visa)[0] == '4':
-    print("VISA")
-
-#amexcheck
-elif lengthnumber(number) == 15 and (str(amex)[0:2] == "37" or str(amex)[0:2] == "34"):
-    print("AMEX")
-
-#mastercheck
-elif lengthnumber(number) == 16 and (str(master)[0:2] == "51" or str(master)[0:2] == "52" or str(master)[0:2] == "53" or str(master)[0:2] == "54" or str(master)[0:2] == "55"):
-    print("MASTER")
-
-#anything else
-else:
-    print("INVALID")
