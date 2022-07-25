@@ -15,7 +15,5 @@ while True:
         print("This has to be a integer")
         continue
 
+print(nthlastdigit(number, 16))
 
-
-print(digitarray)
-# print(nthlastdigit(x, 2))
