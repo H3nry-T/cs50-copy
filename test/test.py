@@ -65,7 +65,7 @@ master = number
 
 #visacheck
 
-if visa[0] == 4 and (lengthnumber(number) == 16 or lengthnumber(number) == 13):
+if str(visa)[0] == 4 and (lengthnumber(number) == 16 or lengthnumber(number) == 13):
     print("VISA")
 
 #amexcheck
