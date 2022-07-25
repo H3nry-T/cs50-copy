@@ -63,11 +63,17 @@ visa = number
 amex = number
 master = number
 
-while number >= 10:
-    number //= 10
-
 #visacheck
-if number == 4 and (lengthnumber(number) == 16 or lengthnumber(number) == 13):
+while visa >= 10:
+    visa //= 10
+while amex 
+if visa == 4 and (lengthnumber(number) == 16 or lengthnumber(number) == 13):
     print("VISA")
+
 #amexcheck
-if number ==
+elif:
+    print("AMEX")
+
+#mastercheck
+else:
+    print("MASTER")
