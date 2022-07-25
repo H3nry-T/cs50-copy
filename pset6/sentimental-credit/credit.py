@@ -20,7 +20,8 @@ def main():
         digitarray.append(digit)
 
     print("")
-    
+    print("times every digit by two:")
+
     for i in range(len(digitarray)):
         print(digitarray[i], end = " ")
 
