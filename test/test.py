@@ -64,15 +64,12 @@ amex = number
 master = number
 
 #visacheck
-while visa >= 10:
-    visa //= 10
-while amex 
 
-if visa == 4 and (lengthnumber(number) == 16 or lengthnumber(number) == 13):
+if visa[0] == 4 and (lengthnumber(number) == 16 or lengthnumber(number) == 13):
     print("VISA")
 
 #amexcheck
-elif:
+elif lengthnumber(number) == 15 and (str(amex)[0:2] == 37 or str(amex)[0:2] == 34):
     print("AMEX")
 
 #mastercheck
