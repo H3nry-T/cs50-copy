@@ -59,4 +59,5 @@ for i in range(1, lengthnumber(number) + 1, 2):
 print("")
 
 productdigits.append(leftoverdigits)
+print()
 print(sumlist(productdigits))
