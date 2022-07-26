@@ -13,7 +13,8 @@ def main():
     # TODO: Read database file into a variable
     with open(sys.argv[1], "r") as csvfile:
         csvfile_dictreader = csv.DictReader(csvfile)
-        header = csvfile_dictreader.fieldnames
+        csvfile_reader = csv.reader(csvfile)
+        header = next(csvfile_reader)
         print(header)
 
 
