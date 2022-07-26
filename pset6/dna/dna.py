@@ -7,7 +7,7 @@ def main():
     # TODO: Check for command-line usage
     if len(sys.argv) != 3:
         print("need a csv file and a txt file")
-        sys.exit()
+        sys.exit(1)
 
 
     # TODO: Read database file into a variable
