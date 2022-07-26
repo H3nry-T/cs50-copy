@@ -15,7 +15,11 @@ def main():
             print(row)
 
     # TODO: Read DNA sequence file into a variable
-
+    with open(sys.argv[2]) as txtfile:
+        txtfile_reader = csv.reader(txtfile)
+        for row in txtfile_reader:
+            print(row)
+            
     # TODO: Find longest match of each STR in DNA sequence
 
     # TODO: Check database for matching profiles
