@@ -5,9 +5,10 @@ import sys
 def main():
 
     # TODO: Check for command-line usage
-    if len(sys.argv) < 3:
+    if len(sys.argv) != 3:
         print("need a csv file and a txt file")
         sys.exit()
+
 
     # TODO: Read database file into a variable
     with open(sys.argv[1]) as database:
@@ -19,6 +20,7 @@ def main():
         for i in database_reader:
             print(i)
 
+
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2]) as txtfile:
         txtfile_reader = csv.reader(txtfile)
@@ -26,7 +28,11 @@ def main():
             print(row)
             longestrun = longest_match(list(row), "TATC")
             print(longestrun)
+
+
     # TODO: Find longest match of each STR in DNA sequence
+
+
     # TODO: Check database for matching profiles
 
     return
