@@ -8,7 +8,7 @@ def main():
     if len(sys.argv) < 3:
         print("need a csv file and a txt file")
         sys.exit()
-        
+
     # TODO: Read database file into a variable
     with open(sys.argv[1]) as database:
         database_dictreader = csv.DictReader(database)
@@ -24,9 +24,9 @@ def main():
         txtfile_reader = csv.reader(txtfile)
         for row in txtfile_reader:
             print(row)
-
+            longestrun = longest_match(row, "AGATC")
+        print(longestrun)
     # TODO: Find longest match of each STR in DNA sequence
-
     # TODO: Check database for matching profiles
 
     return
