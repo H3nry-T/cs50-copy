@@ -14,8 +14,8 @@ def main():
     with open(sys.argv[1], "r") as csvfile:
         csvfile_dictreader = csv.DictReader(csvfile)
         csvfile_reader = csv.reader(csvfile)
-        header = next(csvfile_reader)
-        print(header)
+        subsequences = list(next(csvfile_reader))[1:]
+        print(subsequences)
 
 
 
