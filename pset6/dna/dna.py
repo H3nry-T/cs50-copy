@@ -8,12 +8,13 @@ def main():
     if len(sys.argv) < 3:
         print("need a csv file and a txt file")
         sys.exit()
+        
     # TODO: Read database file into a variable
     with open(sys.argv[1]) as database:
         database_dictreader = csv.DictReader(database)
         for row in database_dictreader:
             print(row)
-            
+
         database_reader = csv.reader(database)
         for i in database_reader:
             print(i)
