@@ -24,8 +24,8 @@ def main():
         txtfile_reader = csv.reader(txtfile)
         for row in txtfile_reader:
             print(row)
-            longestrun = longest_match(row, "AGATC")
-        print(longestrun)
+            longestrun = longest_match(list(row), "TATC")
+            print(longestrun)
     # TODO: Find longest match of each STR in DNA sequence
     # TODO: Check database for matching profiles
 
