@@ -20,21 +20,19 @@ def main():
         for i in database_reader:
             print(i)
 
-
+    print("")
     # TODO: Read DNA sequence file into a variable
-    with open(sys.argv[2], "r") as txtfile:
-        txtfile_reader = csv.reader(txtfile)
-        for row in txtfile_reader:
-            print(row)
-            longestrun = longest_match(list(row), "TATC")
-            print(longestrun)
+    txtfile = open(sys.argv[2], "r")
+    txtfile_reader = csv.reader(txtfile)
+    for row in txtfile_reader:
+        print(row)
 
 
     # TODO: Find longest match of each STR in DNA sequence
 
 
     # TODO: Check database for matching profiles
-
+    txtfile.close() 
     return
 
 
