@@ -5,7 +5,7 @@ import sys
 def main():
 
     # TODO: Check for command-line usage
-    if len(sys.argv) != 3:
+    if len(sys.argv) < 3:
         print("need a csv file and a txt file")
         sys.exit()
     # TODO: Read database file into a variable
