@@ -11,16 +11,15 @@ def main():
 
 
     # TODO: Read database file into a variable
-    with open(sys.argv[1], "r") as database:
-        database_dictreader = csv.DictReader(database)
-        for row in database_dictreader:
-            print(row)
+    with open(sys.argv[1], "r") as csvfile:
+        csvfile_dictreader = csv.DictReader(csvfile)
+        header = csvfile_dictreader.fieldnames
+        print(header)
 
-        database_reader = csv.reader(database)
-        for i in database_reader:
-            print(i)
 
-    print("")
+
+
+
     # TODO: Read DNA sequence file into a variable
     txtfile = open(sys.argv[2], "r")
     txtfile_reader = csv.reader(txtfile)
@@ -32,7 +31,7 @@ def main():
 
 
     # TODO: Check database for matching profiles
-    txtfile.close() 
+    txtfile.close()
     return
 
 
