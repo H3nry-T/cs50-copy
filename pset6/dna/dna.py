@@ -32,23 +32,30 @@ def main():
 
     # TODO: Check database for matching profiles
     match = 0
+    matched_name = []
     for row in csvfile_dictreader:
-        #identify the name in that row
+        #identify the name in that row dictionary
         name = str(row["name"])
         #if there are x dna patterns, find the number of times they repeat for each person
         for i in range(len(subsequences)):
+            #this checks for "AGATC" for example
             subsequence_name = subsequences[i]
             datasetnum = row[subsequence_name]
             print(datasetnum, end = " ")
+
+
             if int(longest_runs[i]) == int(datasetnum):
                 print(f"match for {name}")
                 match += 1
                 if match == len(subsequences):
-                    print(name)
+                    matched_name.append(name)
+
             else:
                 print("no match")
-        print("")
 
+
+        print("")
+        print(str(matched_name))
 
 
 
