@@ -32,9 +32,17 @@ def main():
 
     # TODO: Check database for matching profiles
     for row in csvfile_dictreader:
-        for index in range(0, len(row) - 1, 1):
-            num = row[subsequences[index]]
-            print(num, end = " ")
+        print(type(row.keys()))
+        for i in range(len(subsequences)):
+
+            datasetnum = row[subsequences[i]]
+            print(datasetnum, end = " ")
+            if longest_runs[i] == datasetnum:
+                print(longest_runs[i])
+            else:
+                print("no match")
+        print("")
+
 
 
 
