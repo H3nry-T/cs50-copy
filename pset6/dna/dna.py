@@ -41,13 +41,12 @@ def main():
             subsequence_name = subsequences[i]
             datasetnum = row[subsequence_name]
 
-            #if there are 3 matches then we print the name in the row.
+            #if there are 3 matches to the same name then we update matched_name
             if int(longest_runs[i]) == int(datasetnum):
                 match += 1
                 if match == len(subsequences):
                     matched_name = name
                     break
-
             else:
                 continue
 
