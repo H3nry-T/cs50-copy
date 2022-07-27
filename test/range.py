@@ -1,6 +1,5 @@
-list = []
-for i in range(5):
-    print(i, end = " ")
-    list.append(i)
+list = [1, 2, 3, 4]
+list.append(5)
+print(list)
 
-
+list.add(3)
