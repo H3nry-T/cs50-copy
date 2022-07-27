@@ -24,11 +24,11 @@ def main():
     # TODO: Read DNA sequence file into a variable
     txtfile = open(sys.argv[2], "r")
     txtfile_reader = csv.reader(txtfile)
-
+    dna_sequence = list(next(txtfile_reader))
 
     # TODO: Find longest match of each STR in DNA sequence
     longestruns = []
-    for i in range(len(subsequences)):
+    for i in range(len()):
         print(subsequences[i])
 
 
