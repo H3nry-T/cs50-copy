@@ -28,13 +28,15 @@ def main():
 
 
     # TODO: Find longest match of each STR in DNA sequence
-    for i in range(len(dna_sequence[0])):
-        for j in range(len(subsequences)):
-            
-            longest_run = longest_match(dna_sequence[0], subsequences[j])
-            print(longest_run)
+    longest_runs = []
+    for i in range(len(subsequences)):
+        longest_run = longest_match(dna_sequence[0], subsequences[i])
+        longest_runs.append(longest_run)
+    print(longest_runs)
 
     # TODO: Check database for matching profiles
+    
+
     txtfile.close()
     csvfile.close()
     return
