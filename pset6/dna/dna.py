@@ -14,7 +14,7 @@ def main():
     csvfile = open(sys.argv[1], "r")
     csvfile_dictreader = csv.DictReader(csvfile)
     subsequences = csvfile_dictreader.fieldnames[1:]
-
+    print(subsequences)
     # TODO: Read DNA sequence file into a variable
     txtfile = open(sys.argv[2], "r")
     txtfile_reader = csv.reader(txtfile)
