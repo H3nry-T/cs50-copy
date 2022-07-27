@@ -1,7 +1,8 @@
-list = [1, 2, 3, 4]
-set = {1, 2, 3, 4}
-list.append(5)
-print(list)
+dict = {
+    "hello" : 0,
+    "everyone" : 1
+}
 
-set.add(23)
-print(set)
+dict["smile"] += 1
+for key,value in dict.items():
+    print(key)
