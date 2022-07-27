@@ -30,7 +30,8 @@ def main():
 
     # TODO: Check database for matching profiles
     for row in csvfile_dictreader:
-        print(row) 
+        for subsequence_count in row:
+            
 
     txtfile.close()
     csvfile.close()
