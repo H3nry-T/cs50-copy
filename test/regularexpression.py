@@ -3,7 +3,7 @@ import cs50
 import sys
 
 while True:
-    input = cs50.get_string("pls type in a string: ")
+    input = cs50.get_string("pls type in a string: ").strip().lower()
     print("")
 
     if input.isdigit():
@@ -15,9 +15,8 @@ while True:
     else:
         break
 
-formatted_input = input.strip().lower()
 
-if re.search("^(hello)$", formatted_input):
+if re.search("^(hello)$", input):
     print("it matches!")
 else:
     print("it doesn't match")
