@@ -3,7 +3,7 @@ dict = {
     "everyone" : 1
 }
 
-dict["smile"] = 0
+dict["smile"] = 1
 for key,value in dict.items():
-    print(key, value)
+    print(dict.items())
 
