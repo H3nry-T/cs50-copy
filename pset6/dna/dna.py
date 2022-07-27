@@ -32,8 +32,8 @@ def main():
 
     # TODO: Check database for matching profiles
     for row in csvfile_dictreader:
-        for key, value in row.items():
-            print(key)
+        for name in row:
+            print(name)
         for i in range(len(subsequences)):
 
             datasetnum = row[subsequences[i]]
