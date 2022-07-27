@@ -34,7 +34,7 @@ def main():
     for row in csvfile_dictreader:
         for index in range(0, len(row) - 1, 1):
             num = row[subsequences[index]]
-            print(num)
+            print(num, end = " ")
 
 
 
