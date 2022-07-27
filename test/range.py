@@ -4,7 +4,7 @@ dict = {
 }
 
 dict["smile"] = 1
-for i in dict:
+for i in range(len(dict)):
     print(list(dict.keys())[i])
 
 
