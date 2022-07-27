@@ -27,9 +27,7 @@ def main():
     dna_sequence = list(next(txtfile_reader))
 
     # TODO: Find longest match of each STR in DNA sequence
-    longestruns = []
-    for i in range(len()):
-        print(subsequences[i])
+    print(len(dna_sequence))
 
 
     # TODO: Check database for matching profiles
