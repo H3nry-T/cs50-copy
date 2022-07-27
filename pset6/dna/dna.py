@@ -17,7 +17,7 @@ def main():
 
     subsequences = list(next(csvfile_reader))[1:]
 
-
+    print(subsequences)
 
 
 
@@ -27,8 +27,10 @@ def main():
 
 
     # TODO: Find longest match of each STR in DNA sequence
+    longestruns = []
     for i in range(len(subsequences)):
-        longest_match(next(txtfile_reader), subsequences[i])
+        print(longest_match(next(txtfile_reader), subsequences[i]))
+
 
     # TODO: Check database for matching profiles
     txtfile.close()
