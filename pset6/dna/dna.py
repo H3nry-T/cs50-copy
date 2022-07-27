@@ -15,6 +15,8 @@ def main():
     csvfile_dictreader = csv.DictReader(csvfile)
     subsequences = csvfile_dictreader.fieldnames[1:]
     print(subsequences)
+
+
     # TODO: Read DNA sequence file into a variable
     txtfile = open(sys.argv[2], "r")
     txtfile_reader = csv.reader(txtfile)
@@ -30,8 +32,12 @@ def main():
 
     # TODO: Check database for matching profiles
     for row in csvfile_dictreader:
-        for subsequence_count in row:
-            
+        for index in range(0, len(row) - 1, 1):
+            num = row[subsequences[index]]
+            print(num)
+
+
+
 
     txtfile.close()
     csvfile.close()
