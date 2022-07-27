@@ -48,7 +48,9 @@ def main():
                 print(f"match for {name}")
                 match += 1
                 if match == len(subsequences):
-                    matched_name.append(name)
+                    matched_name = name
+                else:
+                    matched_name = "there is no match"
 
             else:
                 print("no match")
