@@ -30,9 +30,9 @@ def main():
 
 
     # TODO: Check database for matching profiles
-    match = 0
     matched_name = ""
     for row in csvfile_dictreader:
+        match = 0
         #identify the name in that row dictionary
         name = str(row["name"])
         #if there are x dna patterns, find the number of times they repeat for each person
