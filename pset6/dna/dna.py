@@ -34,14 +34,17 @@ def main():
     for row in csvfile_dictreader:
         keylist = list(row.keys())
         print(keylist[0])
-
-        
+        name = str(row["name"])
+        #if there are 3 dna patterns, find the number of times they repeat for each person
         for i in range(len(subsequences)):
-
+            match = 0
             datasetnum = row[subsequences[i]]
             print(datasetnum, end = " ")
-            if longest_runs[i] == datasetnum:
-                print(longest_runs[i])
+            if int(longest_runs[i]) == int(datasetnum):
+                print(f"match for {name}")
+                match += 1
+                if match == len(subsequences):
+                    print(name)
             else:
                 print("no match")
         print("")
