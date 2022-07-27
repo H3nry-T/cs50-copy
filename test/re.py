@@ -7,4 +7,6 @@ while True:
     else:
         print("pls type everything as a string")
 
-re.search()
+input.lower()
+if re.search("^(hello)$", input):
+    print("it matches!") 
