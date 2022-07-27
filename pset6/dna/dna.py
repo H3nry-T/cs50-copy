@@ -14,7 +14,6 @@ def main():
     csvfile = open(sys.argv[1], "r")
     csvfile_dictreader = csv.DictReader(csvfile)
     subsequences = csvfile_dictreader.fieldnames[1:]
-    print(subsequences)
 
 
     # TODO: Read DNA sequence file into a variable
@@ -28,7 +27,7 @@ def main():
     for i in range(len(subsequences)):
         longest_run = longest_match(dna_sequence, subsequences[i])
         longest_runs.append(longest_run)
-    print(longest_runs, "\n")
+
 
     # TODO: Check database for matching profiles
     match = 0
@@ -41,23 +40,21 @@ def main():
             #this checks for "AGATC" for example
             subsequence_name = subsequences[i]
             datasetnum = row[subsequence_name]
-            print(datasetnum, end = " ")
 
-
+            #if there are 3 matches then we print the name in the row.
             if int(longest_runs[i]) == int(datasetnum):
-                print(f"match for {name}")
                 match += 1
                 if match == len(subsequences):
                     matched_name = name
                     break
 
             else:
-                print("no match")
+                continue
 
-
-    print("")
-    print(str(matched_name))
-
+    if len(matched_name) > 0:
+        print(str(matched_name))
+    else:
+        print("No match")
 
 
 
