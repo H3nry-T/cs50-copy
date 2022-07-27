@@ -12,7 +12,7 @@ def main():
 
     # TODO: Read database file into a variable
     csvfile = open(sys.argv[1], "r")
-    csvfile_dictreader = csv.DictReader(csvfile)
+
     csvfile_reader = csv.reader(csvfile)
 
     subsequences = list(next(csvfile_reader))[1:]
@@ -35,7 +35,7 @@ def main():
     print(longest_runs)
 
     # TODO: Check database for matching profiles
-    for row in csvfile_dictreader:
+    for row in csv.DictReader(csvfile):
         print(row )
 
     txtfile.close()
