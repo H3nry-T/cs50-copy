@@ -28,17 +28,17 @@ def main():
     for i in range(len(subsequences)):
         longest_run = longest_match(dna_sequence, subsequences[i])
         longest_runs.append(longest_run)
-    print(longest_runs)
+    print(longest_runs, "\n")
 
     # TODO: Check database for matching profiles
     match = 0
     for row in csvfile_dictreader:
-        keylist = list(row.keys())
-        print(keylist[0])
+        #identify the name in that row
         name = str(row["name"])
-        #if there are 3 dna patterns, find the number of times they repeat for each person
+        #if there are x dna patterns, find the number of times they repeat for each person
         for i in range(len(subsequences)):
-            datasetnum = row[subsequences[i]]
+            subsequence_name = subsequences[i]
+            datasetnum = row[subsequence_name]
             print(datasetnum, end = " ")
             if int(longest_runs[i]) == int(datasetnum):
                 print(f"match for {name}")
