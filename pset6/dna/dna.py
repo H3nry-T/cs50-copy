@@ -29,7 +29,8 @@ def main():
     print(longest_runs)
 
     # TODO: Check database for matching profiles
-
+    for row in csvfile_dictreader:
+        print(row) 
 
     txtfile.close()
     csvfile.close()
