@@ -32,7 +32,7 @@ def main():
 
     # TODO: Check database for matching profiles
     match = 0
-    matched_name = []
+    matched_name = ""
     for row in csvfile_dictreader:
         #identify the name in that row dictionary
         name = str(row["name"])
@@ -50,8 +50,6 @@ def main():
                 if match == len(subsequences):
                     matched_name = name
                     break
-                else:
-                    matched_name = "there is no match"
 
             else:
                 print("no match")
