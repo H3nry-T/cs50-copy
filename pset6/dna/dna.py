@@ -18,13 +18,13 @@ def main():
     # TODO: Read DNA sequence file into a variable
     txtfile = open(sys.argv[2], "r")
     txtfile_reader = csv.reader(txtfile)
-    dna_sequence = list(next(txtfile_reader))
+    dna_sequence = list(next(txtfile_reader))[0]
 
 
     # TODO: Find longest match of each STR in DNA sequence
     longest_runs = []
     for i in range(len(subsequences)):
-        longest_run = longest_match(dna_sequence[0], subsequences[i])
+        longest_run = longest_match(dna_sequence, subsequences[i])
         longest_runs.append(longest_run)
     print(longest_runs)
 
