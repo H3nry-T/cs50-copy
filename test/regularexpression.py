@@ -20,3 +20,6 @@ if re.search("^(hello)$", input):
     print("it matches!")
 else:
     print("it doesn't match")
+
+for i in range(3):
+    
