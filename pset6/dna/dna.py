@@ -49,6 +49,7 @@ def main():
                 match += 1
                 if match == len(subsequences):
                     matched_name = name
+                    break
                 else:
                     matched_name = "there is no match"
 
