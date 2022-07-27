@@ -13,15 +13,7 @@ def main():
     # TODO: Read database file into a variable
     csvfile = open(sys.argv[1], "r")
     csvfile_dictreader = csv.DictReader(csvfile)
-    for row in csv.DictReader(csvfile):
-        print(row)
-    print("")
-    print(list(csvfile_dictreader.fieldnames()))
-    subsequences = list(next(csvfile_dictreader))[1:]
-
-    print(subsequences)
-
-
+    subsequences = csvfile_dictreader.fieldnames[1:]
 
     # TODO: Read DNA sequence file into a variable
     txtfile = open(sys.argv[2], "r")
