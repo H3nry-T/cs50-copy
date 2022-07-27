@@ -16,7 +16,7 @@ def main():
         csvfile_reader = csv.reader(csvfile)
         subsequences = list(next(csvfile_reader))[1:]
         print(subsequences, "\n")
-        for row in csvfile_dictreader:
+        for row in csvfile_reader:
             print(row)
 
 
