@@ -29,7 +29,7 @@ def main():
     # TODO: Find longest match of each STR in DNA sequence
     longestruns = []
     for i in range(len(subsequences)):
-        print(longest_match(next(txtfile_reader), ))
+        print(subsequences[i])
 
 
     # TODO: Check database for matching profiles
