@@ -12,10 +12,9 @@ def main():
 
     # TODO: Read database file into a variable
     csvfile = open(sys.argv[1], "r")
+    csvfile_dictreader = csv.DictReader(csvfile)
 
-    csvfile_reader = csv.reader(csvfile)
-
-    subsequences = list(next(csvfile_reader))[1:]
+    subsequences = list(next(csvfile_dictreader))[1:]
 
     print(subsequences)
 
