@@ -1,1 +1,1 @@
-SELECT name FROM people WHERE id = (SELECT person_id FROM stars JOIN movies ON movie_id = id AND title LIKE "%Toy Story%");
+SELECT name from people JOIN stars ON people.id = stars.person_id JOIN movies ON stars.movie_id = movies.id WHERE movies.title = "Toy Story";
