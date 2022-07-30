@@ -1,0 +1,1 @@
+SELECT title, rating, year FROM movies JOIN ratings WHERE movies.id = ratings.movie_id AND movies.year = 2010;
