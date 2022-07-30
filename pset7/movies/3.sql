@@ -1,1 +1,1 @@
-SELECT * FROM movies WHERE year > 2018 DESC LIMIT 5;
+SELECT * FROM movies WHERE year >= 2018 LIMIT 5;
