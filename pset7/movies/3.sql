@@ -1,1 +1,1 @@
-SELECT * FROM movies WHERE year >= 2018 LIMIT 5;
+SELECT * FROM movies WHERE year >= 2018 ORDER BY title ASC LIMIT 30;
