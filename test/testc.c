@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-int main(int argc, char**argv)
+int main(int argc, char** argv)
 {
-    char* x = argv[2];
-    printf("%s", x);
-    
+    char* x = argv[1];
+    printf("%s\n", x);
+
 }
