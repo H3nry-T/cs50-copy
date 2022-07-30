@@ -1,0 +1,1 @@
+SELECT energy FROM songs WHERE artist_id = (SELECT )
