@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(int argc, char* argv[])
 {
@@ -8,7 +9,8 @@ int main(int argc, char* argv[])
         return 1;
     }
 
-    int x = argv[1];
-    printf("%i\n", &x);
+    
+    int x = atoi(argv[1]);
+    printf("%i\n", x);
     return 0;
 }
