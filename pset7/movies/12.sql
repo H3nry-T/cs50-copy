@@ -1,6 +1,10 @@
-SELECT DISTINCT title FROM movies
+SELECT title FROM movies
 JOIN stars ON movies.id = stars.movie_id
 JOIN people ON stars.person_id = people.id
-WHERE people.name IN ("Johnny Depp", "Helena Bonham Carter")
-GROUP BY title
-HAVING COUNT(DISTINCT stars.person_id) = 2
+WHERE name LIKE "Johhny Depp"
+
+INTERSECT
+SELECT title FROM movies
+JOIN stars ON movies.id = stars.movie_id
+JOIN people ON stars.person_id = people.id
+WHERE name LIKE "Helena Bonham Carter"
