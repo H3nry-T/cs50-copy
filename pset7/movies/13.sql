@@ -6,7 +6,7 @@ WHERE name = "Kevin Bacon" AND birth = 1958;
 
 
 SELECT * FROM stars
-WHERE movie_Id IN
+WHERE movie_id IN
 (
     SELECT movies.id FROM movies
     JOIN stars ON movies.id = stars.movie_id
