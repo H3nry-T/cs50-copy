@@ -1,1 +1,2 @@
-SELECT name FROM people
+SELECT title FROM movies
+
