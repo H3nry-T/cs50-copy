@@ -1,2 +1,2 @@
 SELECT name FROM people
-JOIN 
+WHERE name LIKE "Johnny Depp" AND name LIKE "Helena Bonham Carter"
