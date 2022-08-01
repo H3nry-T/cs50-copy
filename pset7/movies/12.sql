@@ -4,8 +4,3 @@ JOIN people ON stars.person_id = people.id
 WHERE people.name IN ("Johnny Depp", "Helena Bonham Carter")
 GROUP BY title
 HAVING COUNT(DISTINCT stars.person_id) = 2
-
-
-SELECT title FROM movies
-GROUP BY title
-HAVING COUNT(title) < 4; 
