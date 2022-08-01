@@ -15,5 +15,3 @@ WHERE movie_id IN
     WHERE name = "Kevin Bacon" AND birth = 1958
 )
 
-AND name != "Kevin Bacon";
-
