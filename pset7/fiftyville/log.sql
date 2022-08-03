@@ -5,5 +5,7 @@
 
 -- look at the crime scene reports
 SELECT * FROM crime_scene_reports;
-SELECT 
+
+SELECT description FROM crime_scene_reports
+WHERE (year = 2021, month = 2021);
 
