@@ -7,5 +7,9 @@
 SELECT * FROM crime_scene_reports;
 
 SELECT description FROM crime_scene_reports
-WHERE (year = 2021, month = 2021);
+WHERE (year, month, street)
+IN
+(
+    
+)
 
