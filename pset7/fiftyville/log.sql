@@ -19,11 +19,17 @@ SELECT name, transcript FROM bakery_security_logs
 JOIN interviews ON bakery_security_logs.id = interviews.id
 WHERE interviews.year = 2021 AND interviews.month = 7 AND interviews.day = 28;
 
-SELECT name FROM bakery_security_logs
-JOIN interviews ON bakery_security_logs.id = interviews.id
-WHERE interviews.year = 2021 AND interviews.month = 7 AND interviews.day = 28;
+-- Create a table of suspects
+CREATE TABLE suspects (
+    name TEXT
+);
 
-WITH CTE AS (
-    SELECT name
-    RN = ROW_NUMBER()OVER(PARTITION BY CO)
-)
+INSERT INTO suspects (name)
+VALUES
+(
+    SELECT name FROM bakery_security_logs
+    JOIN interviews ON bakery_security_logs.id = interviews.id
+    WHERE interviews.year = 2021 AND interviews.month = 7 AND interviews.day = 28;
+);
+
+--
