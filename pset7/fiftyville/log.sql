@@ -2,6 +2,8 @@
 .tables
 .schema
 .schema crime_scene_reports
--- look 
+
+-- look at the crime scene reports
 SELECT * FROM crime_scene_reports;
-SELECT
+SELECT 
+
