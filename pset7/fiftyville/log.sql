@@ -3,13 +3,13 @@
 .schema
 .schema crime_scene_reports
 
--- look at the crime scene reports
-SELECT * FROM crime_scene_reports;
+-- look at the crime scene reports in descriptions
 
 SELECT description FROM crime_scene_reports
-WHERE (year, month, street)
-IN
-(
-    
-)
+WHERE year = 2021 AND month = 7 AND day = 28;
+
+-- look at Humphery street bakery, Interviews are conducted on that date
+-- three witnesses
+
+.schema 
 
