@@ -46,8 +46,8 @@
                 correctAnswer.style.backgroundColor = "green";
             });
             let incorrectAnswer = document.querySelectorAll(".incorrect");
-            incorrectAnswer.addEventListener("click", function(){
-                for (var i = 0; i < len(correctAnswer); i++)
+            incorrectAnswer[0].addEventListener("click", function(){
+                for (var i = 0; i < correctAnswer.length; i++)
                 {
                     console.log(incorrectAnswer[i])
                 }
