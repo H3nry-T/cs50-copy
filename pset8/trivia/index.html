@@ -48,13 +48,10 @@
                 console.log("green!")
             });
 
-            let bob = document.query
             const incorrectList = [document.querySelectorAll(".incorrect")];
-            for (var i = 0; i < incorrectList.length; i++)
+            for (let incorrectButton of incorrectList)
             {
-                incorrectList[i].addEventListener("click", function(){
-                    incorrectList[i].style.backgroundColor = "red";
-                });
+                console.log("hello there");
             }
         </script>
     </body>
