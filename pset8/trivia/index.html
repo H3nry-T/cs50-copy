@@ -19,9 +19,9 @@
                 <p>
                     <h3>Which of the following countries is partially located in the Arctic?</h3>
                     <button id="correct">Greenland</button>
-                    <button onclick="ChangeColour();" id="incorrect">Australia</button>
-                    <button onclick="ChangeColour();" id="incorrect">Cuba</button>
-                    <button onclick="ChangeColour();" id="incorrect">Wales</button>
+                    <button id="incorrect">Australia</button>
+                    <button id="incorrect">Cuba</button>
+                    <button id="incorrect">Wales</button>
                 </p>
 
                 <p id="response1"></p>
@@ -45,9 +45,9 @@
             correctAnswer.addEventListener("click", function(){
                 correctAnswer.style.backgroundColor = "green"
             });
-            let incorrectAnswer = document.querySelector("#incorrect");
+            let incorrectAnswer = document.querySelectorAll("#incorrect");
             incorrectAnswer.addEventListener("click", function(){
-                correctAnswer.style.backgroundColor = "green"
+                correctAnswer.style.backgroundColor = "red"
             });
 
         </script>
