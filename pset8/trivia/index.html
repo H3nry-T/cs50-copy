@@ -43,6 +43,11 @@
         <script>
             // TODO: Add code to check answers to questions
 
+            function greenOrRed()
+            {
+                
+            }
+
             let correctAnswer = document.querySelector(".correct");
             correctAnswer.addEventListener("click", function(){
 
@@ -53,9 +58,7 @@
             let incorrectButtons = document.querySelectorAll(".incorrect");
             for(var incorrectButton of incorrectButtons)
             {
-                incorrectButton.addEventListener("click", function(){
-                    incorrectButton.style.backgroundColor = "red"; 
-                })
+                incorrectButton.addEventListener("click", greenOrRed)
             }
 
         </script>
