@@ -24,7 +24,21 @@
                     <button class="incorrect">Cuba</button>
                     <button class="incorrect">Wales</button>
                 </p>
-
+                <p>
+                    <h3>Notorious gangster Al Capone is quoted as saying, "You can go a long way with a smile. You can go a lot farther with a smile and a ___." What finishes this quote"?</h3>
+                    <button id="correct">Threat</button>
+                    <button id="incorrect">Mob</button>
+                    <button id="incorrect">Gun</button>
+                    <button id="incorrect">Bribe</button>
+                </p>
+                <p>
+                    <h3>In computer terminology, what do the initials P.D.F. stand for?</h3>
+                    <button id="incorrect">Printed desktop freeware</button>
+                    <button id="correct">Portable document format</button>
+                    <button id="incorrect">Private document folder</button>
+                    <button id="incorrect">Personal data file</button>
+                </p>
+                
                 <p id="response1"></p>
             </div>
 
@@ -49,7 +63,7 @@
                 if (pressedButton.classList.contains("correct"))
                 {
                     pressedButton.style.backgroundColor = "green";
-                    document.querySelector("#response1").innerHTML = "correct"; 
+                    document.querySelector("#response1").innerHTML = "correct";
                 }
                 else
                 {
