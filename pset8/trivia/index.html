@@ -46,9 +46,13 @@
             function greenOrRed(event)
             {
                 const pressedButton = event.target;
-                if (pressedButton.contains("correct"))
+                if (pressedButton.classList.contains("correct"))
                 {
                     pressedButton.style.backgroundColor = "green";
+                }
+                else
+                {
+                    pressedButton.style.backgroundColor = "red";
                 }
             }
 
