@@ -45,6 +45,7 @@
 
             function greenOrRed(event)
             {
+                
             }
 
             let correctAnswer = document.querySelector(".correct");
@@ -57,7 +58,7 @@
             let incorrectButtons = document.querySelectorAll(".incorrect");
             for(var incorrectButton of incorrectButtons)
             {
-                incorrectButton.addEventListener("click", (event) => console.log(event));
+                incorrectButton.addEventListener("click", (event) => greenOrRed(event));
             }
 
         </script>
