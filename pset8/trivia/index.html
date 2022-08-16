@@ -42,10 +42,7 @@
 
         <script>
             // TODO: Add code to check answers to questions
-            function redOrGreen(event)
-            {
-                
-            }
+
             let correctAnswer = document.querySelector(".correct");
             correctAnswer.addEventListener("click", function(){
 
@@ -56,8 +53,9 @@
             let incorrectButtons = document.querySelectorAll(".incorrect");
             for(var incorrectButton of incorrectButtons)
             {
-                incorrectButton.addEventListener("click", redOrGreen())
-                console.log(incorrectButton);
+                incorrectButton.addEventListener("click", function(){
+                    
+                })
             }
 
         </script>
