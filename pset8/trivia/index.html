@@ -84,9 +84,13 @@
                 incorrectButton.addEventListener("click", (event) => greenOrRed(event));
             }
 
+            function checkMe() {
+                let textInAnswerBox = document.querySelector("textResponse");
+                console.log(textInAnswerBox); 
+            }
             let correctText = document.querySelector("#checkMeButtonId");
             correctText.addEventListener('click', function(){
-                console.log("checkMe button works"); 
+
             });
         </script>
     </body>
