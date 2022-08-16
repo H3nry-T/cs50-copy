@@ -5,14 +5,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
-        <script>
-            // TODO: Add code to check answers to questions
-            document.querySelectorAll("button").addEventListener('click', function(e) {
-                document.querySelector("button").style.backgroundColor = "blue"
-                e.preventDefault()
-            });
-            document.querySelector("#response1").innerHTML = "correct?"
-        </script>
     </head>
     <body>
         <div class="header">
@@ -31,7 +23,7 @@
                     <button onclick="ChangeColour();" id="incorrect">Cuba</button>
                     <button onclick="ChangeColour();" id="incorrect">Wales</button>
                 </p>
-                
+
                 <p id="response1"></p>
             </div>
 
@@ -46,5 +38,14 @@
                 <p id="response2"></p>
             </div>
         </div>
+        
+        <script>
+            // TODO: Add code to check answers to questions
+            document.querySelectorAll("button").addEventListener('click', function(e) {
+                document.querySelector("button").style.backgroundColor = "blue"
+                e.preventDefault()
+            });
+            document.querySelector("#response1").innerHTML = "correct?"
+        </script>
     </body>
 </html>
