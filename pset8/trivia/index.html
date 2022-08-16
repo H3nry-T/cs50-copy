@@ -44,12 +44,13 @@
             let correctAnswer = document.querySelector(".correct");
             correctAnswer.addEventListener("click", function(){
                 correctAnswer.style.backgroundColor = "green";
+                console.log("green!")
             });
             let incorrectAnswer = document.querySelectorAll(".incorrect");
             incorrectAnswer[0].addEventListener("click", function(){
                 for (var i = 0; i < correctAnswer.length; i++)
                 {
-                    console.log(incorrectAnswer[i])
+                    console.log(incorrectAnswer[i]);
                 }
             });
 
