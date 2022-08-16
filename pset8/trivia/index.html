@@ -7,9 +7,9 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
-            document.querySelectorAll("button").addEventListener('click', function() {
+            document.querySelectorAll("button").addEventListener('click', function(e) {
                 document.querySelector("button").style.backgroundColor = "blue"
-
+                e.preventDefault() 
             });
             document.querySelector("#response1").innerHTML = "correct?"
         </script>
