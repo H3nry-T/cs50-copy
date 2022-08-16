@@ -41,11 +41,10 @@
 
         <script>
             // TODO: Add code to check answers to questions
-            document.querySelectorAll("button").addEventListener('click', function(e) {
-                document.querySelector("button").style.backgroundColor = "blue"
-                e.preventDefault()
+            let correctAnswer = document.querySelector("#correct");
+            correctAnswer.addEventListener("click", funciton(){
+                alert('hello there')
             });
-            document.querySelector("#response1").innerHTML = "hello there" 
         </script>
     </body>
 </html>
