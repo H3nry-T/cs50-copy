@@ -24,7 +24,6 @@
                     <button class="incorrect">Cuba</button>
                     <button class="incorrect">Wales</button>
                 </p>
-                <p id="response1"></p>
                 <p>
                     <h3>Notorious gangster Al Capone is quoted as saying, "You can go a long way with a smile. You can go a lot farther with a smile and a ___." What finishes this quote"?</h3>
                     <button class="correct">Threat</button>
@@ -32,7 +31,6 @@
                     <button class="incorrect">Gun</button>
                     <button class="incorrect">Bribe</button>
                 </p>
-                <p id="response1"></p>
                 <p>
                     <h3>In computer terminology, what do the initials P.D.F. stand for?</h3>
                     <button class="incorrect">Printed desktop freeware</button>
@@ -69,6 +67,7 @@
                 else
                 {
                     pressedButton.style.backgroundColor = "red";
+                    document.querySelector("#response1").innerHTML = "incorrect";
                 }
             }
 
