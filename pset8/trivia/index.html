@@ -48,7 +48,7 @@
 
                 <h3>The 2016 World Chess Champion Magnus Carlsen comes from a country known for its beautiful fjords. What country is it?</h3>
                 <input type="text" placeholder="Type your answer..." id="textResponse">
-                <button>Check Me!</button>
+                <button id="checkMeButtonId">Check Me!</button>
 
                 <p id="response2"></p>
             </div>
@@ -84,7 +84,7 @@
                 incorrectButton.addEventListener("click", (event) => greenOrRed(event));
             }
 
-            let correctText = document.querySelector("#textResponse");
+            let correctText = document.querySelector("#checkMeButtonId");
             correctText.addEventListener('click', function(){
 
             });
