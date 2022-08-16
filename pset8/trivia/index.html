@@ -45,10 +45,12 @@
             correctAnswer.addEventListener("click", function(){
                 correctAnswer.style.backgroundColor = "green";
             });
-            let incorrectAnswer = document.querySelector(".incorrect");
+            let incorrectAnswer = document.querySelectorAll(".incorrect");
             incorrectAnswer.addEventListener("click", function(){
-                
-                incorrectAnswer.style.backgroundColor = "red";
+                for (var i = 0; i < len(correctAnswer); i++)
+                {
+                    console.log(incorrectAnswer[i])
+                }
             });
 
         </script>
