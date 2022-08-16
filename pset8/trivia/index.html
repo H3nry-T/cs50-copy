@@ -48,9 +48,14 @@
             });
             let incorrectAnswer = document.querySelectorAll(".incorrect");
             incorrectAnswer[0].addEventListener("click", function(){
-                alert(event.target)
+                incorrectAnswer.style.backgroundColor = "red";
             });
-
+            incorrectAnswer[1].addEventListener("click", function(){
+                incorrectAnswer.style.backgroundColor = "red";
+            });
+            incorrectAnswer[2].addEventListener("click", function(){
+                incorrectAnswer.style.backgroundColor = "red";
+            });
         </script>
     </body>
 </html>
