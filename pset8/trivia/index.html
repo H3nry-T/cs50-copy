@@ -86,9 +86,18 @@
 
             function checkMe() {
                 const inputField = document.querySelector("#inputBoxId");
-                console.log(inputField);
-                let inputFieldValue = inputField.Value;
-                console.log(inputFieldValue); 
+                let answer = inputField.value;
+                let smallscript = document.querySelector("#response2");
+                if (answer == "Norway")
+                {
+                    inputField.style.backgroundColor = "green";
+                    smallscript.innerHTML = "correct";
+                }
+                else
+                {
+                    inputField.style.backgroundColor = "red";
+                    smallscript.innerHTML = "incorrect";
+                }
             }
 
             let checkMeButton = document.querySelector("#checkMeButtonId");
