@@ -1,8 +1,6 @@
-.logo
-{
-    text-align: center;
-    width: 10%;
-    border: 2px solid black;
-    padding: 10px;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
