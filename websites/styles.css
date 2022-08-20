@@ -35,5 +35,10 @@
 /* general styles */
 
 body{
-    background: var(--clr-light)
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6; 
 }
