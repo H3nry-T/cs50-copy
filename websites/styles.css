@@ -66,6 +66,9 @@ strong {
 }
 
 /* typography */
+
+
+/* sections */
 .sectionTitle {
     margin-bottom: 0.25rem;
 }
@@ -87,4 +90,11 @@ strong {
 .sectionSubtitle--about {
     background: var(--clr-accent);
     font-family: var(--ff-secondary);
+}
+
+
+/* introduction */
+
+.intro {
+    position: relative; 
 }
