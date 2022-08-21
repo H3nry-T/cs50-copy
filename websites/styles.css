@@ -73,6 +73,11 @@ strong {
 .sectionTitle--intro {
     font-family: var(--ff-)
 }
+
+.sectionTitle--intro strong {
+    display: block;
+}
+
 .sectionSubtitle {
     margin: 0;
     font-size: var(--fs-h3);
