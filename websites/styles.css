@@ -61,6 +61,7 @@ h2 {font-size: var(--fs-h2);}
 h3 {font-size: var(--fs-h3);}
 
 
+/* typography */
 .sectionTitle {
     margin-bottom: 0.25rem;
 }
