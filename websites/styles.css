@@ -62,9 +62,12 @@ h3 {font-size: var(--fs-h3);}
 
 
 .sectionTitle {
-    margin-bottom: 0.25rem; 
+    margin-bottom: 0.25rem;
 }
 
+.sectionTitle--intro {
+    font-family: var(--ff-)
+}
 .sectionSubtitle {
     margin: 0;
     font-size: var(--fs-h3);
