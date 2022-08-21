@@ -34,6 +34,10 @@
 
 /* general styles */
 
+section {
+
+}
+
 body{
     background: var(--clr-dark);
     color: var(--clr-light);
@@ -92,9 +96,12 @@ strong {
     font-family: var(--ff-secondary);
 }
 
-
+/* navigation bar */
+nav {
+    display: none; 
+}
 /* introduction */
 
 .intro {
-    position: relative; 
+    position: relative;
 }
