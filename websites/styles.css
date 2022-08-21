@@ -46,5 +46,14 @@ body{
 img{
     display: block;
     max-width: 100%;
-    
+
 }
+
+h1,
+h2,
+h3 {
+    line-height: 1.6;
+    margin: 0;
+}
+
+h1 {font-size: var(--fs-h1);}
