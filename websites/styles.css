@@ -124,6 +124,7 @@ strong {
         grid-area: img;
         min-width: 250px;
         min-height: 330px;
+        position: relative; 
     }
 }
 
