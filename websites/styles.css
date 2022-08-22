@@ -223,6 +223,6 @@ strong {
 @media (min-width: 600px) {
     .aboutMe {
         display: grid;
-        grid-template-columns: 1fr 200px
+        grid-template-columns: 1fr 200px; 
     }
 }
