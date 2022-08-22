@@ -193,6 +193,9 @@ strong {
     opacity: 0.25;
 }
 
+.services {
+    margin-bottom: 9rem;
+}
 /* .service {
     max-width: 500px;
     margin: 0 auto;
