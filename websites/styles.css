@@ -171,6 +171,11 @@ strong {
     opacity: 0.25;
 }
 
+.service {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 @media (min-width: 800px) {
     .divServices {
         display: flex;
