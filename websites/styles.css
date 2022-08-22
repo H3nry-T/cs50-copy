@@ -21,7 +21,7 @@
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
 
-    --boxShadow: 0.25rem 0.25rem 0.75rem rgba(0,0,0, 0.25); 
+    --boxShadow: 0.25rem 0.25rem 0.75rem rgba(0,0,0, 0.25);
 }
 
 @media (min-width: 800px) {
@@ -121,6 +121,9 @@ strong {
         grid-template-columns: min-content max-content;
     }
 
+    .introImage {
+        box-shadow: var(--boxShadow); 
+    }
     .introImage {
         grid-area: img;
         min-width: 250px;
