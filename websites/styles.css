@@ -212,3 +212,10 @@ strong {
 .service + .service {
     margin-left: 0.5rem;
 }
+
+/* about me */
+
+.aboutMe {
+    max-width: 1000px;
+    margin: 0 auto; 
+}
