@@ -231,11 +231,11 @@ strong {
         grid-column-gap: 2rem;
     }
 
-    .sectionTitle--about {
+    #sectionTitleId {
         grid-area: title;
     }
 
-    .sectionSubtitle--about {
+    #sectionSubtitleId {
         grid-area: subtitle;
         grid-column: 1/-1;
         grid-row: 2;
@@ -251,5 +251,6 @@ strong {
 
     .aboutMeImage {
         grid-area: image;
+        z-index: 2;
     }
 }
