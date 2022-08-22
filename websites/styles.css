@@ -233,12 +233,16 @@ strong {
 
     .sectionTitle--about {
         grid-area: title;
-
     }
-
+    .sectionSubtitle--about {
+        grid-area: subtitle;
+        grid-column: 1/-1;
+        grid-row: 2; 
+    }
     .aboutMeImage {
         box-shadow: var(--boxShadow);
     }
+
     .aboutMeImage {
         grid-area: image;
     }
