@@ -168,5 +168,5 @@ strong {
     height: 1px;
     margin: 0.25rem auto 1rem;
     background: currentColor;
-
+    opacity: 0.25;
 }
