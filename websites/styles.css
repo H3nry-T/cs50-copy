@@ -153,4 +153,5 @@ strong {
     color: var(--clr-light);
     background-image: url("work.jpg");
     background-size: cover;
+    background-blend-mode: multiply;
 }
