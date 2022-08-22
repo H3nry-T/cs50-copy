@@ -167,5 +167,6 @@ strong {
     width: 25%;
     height: 1px;
     margin: 0.25rem auto 1rem;
-    background: var(--clr-light); 
+    background: currentColor;
+
 }
