@@ -95,6 +95,7 @@ strong {
     background: var(--clr-accent);
     font-family: var(--ff-secondary);
     margin-bottom: 1.6rem;
+    padding:0.25rem 1rem;
 }
 
 /* navigation bar */
