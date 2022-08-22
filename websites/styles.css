@@ -72,6 +72,9 @@ strong {
     font-weight: var(--fw-bold);
 }
 
+:focus {
+    outline: 3px solid var(--clr-dark);
+}
 /* buttons */
 .button {
     display: inline-block;
