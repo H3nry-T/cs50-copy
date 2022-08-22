@@ -246,7 +246,9 @@ strong {
         padding-left: 1rem;
         padding-right: calc(200px + 2rem);
     }
-    
+    .aboutMeBody {
+        grid-area: text image;
+    }
     .aboutMeImage {
         box-shadow: var(--boxShadow);
     }
