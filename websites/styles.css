@@ -220,28 +220,28 @@ strong {
     margin: 0 auto;
 }
 
-.about-me__img {
+.aboutMeimage {
     box-shadow: var(--boxShadow);
 }
-    @media (min-width: 600px) {
-        .about-me {
-            display: grid;
-            grid-template-columns: 1fr 200px;
-            grid-template-areas:
-            "title img"
-            "subtitle img"
-            "text img";
-            grid-column-gap: 2em;
-        }
-        .section__title--about {
-            grid-area: title;
-        }
-        .section__subtitle--about {
-            grid-column: 1 / -1;
-            grid-row: 2;
-        }
-        .about-me__img {
-            grid-area: img;
-        }
+@media (min-width: 600px) {
+    .about-me {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-areas:
+        "title img"
+        "subtitle img"
+        "text img";
+        grid-column-gap: 2em;
+    }
+    .section__title--about {
+        grid-area: title;
+    }
+    .section__subtitle--about {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+    .aboutMeImage {
+        grid-area: img;
+    }
 }
 
