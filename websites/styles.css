@@ -78,6 +78,10 @@ strong {
     padding: 0.5rem 1.5rem;
     background: var(--clr-accent);
     margin: 0 auto;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: uppercase;
 }
 /* typography */
 
