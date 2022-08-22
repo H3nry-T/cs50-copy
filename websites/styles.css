@@ -226,8 +226,8 @@ strong {
         display: grid;
         grid-template-columns: 1fr 200px;
         grid-template-areas:
-            "title image"
-            "subtitle image"
+            "title image",
+            "subtitle image",
             "text image";
         grid-column-gap: 2rem;
     }
