@@ -132,5 +132,7 @@ strong {
     grid-row: 2;
     text-align: right;
     position: relative;
-    left: -1.5rem; 
+    left: -1.5rem;
+    width: calc(100% + 1.5rem);
+
 }
