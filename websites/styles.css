@@ -13,6 +13,7 @@
     --fw-bold: 900;
 
     --clr-light: #fff;
+    --clr-grey: #aaa;
     --clr-dark: #303030;
     --clr-accent: #16e0bd;
 
@@ -147,6 +148,6 @@ strong {
 
 /* my services section */
 
-.myServices {
-    
+.services {
+    background-color: var(--clr-grey);
 }
