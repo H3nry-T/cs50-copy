@@ -225,9 +225,10 @@ strong {
         display: grid;
         grid-template-columns: 1fr 200px;
         grid-template-areas:
-            "titleImage"
-            "subtitleImage"
-            "textImage";
+            "title image"
+            "subtitle image"
+            "text image";
+        grid-column-gap: 2rem;
     }
 
     .sectionTitle--about {
@@ -235,6 +236,9 @@ strong {
 
     }
 
+    .aboutMeImage {
+        box-shadow: var(--boxShadow);
+    }
     .aboutMeImage {
         grid-area: image;
     }
