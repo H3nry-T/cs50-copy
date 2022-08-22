@@ -220,6 +220,7 @@ strong {
     margin: 0 auto;
 }
 
+
 @media (min-width: 600px) {
     .aboutMe {
         display: grid;
