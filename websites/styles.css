@@ -224,7 +224,13 @@ strong {
     .aboutMe {
         display: grid;
         grid-template-columns: 1fr 200px;
+        grid-template-areas:
+            "titleImage"
+            "subtitleImage"
+            "textImage";
     }
+
+
     .sectionTitle,
     .sectionSubtitle--about {
         grid-column: 1;
