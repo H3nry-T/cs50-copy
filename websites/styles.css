@@ -230,14 +230,12 @@ strong {
             "textImage";
     }
 
-
-    .sectionTitle,
-    .sectionSubtitle--about {
-        grid-column: 1;
+    .sectionTitle--about {
+        grid-area: title;
 
     }
+
     .aboutMeImage {
-        grid-row: 1/-1;
-        grid-column: 2/;
+        grid-area: image;
     }
 }
