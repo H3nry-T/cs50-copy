@@ -74,6 +74,7 @@ strong {
 
 :focus {
     outline: 3px solid var(--clr-dark);
+    outline-offset: 2px;
 }
 /* buttons */
 .button {
