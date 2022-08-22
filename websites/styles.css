@@ -220,13 +220,9 @@ strong {
     margin: 0 auto;
 }
 
-.about-me {
-    max-width: 1000px;
-    margin: 0 auto;
-    }
-    .about-me__img {
-    box-shadow: var(--bs);
-    }
+.about-me__img {
+    box-shadow: var(--boxShadow);
+}
     @media (min-width: 600px) {
         .about-me {
             display: grid;
