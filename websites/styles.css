@@ -151,6 +151,6 @@ strong {
 .services {
     background-color: var(--clr-grey);
     color: var(--clr-light);
-    background-image: url("coding.jpg");
+    background-image: url("work.jpg");
     background-size: cover;
 }
