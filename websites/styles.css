@@ -246,6 +246,7 @@ strong {
         padding-left: 1rem;
         padding-right: calc(200px + 2rem);
     }
+    
     .aboutMeImage {
         box-shadow: var(--boxShadow);
     }
