@@ -231,11 +231,11 @@ strong {
         grid-column-gap: 2rem;
     }
 
-    #sectionTitleId {
+    .sectionTitle--about {
         grid-area: title;
     }
 
-    #sectionSubtitleId {
+    .sectionSubtitle--about{
         grid-area: subtitle;
         grid-column: 1/-1;
         grid-row: 2;
