@@ -35,7 +35,7 @@
 /* general styles */
 
 section {
-
+    padding: 5rem 2rem; 
 }
 
 body{
@@ -98,7 +98,7 @@ strong {
 
 /* navigation bar */
 nav {
-    display: none; 
+    display: none;
 }
 /* introduction */
 
