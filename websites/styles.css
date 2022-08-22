@@ -154,4 +154,5 @@ strong {
     background-image: url("work.jpg");
     background-size: cover;
     background-blend-mode: multiply;
+    text-align: center;
 }
