@@ -156,3 +156,16 @@ strong {
     background-blend-mode: multiply;
     text-align: center;
 }
+
+.sectionTitle--services {
+    color: var(--clr-accent);
+    position: relative;
+}
+.sectionTitle--services::after {
+    content: '';
+    display:block;
+    width: 25%;
+    height: 1px;
+    margin: 0.25rem auto 1rem;
+    background: var(--clr-light); 
+}
