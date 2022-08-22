@@ -21,6 +21,7 @@
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
 
+    --boxShadow: 0.25rem 0.25rem 0.75rem rgba(0,0,0, 0.25); 
 }
 
 @media (min-width: 800px) {
@@ -125,7 +126,7 @@ strong {
         min-width: 250px;
         min-height: 330px;
         position: relative;
-        z-index: 2; 
+        z-index: 2;
     }
 }
 
