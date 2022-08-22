@@ -112,7 +112,7 @@ strong {
         display: grid;
         grid-column-gap: 1rem;
         width: min-content;
-        margin: 0 auto; 
+        margin: 0 auto;
         grid-template-areas:
             "img title"
             "img subtitle";
@@ -124,4 +124,9 @@ strong {
         min-width: 250px;
         min-height: 330px;
     }
+}
+
+.sectionSubtitle--intro {
+    align-self: start;
+    grid-column: -1/1; 
 }
