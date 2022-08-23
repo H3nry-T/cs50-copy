@@ -223,22 +223,26 @@ strong {
 .aboutMeimage {
     box-shadow: var(--boxShadow);
 }
+
 @media (min-width: 600px) {
-    .about-me {
-    display: grid;
-    grid-template-columns: 1fr 200px;
-    grid-template-areas:
+    .aboutMe {
+        display: grid;
+        grid-template-columns: 1fr 500px;
+        grid-template-areas:
         "title img"
         "subtitle img"
         "text img";
         grid-column-gap: 2em;
     }
-    .section__title--about {
+    .sectionTitle--about {
         grid-area: title;
     }
-    .section__subtitle--about {
+    .sectionSubtitle--about {
         grid-column: 1 / -1;
         grid-row: 2;
+    }
+    .aboutMeBody {
+        grid-area: text;
     }
     .aboutMeImage {
         grid-area: img;
