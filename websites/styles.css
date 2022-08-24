@@ -262,7 +262,7 @@ strong {
 
 .myWork {
     background-color: var(--clr-dark) ;
-
+    text-align: center; 
     margin: 0 auto;
 
 }
@@ -271,10 +271,8 @@ strong {
     color: var(--clr-accent);
     background: var(--clr-light);
     font-size: var(--fs-h2);
-    text-align: center;
 }
 
 .sectionSubtitle--myWork {
-    text-align: center;
     background: #222
 }
