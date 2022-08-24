@@ -329,7 +329,7 @@ header {
     }
     .sectionTitle--about {
         grid-area: title;
-        
+
     }
     .sectionSubtitle--about {
         grid-area: subtitle;
@@ -340,9 +340,6 @@ header {
         width: calc(100% + 15rem);
         padding-left: 2rem;
         padding-right: calc(15rem);
-    }
-    .aboutMeBody {
-        height: auto;
     }
     .aboutMeImage {
         grid-area: img;
