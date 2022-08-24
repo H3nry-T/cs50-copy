@@ -248,10 +248,12 @@ strong {
         padding-right: calc(200px + 2rem);
     }
     .aboutMeBody {
-
+        
     }
     .aboutMeImage {
         grid-area: img;
+        position: relative;
+        z-index: 2;
     }
 }
 
