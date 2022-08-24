@@ -202,19 +202,20 @@ header {
     width: 2em;
     height: 3px;
     border-radius: 0.25em;
-    transition: transform 250ms ease-in-out; 
+    transition: transform 250ms ease-in-out;
 }
 
 
 .hamburger::before,
 .hamburger::after {
-    content: "";
+    content:' ';
     position: absolute;
     left: 0;
     right: 0;
 }
 
-
+.hamburger::before {top: 6px; }
+.hamburger::after {bottom: 6pc; }
 
 
 /* introduction */
