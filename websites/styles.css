@@ -262,17 +262,25 @@ strong {
 
 .myWork {
     background-color: var(--clr-dark) ;
-    text-align: center; 
     margin: 0 auto;
+    color: var(--clr-light);
 
 }
 
 .sectionTitle--myWork {
-    color: var(--clr-accent);
-    background: var(--clr-light);
+    background: #222;
+    text-align: center;
     font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
 }
 
 .sectionSubtitle--myWork {
-    background: #222
+    background: #222;
+    text-align: center; 
+    font-weight: var(--fw-reg);
+}
+
+.portfolio {
+    display: grid;
+    grid-column: 1 / 3
 }
