@@ -139,19 +139,23 @@ strong {
 
 
 /* navigation bar */
-.nav {
-    position: fixed; 
-}
-
 header {
     display: flex;
     justify-content: space-between;
     padding: 1em;
 }
+
+.nav {
+    position: fixed;
+}
+
 .logo {
     max-width: 100px;
 
 }
+
+
+
 /* introduction */
 
 .intro {
