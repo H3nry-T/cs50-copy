@@ -329,6 +329,7 @@ header {
     }
     .sectionTitle--about {
         grid-area: title;
+        
     }
     .sectionSubtitle--about {
         grid-area: subtitle;
