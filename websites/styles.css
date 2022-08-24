@@ -298,5 +298,5 @@ strong {
 .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit minmax(1fr 2fr));
-
+    max-width: 400px
 }
