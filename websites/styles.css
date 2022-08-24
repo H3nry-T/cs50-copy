@@ -261,10 +261,9 @@ strong {
 /* My work */
 
 .myWork {
-    background-color: var(--clr-dark) ;
-    margin: 0 auto;
+    background-color: var(--clr-dark);
     color: var(--clr-light);
-
+    margin: 0 auto;
 }
 
 .sectionTitle--myWork {
@@ -276,7 +275,7 @@ strong {
 
 .sectionSubtitle--myWork {
     background: #222;
-    text-align: center; 
+    text-align: center;
     font-weight: var(--fw-reg);
 }
 
