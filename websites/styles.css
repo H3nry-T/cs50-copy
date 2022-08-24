@@ -123,6 +123,21 @@ strong {
     padding:0.2rem 1rem;
 }
 
+.sectionTitle--myWork {
+    background: #222;
+    text-align: center;
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
+}
+
+.sectionSubtitle--myWork {
+    background: #222;
+    text-align: center;
+    font-weight: var(--fw-reg);
+    margin-bottom: 1rem;
+}
+
+
 /* navigation bar */
 .nav {
     display: none;
@@ -262,7 +277,6 @@ strong {
 
 .myWork {
     background-color: var(--clr-dark) ;
-    margin: 0 auto;
     color: var(--clr-light);
 
 }
@@ -276,11 +290,11 @@ strong {
 
 .sectionSubtitle--myWork {
     background: #222;
-    text-align: center; 
+    text-align: center;
     font-weight: var(--fw-reg);
+    margin-bottom: 1rem;
 }
 
 .portfolio {
     display: grid;
-    grid-column: 1 / 3
 }
