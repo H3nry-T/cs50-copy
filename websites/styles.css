@@ -242,7 +242,7 @@ strong {
         grid-column: 1 / -1;
         grid-row: 2;
         position: relative;
-        left: -2rem;
+        left: -1rem;
         width: calc(100% + 4rem);
         padding-left: 2rem;
         padding-right: calc(200px + 2rem);
