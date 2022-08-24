@@ -232,7 +232,7 @@ strong {
         "title img"
         "subtitle img"
         "text img";
-        grid-column-gap: 2em;
+        grid-column-gap: 1em;
     }
     .sectionTitle--about {
         grid-area: title;
