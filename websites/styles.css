@@ -300,3 +300,15 @@ strong {
     grid-template-columns: repeat(auto-fit minmax(400px 1fr));
     max-width: 400px
 }
+
+.portfolioItem {
+    background-color: var(--clr-accent);
+}
+
+.portfolioImage {
+    transition:
+        transform 700ms cubic-bezier(.5, 0, .5, 1)
+        opacity 250ms linear ;
+}
+
+.portfolio
