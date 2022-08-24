@@ -261,6 +261,14 @@ strong {
 /* My work */
 
 .myWork {
+    background-color: var(--clr-dark) ;
+
     margin: 0 auto;
-    
+
+}
+
+.sectionTitle--myWork {
+    color: var(--clr-accent);
+    background: var(--clr-light);
+    font-size: var(--fs-h1);
 }
