@@ -243,7 +243,7 @@ strong {
         grid-row: 2;
         position: relative;
         left: -0.1rem;
-        width: calc(100% + 4rem);
+        width: calc(100% + 15rem);
         padding-left: 2rem;
         padding-right: calc(200px + 2rem);
     }
