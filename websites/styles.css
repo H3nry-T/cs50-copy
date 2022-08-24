@@ -245,10 +245,10 @@ strong {
         left: -2rem;
         width: calc(100% + 4rem);
         padding-left: 2rem;
-        padding-right: calc(200px + 2rem); 
+        padding-right: calc(200px + 2rem);
     }
     .aboutMeBody {
-        grid-area: text;
+        
     }
     .aboutMeImage {
         grid-area: img;
