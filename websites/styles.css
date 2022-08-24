@@ -344,7 +344,7 @@ strong {
     display: flex;
     list-style: none;
     justify-content: center;
-    margin: 2em;
+    margin: 2em 0 0;
     padding: 0;
 }
 
@@ -354,6 +354,7 @@ strong {
 
 .socialListLink {
     margin: 0.5em;
+
 }
 .footerLink:hover,
 .socialListLink:hover {
