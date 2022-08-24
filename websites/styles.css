@@ -248,9 +248,7 @@ strong {
         padding-right: calc(15rem);
     }
     .aboutMeBody {
-        background: grey;
         height: auto;
-
     }
     .aboutMeImage {
         grid-area: img;
