@@ -184,13 +184,14 @@ header {
 
 }
 
+.navToggle {
+    padding: 0.25em;
+    background: transparent;
+    border: 0;
+}
 /* hamburger */
 
 .hamburger {
-    background: var(--clr-dark);
-    width: 2em;
-    height: 3px;
-    border-radius: 0.25em;
     display: block;
     position: relative;
 
@@ -198,7 +199,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-dark);
+    background: var(--clr-light);
     width: 2em;
     height: 3px;
     border-radius: 0.25em;
@@ -215,7 +216,7 @@ header {
 }
 
 .hamburger::before {top: 6px; }
-.hamburger::after {bottom: 6pc; }
+.hamburger::after {bottom: 6px; }
 
 
 /* introduction */
