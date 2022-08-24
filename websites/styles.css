@@ -311,4 +311,7 @@ strong {
         opacity 250ms linear ;
 }
 
-.portfolio
+.portfolioImage {
+    transform: scale(1.2);
+    opacity: 0.75;
+}
