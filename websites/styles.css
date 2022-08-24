@@ -270,5 +270,11 @@ strong {
 .sectionTitle--myWork {
     color: var(--clr-accent);
     background: var(--clr-light);
-    font-size: var(--fs-h1);
+    font-size: var(--fs-h2);
+    text-align: center;
+}
+
+.sectionSubtitle--myWork {
+    text-align: center;
+    background: #222
 }
