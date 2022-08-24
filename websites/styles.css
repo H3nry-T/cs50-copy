@@ -147,6 +147,7 @@ header {
 
 .nav {
     position: fixed;
+    background: grey;
 }
 
 .logo {
