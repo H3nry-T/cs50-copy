@@ -297,6 +297,6 @@ strong {
 
 .portfolio {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2em; 
+    grid-template-columns: repeat(auto-fit, minmax(300px 1fr));
+
 }
