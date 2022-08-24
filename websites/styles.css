@@ -317,35 +317,9 @@ header {
     box-shadow: var(--boxShadow);
 }
 
-@media (min-width: 600px) {
-    .aboutMe {
-        display: grid;
-        grid-template-columns: 1fr 200px;
-        grid-template-areas:
-        "title img"
-        "subtitle img"
-        "text img";
-        grid-column-gap: 1em;
-    }
-    .sectionTitle--about {
-        grid-area: title;
 
-    }
-    .sectionSubtitle--about {
-        grid-area: subtitle;
-        grid-column: 1 / -1;
-        grid-row: 2;
-        position: relative;
-        left: -0.1rem;
-        width: calc(100% + 15rem);
-        padding-left: 2rem;
-        padding-right: calc(15rem);
-    }
-    .aboutMeImage {
-        grid-area: img;
-        position: relative;
-        z-index: 2;
-    }
+@media(min-width: 600px) {
+    
 }
 
 /* My work */
