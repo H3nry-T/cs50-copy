@@ -268,18 +268,18 @@ strong {
 }
 
 .sectionTitle--myWork {
-
+    font-style: var(--fs-)
 }
 
 .sectionSubtitle--myWork {
     color: var(--clr-accent);
     font-weight: var(--fw-bold);
-    margin-bottom: 1em; 
+    margin-bottom: 1em;
 }
 
 .portfolio {
     display: grid;
-    grid-column: repeat(auto-fit minmax(300px 400px));
+    grid-column: repeat(auto-fit minmax(300px 1fr));
 }
 
 .portfolioItem {
