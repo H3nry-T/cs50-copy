@@ -245,12 +245,12 @@ strong {
         left: -0.1rem;
         width: calc(100% + 15rem);
         padding-left: 2rem;
-        padding-right: calc(200px + 2rem);
+        padding-right: calc(15rem);
     }
     .aboutMeBody {
         background: grey;
         height: auto;
-        
+
     }
     .aboutMeImage {
         grid-area: img;
