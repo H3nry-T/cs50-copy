@@ -312,7 +312,12 @@ strong {
         opacity 250ms linear;
 }
 
-.portfolioImage:hover {
+.portfolioItem:focus {
+    position: relative;
+    z-index: 2; 
+}
+.portfolioImage:hover,
+.portfolioItem:focus .portfolioImage {
     transform: scale(1.1);
-    opacity: 0.75;
+    opacity: 0.85;
 }
