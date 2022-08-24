@@ -227,7 +227,7 @@ strong {
 @media (min-width: 600px) {
     .aboutMe {
         display: grid;
-        grid-template-columns: 1fr 500px;
+        grid-template-columns: 1fr 200px;
         grid-template-areas:
         "title img"
         "subtitle img"
@@ -248,7 +248,7 @@ strong {
         padding-right: calc(200px + 2rem);
     }
     .aboutMeBody {
-        
+
     }
     .aboutMeImage {
         grid-area: img;
