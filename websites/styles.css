@@ -268,23 +268,22 @@ strong {
 }
 
 .sectionTitle--myWork {
-    background: #222;
-    text-align: center;
-    font-size: var(--fs-h2);
-    font-weight: var(--fw-bold);
+   
 }
 
 .sectionSubtitle--myWork {
-    background: #222;
-    text-align: center;
-    font-weight: var(--fw-reg);
+
 }
 
 .portfolio {
     display: grid;
-    grid-column: 1 / 3
+    grid-column: repeat(auto-fit minmax(300px 400px));
 }
 
 .portfolioItem {
-    
+
+}
+
+.portfolioImage {
+
 }
