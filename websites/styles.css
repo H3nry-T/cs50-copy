@@ -285,16 +285,18 @@ strong {
 
 .portfolioItem {
     background: var(--clr-accent);
+    overflow: none; 
 }
 
 .portfolioImage {
     transition:
-        transform 300ms cubic-bezier(.5, 0, .5, 1)
+        transform 300ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
+
 }
 
 .portfolioImage:hover {
     transform: scale(1.2);
     opacity: .75;
-    
+    overflow: none;
 }
