@@ -265,16 +265,19 @@ strong {
     background-color: var(--clr-dark);
     color: var(--clr-light);
     margin: 0 auto;
+
 }
 
 .sectionTitle--myWork {
-    font-style: var(--fs-)
+    font-style: var(--fs-bold)
+    text-align: center;
 }
 
 .sectionSubtitle--myWork {
     color: var(--clr-accent);
     font-weight: var(--fw-bold);
     margin-bottom: 1em;
+    text-align: center;
 }
 
 .portfolioAll {
@@ -285,7 +288,7 @@ strong {
 
 .portfolioItem {
     background: var(--clr-accent);
-    overflow: none; 
+    overflow: none;
 }
 
 .portfolioImage {
