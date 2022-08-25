@@ -301,5 +301,4 @@ strong {
 .portfolioImage:hover {
     transform: scale(1.2);
     opacity: .75;
-    overflow: none;
 }
