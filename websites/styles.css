@@ -277,10 +277,10 @@ strong {
     margin-bottom: 1em;
 }
 
-.portfolio {
+.portfolioAll {
     display: grid;
     grid-column: repeat(auto-fit minmax(300px 1fr));
-    max-width: 300px; 
+    max-width: 300px;
 }
 
 .portfolioItem {
