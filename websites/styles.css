@@ -103,7 +103,7 @@ strong {
 }
 
 .sectionTitle--intro {
-    font-family: var(--ff-)
+    font-family: var(--ff-primary)
 }
 
 .sectionTitle--intro strong {
