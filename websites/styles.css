@@ -280,10 +280,11 @@ strong {
 .portfolio {
     display: grid;
     grid-column: repeat(auto-fit minmax(300px 1fr));
+    max-width: 300px; 
 }
 
 .portfolioItem {
-    
+
 }
 
 .portfolioImage {
