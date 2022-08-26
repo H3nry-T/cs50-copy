@@ -146,7 +146,7 @@ strong {
     z-index: 100;
     display: block;
 
-    transform: translateX(100%);
+    transform: translateX(0%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
 
@@ -173,7 +173,7 @@ strong {
 }
 
 .navOpen {
-    transform: translateX(0); 
+    transform: translateX(0);
 }
 /* hamburger */
 
