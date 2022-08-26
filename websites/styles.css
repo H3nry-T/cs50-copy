@@ -305,7 +305,6 @@ strong {
 .portfolioItem:focus {
     position: relative;
     z-index: 2;
-
 }
 
 .portfolioImage:hover,
