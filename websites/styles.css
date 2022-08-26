@@ -326,7 +326,9 @@ strong {
 .socialListLink:hover {
     opacity: 0.7;
 }
-
+.footerLink:hover {
+    text-decoration: 
+}
 .socialList {
     list-style: none;
     display:
