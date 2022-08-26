@@ -178,7 +178,9 @@ strong {
     background-blend-mode: multiply;
     text-align: center;
 }
-
+.services h3 {
+    font-weight: var(--fw-bold); 
+}
 .sectionTitle--services {
     color: var(--clr-accent);
     position: relative;
@@ -340,7 +342,7 @@ strong {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin: 2em 0;
+    margin: 2em 0 0;
     padding: 0;
 }
 
@@ -350,5 +352,5 @@ strong {
 }
 
 .socialListLink {
-    padding: 1em; 
+    padding: 1em;
 }
