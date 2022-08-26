@@ -173,7 +173,7 @@ strong {
 }
 
 .navOpen {
-    background: red;
+    transform: translateX(0); 
 }
 /* hamburger */
 
