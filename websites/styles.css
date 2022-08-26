@@ -159,13 +159,17 @@ header {
     align-items: center;
     margin: 0;
     padding: 0;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 .navLink {
     color: inherit;
     font-weight: var(--fw-bold);
     font-size: var(--fs-h2);
+}
+
+.nav_link:hover {
+    color: var(--clr-accent);
 }
 /* introduction */
 
