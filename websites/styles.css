@@ -146,7 +146,7 @@ header {
     z-index: 100;
     display: block;
 
-    transform: translateX(0%);
+    transform: translateX(100%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
 
@@ -168,8 +168,36 @@ header {
     font-size: var(--fs-h2);
 }
 
-.nav_link:hover {
+.navLink:hover {
     color: var(--clr-accent);
+}
+
+/* hamburger */
+
+.navToggle {
+
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background: var(--clr-dark);
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+}
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+
 }
 /* introduction */
 
