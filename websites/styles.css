@@ -287,11 +287,11 @@ strong {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px 1fr));
     max-width: 300px;
-    grid-gap: 0.25rem; 
+    grid-gap: 0.25rem;
 }
 
 .portfolioItem {
-    background: var(--clr-accent);
+    background-color: var(--clr-accent);
     overflow: none;
 }
 
@@ -307,7 +307,7 @@ strong {
 
 }
 
-.portfolioImage:hover
+.portfolioImage:hover,
 .portfolioItem:focus .portfolioImage {
     transform: scale(1.2);
     opacity: .75;
