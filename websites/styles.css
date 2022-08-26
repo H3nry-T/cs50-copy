@@ -146,7 +146,7 @@ strong {
     z-index: 100;
     display: block;
 
-    transform: translateX(0%);
+    transform: translateX(100%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
 
@@ -172,6 +172,9 @@ strong {
     color: var(--clr-accent);
 }
 
+.navOpen {
+    background: red;
+}
 /* hamburger */
 
 .navToggle {
