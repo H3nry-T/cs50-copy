@@ -321,13 +321,16 @@ strong {
     text-align: center;
 }
 .footer a {color: inherit}
+.footerLink {
+    text-decoration: none; 
+}
 
 .footerLink:hover,
 .socialListLink:hover {
     opacity: 0.7;
 }
 .footerLink:hover {
-    text-decoration: 
+    text-decoration: underline;
 }
 .socialList {
     list-style: none;
