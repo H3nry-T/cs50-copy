@@ -273,6 +273,7 @@ strong {
     text-align: center;
     background: grey;
     border-radius: 4px;
+    width: minmax(12rem, 1fr);
 }
 
 .sectionSubtitle--myWork {
@@ -292,7 +293,7 @@ strong {
 
 .portfolioItem {
     background-color: var(--clr-accent);
-    overflow: none;
+    overflow: hidden;
 }
 
 .portfolioImage {
