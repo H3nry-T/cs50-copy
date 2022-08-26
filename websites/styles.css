@@ -125,7 +125,7 @@ strong {
 
 /* navigation bar */
 
-header {
+.navHeader {
     display: flex;
     justify-content: space-between;
     padding: 1em;
@@ -143,7 +143,7 @@ header {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 2;
+    z-index: 100;
     display: block;
 
     transform: translateX(100%);
