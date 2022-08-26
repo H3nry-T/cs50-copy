@@ -144,6 +144,7 @@ header {
     left: 0;
     right: 0;
     z-index: 100;
+    display: block; 
 
     transform: translateX(0%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
@@ -163,7 +164,7 @@ header {
 .navLink {
     color: inherit;
     font-weight: var(--fw-bold);
-    font-size: var(--fs-h2); 
+    font-size: var(--fs-h2);
 }
 /* introduction */
 
