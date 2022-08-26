@@ -312,3 +312,22 @@ strong {
     transform: scale(1.2);
     opacity: .75;
 }
+
+/* footer */
+
+.footer {
+    background: #111;
+    color: var(--clr-accent);
+    text-align: center;
+}
+.footer a {color: inherit}
+
+.footerLink:hover,
+.socialListLink:hover {
+    opacity: 0.7;
+}
+
+.socialList {
+    list-style: none;
+    display:
+}
