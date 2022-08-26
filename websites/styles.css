@@ -190,6 +190,7 @@ strong {
     width: 2em;
     height: 3px;
     border-radius: 1em;
+    
 }
 .hamburger::before,
 .hamburger::after {
