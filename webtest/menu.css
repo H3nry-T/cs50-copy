@@ -47,7 +47,7 @@ a {
 }
 
 .navLink {
-    transition: 250ms ease-in-out;
+    transition: 500ms ease-in-out;
 
 }
 
@@ -92,7 +92,7 @@ a {
         top: 70px;
         gap: 0;
         flex-direction: column;
-        background-color: inherit;
+        background-color: #eee;
         width: 100%;
         text-align: center;
         transition: 0.3s;
