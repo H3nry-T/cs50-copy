@@ -19,6 +19,11 @@ a {
 
 }
 
+.navBranding {
+    font-size: 2rem;
+}
+
+
 .navBar {
     min-height: 70px ;
     display: flex;
@@ -33,6 +38,19 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 60px ;
-    color: black; 
+    gap: 60px;
+
+}
+
+.navItem {
+
+}
+
+.navLink {
+    transition: 250ms ease-in-out;
+
+}
+
+.navLink:hover {
+    color: blue; 
 }
