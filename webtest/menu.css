@@ -87,6 +87,23 @@ a {
     }
 
     .navList {
-        
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: inherit;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .navItem {
+        margin: 16px 0;
+
+    }
+
+    .navList.active {
+        left: 0; 
     }
 }
