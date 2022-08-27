@@ -52,5 +52,19 @@ a {
 }
 
 .navLink:hover {
-    color: blue; 
+    color: blue;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out; 
 }
