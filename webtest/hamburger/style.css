@@ -69,3 +69,9 @@ body {
 .menuButton.open .hamburger::after {
     transform: rotate(-45deg) translate(35px, 35px);
 }
+
+.homepage {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+}
