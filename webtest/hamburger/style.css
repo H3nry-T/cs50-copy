@@ -71,7 +71,7 @@ body {
 }
 
 .homepage {
-    display: flex;
-    justify-content: center;
-    align-items: left;
+    position: relative;
+    top: 0;
+    right: 0; 
 }
