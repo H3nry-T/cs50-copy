@@ -53,3 +53,19 @@ body {
 .hamburger::after {
     transform: translateY(+16px);
 }
+
+/* animation */
+.menuButton.open .hamburger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+
+}
+
+.menuButton.open .hamburger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menuButton.open .hamburger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
