@@ -184,15 +184,13 @@ strong {
     position: fixed;
 }
 .navOpen .hamburger {
-
-    transform: rotate(45deg);
+    transform: rotate(45deg) translateX(-6px);
 }
 .navOpen .hamburger::after {
-    transform: translateX(50px);
-    opacity: 0;
+    transform: translateX(1000px);
 }
 .navOpen .hamburger::before {
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) translateX(6px);
 }
 /* hamburger */
 
