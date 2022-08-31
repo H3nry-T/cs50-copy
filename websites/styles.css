@@ -180,8 +180,19 @@ strong {
 .navOpen .nav {
     transform: translateX(0%);
 }
-
-
+.navOpen .navToggle {
+    position: fixed;
+}
+.navOpen .hamburger {
+    transform: translateX(50px);
+    opacity: 0;
+}
+.navOpen .hamburger::after {
+    transform: rotate(45deg);
+}
+.navOpen .hamburger::before {
+    transform: rotate(-90deg);
+}
 /* hamburger */
 
 .navToggle {
