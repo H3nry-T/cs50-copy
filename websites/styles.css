@@ -136,7 +136,7 @@ strong {
 
 }
 .nav {
-    position: absolute;
+    position: fixed;
     background: var(--clr-dark);
     color: var(--clr-light);
     top: 0;
