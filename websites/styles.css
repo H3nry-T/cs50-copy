@@ -37,6 +37,10 @@
 
 /* general styles */
 
+html {
+   scroll-behaviour: smooth; 
+}
+
 section {
     padding: 5rem 2rem;
 }
