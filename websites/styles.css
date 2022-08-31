@@ -164,6 +164,7 @@ strong {
     color: inherit;
     font-weight: var(--fw-bold);
     font-size: var(--fs-h3);
+    text-decoration: none; 
 }
 
 .navLink:hover {
