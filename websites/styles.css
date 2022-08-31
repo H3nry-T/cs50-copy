@@ -137,8 +137,8 @@ strong {
 }
 .nav {
     position: fixed;
-    background: var(--clr-light);
-    color: var(--clr-dark);
+    background: var(--clr-dark);
+    color: var(--clr-light);
     top: 0;
     bottom: 0;
     left: 0;
@@ -164,15 +164,15 @@ strong {
     color: inherit;
     font-weight: var(--fw-bold);
     font-size: var(--fs-h3);
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 .navLink:hover {
     color: var(--clr-accent);
 }
 
-.navOpen {
-    transform: translateX(0%);
+.navOpen .nav {
+    transform: translateX(0);
 }
 /* hamburger */
 
