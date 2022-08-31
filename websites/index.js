@@ -8,6 +8,6 @@ const navLinks = document.querySelectorAll('.navLink');
 
 navLinks.forEach(Link => {
     Link.addEventListener('click', () => {
-        document.
-    })
-})
+        document.body.classList.remove('navOpen');
+    });
+});
