@@ -11,3 +11,4 @@ navLinks.forEach(Link => {
         document.body.classList.remove('navOpen');
     });
 });
+
