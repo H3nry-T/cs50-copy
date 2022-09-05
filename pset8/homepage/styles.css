@@ -16,11 +16,11 @@ body {
     background: #8faad6;
 }
 
-nav {
+.nav {
     display: flex;
     justify-content: center;
 }
 
-nav-link {
-    color: white;
+.nav-link {
+
 }
