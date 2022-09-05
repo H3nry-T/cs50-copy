@@ -15,3 +15,8 @@ body {
     justify-content: center;
     background: #8faad6;
 }
+
+nav {
+    display: flex;
+    justify-content: center; 
+}
