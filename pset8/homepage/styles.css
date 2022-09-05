@@ -22,5 +22,10 @@ body {
 }
 
 .nav-link {
+    display: flex;
+    color: white;
+}
 
+.nav-link:hover {
+    color: grey;
 }
