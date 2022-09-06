@@ -77,6 +77,8 @@ body {
     display: flex;
     justify-content: center;
     background-color: var(--bs-blue);
+    border-radius: 2px;
+    margin: 2px; 
 }
 
 .nav-link {
