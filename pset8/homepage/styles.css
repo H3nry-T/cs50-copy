@@ -58,6 +58,7 @@
     box-sizing: border-box;
 }
 
+/* index.html */
 body {
     background: black;
     color: white;
@@ -96,3 +97,4 @@ body {
     padding-bottom: 0.5rem;
 }
 
+/* google.html */
