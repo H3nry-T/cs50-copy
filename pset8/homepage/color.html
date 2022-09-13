@@ -11,17 +11,13 @@
         <form>
             <input type="text" class="colorInputText">
             <input type="button" class="colorButton" value="click to change color!" onclick="changeColor()">
-            <input type="color" class="colorInputColor" onlclick="colorBox()">
+            <input type="color" class="colorInputColor">
         </form>
         <script>
             function changeColor() {
-                let color = document.querySelector(".colorInputText").value;
-                document.body.style.backgroundColor = color;
-            }
-
-            function colorBox() {
                 let color = document.querySelector(".colorInputColor").value;
                 document.body.style.backgroundColor = color;
+                document.querySelector(".colorInputText").value = color; 
             }
         </script>
     </body>
