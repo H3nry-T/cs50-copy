@@ -15,7 +15,8 @@
         </form>
         <script>
             function changeColor() {
-                let color = document.querySelector("colorInputText").innerHTML;
+                let color = document.querySelector("colorInputText").value;
+                document.body.style.backgroundColor = color;
             }
         </script>
     </body>
