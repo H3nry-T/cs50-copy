@@ -21,3 +21,6 @@
     padding: 0.1rem;
 } */
 
+.form-control-lg {
+    border-radius: 10rem;
+}
