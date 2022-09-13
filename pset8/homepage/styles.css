@@ -116,8 +116,11 @@
     width: 30rem;
     height: 30rem;
 }
-
+.img-job {
+    width: 200px;
+    height: 200px; 
+}
 p {
     padding: 5px;
-    margin: 5px; 
+    margin: 5px;
 }
