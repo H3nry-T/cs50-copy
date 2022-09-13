@@ -59,12 +59,12 @@
 }
 
 /* index.html */
-body {
+.homepage-body {
     background: black;
     color: white;
 }
 
-.topTitle {
+.top-title {
     font-size: 50px;
     display: flex;
     justify-content: center;
@@ -98,3 +98,16 @@ body {
 }
 
 /* google.html */
+
+.google {
+    color: green;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+    font-size: 6rem;
+}
+
+.form-control-lg {
+    border-radius: 10rem;
+}
