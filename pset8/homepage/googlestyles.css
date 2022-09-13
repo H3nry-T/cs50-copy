@@ -8,5 +8,10 @@
     color: green;
     text-align: center;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between; 
 }
