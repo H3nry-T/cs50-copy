@@ -7,5 +7,6 @@ def outer_function():
 
 my_func = outer_function()
 
-my_func() 
-
+print(my_func.__name__)
+my_func()
+# closure is where an inner function can remember 
