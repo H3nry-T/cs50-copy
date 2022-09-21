@@ -37,3 +37,5 @@ print(squared_list)
 # as you can see, I am able to pass in a function INSIDE another function.
 #  make sure there are no parenthesis
 
+def html_tag(tag):
+    
