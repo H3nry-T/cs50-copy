@@ -45,3 +45,4 @@ def html_tag(tag):
 h1_tag = html_tag("h1")
 
 h1_tag("test headline")
+h1_tag("another headline!")
