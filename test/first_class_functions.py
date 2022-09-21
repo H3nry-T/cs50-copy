@@ -38,4 +38,8 @@ print(squared_list)
 #  make sure there are no parenthesis
 
 def html_tag(tag):
-    
+    def wrap_text(msg):
+        print(f"<{tag}> {msg} </{tag}>")
+    return wrap_text
+
+print(html_tag("h1"))
