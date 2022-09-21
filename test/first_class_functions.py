@@ -39,7 +39,9 @@ print(squared_list)
 
 def html_tag(tag):
     def wrap_text(msg):
-        print(f"<{0}> {1} </{0}>".format(tag, msg))
+        print("<{0}> {1} </{0}>".format(tag, msg))
     return wrap_text
 
-print(html_tag("h1"))
+h1_tag = html_tag("h1")
+
+h1_tag("test headline")
