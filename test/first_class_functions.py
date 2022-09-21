@@ -20,4 +20,19 @@ print(f)
 
 print(f(5))
 
-# we can now treat f just like any other function. 
+# we can now treat f just like any other function.
+# these functions are also used as higher-order functions
+
+def my_map(func, arg_list):
+    results = []
+    for i in arg_list:
+        results.append(func(i))
+    return results
+
+
+squared_list = my_map(square, [1, 2, 3, 4, 5])
+
+print(squared_list)
+
+# as you can see, I am able to pass in a function INSIDE another function.
+#  make sure there are no parenthesis 
