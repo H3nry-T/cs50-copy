@@ -12,3 +12,5 @@ def index():
 def greet():
     name = request.form.get("name", "world")
     return render_template("greet.html", name_val=name)
+
+    
