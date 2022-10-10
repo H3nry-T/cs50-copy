@@ -16,10 +16,10 @@
                 <h2>Add a Birthday</h2>
                 <!-- TODO: Create a form for users to submit a name, a month, and a day -->
                 <form method="POST">
-                    <input name="name" type="text" placeholder="name">
-                    <input name="month" type="text" placeholder="month">
-                    <input name="day" type="text" placeholder="day">
-                    <input id="submit_button" type="submit">
+                    <input name="name" type="text" placeholder="Name">
+                    <input name="month" type="text" placeholder="Month">
+                    <input name="day" type="text" placeholder="Day">
+                    <input id="submit_button" type="submit" value="Add Birthday">
                 </form>
             </div>
 
@@ -33,7 +33,6 @@
                             <th>Birthday</th>
                         </tr>
                     </thead>
-                    {{ birthdays }}
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
                         {% for row in birthdays %}
