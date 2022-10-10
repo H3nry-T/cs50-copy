@@ -27,14 +27,14 @@ def index():
     if request.method == "POST":
 
         # TODO: Add the user's entry into the database
-        db.execute("INSERT )
+
 
         return redirect("/")
 
     else:
 
         # TODO: Display the entries in the database on index.html
-
+        
         return render_template("index.html")
 
 
