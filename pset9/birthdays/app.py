@@ -46,6 +46,10 @@ def index():
 @app.route("/deregister", methods=["POST"])
 def deregister():
     id = request.form.get("id")
+    if id:
+        db.execute("DELETE FROM birthdays WHERE id == ?", id)
+
+    return redirect("/")
 
 
 
