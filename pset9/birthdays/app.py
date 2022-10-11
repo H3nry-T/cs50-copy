@@ -43,8 +43,9 @@ def index():
 
         return render_template("index.html", birthdays=birthdays)
 
-
-
+@app.route("/deregister", methods=["POST"])
+def deregister():
+    id = request.form.get("id")
 
 
 
