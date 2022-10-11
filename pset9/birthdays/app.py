@@ -28,6 +28,7 @@ def index():
 
         # TODO: Add the user's entry into the database
 
+        
 
         return redirect("/")
 
@@ -38,7 +39,7 @@ def index():
 
         return render_template("index.html", birthdays=birthdays)
 
-        
+
 
 
 
