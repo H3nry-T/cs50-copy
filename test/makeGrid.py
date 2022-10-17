@@ -9,3 +9,4 @@ def makeGrid(row, column):
     return rows
 
 print(makeGrid(3, 4))
+print(range(4)[-1])
