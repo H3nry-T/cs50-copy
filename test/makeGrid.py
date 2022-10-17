@@ -3,7 +3,7 @@ def makeGrid(row, column):
     for i in range(row):
 
         columns = []
-        for j in range(column):
+        for j in range(1, column):
             columns.append(j)
         rows.append(columns)
     return rows
