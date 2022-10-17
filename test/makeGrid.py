@@ -1,8 +1,8 @@
 def makeGrid(row, column):
     rows = []
-    columns = []
     for i in range(row):
 
+        columns = []
         for j in range(column):
             columns.append(j)
         rows.append(columns)
