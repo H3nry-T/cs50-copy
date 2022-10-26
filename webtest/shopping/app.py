@@ -17,7 +17,7 @@ Session(app)
 #default route, show all the books from the db return_template("default")
 
 
-#cart route: post, get methods, check if cart in session object 
+#cart route: post, get methods, check if cart in session object
 
 @app.route("/cart", methods=["GET", "POST"])
 def cart():
@@ -26,6 +26,7 @@ def cart():
     if "cart" not in session:
         session["cart"] = []
 
+# check for post method: do something.
     # POST
     if request.method == "POST":
         id = request.form.get("id")
