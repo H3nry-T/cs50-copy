@@ -18,6 +18,7 @@ Session(app)
 @app.route("/")
 def index():
     
+    return render_template("books.html")
 
 #cart route: post, get methods, check if cart in session object
 
