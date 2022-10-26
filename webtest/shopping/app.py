@@ -27,12 +27,12 @@ def cart():
     # Ensure cart exists
     if "cart" not in session:
         session["cart"] = []
-        return redirect("/")
+
 # check for post method: do something.
     # POST
-    session["cart"] = request.form.get("cart")
+
     if request.method == "POST":
-        db.execute(INSERT session[])
+        db.execute("INSERT (?,?) IN books", id, name)
 
 # else GET method, store books in db and render the cart.html page.
     # GET
