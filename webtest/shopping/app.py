@@ -15,13 +15,13 @@ Session(app)
 
 
 #default route, show all the books from the db return_template("default")
-@app.route("/", methods=["GET", "POST"])
+@app.route("/", methods=["GET"])
 def index():
     books = db.execute("SELECT * FROM books")
     return render_template("books.html", books=books)
 
 #cart route: post, get methods, check if cart in session object
-@app.route("/cart", methods=["POST"])
+@app.route("/cart", methods=["GET", "POST"])
 def cart():
 
     # Ensure cart exists
