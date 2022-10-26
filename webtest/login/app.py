@@ -33,3 +33,6 @@ def login():
 def logout():
     session["name"] = None
     return redirect("/")
+
+if __name__ == '__main__':
+    app.run(debug = True)
