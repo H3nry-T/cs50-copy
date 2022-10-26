@@ -15,25 +15,20 @@ Session(app)
 
 
 #default route, show all the books from the db return_template("default")
-
+@app.route("/")
+def index():
+    
 
 #cart route: post, get methods, check if cart in session object
 
-@app.route("/cart", methods=["GET", "POST"])
-def cart():
 
     # Ensure cart exists
-    if "cart" not in session:
-        session["cart"] = []
+
 
 # check for post method: do something.
     # POST
-    if request.method == "POST":
-        id = request.form.get("id")
-        if id:
-            session["cart"].append(id)
-        return redirect("/cart")
 
+# else GET method, store books in db and render the cart.html page.
     # GET
     books = db.execute("SELECT * FROM books WHERE id IN (?)", session["cart"])
     return render_template("cart.html", books=books)
