@@ -32,7 +32,7 @@ def cart():
     # POST
 
     if request.method == "POST":
-        id = request.form.get("id") 
+        id = request.form.get("id")
         db.execute("INSERT (?,?) IN books", id, name)
 
 # else GET method, store books in db and render the cart.html page.
