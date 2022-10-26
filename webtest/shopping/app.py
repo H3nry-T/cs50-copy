@@ -14,11 +14,10 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 
-@app.route("/")
-def index():
-    books = db.execute("SELECT * FROM books")
-    return render_template("books.html", books=books)
+#default route, show all the books from the db return_template("default")
 
+
+#cart route: post, get methods, check if cart in session object 
 
 @app.route("/cart", methods=["GET", "POST"])
 def cart():
