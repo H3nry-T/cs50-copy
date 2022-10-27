@@ -46,10 +46,11 @@ def index():
     if not db.execute("SELECT * FROM portfolio"):
         db.execute("CREATE TABLE stocks ( \
             id INTEGER, \
-            
+            symbol, \
+            name, \
+            shares, \
+            price, \
             PRIMARY KEY (id), \
-
-
         )")
     return render_template("portfolio.html", )
 
