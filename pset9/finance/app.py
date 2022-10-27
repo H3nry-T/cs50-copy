@@ -46,7 +46,7 @@ def index():
     if not db.execute("SELECT * FROM portfolio"):
         db.execute("CREATE TABLE stocks (
             id INTEGER,
-            
+            PRIMARY KEY (id)
 
         )")
     return render_template("portfolio.html", )
