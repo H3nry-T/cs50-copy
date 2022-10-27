@@ -43,7 +43,9 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    return apology("TOD")
+    if not db.execute("SELECT * FROM portfolio"):
+        db.execute("CREATE TABLE users)
+    return render_template("portfolio.html", )
 
 
 @app.route("/buy", methods=["GET", "POST"])
