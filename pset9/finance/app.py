@@ -31,6 +31,7 @@ if not os.environ.get("API_KEY"):
     raise RuntimeError("API_KEY not set")
 
 #configure the API calls
+APIcall = pyEX.Client(api_token='YOUR_API_TOKEN', version='stable')
 
 @app.after_request
 def after_request(response):
