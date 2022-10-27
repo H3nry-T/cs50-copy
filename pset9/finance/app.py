@@ -1,4 +1,5 @@
 import os
+import pyEX
 
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
@@ -29,6 +30,7 @@ db = SQL("sqlite:///finance.db")
 if not os.environ.get("API_KEY"):
     raise RuntimeError("API_KEY not set")
 
+#configure the API calls
 
 @app.after_request
 def after_request(response):
