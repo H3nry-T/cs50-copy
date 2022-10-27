@@ -44,7 +44,10 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     if not db.execute("SELECT * FROM portfolio"):
-        db.execute("CREATE TABLE users)
+        db.execute("CREATE TABLE stocks (
+            id INTEGER NOT NULL
+
+        )")
     return render_template("portfolio.html", )
 
 
