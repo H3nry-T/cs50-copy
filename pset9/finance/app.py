@@ -44,15 +44,7 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    if not db.execute("SELECT * FROM portfolio"):
-        db.execute("CREATE TABLE stocks ( \
-            id INTEGER, \
-            symbol, \
-            name, \
-            shares, \
-            price, \
-            PRIMARY KEY (id), \
-        )")
+    
     return render_template("portfolio.html", )
 
 
