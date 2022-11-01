@@ -116,7 +116,15 @@ def buy():
 
         # insert user id into the portfolio table (recognise the user's portfolio)
         if db.execute("SELECT * FROM portfolio"):
-            db.execute("INSERT INTO portfolio ())
+            db.execute(""" INSERT INTO portfolio (
+                portfolio_user_id,
+                name,
+                symbol,
+                shares,
+                price,
+                total_value_of_stock
+            )
+            VALUES (?, ?, ?, ?, ?)""")
         # update the portfolio table
         db.execute("SELECT * FROM portfolio WHERE portfolio_user_id = ? AND stock_name = ?, session_)
 
