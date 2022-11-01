@@ -56,8 +56,17 @@ def buy():
         return render_template("buy.html")
 
     elif request.method == "POST":
-        if request.form.get("symbol"): 
-
+        if not request.form.get("symbol"):
+            return apology("symbol required")
+        try:
+            symbol_given = request.form.get("symbol")
+            symbol_parse = lookup(symbol_given)
+            stock_name = symbol_parse["name"]
+            stock_symbol = symbol_parse["symbol"]
+            stock_price = usd(symbol_parse["price"])
+            db.execute()
+        except:
+            return apology("invalid symbol")
 
 
 
