@@ -129,8 +129,7 @@ def register():
             return apology("please type in a username")
 
         array_of_usernames = db.execute("SELECT username FROM users")
-        if array_of_usernames[0]["username"] != username:
-            return apology("username exists")
+        for 
 
         if password == confirm_pass:
             hashed_password = generate_password_hash(password)
