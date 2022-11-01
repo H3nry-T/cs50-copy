@@ -127,11 +127,11 @@ def register():
 
         if password == confirm_pass and username:
             hashed_password = generate_password_hash(password)
+            db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username, hashed_password)
         else:
             return apology("Probelmo with register")
 
 
-        db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username, hashed_password)
 
     return render_template("register.html")
 
