@@ -55,6 +55,8 @@ def buy():
     if request.method == "GET":
         return render_template("buy.html")
 
+    if not request.form.get("shares"):
+        return apology(")
     elif request.method == "POST":
         # validate symbol
         if not request.form.get("symbol"):
