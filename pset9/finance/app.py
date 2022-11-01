@@ -79,7 +79,7 @@ def buy():
 
             stock_name = symbol_parse["name"]
             stock_symbol = symbol_parse["symbol"]
-            stock_price = usd(symbol_parse["price"])
+            stock_price = symbol_parse["price"]
             stock_shares = request.form.get("shares")
 
         except:
