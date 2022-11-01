@@ -111,7 +111,7 @@ def buy():
         db.execute("INSERT INTO history (history_user_id, name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], stock_name, stock_symbol, stock_shares, stock_price, value_of_stock)
 
         # insert new stocks into portfolio
-        
+
         #take value_of_stock from transaction history; adding it up cumulatively
         new_value_row = db.execute("SELECT value_of_stock FROM history WHERE history_user_id = ? AND name = ?", session["user_id"], stock_name)
         old_value_row = db.execute("SELECT total_value_of_stock FROM portfolio WHERE portfolio_user_id = ? AND symbol = ?", session["user_id"], stock_symbol)
@@ -120,17 +120,6 @@ def buy():
         for stock in new_value_row:
             total_value_of_stock += stock["value_of_stock"]
 
-        # insert user id into the portfolio table (recognise the user's portfolio)
-        if not db.execute("SELECT * FROM portfolio"):
-            db.execute(""" INSERT INTO portfolio (
-                portfolio_user_id,
-                name,
-                symbol,
-                shares,
-                price,
-                total_value_of_stock
-            )
-            VALUES (?, ?, ?, ?, ?, ?)""", session["user_id"], stock_name, stock_symbol, stock_shares, stock_price, value_of_stock)
         # update the portfolio table
         db.execute("UPDATE portfolio SET total_value_of_stock = ? WHERE (portfolio_user_id = ? AND name = ?)", total_value_of_stock, session["user_id"], stock_name)
 
