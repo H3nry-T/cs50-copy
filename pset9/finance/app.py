@@ -47,7 +47,8 @@ def index():
     # pull out a portfolio table take out the rows and template it into the html
     portfolio_rows = db.execute("SELECT * FROM portfolio WHERE portfolio_user_id = ?", session["user_id"])
     user_cash_rows = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-    return render_template("index.html", portfolio_rows = portfolio_rows, user_cash_rows = user_cash_rows["cash"])
+    user_cash_balance = round(float(user_cash_rows[0]["cash"]), 2)
+    return render_template("index.html", portfolio_rows = portfolio_rows, user_cash_balance = usd(user_cash_balance))
 
 
 @app.route("/buy", methods=["GET", "POST"])
