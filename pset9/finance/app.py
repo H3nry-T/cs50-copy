@@ -118,8 +118,11 @@ def quote():
 
     elif request.method == "POST":
         symbol_given = request.form.get("symbol")
-        lookup(symbol_given)
-        
+        symbol_parse = lookup(symbol_given)
+        stock_name = symbol_parse["name"]
+        stock_symbol =symbol_parse["symbol"]
+        stock_price =symbol_parse["price"]
+        return
 
 
 
