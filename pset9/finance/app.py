@@ -129,7 +129,7 @@ def register():
             return apology("please type in a username")
 
         array_of_usernames = db.execute("SELECT username FROM users WHERE username = ?", username_given)
-        if not array_of_usernames[0][username_given]:
+        if not array_of_usernames[0].get(username_given, 0):
             return apology("username exists")
 
         if password_given == confirm_pass:
