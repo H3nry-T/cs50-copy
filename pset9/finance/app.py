@@ -113,7 +113,7 @@ def buy():
         #take value_of_stock from transaction history; adding it up cumulatively
         new_value_row = db.execute("SELECT value_of_stock FROM history WHERE history_user_id = ? AND name = ?", session["user_id"], stock_name)
         old_value_row = db.execute("SELECT total_value_of_stock FROM portfolio WHERE portfolio_user_id = ? AND symbol = ?", session["user_id"], stock_symbol)
-        total_value_of_stock = old_value_row[0]
+        total_value_of_stock = old_value_row[1]
 
         for stock in new_value_row:
             total_value_of_stock += stock["value_of_stock"]
