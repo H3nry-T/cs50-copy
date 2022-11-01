@@ -127,7 +127,7 @@ def buy():
         db.execute("INSERT INTO history (history_user_id, name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], stock_name, stock_symbol, stock_shares, stock_price, value_of_stock)
 
         # insert new stocks into portfolio
-        if not db.execute("SELECT symbol FROM portfolio WHERE symbol = ?", stock_symbol):
+        if not db.execute("SELECT symbol FROM portfolio WHERE portfolio_user_id = ?", session["user_id"]):
             db.execute("INSERT INTO portfolio (portfolio_user_id, name, symbol, shares, price) VALUES (?, ?, ?, ?, ?)", session["user_id"], stock_name, stock_symbol, stock_shares, stock_price)
 
         #take value_of_stock, shares from transaction history; adding it up cumulatively
