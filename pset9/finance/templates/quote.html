@@ -2,6 +2,8 @@
 
 {% block main %}
     <form action="/quote" method="post">
-        <input name="quote" type="text" placeholder="quote" autofocus 
+        <div mb-3>
+            <input class="form-control mx-auto w-auto" name="quote" type="text" placeholder="quote" autofocus>
+        </div>
     </form>
 {% endblock %}
