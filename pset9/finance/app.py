@@ -128,12 +128,13 @@ def register():
         if password == confirm_pass and username:
             hashed_password = generate_password_hash(password)
             db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username, hashed_password)
+            return render_template("login.html" )
         else:
             return apology("Probelmo with register")
 
 
-
-    return render_template("register.html")
+    elif request.method == "GET":
+        return render_template("register.html")
 
 
 @app.route("/sell", methods=["GET", "POST"])
