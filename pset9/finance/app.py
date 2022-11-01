@@ -88,6 +88,9 @@ def buy():
         if (user_cash - value_of_stock) < 0:
             return apology("Too many shares are bought")
 
+        cash_left = user_cash - value_of_stock
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_left, session["user_id"])
+
         db.execute("INSERT INTO portfolio (name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?)", stock_name, stock_symbol, stock_shares, stock_price, value_of_stock)
         return redirect("/")
 
