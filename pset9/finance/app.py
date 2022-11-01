@@ -128,7 +128,7 @@ def register():
         if password == confirm_pass and username:
             hashed_password = generate_password_hash(password)
             db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username, hashed_password)
-            return render_template("login.html" )
+            return render_template("login.html")
         else:
             return apology("Probelmo with register")
 
@@ -142,5 +142,3 @@ def register():
 def sell():
     """Sell shares of stock"""
     return apology("TODO")
-
-# export API_KEY=pk_bb7d420e0bb44e9ab4dc4ea94505f472
