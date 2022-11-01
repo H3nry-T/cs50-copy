@@ -16,14 +16,15 @@
             </tr>
         </thead>
         <tbody>
-            {% for }
+            {% for dict in portfolio_rows %}
             <tr>
-                <td class="text-start"></td>
-                <td class="text-start"></td>
+                <td class="text-start">{{dict.symbol}}</td>
+                <td class="text-start">dict.name</td>
                 <td class="text-end"></td>
                 <td class="text-end"></td>
                 <td class="text-end"></td>
             </tr>
+            {% endfor %}
         </tbody>
     </table>
 {% endblock %}
