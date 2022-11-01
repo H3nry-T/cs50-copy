@@ -128,7 +128,7 @@ def register():
         if not username:
             return apology("please type in a username")
 
-        array_of_usernames = db.execute("SELECT username FROM users WHERE ? = username", username)
+        array_of_usernames = db.execute("SELECT username FROM users")
         if array_of_usernames[0]["username"] != username:
             return apology("username exists")
 
