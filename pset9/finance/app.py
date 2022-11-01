@@ -252,5 +252,6 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    
+    if request.method == "GET":
+        return render_template(")
     return apology("/sell in progress")
