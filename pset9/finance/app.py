@@ -53,6 +53,7 @@ def index():
     total_starting_cash = 0
     for dict in portfolio_rows:
         total_starting_cash += float(dict["total_value_of_stock"])
+    total_starting_cash + 
 
     return render_template("index.html", portfolio_rows = portfolio_rows, user_cash_balance = usd(user_cash_balance), total_starting_cash = total_starting_cash)
 
