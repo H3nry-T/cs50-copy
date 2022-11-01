@@ -115,7 +115,7 @@ def buy():
         total_value_of_stock = new_value_row[0]["value_of_stock"]
 
         # insert user id into the portfolio table (recognise the user's portfolio)
-        if db.execute("SELECT * FROM portfolio"):
+        if not db.execute("SELECT * FROM portfolio"):
             db.execute(""" INSERT INTO portfolio (
                 portfolio_user_id,
                 name,
@@ -124,9 +124,9 @@ def buy():
                 price,
                 total_value_of_stock
             )
-            VALUES (?, ?, ?, ?, ?)""")
+            VALUES (?, ?, ?, ?, ?)""", session["user_id"], stock_name, stock_symbol, stock_shares, stock_price, value_of_stock)
         # update the portfolio table
-        db.execute("SELECT * FROM portfolio WHERE portfolio_user_id = ? AND stock_name = ?, session_)
+        db.execute("UPDATE portfolio SET total_value_of_stock = ? WHERE (portfolio_user_id = ? AND stock_name = ?)")
 
         return redirect("/")
 
