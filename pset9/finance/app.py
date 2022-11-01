@@ -77,8 +77,8 @@ def buy():
             return apology("invalid symbol")
 
         db.execute('''CREATE TABLE IF NOT EXISTS history (
-                history_user_id INTEGER PRIMARY KEY,
-                history_id INTEGER NOT NULL,
+                history_user_id INTEGER NOT NULL,
+                history_id INTEGER PRIMARY KEY,
                 name TEXT NOT NULL,
                 symbol TEXT NOT NULL,
                 shares INTEGER NOT NULL,
@@ -87,8 +87,8 @@ def buy():
             ); ''')
 
         db.execute('''CREATE TABLE IF NOT EXISTS portfolio (
-                portfolio_user_id INTEGER PRIMARY KEY,
-                portfolio_id INTEGER NOT NULL,
+                portfolio_user_id INTEGER NOT NULL,
+                portfolio_id INTEGER PRIMARY KEY,
                 name TEXT NOT NULL,
                 symbol TEXT NOT NULL,
                 shares INTEGER NOT NULL,
@@ -112,7 +112,9 @@ def buy():
 
 
         # update the portfolio table
-        db.execute("UPDATE portfolio SET stock_value = ? WHERE portfolio_user_id = )
+        db.execute('''UPDATE portfolio
+        JOIN users ON portfolio_user_id = user_id
+        SET value_of_stock''')
 
         return redirect("/")
 
