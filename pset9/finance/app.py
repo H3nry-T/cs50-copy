@@ -64,12 +64,12 @@ def buy():
             stock_name = symbol_parse["name"]
             stock_symbol = symbol_parse["symbol"]
             stock_price = usd(symbol_parse["price"])
-            db.execute(CREATE TABLE [IF NOT EXISTS] [schema_name].table_name (
+            db.execute('''CREATE TABLE [IF NOT EXISTS] [schema_name].table_name (
             column_1 data_type PRIMARY KEY,
             column_2 data_type NOT NULL,
             column_3 data_type DEFAULT 0,
             table_constraints
-        ) [WITHOUT ROWID];)
+        ) ''')
         except:
             return apology("invalid symbol")
 
