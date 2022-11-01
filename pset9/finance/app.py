@@ -118,14 +118,17 @@ def quote():
 
     elif request.method == "POST":
         if not request.form.get("symbol"):
-            apology("symbol required")
+            return apology("symbol required")
+        try:
+            symbol_given = request.form.get("symbol")
+            symbol_parse = lookup(symbol_given)
+            stock_name = symbol_parse["name"]
+            stock_symbol =symbol_parse["symbol"]
+            stock_price =symbol_parse["price"]
+        except:
+            return apology("invalid symbol")
 
-        symbol_given = request.form.get("symbol")
-        symbol_parse = lookup(symbol_given)
-        stock_name = symbol_parse["name"]
-        stock_symbol =symbol_parse["symbol"]
-        stock_price =symbol_parse["price"]
-        return render_template(")
+        return render_template()
 
 
 
