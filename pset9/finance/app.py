@@ -115,12 +115,15 @@ def buy():
             db.execute("INSERT INTO portfolio (portfolio_user_id, name, symbol, shares, price) VALUES (?, ?, ?, ?, ?)", session["user_id"], stock_name, stock_symbol, stock_shares, stock_price)
 
         #take value_of_stock, shares from transaction history; adding it up cumulatively
-        old_value_row = db.execute("SELECT value_of_stock FROM history WHERE history_user_id = ? AND symbol = ?", session["user_id"], stock_symbol)
-        total_value_of_stock = 0
+        old_value_row = db.execute("SELECT SUM(value_of_stock) AS sum_value FROM history WHERE history_user_id = ? AND symbol = ?", session["user_id"], stock_symbol)
+        old_shares_row = db.execute("SELECT SUM(shares) AS sum_shares FROM history WHERE history_user_id = ? AND symbol = ?", session["user_id"], stock_symbol)
+
+        total_value_of_stock = old_value_row[0]["sum_value"]
+        total_shares_of_stock = old_shares_row[0]["sum_shares"]
 
 
         # update the portfolio table
-        db.execute("UPDATE portfolio SET total_value_of_stock = ? WHERE (portfolio_user_id = ? AND name = ?)", total_value_of_stock, session["user_id"], stock_name)
+        db.execute("UPDATE portfolio SET total_value_of_stock = ?, shares = ? WHERE (portfolio_user_id = ? AND name = ?)", total_value_of_stock, total_shares_of_stock, session["user_id"], stock_name)
 
         return redirect("/")
 
