@@ -123,8 +123,8 @@ def quote():
             symbol_given = request.form.get("symbol")
             symbol_parse = lookup(symbol_given)
             stock_name = symbol_parse["name"]
-            stock_symbol =symbol_parse["symbol"]
-            stock_price =usd(symbol_parse["price"])
+            stock_symbol = symbol_parse["symbol"]
+            stock_price = usd(symbol_parse["price"])
             return render_template("quote_info.html", stock_name=stock_name, stock_price=stock_price, stock_symbol=stock_symbol)
         except:
             return apology("invalid symbol")
