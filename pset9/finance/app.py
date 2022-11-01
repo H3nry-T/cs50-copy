@@ -108,7 +108,7 @@ def buy():
         db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_left, session["user_id"])
 
         # insert info into transaction history
-        db.execute("INSERT INTO history (history_user_id, name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?)", session["user_id"], stock_name, stock_symbol, stock_shares, stock_price, value_of_stock)
+        db.execute("INSERT INTO history (history_user_id, name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], stock_name, stock_symbol, stock_shares, stock_price, value_of_stock)
 
         #take value_of_stock from transaction history; adding it up cumulatively
         new_value_row = db.execute("SELECT value_of_stock WHERE history_user_id = ? ORDER BY value_of_stock ASC LIMIT 1")
