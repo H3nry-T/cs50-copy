@@ -125,7 +125,8 @@ def register():
         password = request.form.get("password")
         confirm_pass = request.form.get("confirmation")
 
-    
+    if password == confirm_pass and username :
+
         hashed_password = generate_password_hash(password)
 
 
