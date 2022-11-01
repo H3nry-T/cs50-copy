@@ -125,6 +125,7 @@ def quote():
             stock_name = symbol_parse["name"]
             stock_symbol =symbol_parse["symbol"]
             stock_price =symbol_parse["price"]
+            return render_template("quote_info.html", stock_name=stock_name, stock_price=stock_price, stock_symbol=stock_symbol)
         except:
             return apology("invalid symbol")
 
