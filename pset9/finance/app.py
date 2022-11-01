@@ -45,6 +45,8 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     # pull out a portfolio table take out the rows and template it into the html
+    portfolio_rows = db.execute("SELECT * FROM portfolio WHERE portfolio_user_id = ?", session["user_id"])
+    portfolio_rows[]
     return render_template("index.html", )
 
 
