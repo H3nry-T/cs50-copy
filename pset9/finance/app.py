@@ -65,10 +65,10 @@ def buy():
             stock_symbol = symbol_parse["symbol"]
             stock_price = usd(symbol_parse["price"])
             db.execute('''CREATE TABLE [IF NOT EXISTS] [portfolio].portfolio (
-            id INTEGER PRIMARY KEY,
-            symbol TEXT NOT NULL
-            shares INTEGER NOT NULL
-        ) ''')
+                id INTEGER PRIMARY KEY,
+                symbol TEXT NOT NULL
+                shares INTEGER NOT NULL
+            ) ''')
         except:
             return apology("invalid symbol")
 
