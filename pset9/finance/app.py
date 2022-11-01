@@ -132,13 +132,12 @@ def register():
         if not array_of_usernames[0].get(username_given, 0):
             return apology("username exists")
 
-        if password_given == confirm_pass_given:
-            hashed_password = generate_password_hash(password_given)
-            db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username_given, hashed_password)
-            return render_template("login.html")
-        else:
-            return apology("Probelmo with register")
+        if password_given != confirm_pass_given:
+            return apology("password flopped")
 
+        hashed_password = generate_password_hash(password_given)
+        db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username_given, hashed_password)
+        return render_template("login.html")
 
     elif request.method == "GET":
         return render_template("register.html")
