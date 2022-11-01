@@ -93,7 +93,7 @@ def buy():
                 symbol TEXT NOT NULL,
                 shares INTEGER NOT NULL,
                 price INTEGER NOT NULL,
-                value_of_stock INTEGER NOT NULL
+                total_value_of_stock INTEGER NOT NULL
             ); ''')
 
         # check if user has enough cash to afford stocks
@@ -111,9 +111,12 @@ def buy():
         db.execute("INSERT INTO history (history_user_id, name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?)", session["user_id"], stock_name, stock_symbol, stock_shares, stock_price, value_of_stock)
 
         #take value_of_stock from transaction history; adding it up cumulatively
-        db.execute("SELECT value_of_stock WHERE history_user_id = ? ORDER BY value_of_stock ASC")
+        new_value_row = db.execute("SELECT value_of_stock WHERE history_user_id = ? ORDER BY value_of_stock ASC LIMIT 1")
+        total_value_of_stock = new_value_row[0]["value_of_stock"]
+
+        # insert user id into the portfolio table (recognise the user's portfolio)
         # update the portfolio table
-        if db.execute("SELECT * FROM portfolio WHERE )
+        if db.execute("SELECT * FROM portfolio WHERE portfolio_user_id = ? AND stock_name = ?, session_)
 
         return redirect("/")
 
