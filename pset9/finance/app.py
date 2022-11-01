@@ -52,7 +52,12 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    return apology("/buy in progress")
+    if request.method == "GET":
+        return render_template("buy.html")
+
+    elif request.method == "POST":
+        
+
 
 
 @app.route("/history")
@@ -163,5 +168,5 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    
+
     return apology("/sell in progress")
