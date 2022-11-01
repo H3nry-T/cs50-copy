@@ -123,7 +123,7 @@ def buy():
 
 
         # update the portfolio table
-        db.execute("UPDATE portfolio SET total_value_of_stock = ?, shares = ? WHERE (portfolio_user_id = ? AND name = ?)", total_value_of_stock, total_shares_of_stock, session["user_id"], stock_name)
+        db.execute("UPDATE portfolio SET total_value_of_stock = ?, shares = ? WHERE (portfolio_user_id = ? AND name = ?)", usd(total_value_of_stock), total_shares_of_stock, session["user_id"], stock_name)
 
         return redirect("/")
 
