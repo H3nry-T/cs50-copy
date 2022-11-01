@@ -64,11 +64,19 @@ def buy():
             stock_name = symbol_parse["name"]
             stock_symbol = symbol_parse["symbol"]
             stock_price = usd(symbol_parse["price"])
+            stock_shares = request.form.get("shares")
+
             db.execute('''CREATE TABLE [IF NOT EXISTS] [portfolio].portfolio (
                 id INTEGER PRIMARY KEY,
-                symbol TEXT NOT NULL
-                shares INTEGER NOT NULL
-            ) ''')
+                name TEXT NOT NULL,
+                symbol TEXT NOT NULL,
+                shares INTEGER NOT NULL,
+                price INTEGER NOT NULL,
+                value_of_stock INTEGER NOT NULL
+            ); ''')
+            
+            value_of_stock = stock_price * stock_shares
+            db.execute("INSERT INTO portfolio (name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?)", stock_name, stock_symbol, stock_shares, stock_price, value_of_stock)
         except:
             return apology("invalid symbol")
 
