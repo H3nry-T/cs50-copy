@@ -47,16 +47,19 @@ def index():
     # pull out a portfolio table take out the rows and template it into the html
     portfolio_rows = db.execute("SELECT * FROM portfolio WHERE portfolio_user_id = ?", session["user_id"])
 
-    # formatting to usd string
-    portfolio_rows[0]["total_value_of_stock"] = usd(portfolio_rows[0]["total_value_of_stock"])
-    portfolio_rows[0]["price"] = usd(portfolio_rows[0]["price"])
     user_cash_rows = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
     user_cash_balance = round(float(user_cash_rows[0]["cash"]), 2)
 
+    # summing up
     total_starting_cash = 0
     for dict in portfolio_rows:
         total_starting_cash += float(dict["total_value_of_stock"])
     total_starting_cash += user_cash_balance
+
+    # formatting to usd string
+    for dict in portfolio_rows:
+        dict["price"] = usd(dict["price"])
+        dict["total_value_of_stock"] = usd(dict["total_value_of_stock"])
 
     return render_template("index.html", portfolio_rows = portfolio_rows, user_cash_balance = usd(user_cash_balance), total_starting_cash = usd(total_starting_cash))
 
