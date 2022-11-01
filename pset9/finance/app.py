@@ -134,7 +134,7 @@ def register():
                 return apology("username exists")
         except:
             if password_given != confirm_pass_given:
-                return apology("password flopped")
+                return apology("Confirmed password doesn't match")
 
 
         hashed_password = generate_password_hash(password_given)
