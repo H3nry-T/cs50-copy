@@ -72,7 +72,7 @@ def buy():
         except:
             return apology("invalid symbol")
 
-        db.execute('''CREATE TABLE [IF NOT EXISTS] portfolio (
+        db.execute('''CREATE TABLE IF NOT EXISTS portfolio (
                 id INTEGER PRIMARY KEY,
                 name TEXT NOT NULL,
                 symbol TEXT NOT NULL,
