@@ -129,11 +129,13 @@ def register():
             return apology("please type in a username")
 
         array_of_usernames = db.execute("SELECT username FROM users WHERE username = ?", username_given)
-        if not array_of_usernames[0].get(username_given, 0):
-            return apology("username exists")
+        try:
+            if not array_of_usernames[0].get(username_given, 0):
+                return apology("username exists")
+        except:
+            if password_given != confirm_pass_given:
+                return apology("password flopped")
 
-        if password_given != confirm_pass_given:
-            return apology("password flopped")
 
         hashed_password = generate_password_hash(password_given)
         db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username_given, hashed_password)
