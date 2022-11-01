@@ -83,7 +83,7 @@ def buy():
                 symbol TEXT NOT NULL,
                 shares INTEGER NOT NULL,
                 price INTEGER NOT NULL,
-                value_of_stock INTEGER NOT NULL
+                value_of_stock NUMERIC NOT NULL
             ); ''')
 
         db.execute('''CREATE TABLE IF NOT EXISTS portfolio (
@@ -93,7 +93,7 @@ def buy():
                 symbol TEXT NOT NULL,
                 shares INTEGER NOT NULL,
                 price INTEGER NOT NULL,
-                total_value_of_stock INTEGER NOT NULL DEFAULT 0
+                total_value_of_stock NUMERIC NOT NULL DEFAULT 0
             ); ''')
 
         # check if user has enough cash to afford stocks
@@ -111,7 +111,7 @@ def buy():
         db.execute("INSERT INTO history (history_user_id, name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], stock_name, stock_symbol, stock_shares, stock_price, value_of_stock)
 
         #take value_of_stock from transaction history; adding it up cumulatively
-        new_value_row = db.execute("SELECT value_of_stock FROM history WHERE history_user_id = ? AND name = ?", session["user_id"])
+        new_value_row = db.execute("SELECT value_of_stock FROM history WHERE history_user_id = ? AND name = ?", session["user_id"], )
         total_value_of_stock = 0
         total_value_of_stock += new_value_row[0]["value_of_stock"]
 
