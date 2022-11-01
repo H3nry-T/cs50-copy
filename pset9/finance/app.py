@@ -69,20 +69,27 @@ def buy():
             stock_price = usd(symbol_parse["price"])
             stock_shares = request.form.get("shares")
 
-            db.execute('''CREATE TABLE [IF NOT EXISTS] [portfolio].portfolio (id INTEGER PRIMARY KEY, name TEXT NOT NULL, symbol TEXT NOT NULL, shares INTEGER NOT NULL, price INTEGER NOT NULL, value_of_stock INTEGER NOT NULL); ''')
-
-            # check if user has enough cash to afford stocks
-            value_of_stock = stock_price * stock_shares
-            users_rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
-            user_cash = users_rows[0]["cash"]
-            if (usercash - value_of_stock) < 0:
-                return apology("Too many shares are bought")
-
-            db.execute("INSERT INTO portfolio (name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?)", stock_name, stock_symbol, stock_shares, stock_price, value_of_stock)
-            return redirect("/")
         except:
             return apology("invalid symbol")
 
+        db.execute('''CREATE TABLE [IF NOT EXISTS] portfolio (
+                id INTEGER PRIMARY KEY,
+                name TEXT NOT NULL,
+                symbol TEXT NOT NULL,
+                shares INTEGER NOT NULL,
+                price INTEGER NOT NULL,
+                value_of_stock INTEGER NOT NULL
+            ); ''')
+
+        # check if user has enough cash to afford stocks
+        value_of_stock = stock_price * stock_shares
+        users_rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
+        user_cash = users_rows[0]["cash"]
+        if (usercash - value_of_stock) < 0:
+            return apology("Too many shares are bought")
+
+        db.execute("INSERT INTO portfolio (name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?)", stock_name, stock_symbol, stock_shares, stock_price, value_of_stock)
+        return redirect("/")
 
 
 @app.route("/history")
