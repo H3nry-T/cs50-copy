@@ -77,6 +77,7 @@ def buy():
             return apology("invalid symbol")
 
         db.execute('''CREATE TABLE IF NOT EXISTS history (
+                history_user_id INTEGER PRIMARY KEY,
                 history_id INTEGER NOT NULL,
                 name TEXT NOT NULL,
                 symbol TEXT NOT NULL,
@@ -86,13 +87,15 @@ def buy():
             ); ''')
 
         db.execute('''CREATE TABLE IF NOT EXISTS portfolio (
-                portfolio_id INTEGER PRIMARY KEY,
+                portfolio_user_id INTEGER PRIMARY KEY,
+                portfolio_id INTEGER NOT NULL,
                 name TEXT NOT NULL,
                 symbol TEXT NOT NULL,
                 shares INTEGER NOT NULL,
                 price INTEGER NOT NULL,
                 value_of_stock INTEGER NOT NULL
             ); ''')
+
         # check if user has enough cash to afford stocks
         value_of_stock = symbol_parse["price"] * float(stock_shares)
         users_rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
@@ -109,9 +112,7 @@ def buy():
 
 
         # update the portfolio table
-        # portfolio_rows = db.execute("SELECT value_of_stock FROM portfolio WHERE name = ?", stock_name)
-        # new_value_of_stock = portfolio_rows[0]["value_of_stock"] - value_of_stock
-        # db.execute("UPDATE portfolio SET value_of_stock = ? WHERE name = ?", new_value_of_stock, stock_name)
+        db.execute("UPDATE portfolio SET stock_value = ? WHERE portfolio_user_id = )
 
         return redirect("/")
 
