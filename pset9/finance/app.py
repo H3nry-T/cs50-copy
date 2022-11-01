@@ -117,8 +117,6 @@ def buy():
         old_value_row = db.execute("SELECT total_value_of_stock FROM portfolio WHERE portfolio_user_id = ? AND symbol = ?", session["user_id"], stock_symbol)
         total_value_of_stock = 0
 
-        for stock in new_value_row:
-            total_value_of_stock += stock["value_of_stock"]
 
         # update the portfolio table
         db.execute("UPDATE portfolio SET total_value_of_stock = ? WHERE (portfolio_user_id = ? AND name = ?)", total_value_of_stock, session["user_id"], stock_name)
