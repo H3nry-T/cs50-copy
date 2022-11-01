@@ -19,10 +19,10 @@
             {% for dict in portfolio_rows %}
             <tr>
                 <td class="text-start">{{dict.symbol}}</td>
-                <td class="text-start">dict.name</td>
-                <td class="text-end"></td>
-                <td class="text-end"></td>
-                <td class="text-end"></td>
+                <td class="text-start">{{dict.name}}</td>
+                <td class="text-end">{{dict.shares}}</td>
+                <td class="text-end">{{dict.price}}</td>
+                <td class="text-end">{{dict.total_value_of_stock}}</td>
             </tr>
             {% endfor %}
         </tbody>
