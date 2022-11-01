@@ -44,7 +44,7 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    
+    # pull out a portfolio table take out the rows and template it into the html
     return render_template("index.html", )
 
 
@@ -85,6 +85,14 @@ def buy():
                 value_of_stock INTEGER NOT NULL
             ); ''')
 
+        db.execute('''CREATE TABLE IF NOT EXISTS portfolio (
+                portfolio_id INTEGER PRIMARY KEY,
+                name TEXT NOT NULL,
+                symbol TEXT NOT NULL,
+                shares INTEGER NOT NULL,
+                price INTEGER NOT NULL,
+                value_of_stock INTEGER NOT NULL
+            ); ''')
         # check if user has enough cash to afford stocks
         value_of_stock = symbol_parse["price"] * float(stock_shares)
         users_rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
