@@ -107,6 +107,7 @@ def buy():
         # insert info into transaction history
         db.execute("INSERT INTO history (name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?)", stock_name, stock_symbol, stock_shares, stock_price, value_of_stock)
 
+        
         # update the portfolio table
         # portfolio_rows = db.execute("SELECT value_of_stock FROM portfolio WHERE name = ?", stock_name)
         # new_value_of_stock = portfolio_rows[0]["value_of_stock"] - value_of_stock
