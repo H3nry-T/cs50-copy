@@ -108,7 +108,9 @@ def buy():
         db.execute("INSERT INTO history (name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?)", stock_name, stock_symbol, stock_shares, stock_price, value_of_stock)
 
         # update the portfolio table
-        db.execute("UPDATE portfolio SET value_of_stock = ? WHERE name = ?", stock_name)
+        portfolio_rows = db.execute("SELECT value_of_stock FROM portfolio WHERE )
+        new_value_of_stock = value_of_stock
+        db.execute("UPDATE portfolio SET value_of_stock = ? WHERE name = ?", value_of_stock, stock_name)
 
         return redirect("/")
 
