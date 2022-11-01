@@ -125,7 +125,10 @@ def register():
         password = request.form.get("password")
         confirm_pass = request.form.get("confirmation")
 
-        if password == confirm_pass and not username:
+        if username is None:
+            return apology("please type in a username")
+
+        if password == confirm_pass:
             hashed_password = generate_password_hash(password)
             db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username, hashed_password)
             return render_template("login.html")
