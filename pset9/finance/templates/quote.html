@@ -2,8 +2,10 @@
 
 {% block main %}
     <form action="/quote" method="post">
-        <div mb-3>
-            <input class="form-control mx-auto w-auto" name="quote" type="text" placeholder="quote" autofocus>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="symbol" type="text" placeholder="symbol" autocomplete="off" autofocus>
         </div>
+
+        <button class="btn btn-primary" type="submit">Quote</button>
     </form>
 {% endblock %}
