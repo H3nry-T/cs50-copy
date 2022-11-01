@@ -63,20 +63,13 @@ def buy():
             # take all info from json parse
             symbol_given = request.form.get("symbol")
             symbol_parse = lookup(symbol_given)
-            
+
             stock_name = symbol_parse["name"]
             stock_symbol = symbol_parse["symbol"]
             stock_price = usd(symbol_parse["price"])
             stock_shares = request.form.get("shares")
 
-            db.execute('''CREATE TABLE [IF NOT EXISTS] [portfolio].portfolio (
-                id INTEGER PRIMARY KEY,
-                name TEXT NOT NULL,
-                symbol TEXT NOT NULL,
-                shares INTEGER NOT NULL,
-                price INTEGER NOT NULL,
-                value_of_stock INTEGER NOT NULL
-            ); ''')
+            db.execute('''CREATE TABLE [IF NOT EXISTS] [portfolio].portfolio (id INTEGER PRIMARY KEY, name TEXT NOT NULL, symbol TEXT NOT NULL, shares INTEGER NOT NULL, price INTEGER NOT NULL, value_of_stock INTEGER NOT NULL); ''')
 
             # check if user has enough cash to afford stocks
             value_of_stock = stock_price * stock_shares
