@@ -112,9 +112,7 @@ def buy():
 
 
         # update the portfolio table
-        db.execute('''UPDATE portfolio
-        JOIN users ON portfolio_user_id = user_id
-        SET value_of_stock''')
+        db.execute()
 
         return redirect("/")
 
