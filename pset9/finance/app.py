@@ -56,7 +56,8 @@ def buy():
         return render_template("buy.html")
 
     elif request.method == "POST":
-        
+        if request.form.get("")
+
 
 
 
