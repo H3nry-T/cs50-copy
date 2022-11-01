@@ -132,8 +132,8 @@ def register():
         if not array_of_usernames[0][username_given]:
             return apology("username exists")
 
-        if password == confirm_pass:
-            hashed_password = generate_password_hash(password)
+        if password_given == confirm_pass:
+            hashed_password = generate_password_hash(password_given)
             db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username_given, hashed_password)
             return render_template("login.html")
         else:
