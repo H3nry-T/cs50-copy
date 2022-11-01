@@ -82,7 +82,7 @@ def buy():
             ); ''')
 
         # check if user has enough cash to afford stocks
-        value_of_stock = symbol_parse["price"] * float(stock_shares
+        value_of_stock = symbol_parse["price"] * float(stock_shares)
         users_rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
         user_cash = users_rows[0]["cash"]
         if (user_cash - value_of_stock) < 0:
