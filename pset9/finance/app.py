@@ -125,7 +125,7 @@ def register():
         password = request.form.get("password")
         confirm_pass = request.form.get("confirmation")
 
-        if username is None:
+        if username:
             return apology("please type in a username")
 
         if password == confirm_pass:
