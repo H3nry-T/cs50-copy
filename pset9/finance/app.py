@@ -93,7 +93,7 @@ def buy():
                 symbol TEXT NOT NULL,
                 shares INTEGER NOT NULL,
                 price INTEGER NOT NULL,
-                total_value_of_stock INTEGER NOT NULL
+                total_value_of_stock INTEGER NOT NULL DEFAULT 0
             ); ''')
 
         # check if user has enough cash to afford stocks
