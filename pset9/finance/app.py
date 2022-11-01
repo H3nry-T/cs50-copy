@@ -121,16 +121,16 @@ def register():
     """Register user"""
 
     if request.method == "POST":
-        username = request.form.get("username")
-        password = request.form.get("password")
-        confirm_pass = request.form.get("confirmation")
+        username_given = request.form.get("username")
+        password_given = request.form.get("password")
+        confirm_pass_given = request.form.get("confirmation")
 
-        if not username:
+        if not username_given:
             return apology("please type in a username")
 
-        array_of_usernames = db.execute("SELECT username FROM users WHERE username = ?", username)
-        if not array_of_usernames[0][username]:
-            return apology("username exists") 
+        array_of_usernames = db.execute("SELECT username FROM users WHERE username = ?", username_given)
+        if not array_of_usernames[0][username_given]:
+            return apology("username exists")
 
         if password == confirm_pass:
             hashed_password = generate_password_hash(password)
