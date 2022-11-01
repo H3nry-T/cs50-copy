@@ -128,8 +128,8 @@ def register():
         if not username:
             return apology("please type in a username")
 
-        array_of_usernames = db.execute("SELECT username FROM users")
-        for 
+        array_of_usernames = db.execute("SELECT username FROM users WHERE ? = username")
+
 
         if password == confirm_pass:
             hashed_password = generate_password_hash(password)
