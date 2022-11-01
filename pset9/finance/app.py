@@ -44,17 +44,15 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    if request.method == "GET":
-        return apology("coming soon")
     # pull out a portfolio table take out the rows and template it into the html
     portfolio_rows = db.execute("SELECT * FROM portfolio WHERE portfolio_user_id = ?", session["user_id"])
 
     user_cash_rows = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
     user_cash_balance = round(float(user_cash_rows[0]["cash"]), 2)
 
-    # total_starting_cash = 0
-    # for dict in portfolio_rows:
-    #     total_starting_cash += float(dict["total_value_of_stock"])
+    total_starting_cash = 0
+    for dict in portfolio_rows:
+        total_starting_cash += float(dict["total_value_of_stock"])
 
     return render_template("index.html", portfolio_rows = portfolio_rows, user_cash_balance = usd(user_cash_balance), total_starting_cash = total_starting_cash)
 
