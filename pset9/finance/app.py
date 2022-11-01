@@ -112,7 +112,7 @@ def buy():
 
 
         # update the portfolio table
-        db.execute()
+        if db.execute("SELECT )
 
         return redirect("/")
 
