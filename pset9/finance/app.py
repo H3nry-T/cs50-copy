@@ -125,7 +125,7 @@ def register():
         password_given = request.form.get("password")
         confirm_pass_given = request.form.get("confirmation")
 
-        if not username_given:
+        if not username_given or not password_given:
             return apology("please type in a username")
 
         array_of_usernames = db.execute("SELECT username FROM users WHERE username = ?", username_given)
