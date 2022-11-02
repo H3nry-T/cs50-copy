@@ -259,6 +259,8 @@ def sell():
         return render_template("sell.html", portfolio_rows = portfolio_rows)
 
     elif request.method == "POST":
+        # get number of shares and stock ticker symbol
+        symbol = request.form.get("symbol") 
         # check for negative numbers and numbers out of range of shares available
         if request.form.get("shares") < 0:
             return apology("cannot sell negative shares")
