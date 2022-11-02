@@ -274,7 +274,7 @@ def sell():
         symbol_parse = lookup(symbol_given)
         current_stock_price = symbol_parse["price"]
         stock_name = dict_of_stock_info["name"]
-
+        value_of_stock = int(shares_given) * 
 
         # check for negative numbers and numbers out of range of shares available
         if int(shares_given) < 0:
@@ -283,7 +283,7 @@ def sell():
             return apology("too many shares bro")
 
         # update history table of the user
-        db.execute("INSERT INTO history (history_user_id, name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], stock_name, symbol_given, -shares_given, current_price, value_of_stock)
+        db.execute("INSERT INTO history (history_user_id, name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], stock_name, symbol_given, -shares_given, current_stock_price, value_of_stock)
         # update the portfolio of the user
         current_price
         return redirect("/")
