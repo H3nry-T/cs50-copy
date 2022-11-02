@@ -270,9 +270,9 @@ def sell():
         dict_of_stock_info = list_of_dict_search(symbol_given, portfolio_rows)
 
         # check for negative numbers and numbers out of range of shares available
-        if shares_given < 0:
+        if int(shares_given) < 0:
             return apology("cannot sell negative shares")
-        elif shares_given > dict_of_stock_info["shares"]:
+        elif int(shares_given) > dict_of_stock_info["shares"]:
             return apology("too many shares bro")
-
+        
         return redirect("/")
