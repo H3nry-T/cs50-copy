@@ -8,7 +8,9 @@
                 <optgroup label="Ticker Symbols">
                     <option disabled selected value="">Symbol</option>
                     <!-- option for ticker symbols, select through the portfolio of some kind :)  -->
-
+                    {% for dict in portfolio_rows %}
+                        <option value="{{dict[symbol}}">{{dict[symbol]}}</option>
+                    {% endfor %}
                 </optgroup>
             </select>
         </div>
@@ -16,7 +18,7 @@
         <div class="mb-3">
             <input class="form-control mx-auto w-auto" min="0" type="number" placeholder="Shares" autocomplete="off">
         </div>
-        
+
         <div class="w-auto mx-auto">
             <button class="btn btn-primary" type="submit">Sell</button>
         </div>
