@@ -3,13 +3,20 @@
 {% block main %}
     <form action="/sell" method="post">
         <div class="mb-3 mx-auto w-auto">
-            <label for="ticker"> Select your stock: </label>
+            <label class="mb-3" for="ticker"> Select your stock: </label>
             <select class="ticker form-select mx-auto w-auto">
                 <optgroup label="Ticker Symbols">
-                    <option deselect value="yourmom"> your mom </option>
+                    <option disabled selected value="">Symbol</option>
+
 
                 </optgroup>
             </select>
+        </div>
+        <div class="w-auto mb-3">
+            <input min="0" type="number" placeholder="Shares" autocomplete="off">
+        </div>
+        <div class="w-auto mx-auto">
+            <button class="btn btn-primary" type="submit">Sell</button>
         </div>
     </form>
 {% endblock %}
