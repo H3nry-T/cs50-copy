@@ -71,11 +71,9 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
+
     if request.method == "GET":
         return render_template("buy.html")
-
-
-
 
     elif request.method == "POST":
         # validate symbol, shares, fractional shares, negative shares
