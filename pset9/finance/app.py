@@ -280,7 +280,7 @@ def sell():
             return apology("too many shares bro")
 
         # update history table of the user
-        
+        db.execute
         # update the portfolio of the user
         current_price
         return redirect("/")
