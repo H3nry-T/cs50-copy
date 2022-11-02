@@ -274,5 +274,6 @@ def sell():
             return apology("cannot sell negative shares")
         elif int(shares_given) > dict_of_stock_info["shares"]:
             return apology("too many shares bro")
-        
+
+        current_price
         return redirect("/")
