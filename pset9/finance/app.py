@@ -261,7 +261,7 @@ def sell():
 
     elif request.method == "POST":
         # check for negative numbers and numbers out of range of shares available
-
+        return apology("cannot sell yet")
 
 
     return apology("/sell in progress")

@@ -6,10 +6,10 @@
             <label class="mb-3" for="ticker"> Select your stock: </label>
             <select class="ticker form-select mx-auto w-auto">
                 <optgroup label="Ticker Symbols">
-                    <option disabled selected value="">Symbol</option>
+                    <option disabled selected value="">Select</option>
                     <!-- option for ticker symbols, select through the portfolio of some kind :)  -->
                     {% for dict in portfolio_rows %}
-                        <option value="{{dict[symbol}}">{{dict[symbol]}}</option>
+                        <option value="{{dict.symbol}}">{{dict.symbol}}</option>
                     {% endfor %}
                 </optgroup>
             </select>
