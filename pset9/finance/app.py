@@ -71,17 +71,17 @@ def buy():
     if request.method == "GET":
         return render_template("buy.html")
 
-    # check number of shares for existance and for fractional
-    if not request.form.get("shares"):
-        return apology("missing shares")
-    if request.form.get("shares") % 1 != 0:
-        return apology("shares cannot be fractional")
 
 
 
     elif request.method == "POST":
         # validate symbol
-        if not request.form.get("symbol"):
+        # check number of shares for existance and for fractional
+        if not request.form.get("shares"):
+            return apology("missing shares")
+        elif request.form.get("shares") % 1 != 0:
+            return apology("shares cannot be fractional")
+        elif not request.form.get("symbol"):
             return apology("symbol required")
         try:
             # take all info from json parse
