@@ -260,4 +260,7 @@ def sell():
 
     elif request.method == "POST":
         # check for negative numbers and numbers out of range of shares available
+        if request.form.get("shares") < 0:
+            return apology("cannot sell negative shares")
+        else request.form.get("shares") > portfolio_rows[]
         return redirect("/")
