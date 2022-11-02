@@ -269,10 +269,11 @@ def sell():
 
         # search the specific dictionary of the given stock
         dict_of_stock_info = list_of_dict_search(symbol_given, portfolio_rows)
-        
+
         # up to date info on stock selection
         symbol_parse = lookup(symbol_given)
         current_price = symbol_parse["price"]
+        stock_name = dict_of_stock_info["name"]
 
 
         # check for negative numbers and numbers out of range of shares available
@@ -282,7 +283,7 @@ def sell():
             return apology("too many shares bro")
 
         # update history table of the user
-        db.execute("INSERT INTO history (history_user_id, name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], stock_name, stock_symbol, stock_shares, stock_price, value_of_stock)
+        db.execute("INSERT INTO history (history_user_id, name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], stock_name, symbol_given, stock_shares, stock_price, value_of_stock)
         # update the portfolio of the user
         current_price
         return redirect("/")
