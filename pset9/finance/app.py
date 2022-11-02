@@ -298,5 +298,5 @@ def sell():
         db.execute("UPDATE portfolio SET total_value_of_stock = ?, shares = ? WHERE (portfolio_user_id = ? AND name = ?)", total_value_of_stock, total_shares_of_stock, session["user_id"], stock_name)
 
         cash_balance = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-        updated_cash_balance = cash_balance[0]["cash"] - 
+        updated_cash_balance = cash_balance[0]["cash"] + value_of_stock
         return redirect("/")
