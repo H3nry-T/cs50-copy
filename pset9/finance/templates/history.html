@@ -12,7 +12,15 @@
         </tr>
     </thead>
     <tbody>
-        
+        {% for dict in history_rows %}
+            <tr>
+                <td>{{dict.symbol}}</td>
+                <td>{{dict.shares}}</td>
+                <td>{{dict.price}}</td>
+                <td>{{dict.total_value_of_stock}}</td>
+            </tr>
+        {% endfor %}
     </tbody>
+    
 </table>
 {% endblock %}
