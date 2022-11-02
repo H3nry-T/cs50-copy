@@ -256,7 +256,7 @@ def sell():
         for dict in rows:
             if dict["symbol"] == symbol:
                 return dict
-                
+
     portfolio_rows = db.execute("SELECT * FROM portfolio WHERE portfolio_user_id = ?", session["user_id"])
 
     if request.method == "GET":
@@ -266,8 +266,13 @@ def sell():
         # get number of shares and stock ticker symbol
         symbol_given = request.form.get("symbol")
         shares_given = request.form.get("shares")
+
+        dict_of_stock_info = list_of_dict_search(symbol_given, portfolio_rows)
+
         # check for negative numbers and numbers out of range of shares available
-        if request.form.get("shares") < 0:
+        if shares_given < 0:
             return apology("cannot sell negative shares")
-        else request.form.get("shares") > portfolio_rows[]
+        else shares_given > dict_of_stock_info["shares"]
+            return apology("too many shares bro")
+            
         return redirect("/")
