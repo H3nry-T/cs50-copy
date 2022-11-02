@@ -252,7 +252,11 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-
+    def list_of_dict_search(symbol, rows):
+        for dict in rows:
+            if dict["symbol"] == symbol:
+                return dict
+                
     portfolio_rows = db.execute("SELECT * FROM portfolio WHERE portfolio_user_id = ?", session["user_id"])
 
     if request.method == "GET":
