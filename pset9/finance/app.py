@@ -272,7 +272,7 @@ def sell():
         # check for negative numbers and numbers out of range of shares available
         if shares_given < 0:
             return apology("cannot sell negative shares")
-        else shares_given > dict_of_stock_info["shares"]
+        elif shares_given > dict_of_stock_info["shares"]:
             return apology("too many shares bro")
-            
+
         return redirect("/")
