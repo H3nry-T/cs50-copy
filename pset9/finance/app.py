@@ -260,7 +260,8 @@ def sell():
 
     elif request.method == "POST":
         # get number of shares and stock ticker symbol
-        symbol = request.form.get("symbol") 
+        symbol_given = request.form.get("symbol")
+        shares_given = request.form.get("shares")
         # check for negative numbers and numbers out of range of shares available
         if request.form.get("shares") < 0:
             return apology("cannot sell negative shares")
