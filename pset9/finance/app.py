@@ -257,7 +257,8 @@ def sell():
         return render_template("sell.html")
 
     elif request.method == "POST":
-        if 
+        # check for negative numbers and numbers out of range of shares available
+        portfolio_rows = db.execute("SELECT * FROM )
 
 
     return apology("/sell in progress")
