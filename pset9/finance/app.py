@@ -284,7 +284,7 @@ def sell():
         symbol_parse = lookup(symbol_given)
         current_stock_price = symbol_parse["price"]
         stock_name = dict_of_stock_info["name"]
-        value_of_stock_sold = int(shares_given) * round(current_stock_price, 2)
+        value_of_stock_sold = int(shares_given) * current_stock_price
 
         # check for negative numbers and for too many shares sold
         if int(shares_given) < 0:
@@ -293,7 +293,7 @@ def sell():
             return apology("too many shares bro")
 
         # update history table of the user
-        db.execute("INSERT INTO history (history_user_id, name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], stock_name, symbol_given, -int(shares_given), current_stock_price, -value_of_stock_sold)
+        db.execute("INSERT INTO history (history_user_id, name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], stock_name, symbol_given, -int(shares_given), current_stock_price, -round(value_of_stock_sold, 2))
 
 
         #take value_of_stock, shares from transaction history; adding it up cumulatively
