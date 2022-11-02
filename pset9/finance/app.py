@@ -276,7 +276,7 @@ def sell():
         stock_name = dict_of_stock_info["name"]
         value_of_stock_sold = int(shares_given) * current_stock_price
 
-        # check for negative numbers and numbers out of range of shares available
+        # check for negative numbers and for too many shares sold
         if int(shares_given) < 0:
             return apology("cannot sell negative shares")
         elif int(shares_given) > dict_of_stock_info["shares"]:
