@@ -300,6 +300,6 @@ def sell():
         # update the user cash balance add the liquid cash
         cash_balance = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
         updated_cash_balance = cash_balance[0]["cash"] + value_of_stock_sold
-        cd.execute("UPDATE users SET cash = ? WHERE id = ?", updated_cash_balance, session["user_id"])
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", updated_cash_balance, session["user_id"])
 
         return redirect("/")
