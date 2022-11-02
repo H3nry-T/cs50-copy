@@ -268,6 +268,8 @@ def sell():
         shares_given = request.form.get("shares")
 
         # up to date info on stock selection
+        symbol_parse = lookup(symbol_given)
+        current_price = symbol_parse["price"]
         
         dict_of_stock_info = list_of_dict_search(symbol_given, portfolio_rows)
 
