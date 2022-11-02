@@ -79,10 +79,11 @@ def buy():
         # check number of shares for existance and for fractional
         if not request.form.get("shares"):
             return apology("missing shares")
-        elif float(request.form.get("shares")) % 1 != 0:
-            return apology("shares cannot be fractional")
         elif not request.form.get("symbol"):
             return apology("symbol required")
+
+        elif float(request.form.get("shares")) :
+            return apology("shares cannot be fractional")
         elif float(request.form.get("shares")) < 0:
             return apology("negative shares not possible")
         try:
