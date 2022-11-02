@@ -270,7 +270,7 @@ def sell():
         # up to date info on stock selection
         symbol_parse = lookup(symbol_given)
         current_price = symbol_parse["price"]
-        
+
         dict_of_stock_info = list_of_dict_search(symbol_given, portfolio_rows)
 
         # check for negative numbers and numbers out of range of shares available
@@ -279,5 +279,8 @@ def sell():
         elif int(shares_given) > dict_of_stock_info["shares"]:
             return apology("too many shares bro")
 
+        # update history table of the user
+        
+        # update the portfolio of the user
         current_price
         return redirect("/")
