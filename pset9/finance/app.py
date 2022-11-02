@@ -284,7 +284,7 @@ def sell():
         symbol_parse = lookup(symbol_given)
         current_stock_price = symbol_parse["price"]
         stock_name = dict_of_stock_info["name"]
-        value_of_stock_sold = int(shares_given) * current_stock_price
+        value_of_stock_sold = int(shares_given) * round(current_stock_price, 2)
 
         # check for negative numbers and for too many shares sold
         if int(shares_given) < 0:
