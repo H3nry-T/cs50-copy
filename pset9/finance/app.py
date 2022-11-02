@@ -274,7 +274,7 @@ def sell():
         symbol_parse = lookup(symbol_given)
         current_stock_price = symbol_parse["price"]
         stock_name = dict_of_stock_info["name"]
-        value_of_stock = int(shares_given) * current_stock_price
+        value_of_stock_sold = int(shares_given) * current_stock_price
 
         # check for negative numbers and numbers out of range of shares available
         if int(shares_given) < 0:
@@ -283,15 +283,15 @@ def sell():
             return apology("too many shares bro")
 
         # update history table of the user
-        db.execute("INSERT INTO history (history_user_id, name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], stock_name, symbol_given, -int(shares_given), current_stock_price, -value_of_stock)
+        db.execute("INSERT INTO history (history_user_id, name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], stock_name, symbol_given, -int(shares_given), current_stock_price, -value_of_stock_sold)
 
 
         #take value_of_stock, shares from transaction history; adding it up cumulatively
         old_value_row = db.execute("SELECT SUM(value_of_stock) AS sum_value FROM history WHERE history_user_id = ? AND symbol = ?", session["user_id"], symbol_given)
         old_shares_row = db.execute("SELECT SUM(shares) AS sum_shares FROM history WHERE history_user_id = ? AND symbol = ?", session["user_id"], symbol_given)
 
-        total_value_of_stock_sold = old_value_row[0]["sum_value"]
-        total_shares_of_stock_sold = old_shares_row[0]["sum_shares"]
+        total_value_of_stock = old_value_row[0]["sum_value"]
+        total_shares_of_stock = old_shares_row[0]["sum_shares"]
 
 
         # update the portfolio table take away the money in stock
@@ -299,7 +299,7 @@ def sell():
 
         # update the user cash balance add the liquid cash
         cash_balance = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-        updated_cash_balance = cash_balance[0]["cash"] + value_of_stock
+        updated_cash_balance = cash_balance[0]["cash"] + value_of_stock_sold
         cd.execute("UPDATE users SET cash = ? WHERE id = ?", updated_cash_balance, session["user_id"])
-        
+
         return redirect("/")
