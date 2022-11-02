@@ -283,7 +283,7 @@ def sell():
             return apology("too many shares bro")
 
         # update history table of the user
-        db.execute("INSERT INTO history (history_user_id, name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], stock_name, symbol_given, -shares_given, current_stock_price, value_of_stock)
+        db.execute("INSERT INTO history (history_user_id, name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], stock_name, symbol_given, -int(shares_given), current_stock_price, value_of_stock)
         # update the portfolio of the user
-        current_price
+        
         return redirect("/")
