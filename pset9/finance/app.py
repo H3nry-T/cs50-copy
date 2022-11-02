@@ -267,6 +267,8 @@ def sell():
         symbol_given = request.form.get("symbol")
         shares_given = request.form.get("shares")
 
+        # up to date info on stock selection
+        
         dict_of_stock_info = list_of_dict_search(symbol_given, portfolio_rows)
 
         # check for negative numbers and numbers out of range of shares available
