@@ -81,7 +81,7 @@ def buy():
             return apology("missing shares")
         elif not request.form.get("symbol"):
             return apology("symbol required")
-        elif not float(request.form.get("shares")).is_integer() :
+        elif not float(request.form.get("shares")).is_integer():
             return apology("shares cannot be fractional")
         elif float(request.form.get("shares")) < 0:
             return apology("negative shares not possible")
