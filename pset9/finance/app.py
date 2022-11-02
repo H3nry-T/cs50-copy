@@ -253,5 +253,5 @@ def register():
 def sell():
     """Sell shares of stock"""
     if request.method == "GET":
-        return render_template(")
+        return render_template("sell.html")
     return apology("/sell in progress")
