@@ -258,7 +258,8 @@ def sell():
 
     elif request.method == "POST":
         # check for negative numbers and numbers out of range of shares available
-        portfolio_rows = db.execute("SELECT * FROM )
+        portfolio_rows = db.execute("SELECT * FROM portfolio WHERE portfolio_user_id = ?", session["user_id"])
+        
 
 
     return apology("/sell in progress")
