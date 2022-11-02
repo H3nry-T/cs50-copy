@@ -284,6 +284,17 @@ def sell():
 
         # update history table of the user
         db.execute("INSERT INTO history (history_user_id, name, symbol, shares, price, value_of_stock) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], stock_name, symbol_given, -int(shares_given), current_stock_price, value_of_stock)
-        # update the portfolio of the user
-        
+
+
+        #take value_of_stock, shares from transaction history; adding it up cumulatively
+        old_value_row = db.execute("SELECT SUM(value_of_stock) AS sum_value FROM history WHERE history_user_id = ? AND symbol = ?", session["user_id"], stock_symbol)
+        old_shares_row = db.execute("SELECT SUM(shares) AS sum_shares FROM history WHERE history_user_id = ? AND symbol = ?", session["user_id"], stock_symbol)
+
+        total_value_of_stock = old_value_row[0]["sum_value"]
+        total_shares_of_stock = old_shares_row[0]["sum_shares"]
+
+
+        # update the portfolio table
+        db.execute("UPDATE portfolio SET total_value_of_stock = ?, shares = ? WHERE (portfolio_user_id = ? AND name = ?)", total_value_of_stock, total_shares_of_stock, session["user_id"], stock_name)
+
         return redirect("/")
