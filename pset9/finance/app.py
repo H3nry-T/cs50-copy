@@ -313,5 +313,4 @@ def sell():
         db.execute("UPDATE users SET cash = ? WHERE id = ?", updated_cash_balance, session["user_id"])
 
 
-
         return redirect("/")
