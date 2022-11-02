@@ -310,6 +310,6 @@ def sell():
         db.execute("UPDATE users SET cash = ? WHERE id = ?", updated_cash_balance, session["user_id"])
 
         # check portfolio DELETE stocks WHERE id = session[id] AND shares = 0
-        
+        db.execute("DELETE FROM portfolio WHERE id = ? AND shares = 0", session["user_id"])
 
         return redirect("/")
