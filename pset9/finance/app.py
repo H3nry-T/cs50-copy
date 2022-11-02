@@ -83,7 +83,8 @@ def buy():
             return apology("shares cannot be fractional")
         elif not request.form.get("symbol"):
             return apology("symbol required")
-
+        elif float(request.form.get("shares")) < 0:
+            return apology("negative shares not possible")
         try:
             # take all info from json parse
             symbol_given = request.form.get("symbol")
