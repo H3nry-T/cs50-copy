@@ -256,12 +256,8 @@ def sell():
     portfolio_rows = db.execute("SELECT * FROM portfolio WHERE portfolio_user_id = ?", session["user_id"])
 
     if request.method == "GET":
-
         return render_template("sell.html", portfolio_rows = portfolio_rows)
 
     elif request.method == "POST":
         # check for negative numbers and numbers out of range of shares available
-        return apology("cannot sell yet")
-
-
-    return apology("/sell in progress")
+        return redirect("/")
