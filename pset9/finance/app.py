@@ -44,6 +44,9 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+    # check portfolio DELETE stocks WHERE id = session[id] AND shares = 0
+    db.execute("DELETE FROM portfolio WHERE portfolio_user_id = ? AND shares = 0", session["user_id"])
+
     # pull out a portfolio table take out the rows and template it into the html
     portfolio_rows = db.execute("SELECT * FROM portfolio WHERE portfolio_user_id = ?", session["user_id"])
 
@@ -309,7 +312,6 @@ def sell():
         updated_cash_balance = cash_balance[0]["cash"] + value_of_stock_sold
         db.execute("UPDATE users SET cash = ? WHERE id = ?", updated_cash_balance, session["user_id"])
 
-        # check portfolio DELETE stocks WHERE id = session[id] AND shares = 0
-        db.execute("DELETE FROM portfolio WHERE id = ? AND shares = 0", session["user_id"])
+
 
         return redirect("/")
