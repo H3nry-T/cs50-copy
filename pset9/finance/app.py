@@ -274,7 +274,7 @@ def sell():
         symbol_parse = lookup(symbol_given)
         current_stock_price = symbol_parse["price"]
         stock_name = dict_of_stock_info["name"]
-        value_of_stock = int(shares_given) * 
+        value_of_stock = int(shares_given) * current_stock_price
 
         # check for negative numbers and numbers out of range of shares available
         if int(shares_given) < 0:
