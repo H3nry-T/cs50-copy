@@ -83,7 +83,7 @@ def buy():
             return apology("shares cannot be fractional")
         elif not request.form.get("symbol"):
             return apology("symbol required")
-            
+
         try:
             # take all info from json parse
             symbol_given = request.form.get("symbol")
@@ -153,7 +153,8 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    return apology("/history in progress")
+
+    return render_template("history.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
