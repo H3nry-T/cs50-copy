@@ -16,7 +16,14 @@
     "vscjava.vscode-java-debug",
     "vsls-contrib.gitdoc"
   ],
-  "image": "ghcr.io/cs50/codespace:ac8d1a02b14ac4394e28e586b6de0602fed1cef7",
+  "forwardPorts": [
+    5000,
+    5900,
+    6081,
+    8080,
+    8082
+  ],
+  "image": "ghcr.io/cs50/codespace:9260110b61400782472ceb09246c0012531f4741",
   "postCreateCommand": "/opt/cs50/bin/postCreateCommand",
   "settings": {
     "C_Cpp.autocomplete": "Disabled",
@@ -85,6 +92,7 @@
     "gitdoc.commitValidationLevel": "none",
     "gitdoc.enabled": true,
     "gitdoc.pullOnOpen": false,
+    "github.codespaces.devcontainerChangedNotificationStyle": "none",
     "github.gitAuthentication": true,
     "html.suggest.html5": false,
     "java.configuration.runtimes": [
