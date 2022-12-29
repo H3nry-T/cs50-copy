@@ -1,6 +1,8 @@
 # 2D fighting game
 This project is a simple fighting game that utilizes an HTML canvas and JavaScript.
 
+#### video url: https://youtu.be/o2tbKOmaOI4
+
 ## File Descriptions
 - index.html - the HTML file that contains the canvas element and links to the necessary JavaScript files
 - main.js - the main JavaScript file that contains the game logic and sets up the canvas and game elements
@@ -18,7 +20,7 @@ This project is a simple fighting game that utilizes an HTML canvas and JavaScri
 
 - both player/enemy can dodge once and must attack and hit to gain the dodge ability back. Players cannot spam dodge and should only use it for tactical reasons. It is good at closing gaps or getting away
 
-- sprites are animated every 5 frames. This is set in the 'Sprite.framesHold' property. 
+- sprites are animated every 5 frames. This is set in the 'Sprite.framesHold' property.
 
 ## game features:
 
